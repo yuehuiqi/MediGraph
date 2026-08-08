@@ -1,0 +1,41 @@
+name: offline-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install offline-test dependencies
+        # Kept minimal on purpose: the offline core (extraction fallback, graph,
+        # deterministic NL2SQL, tests) must not require torch or the service stack.
+        # sqlglot is core -- the NL2SQL read-only guard parses SQL rather than
+        # regex-matching it.
+        run: >-
+          python -m pip install
+          pytest pydantic networkx numpy python-dotenv pypdf sqlglot
+      - name: Install service-layer dependencies
+        # The service tests skip themselves when FastAPI is absent; installing these
+        # keeps the HTTP layer, SSE protocol and metrics covered in CI too.
+        run: >-
+          python -m pip install
+          fastapi uvicorn prometheus-client python-json-logger sse-starlette httpx
+      - name: Compile
+        run: python -m compileall -q medigraph benchmarks data/prep service
+      - name: Test
+        run: python -m pytest -q
+      - name: Release checks
+        run: python scripts/check_release.py --ci
+      - name: Doc/evidence consistency
+        run: python scripts/check_claims.py --ci

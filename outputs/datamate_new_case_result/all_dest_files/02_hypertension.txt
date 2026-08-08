@@ -1,0 +1,101 @@
+{
+  "valid": [
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "头晕",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "头痛",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "心悸",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "脑卒中",
+      "tail_type": "Disease",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "冠心病",
+      "tail_type": "Disease",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "慢性肾病",
+      "tail_type": "Disease",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "动态血压监测",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "肾功能检查",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "心电图检查",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "氨氯地平",
+      "tail_type": "Drug",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "缬沙坦",
+      "tail_type": "Drug",
+      "confidence": 0.95
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "美托洛尔",
+      "tail_type": "Drug",
+      "confidence": 0.95
+    }
+  ],
+  "rejected": []
+}

@@ -1,0 +1,232 @@
+{
+  "graph_file": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+  "num_questions": 120,
+  "one_hop": {
+    "n": 40,
+    "accuracy": 1.0
+  },
+  "two_hop": {
+    "n": 40,
+    "accuracy": 1.0
+  },
+  "three_hop": {
+    "n": 40,
+    "accuracy": 1.0
+  },
+  "multi_hop_accuracy": 1.0,
+  "overall_accuracy": 1.0,
+  "provenance_rate": 1.0,
+  "safe_rejection_rate": 1.0,
+  "examples": [
+    {
+      "question": "幽门螺杆菌阳性消化性溃疡的cmeie:pathological_classification有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "羊水过多的cmeie:imaging_examination有哪些？",
+      "hops": 1,
+      "gold_size": 2,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "下肢动脉病变的cmeie:incidence有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "青少年型的cmeie:onset_age有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "CO中毒的cmeie:related_cause有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "免疫力受损的cmeie:related_cause有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "十二指肠球部溃疡出血的cmeie:surgical_treatment有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "重度佝偻病的cmeie:onset_age有哪些？",
+      "hops": 1,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "急性淋巴细胞白血病分类的cmeie:pathological_classification有哪些？",
+      "hops": 1,
+      "gold_size": 2,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "晚期梅毒征象的cmeie:clinical_manifestation有哪些？",
+      "hops": 1,
+      "gold_size": 3,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与CO中毒相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 5,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与免疫力受损相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 130,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与急性淋巴细胞白血病分类相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与PEM相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 4,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与胃出血相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 10,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与恶性疟原虫感染相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 165,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与DN相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 19,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与上消化道梗阻相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与dRTA相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 3,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "与巨结肠相关联的二跳实体有哪些？",
+      "hops": 2,
+      "gold_size": 27,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从免疫力受损出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 2,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从PEM出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 2,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从恶性疟原虫感染出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 8,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从dRTA出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 1,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从椎间盘炎出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 7,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从下丘脑疾病出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 52,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从精神疾病出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 2,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从遗传性出血性疾病出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 5,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从急性冠脉综合征出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 3,
+      "coverage": 1.0,
+      "ok": true
+    },
+    {
+      "question": "从链球菌感染出发三跳可达的实体有哪些？",
+      "hops": 3,
+      "gold_size": 173,
+      "coverage": 1.0,
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "metadata": {
+    "format": "medigraph_graph",
+    "schema_version": "2.0.0",
+    "exported_at": "2026-08-08T05:16:24.938272+00:00",
+    "stats": {
+      "num_entities": 12,
+      "num_triples": 12,
+      "entity_type_counts": {
+        "Department": 1,
+        "Symptom": 2,
+        "Disease": 5,
+        "Examination": 3,
+        "Drug": 1
+      },
+      "relation_counts": {
+        "need_examination": 4,
+        "has_symptom": 2,
+        "complication": 4,
+        "treated_in_department": 1,
+        "recommend_drug": 1
+      },
+      "top_entities": [
+        {
+          "name": "高血压",
+          "degree": 8
+        },
+        {
+          "name": "糖尿病",
+          "degree": 4
+        },
+        {
+          "name": "肾功能检查",
+          "degree": 2
+        },
+        {
+          "name": "冠心病",
+          "degree": 2
+        },
+        {
+          "name": "慢性肾病",
+          "degree": 2
+        },
+        {
+          "name": "内科",
+          "degree": 1
+        },
+        {
+          "name": "头晕",
+          "degree": 1
+        },
+        {
+          "name": "心悸",
+          "degree": 1
+        },
+        {
+          "name": "血压",
+          "degree": 1
+        },
+        {
+          "name": "心电图",
+          "degree": 1
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "内科",
+      "type": "Department",
+      "canonical_id": "MEDIGRAPH:425c7407d90e7f5d",
+      "canonical_name": "内科",
+      "surface_forms": [
+        "内科"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "头晕",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:01236a16a30a4474",
+      "canonical_name": "头晕",
+      "surface_forms": [
+        "头晕"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "头痛",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:74f56117128ecaad",
+      "canonical_name": "头痛",
+      "surface_forms": [
+        "头痛"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "心悸",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:6d2b87aed852a097",
+      "canonical_name": "心悸",
+      "surface_forms": [
+        "心悸"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "高血压",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:a6dc4052d1d31d25",
+      "canonical_name": "高血压",
+      "surface_forms": [
+        "高血压"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "糖尿病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:e64d7c75ea71e077",
+      "canonical_name": "糖尿病",
+      "surface_forms": [
+        "糖尿病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "血压",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:89b11f31c0ca65c6",
+      "canonical_name": "血压",
+      "surface_forms": [
+        "血压"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "心电图",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:a6a6839b120abe00",
+      "canonical_name": "心电图",
+      "surface_forms": [
+        "心电图"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "肾功能检查",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:ed4d3b1b7ee2c292",
+      "canonical_name": "肾功能检查",
+      "surface_forms": [
+        "肾功能检查"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "二甲双胍",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:bed1505c96c84566",
+      "canonical_name": "二甲双胍",
+      "surface_forms": [
+        "二甲双胍"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "DIAKG",
+      "confidence": 0.579
+    },
+    {
+      "id": "冠心病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:dae5b91a4aa24bf2",
+      "canonical_name": "冠心病",
+      "surface_forms": [
+        "冠心病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.579
+    },
+    {
+      "id": "慢性肾病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:50cc5ed192cadf6f",
+      "canonical_name": "慢性肾病",
+      "surface_forms": [
+        "慢性肾病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.579
+    }
+  ],
+  "edges": [
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "心电图",
+      "tail_type": "Examination",
+      "confidence": 0.95,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937705+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.95,
+          "timestamp": "2026-08-08T05:16:24.937705+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "血压",
+      "tail_type": "Examination",
+      "confidence": 0.95,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937736+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.95,
+          "timestamp": "2026-08-08T05:16:24.937736+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "头晕",
+      "tail_type": "Symptom",
+      "confidence": 0.9,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937762+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.9,
+          "timestamp": "2026-08-08T05:16:24.937762+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "心悸",
+      "tail_type": "Symptom",
+      "confidence": 0.9,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937788+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.9,
+          "timestamp": "2026-08-08T05:16:24.937788+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "肾功能检查",
+      "tail_type": "Examination",
+      "confidence": 0.9,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937819+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.9,
+          "timestamp": "2026-08-08T05:16:24.937819+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "冠心病",
+      "tail_type": "Disease",
+      "confidence": 0.85,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937895+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.85,
+          "timestamp": "2026-08-08T05:16:24.937895+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "慢性肾病",
+      "tail_type": "Disease",
+      "confidence": 0.85,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937917+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.85,
+          "timestamp": "2026-08-08T05:16:24.937917+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "treated_in_department",
+      "relation_zh": "就诊于",
+      "tail": "内科",
+      "tail_type": "Department",
+      "confidence": 0.8,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937964+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.8,
+          "timestamp": "2026-08-08T05:16:24.937964+00:00"
+        }
+      ]
+    },
+    {
+      "head": "糖尿病",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "二甲双胍",
+      "tail_type": "Drug",
+      "confidence": 1.0,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937648+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 1.0,
+          "timestamp": "2026-08-08T05:16:24.937648+00:00"
+        }
+      ]
+    },
+    {
+      "head": "糖尿病",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "慢性肾病",
+      "tail_type": "Disease",
+      "confidence": 0.85,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937845+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.85,
+          "timestamp": "2026-08-08T05:16:24.937845+00:00"
+        }
+      ]
+    },
+    {
+      "head": "糖尿病",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "肾功能检查",
+      "tail_type": "Examination",
+      "confidence": 0.85,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937868+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.85,
+          "timestamp": "2026-08-08T05:16:24.937868+00:00"
+        }
+      ]
+    },
+    {
+      "head": "糖尿病",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "冠心病",
+      "tail_type": "Disease",
+      "confidence": 0.8,
+      "source": "fetch",
+      "sources": [
+        "fetch"
+      ],
+      "operator_version": "llm_schema/2.0.0",
+      "timestamp": "2026-08-08T05:16:24.937940+00:00",
+      "provenance": [
+        {
+          "source_doc": "fetch",
+          "source_hash": "cd664f3b5946e6c1aa0d98ab8bd3df2726653fcf4533c9158728a7f8e69cd4c6",
+          "chunk_id": "b2634553aa45f103e1c5",
+          "sentence_id": "",
+          "extractor": "llm_schema",
+          "model_version": "2.0.0",
+          "evidence": "门诊病历（合成样例，非真实患者数据）\n\n科室：心内科　　就诊日期：2026-03-14\n\n主诉：反复头晕、头痛 3 个月，加重 1 周，伴心悸。\n\n既往史：高血压病史 5 年，未规律服药；2 型糖尿病病史 2 年。\n\n辅助检查：动态血压监测提示全天血压增高；心电图示左室高电压；肾功能检查示血肌酐轻度升高。\n\n诊断：高血压 2 级（高危）；2 型糖尿病。\n\n治疗：予氨氯地平、缬沙坦降压，二甲双胍降糖。低盐饮食，1 个月后复诊，\n评估脑卒中、冠心病及慢性肾病风险。",
+          "confidence": 0.8,
+          "timestamp": "2026-08-08T05:16:24.937940+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"system":"npu_ascendc","rows":200000,"labels":32,"block_dim":40,"throughput_rows_per_s":3411998377.6,"batch_latency_mean_ms":0.058617,"latency_mean_ms":0.107317,"latency_p50_ms":0.103172,"latency_p95_ms":0.125042,"latency_p99_ms":0.191504,"end_to_end_mean_ms":3.249009,"max_abs_diff_vs_cpu":1.490116119e-07}

@@ -1,0 +1,227 @@
+{
+  "documents_ingested": 25492,
+  "raw_triples_emitted": 101428,
+  "graph": {
+    "num_entities": 43566,
+    "num_triples": 70790,
+    "entity_type_counts": {
+      "Disease": 11932,
+      "SocialFactor": 5253,
+      "Epidemiology": 1841,
+      "Drug": 3416,
+      "Symptom": 11637,
+      "Procedure": 3122,
+      "Examination": 3644,
+      "Other": 1021,
+      "Prognosis": 345,
+      "Body": 1342,
+      "Unknown": 13
+    },
+    "relation_counts": {
+      "cmeie:pathological_classification": 3986,
+      "cmeie:related_cause": 7167,
+      "cmeie:genetic_factor": 203,
+      "cmeie:drug_treatment": 6745,
+      "cmeie:adjuvant_therapy": 2740,
+      "cmeie:susceptible_population": 1252,
+      "cmeie:complication": 2093,
+      "cmeie:stage": 619,
+      "cmeie:clinical_manifestation": 20030,
+      "cmeie:surgical_treatment": 1328,
+      "cmeie:synonym": 3499,
+      "cmeie:laboratory_examination": 2769,
+      "cmeie:differential_diagnosis": 1415,
+      "cmeie:pathogenesis": 425,
+      "cmeie:onset_site": 2279,
+      "cmeie:high_incidence_area": 431,
+      "cmeie:medical_history": 323,
+      "cmeie:prevention": 772,
+      "cmeie:etiology": 3723,
+      "cmeie:pathophysiology": 201,
+      "cmeie:department": 154,
+      "cmeie:incidence": 776,
+      "cmeie:sex_tendency": 203,
+      "cmeie:screening": 127,
+      "cmeie:auxiliary_examination": 885,
+      "cmeie:high_risk_factor": 1796,
+      "cmeie:onset_age": 516,
+      "cmeie:histological_examination": 425,
+      "cmeie:prognosis_status": 403,
+      "cmeie:metastatic_site": 230,
+      "cmeie:imaging_examination": 1713,
+      "cmeie:mortality": 124,
+      "cmeie:chemotherapy": 202,
+      "cmeie:related_transformation": 60,
+      "cmeie:invasion_site": 163,
+      "cmeie:radiotherapy": 203,
+      "cmeie:prognosis_survival_rate": 69,
+      "cmeie:endoscopic_examination": 242,
+      "cmeie:post_treatment_symptom": 169,
+      "cmeie:transmission_route": 122,
+      "cmeie:risk_assessment_factor": 106,
+      "cmeie:related_symptom": 10,
+      "cmeie:seasonality": 92
+    },
+    "top_entities": [
+      {
+        "name": "慢性胰腺炎",
+        "degree": 590
+      },
+      {
+        "name": "脑炎",
+        "degree": 579
+      },
+      {
+        "name": "急性胰腺炎",
+        "degree": 528
+      },
+      {
+        "name": "糖尿病",
+        "degree": 498
+      },
+      {
+        "name": "食物中毒",
+        "degree": 419
+      },
+      {
+        "name": "登革热",
+        "degree": 410
+      },
+      {
+        "name": "非小细胞肺癌",
+        "degree": 409
+      },
+      {
+        "name": "稳定型缺血性心脏疾病",
+        "degree": 398
+      },
+      {
+        "name": "溃疡性结肠炎",
+        "degree": 387
+      },
+      {
+        "name": "HIV感染",
+        "degree": 379
+      }
+    ]
+  },
+  "self_produced": true,
+  "third_party_graph_import": false,
+  "incremental_revision_delta": {
+    "label": "incremental-diakg-batch",
+    "started_at": "2026-07-03T08:08:36.261907+00:00",
+    "committed_at": "2026-07-03T08:09:38.927798+00:00",
+    "added_entity_count": 0,
+    "added_triple_count": 0,
+    "added_entities": [],
+    "added_triples": [],
+    "graph_stats": {
+      "num_entities": 43566,
+      "num_triples": 70790,
+      "entity_type_counts": {
+        "Disease": 11932,
+        "SocialFactor": 5253,
+        "Epidemiology": 1841,
+        "Drug": 3416,
+        "Symptom": 11637,
+        "Procedure": 3122,
+        "Examination": 3644,
+        "Other": 1021,
+        "Prognosis": 345,
+        "Body": 1342,
+        "Unknown": 13
+      },
+      "relation_counts": {
+        "cmeie:pathological_classification": 3986,
+        "cmeie:related_cause": 7167,
+        "cmeie:genetic_factor": 203,
+        "cmeie:drug_treatment": 6745,
+        "cmeie:adjuvant_therapy": 2740,
+        "cmeie:susceptible_population": 1252,
+        "cmeie:complication": 2093,
+        "cmeie:stage": 619,
+        "cmeie:clinical_manifestation": 20030,
+        "cmeie:surgical_treatment": 1328,
+        "cmeie:synonym": 3499,
+        "cmeie:laboratory_examination": 2769,
+        "cmeie:differential_diagnosis": 1415,
+        "cmeie:pathogenesis": 425,
+        "cmeie:onset_site": 2279,
+        "cmeie:high_incidence_area": 431,
+        "cmeie:medical_history": 323,
+        "cmeie:prevention": 772,
+        "cmeie:etiology": 3723,
+        "cmeie:pathophysiology": 201,
+        "cmeie:department": 154,
+        "cmeie:incidence": 776,
+        "cmeie:sex_tendency": 203,
+        "cmeie:screening": 127,
+        "cmeie:auxiliary_examination": 885,
+        "cmeie:high_risk_factor": 1796,
+        "cmeie:onset_age": 516,
+        "cmeie:histological_examination": 425,
+        "cmeie:prognosis_status": 403,
+        "cmeie:metastatic_site": 230,
+        "cmeie:imaging_examination": 1713,
+        "cmeie:mortality": 124,
+        "cmeie:chemotherapy": 202,
+        "cmeie:related_transformation": 60,
+        "cmeie:invasion_site": 163,
+        "cmeie:radiotherapy": 203,
+        "cmeie:prognosis_survival_rate": 69,
+        "cmeie:endoscopic_examination": 242,
+        "cmeie:post_treatment_symptom": 169,
+        "cmeie:transmission_route": 122,
+        "cmeie:risk_assessment_factor": 106,
+        "cmeie:related_symptom": 10,
+        "cmeie:seasonality": 92
+      },
+      "top_entities": [
+        {
+          "name": "慢性胰腺炎",
+          "degree": 590
+        },
+        {
+          "name": "脑炎",
+          "degree": 579
+        },
+        {
+          "name": "急性胰腺炎",
+          "degree": 528
+        },
+        {
+          "name": "糖尿病",
+          "degree": 498
+        },
+        {
+          "name": "食物中毒",
+          "degree": 419
+        },
+        {
+          "name": "登革热",
+          "degree": 410
+        },
+        {
+          "name": "非小细胞肺癌",
+          "degree": 409
+        },
+        {
+          "name": "稳定型缺血性心脏疾病",
+          "degree": 398
+        },
+        {
+          "name": "溃疡性结肠炎",
+          "degree": 387
+        },
+        {
+          "name": "HIV感染",
+          "degree": 379
+        }
+      ]
+    }
+  },
+  "provenance_per_edge": true,
+  "extractor": "neural-gplinker-1.0.0",
+  "elapsed_s": 7178.5,
+  "graph_file": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json"
+}

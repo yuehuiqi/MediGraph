@@ -1,0 +1,703 @@
+{
+  "task": "Task 3 - graph-aware data analysis and BI visualization",
+  "graph_source": "graph_scaled.json",
+  "analyses": [
+    {
+      "question": "各疾病的就诊人次是多少",
+      "route": "SQL",
+      "plan": {
+        "route": "SQL",
+        "reason": "问题包含统计/趋势意图：多少, 人次",
+        "planner": "deterministic_intent_router"
+      },
+      "chart_type": "bar",
+      "columns": [
+        "disease",
+        "cnt"
+      ],
+      "rows": [
+        [
+          "急性心肌梗死",
+          168
+        ],
+        [
+          "冠心病",
+          153
+        ],
+        [
+          "糖尿病肾病",
+          150
+        ],
+        [
+          "高血压",
+          75
+        ],
+        [
+          "2型糖尿病",
+          54
+        ]
+      ],
+      "row_count": 5,
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "sql_attempts": [
+        {
+          "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "anchors": [],
+      "intent_relations": [],
+      "evidence_total": 0,
+      "evidence_used": 0,
+      "citations": [],
+      "insight": "在统计的5种疾病中，急性心肌梗死的就诊人次最高（168人次），冠心病（153人次）和糖尿病肾病（150人次）紧随其后，三者合计占总就诊人次的78.5%。高血压（75人次）和2型糖尿病（54人次）的就诊量相对较低。数据反映出心脑血管急症及糖尿病并发症是当前就诊的主要病种。",
+      "report_html": "D:\\LLMagent\\CCF\\outputs\\task3_complete_bar.html",
+      "data_provenance": {
+        "medical_kg_graph": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+        "analytics_db": "D:\\LLMagent\\CCF\\outputs\\analytics.db",
+        "demo_record_note": "就诊/处方/检查记录由医疗知识图谱词表按固定seed确定性生成，仅用于可复现分析演示。"
+      }
+    },
+    {
+      "question": "2024年每个月的就诊量趋势",
+      "route": "SQL",
+      "plan": {
+        "route": "SQL",
+        "reason": "问题包含统计/趋势意图：趋势",
+        "planner": "deterministic_intent_router"
+      },
+      "chart_type": "line",
+      "columns": [
+        "month",
+        "visits"
+      ],
+      "rows": [
+        [
+          "2024-01",
+          14
+        ],
+        [
+          "2024-02",
+          57
+        ],
+        [
+          "2024-03",
+          95
+        ],
+        [
+          "2024-04",
+          103
+        ],
+        [
+          "2024-05",
+          125
+        ],
+        [
+          "2024-06",
+          84
+        ],
+        [
+          "2024-07",
+          74
+        ],
+        [
+          "2024-08",
+          28
+        ],
+        [
+          "2024-09",
+          13
+        ],
+        [
+          "2024-10",
+          4
+        ]
+      ],
+      "row_count": 12,
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "sql_attempts": [
+        {
+          "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "anchors": [],
+      "intent_relations": [],
+      "evidence_total": 0,
+      "evidence_used": 0,
+      "citations": [],
+      "insight": "2024年就诊量呈现先升后降的明显季节性波动：1月至5月持续攀升，5月达到峰值125次；6月起逐步回落，8月后急剧下滑，11月降至全年最低仅1次，12月小幅回升至2次。全年就诊高峰集中在3-7月，第四季度极为冷清，需关注是否存在服务调整或外部因素影响。",
+      "report_html": "D:\\LLMagent\\CCF\\outputs\\task3_complete_line.html",
+      "data_provenance": {
+        "medical_kg_graph": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+        "analytics_db": "D:\\LLMagent\\CCF\\outputs\\analytics.db",
+        "demo_record_note": "就诊/处方/检查记录由医疗知识图谱词表按固定seed确定性生成，仅用于可复现分析演示。"
+      }
+    },
+    {
+      "question": "男性和女性的就诊比例",
+      "route": "SQL",
+      "plan": {
+        "route": "SQL",
+        "reason": "问题包含统计/趋势意图：比例",
+        "planner": "deterministic_intent_router"
+      },
+      "chart_type": "pie",
+      "columns": [
+        "gender",
+        "cnt"
+      ],
+      "rows": [
+        [
+          "女",
+          303
+        ],
+        [
+          "男",
+          297
+        ]
+      ],
+      "row_count": 2,
+      "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender",
+      "sql_attempts": [
+        {
+          "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender",
+          "error": "",
+          "source": "llm"
+        }
+      ],
+      "anchors": [],
+      "intent_relations": [],
+      "evidence_total": 0,
+      "evidence_used": 0,
+      "citations": [],
+      "insight": "根据统计，女性就诊人次为303，男性为297，女性略高于男性，但两者数量非常接近。整体就诊性别比例约为1:1，女性占比50.5%，男性占比49.5%，未见显著性别差异。",
+      "report_html": "D:\\LLMagent\\CCF\\outputs\\task3_complete_pie.html",
+      "data_provenance": {
+        "medical_kg_graph": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+        "analytics_db": "D:\\LLMagent\\CCF\\outputs\\analytics.db",
+        "demo_record_note": "就诊/处方/检查记录由医疗知识图谱词表按固定seed确定性生成，仅用于可复现分析演示。"
+      }
+    },
+    {
+      "question": "高血压有哪些并发症和推荐用药关系",
+      "route": "GRAPH",
+      "plan": {
+        "route": "GRAPH",
+        "reason": "问题包含图谱关联意图：关系, 并发症, 用药",
+        "planner": "deterministic_intent_router"
+      },
+      "chart_type": "graph",
+      "columns": [
+        "head",
+        "relation",
+        "tail"
+      ],
+      "rows": [
+        [
+          "高血压",
+          "cmeie:pathological_classification",
+          "原发性高血压"
+        ],
+        [
+          "高血压",
+          "cmeie:pathological_classification",
+          "妊娠期高血压"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "尼卡地平"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "拉贝洛尔"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "硝苯地平短效或缓释片"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "肼屈嗪"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "酚妥拉明"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "降压治疗"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "低盐饮食"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "减轻体重"
+        ],
+        [
+          "高血压",
+          "cmeie:susceptible_population",
+          "年龄偏大者"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "卡托普利"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "提倡体育锻炼"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "每天30～60分钟中度体育活动"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "氯沙坦"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "调整饮食结构"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "限制钠盐摄入"
+        ],
+        [
+          "高血压",
+          "cmeie:drug_treatment",
+          "硝苯地平"
+        ],
+        [
+          "高血压",
+          "cmeie:pathological_classification",
+          "原发性"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "减少高糖饮料和高能量零食的摄入"
+        ],
+        [
+          "高血压",
+          "cmeie:clinical_manifestation",
+          "收缩压≥140mmHg"
+        ],
+        [
+          "高血压",
+          "cmeie:clinical_manifestation",
+          "收缩压＜160mmHg"
+        ],
+        [
+          "高血压",
+          "cmeie:adjuvant_therapy",
+          "注意生活规律"
+        ],
+        [
+          "高血压",
+          "cmeie:pathological_classification",
+          "神经性高血压"
+        ]
+      ],
+      "row_count": 24,
+      "sql": "",
+      "sql_attempts": [],
+      "anchors": [
+        "高血压"
+      ],
+      "intent_relations": [
+        "recommend_drug",
+        "complication"
+      ],
+      "evidence_total": 173,
+      "evidence_used": 24,
+      "citations": [
+        {
+          "id": 1,
+          "triple": "高血压 --[cmeie:pathological_classification]--> 原发性高血压",
+          "relation": "cmeie:pathological_classification",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 2,
+          "triple": "高血压 --[cmeie:pathological_classification]--> 妊娠期高血压",
+          "relation": "cmeie:pathological_classification",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 3,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 尼卡地平",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 4,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 拉贝洛尔",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 5,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 硝苯地平短效或缓释片",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 6,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 肼屈嗪",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 7,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 酚妥拉明",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 8,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 降压治疗",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 1.0,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 9,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 低盐饮食",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.999,
+          "source": "DIAKG/34.json"
+        },
+        {
+          "id": 10,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 减轻体重",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.999,
+          "source": "DIAKG/34.json"
+        },
+        {
+          "id": 11,
+          "triple": "高血压 --[cmeie:susceptible_population]--> 年龄偏大者",
+          "relation": "cmeie:susceptible_population",
+          "confidence": 0.999,
+          "source": "CMeIE-V2_dev"
+        },
+        {
+          "id": 12,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 卡托普利",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 0.998,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 13,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 提倡体育锻炼",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.997,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 14,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 每天30～60分钟中度体育活动",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.997,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 15,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 氯沙坦",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 0.997,
+          "source": "DIAKG/32.json"
+        },
+        {
+          "id": 16,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 调整饮食结构",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.997,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 17,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 限制钠盐摄入",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.997,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 18,
+          "triple": "高血压 --[cmeie:drug_treatment]--> 硝苯地平",
+          "relation": "cmeie:drug_treatment",
+          "confidence": 0.996,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 19,
+          "triple": "高血压 --[cmeie:pathological_classification]--> 原发性",
+          "relation": "cmeie:pathological_classification",
+          "confidence": 0.995,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 20,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 减少高糖饮料和高能量零食的摄入",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.994,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 21,
+          "triple": "高血压 --[cmeie:clinical_manifestation]--> 收缩压≥140mmHg",
+          "relation": "cmeie:clinical_manifestation",
+          "confidence": 0.994,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 22,
+          "triple": "高血压 --[cmeie:clinical_manifestation]--> 收缩压＜160mmHg",
+          "relation": "cmeie:clinical_manifestation",
+          "confidence": 0.994,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 23,
+          "triple": "高血压 --[cmeie:adjuvant_therapy]--> 注意生活规律",
+          "relation": "cmeie:adjuvant_therapy",
+          "confidence": 0.993,
+          "source": "CMeIE-V2_train"
+        },
+        {
+          "id": 24,
+          "triple": "高血压 --[cmeie:pathological_classification]--> 神经性高血压",
+          "relation": "cmeie:pathological_classification",
+          "confidence": 0.992,
+          "source": "CMeIE-V2_train"
+        }
+      ],
+      "insight": "本次分析的数据主要涵盖高血压的药物治疗与辅助干预，未直接包含并发症信息。在用药方面，涉及钙通道阻滞剂（如硝苯地平）、ACEI（卡托普利）、ARB（氯沙坦）及血管扩张剂（肼屈嗪）等多类药物，其中硝苯地平被多次提及，提示其作为常用降压选择。辅助治疗强调生活方式调整，包括低盐饮食、减重、规律运动等，反映出药物与生活方式相结合的综合管理趋势。",
+      "report_html": "D:\\LLMagent\\CCF\\outputs\\task3_complete_graph.html",
+      "data_provenance": {
+        "medical_kg_graph": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+        "analytics_db": "D:\\LLMagent\\CCF\\outputs\\analytics.db",
+        "demo_record_note": "就诊/处方/检查记录由医疗知识图谱词表按固定seed确定性生成，仅用于可复现分析演示。"
+      }
+    }
+  ],
+  "audit": {
+    "kg_reuse": {
+      "graph_file": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+      "used_example_graph": false,
+      "graph_profile": {
+        "num_entities": 43553,
+        "num_triples": 70769,
+        "entity_types": {
+          "Disease": 11932,
+          "SocialFactor": 5253,
+          "Epidemiology": 1841,
+          "Drug": 3416,
+          "Symptom": 11637,
+          "Procedure": 3122,
+          "Examination": 3644,
+          "Other": 1021,
+          "Prognosis": 345,
+          "Body": 1342
+        },
+        "relation_types": {
+          "cmeie:pathological_classification": 3986,
+          "cmeie:related_cause": 7167,
+          "cmeie:genetic_factor": 203,
+          "cmeie:drug_treatment": 6745,
+          "cmeie:adjuvant_therapy": 2740,
+          "cmeie:susceptible_population": 1252,
+          "cmeie:complication": 2093,
+          "cmeie:stage": 619,
+          "cmeie:clinical_manifestation": 20030,
+          "cmeie:surgical_treatment": 1328,
+          "cmeie:synonym": 3499,
+          "cmeie:laboratory_examination": 2769,
+          "cmeie:differential_diagnosis": 1415,
+          "cmeie:pathogenesis": 425,
+          "cmeie:onset_site": 2279,
+          "cmeie:high_incidence_area": 431,
+          "cmeie:medical_history": 323,
+          "cmeie:prevention": 772,
+          "cmeie:etiology": 3723,
+          "cmeie:pathophysiology": 201,
+          "cmeie:department": 154,
+          "cmeie:incidence": 755,
+          "cmeie:sex_tendency": 203,
+          "cmeie:screening": 127,
+          "cmeie:auxiliary_examination": 885,
+          "cmeie:high_risk_factor": 1796,
+          "cmeie:onset_age": 516,
+          "cmeie:histological_examination": 425,
+          "cmeie:prognosis_status": 403,
+          "cmeie:metastatic_site": 230,
+          "cmeie:imaging_examination": 1713,
+          "cmeie:mortality": 124,
+          "cmeie:chemotherapy": 202,
+          "cmeie:related_transformation": 60,
+          "cmeie:invasion_site": 163,
+          "cmeie:radiotherapy": 203,
+          "cmeie:prognosis_survival_rate": 69,
+          "cmeie:endoscopic_examination": 242,
+          "cmeie:post_treatment_symptom": 169,
+          "cmeie:transmission_route": 122,
+          "cmeie:risk_assessment_factor": 106,
+          "cmeie:related_symptom": 10,
+          "cmeie:seasonality": 92
+        },
+        "top_entities": [
+          {
+            "name": "慢性胰腺炎",
+            "degree": 590
+          },
+          {
+            "name": "脑炎",
+            "degree": 579
+          },
+          {
+            "name": "急性胰腺炎",
+            "degree": 528
+          },
+          {
+            "name": "糖尿病",
+            "degree": 496
+          },
+          {
+            "name": "食物中毒",
+            "degree": 419
+          },
+          {
+            "name": "登革热",
+            "degree": 410
+          },
+          {
+            "name": "非小细胞肺癌",
+            "degree": 409
+          },
+          {
+            "name": "稳定型缺血性心脏疾病",
+            "degree": 398
+          },
+          {
+            "name": "溃疡性结肠炎",
+            "degree": 387
+          },
+          {
+            "name": "HIV感染",
+            "degree": 379
+          }
+        ]
+      },
+      "kg_mirror_tables": [
+        "kg_entities",
+        "kg_triples"
+      ],
+      "analytics_vocab_from_relations": [
+        "treated_in_department",
+        "recommend_drug",
+        "need_examination"
+      ]
+    },
+    "analytics_schema": "表 patient_visits(visit_id, patient_id, age 年龄, gender 性别('男'/'女'), disease 疾病, department 科室, visit_date 就诊日期'YYYY-MM-DD', cost 费用)\n表 prescriptions(rx_id, visit_id, drug 药物, days 用药天数)\n表 lab_tests(test_id, visit_id, test_name 检查名称, abnormal 是否异常(1/0))\n表 kg_entities(name 实体名, type 类型)\n表 kg_triples(head, head_type, relation 关系, tail, tail_type, confidence, source)",
+    "table_counts": {
+      "patient_visits": 600,
+      "prescriptions": 720,
+      "lab_tests": 600,
+      "kg_entities": 43553,
+      "kg_triples": 70769
+    },
+    "nl2sql_evaluation": {
+      "model": "deepseek-ai/DeepSeek-V4-Pro",
+      "samples": 16,
+      "correct": 16,
+      "execution_accuracy": 1.0,
+      "dual_database_execution_accuracy": 1.0,
+      "target": 0.85,
+      "passed": true
+    },
+    "analysis_routes": {
+      "SQL": [
+        "统计",
+        "分组",
+        "排名",
+        "趋势",
+        "比例",
+        "费用",
+        "异常率"
+      ],
+      "GRAPH": [
+        "症状",
+        "药物",
+        "检查",
+        "并发症",
+        "标志物",
+        "基因",
+        "多跳关联"
+      ]
+    },
+    "visualizations": [
+      "bar",
+      "line",
+      "pie",
+      "graph",
+      "heatmap",
+      "scatter",
+      "table"
+    ],
+    "generated_reports": [
+      {
+        "name": "task3_closed_loop.html",
+        "path": "D:\\LLMagent\\CCF\\outputs\\task3_closed_loop.html",
+        "bytes": 2287
+      },
+      {
+        "name": "task3_complete_bar.html",
+        "path": "D:\\LLMagent\\CCF\\outputs\\task3_complete_bar.html",
+        "bytes": 1036649
+      },
+      {
+        "name": "task3_complete_graph.html",
+        "path": "D:\\LLMagent\\CCF\\outputs\\task3_complete_graph.html",
+        "bytes": 1043057
+      },
+      {
+        "name": "task3_complete_line.html",
+        "path": "D:\\LLMagent\\CCF\\outputs\\task3_complete_line.html",
+        "bytes": 1036942
+      },
+      {
+        "name": "task3_complete_pie.html",
+        "path": "D:\\LLMagent\\CCF\\outputs\\task3_complete_pie.html",
+        "bytes": 1036146
+      }
+    ],
+    "provenance_note": "KG与词表来自医疗知识图谱主图；就诊/处方/检查明细为固定seed生成的可复现实验数据。"
+  }
+}

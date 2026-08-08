@@ -1,0 +1,101 @@
+{
+  "valid": [
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "活动后气促",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "乏力",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "下肢水肿",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "夜间阵发性呼吸困难",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "心电图",
+      "tail_type": "Examination",
+      "confidence": 0.9
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "超声心动图",
+      "tail_type": "Examination",
+      "confidence": 0.9
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "胸部X线",
+      "tail_type": "Examination",
+      "confidence": 0.9
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "脑钠肽检测",
+      "tail_type": "Examination",
+      "confidence": 0.9
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "呋塞米",
+      "tail_type": "Drug",
+      "confidence": 0.94
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "螺内酯",
+      "tail_type": "Drug",
+      "confidence": 0.94
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "高血压",
+      "tail_type": "Disease",
+      "confidence": 0.9
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "冠心病",
+      "tail_type": "Disease",
+      "confidence": 0.9
+    }
+  ],
+  "rejected": []
+}

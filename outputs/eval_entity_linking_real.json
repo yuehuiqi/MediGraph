@@ -1,0 +1,254 @@
+{
+  "protocol": "real mentions from neural NER on held-out CMeIE-V2 dev, linked to CM3KG",
+  "distinct_mentions": 1793,
+  "linked": 1314,
+  "linked_rate": 0.7328,
+  "method_breakdown": {
+    "exact": 1259,
+    "fuzzy": 55,
+    "unlinked_local_id": 479
+  },
+  "note": "coverage metric (no gold links); precision is covered by eval_entity_linking.py",
+  "examples": [
+    {
+      "mention": "失眠症",
+      "canonical": "失眠症",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "小细胞肺癌",
+      "canonical": "小细胞肺癌",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "咳嗽",
+      "canonical": "咳嗽",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "呼吸困难",
+      "canonical": "呼吸困难",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "咯血",
+      "canonical": "咯血",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "体重减轻",
+      "canonical": "体重减轻",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "发热",
+      "canonical": "发热",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "关节痛",
+      "canonical": "关节痛",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "皮肤病变",
+      "canonical": "皮肤病变",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "盗汗",
+      "canonical": "盗汗",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "腺泡型软组织肉瘤",
+      "canonical": "腺泡型软组织肉瘤",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "alveolar soft part sarcoma",
+      "canonical": "alveolar soft part sarcoma",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "15岁左右",
+      "canonical": "15岁左右",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "青少年",
+      "canonical": "青少年",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "女性",
+      "canonical": "女性",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "女性多于男性",
+      "canonical": "女性多于男性",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "乙型肝炎",
+      "canonical": "乙型肝炎",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "与HBV感染性伴侣的性接触",
+      "canonical": "与HBV感染性伴侣的性接触",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "胆管癌",
+      "canonical": "胆管癌",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "感染",
+      "canonical": "感染",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "肝脏",
+      "canonical": "肝脏",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "转移性乳腺癌",
+      "canonical": "转移性乳腺癌",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "肝功能检查",
+      "canonical": "肝功能检查",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "LFT",
+      "canonical": "LFT",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "全血细胞计数",
+      "canonical": "全血细胞计数",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "急性细菌性痢疾",
+      "canonical": "急性细菌性痢疾",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "细菌性痢疾",
+      "canonical": "细菌性痢疾",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "夏季",
+      "canonical": "夏季",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "粪便培养",
+      "canonical": "粪便培养",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "不洁食物史",
+      "canonical": "不洁食物史",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "细菌性脑膜炎",
+      "canonical": "细菌性脑膜炎",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "抗生素靶向治疗",
+      "canonical": "抗生素靶向治疗",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "庆大霉素",
+      "canonical": "庆大霉素",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "大肠杆菌",
+      "canonical": "大肠杆菌",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "其他革兰氏阴性肠杆菌",
+      "canonical": "其他革兰氏阴性肠杆菌",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "中耳炎",
+      "canonical": "中耳炎",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "急性中耳炎",
+      "canonical": "急性中耳炎",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "RDS",
+      "canonical": "RDS",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "早产",
+      "canonical": "早产",
+      "method": "exact",
+      "score": 1.0
+    },
+    {
+      "mention": "胎龄越小",
+      "canonical": "胎龄越小",
+      "method": "exact",
+      "score": 1.0
+    }
+  ]
+}

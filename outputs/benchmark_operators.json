@@ -1,0 +1,58 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4-Pro",
+  "operators": {
+    "text_clean": {
+      "p50_ms": 0.0,
+      "p95_ms": 1.4,
+      "mean_ms": 0.5,
+      "runs": 3,
+      "throughput_samples_per_s": 2112.29,
+      "backend": "cpu",
+      "type": "rule"
+    },
+    "chunker": {
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "mean_ms": 0.0,
+      "runs": 3,
+      "throughput_samples_per_s": 340078.7,
+      "backend": "cpu",
+      "type": "rule"
+    },
+    "medical_ner": {
+      "p50_ms": 12737.4,
+      "p95_ms": 14275.6,
+      "mean_ms": 12897.2,
+      "runs": 3,
+      "throughput_samples_per_s": 0.08,
+      "backend": "cpu+API",
+      "type": "llm"
+    },
+    "medical_re": {
+      "p50_ms": 26232.8,
+      "p95_ms": 29003.5,
+      "mean_ms": 24470.5,
+      "runs": 3,
+      "throughput_samples_per_s": 0.04,
+      "backend": "cpu+API",
+      "type": "llm"
+    },
+    "triple_validator": {
+      "p50_ms": 0.9,
+      "p95_ms": 1.0,
+      "mean_ms": 0.9,
+      "runs": 3,
+      "throughput_samples_per_s": 1132.37,
+      "backend": "cpu",
+      "type": "rule",
+      "note": "180 triples/run"
+    }
+  },
+  "llm_stats": {
+    "calls": 8,
+    "total_seconds": 150.203,
+    "avg_latency_s": 18.775,
+    "prompt_tokens": 8544,
+    "completion_tokens": 5149
+  }
+}

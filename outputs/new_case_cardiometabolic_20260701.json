@@ -1,0 +1,1482 @@
+{
+  "metadata": {
+    "format": "medigraph_graph",
+    "schema_version": "2.0.0",
+    "exported_at": "2026-07-01T13:02:11.465603+00:00",
+    "stats": {
+      "num_entities": 29,
+      "num_triples": 37,
+      "entity_type_counts": {
+        "Disease": 9,
+        "Symptom": 9,
+        "Drug": 5,
+        "Examination": 6
+      },
+      "relation_counts": {
+        "has_symptom": 24,
+        "need_examination": 2,
+        "complication": 6,
+        "recommend_drug": 5
+      },
+      "top_entities": [
+        {
+          "name": "高血压",
+          "degree": 20
+        },
+        {
+          "name": "心力衰竭",
+          "degree": 10
+        },
+        {
+          "name": "2型糖尿病",
+          "degree": 8
+        },
+        {
+          "name": "活动后气促",
+          "degree": 3
+        },
+        {
+          "name": "乏力",
+          "degree": 3
+        },
+        {
+          "name": "夜间阵发性呼吸困难",
+          "degree": 3
+        },
+        {
+          "name": "头晕",
+          "degree": 3
+        },
+        {
+          "name": "心悸",
+          "degree": 3
+        },
+        {
+          "name": "多饮",
+          "degree": 3
+        },
+        {
+          "name": "多尿",
+          "degree": 3
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "心力衰竭",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:ab7a4a5f6fc95717",
+      "canonical_name": "心力衰竭",
+      "surface_forms": [
+        "心力衰竭"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "下肢水肿",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:72f3dc6e84108d53",
+      "canonical_name": "下肢水肿",
+      "surface_forms": [
+        "下肢水肿"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.999
+    },
+    {
+      "id": "高血压",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:a6dc4052d1d31d25",
+      "canonical_name": "高血压",
+      "surface_forms": [
+        "高血压"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "冠心病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:dae5b91a4aa24bf2",
+      "canonical_name": "冠心病",
+      "surface_forms": [
+        "冠心病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "脑卒中",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:67b01e5ba188ea65",
+      "canonical_name": "脑卒中",
+      "surface_forms": [
+        "脑卒中"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.995
+    },
+    {
+      "id": "慢性肾病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:50cc5ed192cadf6f",
+      "canonical_name": "慢性肾病",
+      "surface_forms": [
+        "慢性肾病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.989
+    },
+    {
+      "id": "2型糖尿病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:51999f7b4dd71677",
+      "canonical_name": "2型糖尿病",
+      "surface_forms": [
+        "2型糖尿病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "DIAKG",
+      "confidence": 1.0
+    },
+    {
+      "id": "糖尿病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:e64d7c75ea71e077",
+      "canonical_name": "糖尿病",
+      "surface_forms": [
+        "糖尿病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "糖尿病肾病",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:0fb9522ad9f7a6ce",
+      "canonical_name": "糖尿病肾病",
+      "surface_forms": [
+        "糖尿病肾病"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.997
+    },
+    {
+      "id": "呋塞米",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:d83643b7f0ba5fa7",
+      "canonical_name": "呋塞米",
+      "surface_forms": [
+        "呋塞米"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 1.0
+    },
+    {
+      "id": "螺内酯",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:650b67624396408b",
+      "canonical_name": "螺内酯",
+      "surface_forms": [
+        "螺内酯"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 1.0
+    },
+    {
+      "id": "氨氯地平",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:3514a4f7eed99120",
+      "canonical_name": "氨氯地平",
+      "surface_forms": [
+        "氨氯地平"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "DIAKG",
+      "confidence": 0.999
+    },
+    {
+      "id": "缬沙坦",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:bf013e4b7b756b39",
+      "canonical_name": "缬沙坦",
+      "surface_forms": [
+        "缬沙坦"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "DIAKG",
+      "confidence": 1.0
+    },
+    {
+      "id": "美托洛尔",
+      "type": "Drug",
+      "canonical_id": "MEDIGRAPH:4c4f7623e4f73d6a",
+      "canonical_name": "美托洛尔",
+      "surface_forms": [
+        "美托洛尔"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.999
+    },
+    {
+      "id": "心电图",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:a6a6839b120abe00",
+      "canonical_name": "心电图",
+      "surface_forms": [
+        "心电图"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "超声心动图",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:8d7eb166fd6a5b29",
+      "canonical_name": "超声心动图",
+      "surface_forms": [
+        "超声心动图"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.992
+    },
+    {
+      "id": "胸部X线",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:b1f159067e0f730b",
+      "canonical_name": "胸部X线",
+      "surface_forms": [
+        "胸部X线"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.998
+    },
+    {
+      "id": "脑钠肽检测",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:970c0eccaad310ef",
+      "canonical_name": "脑钠肽检测",
+      "surface_forms": [
+        "脑钠肽检测"
+      ],
+      "link_score": 0.0,
+      "link_method": "unlinked_local_id",
+      "kb_source": "MediGraph-local",
+      "confidence": 1.0
+    },
+    {
+      "id": "动态血压监测",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:4a53f46f2091b0ab",
+      "canonical_name": "动态血压监测",
+      "surface_forms": [
+        "动态血压监测"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 0.956
+    },
+    {
+      "id": "肾功能检查",
+      "type": "Examination",
+      "canonical_id": "MEDIGRAPH:ed4d3b1b7ee2c292",
+      "canonical_name": "肾功能检查",
+      "surface_forms": [
+        "肾功能检查"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.992
+    },
+    {
+      "id": "活动后气促",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:1084788744e74111",
+      "canonical_name": "活动后气促",
+      "surface_forms": [
+        "活动后气促"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "乏力",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:41fc48276214dd54",
+      "canonical_name": "乏力",
+      "surface_forms": [
+        "乏力"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "夜间阵发性呼吸困难",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:9f4bdccde9646077",
+      "canonical_name": "夜间阵发性呼吸困难",
+      "surface_forms": [
+        "夜间阵发性呼吸困难"
+      ],
+      "link_score": 0.0,
+      "link_method": "unlinked_local_id",
+      "kb_source": "MediGraph-local",
+      "confidence": 1.0
+    },
+    {
+      "id": "头晕",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:01236a16a30a4474",
+      "canonical_name": "头晕",
+      "surface_forms": [
+        "头晕"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "头痛",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:74f56117128ecaad",
+      "canonical_name": "头痛",
+      "surface_forms": [
+        "头痛"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "心悸",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:6d2b87aed852a097",
+      "canonical_name": "心悸",
+      "surface_forms": [
+        "心悸"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 0.999
+    },
+    {
+      "id": "多饮",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:9d22627102ed624e",
+      "canonical_name": "多饮",
+      "surface_forms": [
+        "多饮"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "多尿",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:349222cdd85e0418",
+      "canonical_name": "多尿",
+      "surface_forms": [
+        "多尿"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "体重下降",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:862d727623bd460e",
+      "canonical_name": "体重下降",
+      "surface_forms": [
+        "体重下降"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CMeIE-V2_train",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "乏力",
+      "tail_type": "Symptom",
+      "confidence": 0.85,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.85,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "活动后气促",
+      "tail_type": "Symptom",
+      "confidence": 0.839,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.839,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多饮",
+      "tail_type": "Symptom",
+      "confidence": 0.83,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.83,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多尿",
+      "tail_type": "Symptom",
+      "confidence": 0.825,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.825,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "胸部X线",
+      "tail_type": "Examination",
+      "confidence": 0.811,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.811,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "体重下降",
+      "tail_type": "Symptom",
+      "confidence": 0.806,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.806,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "头晕",
+      "tail_type": "Symptom",
+      "confidence": 0.801,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.801,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "夜间阵发性呼吸困难",
+      "tail_type": "Symptom",
+      "confidence": 0.779,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.457508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.779,
+          "timestamp": "2026-07-01T13:02:11.457508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "心悸",
+      "tail_type": "Symptom",
+      "confidence": 0.764,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.458513+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.764,
+          "timestamp": "2026-07-01T13:02:11.458513+00:00"
+        }
+      ]
+    },
+    {
+      "head": "心力衰竭",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "relation_zh": "需做检查",
+      "tail": "脑钠肽检测",
+      "tail_type": "Examination",
+      "confidence": 0.71,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.464011+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.71,
+          "timestamp": "2026-07-01T13:02:11.464011+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "慢性肾病",
+      "tail_type": "Disease",
+      "confidence": 0.834,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.834,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "脑卒中",
+      "tail_type": "Disease",
+      "confidence": 0.818,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.818,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "乏力",
+      "tail_type": "Symptom",
+      "confidence": 0.803,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.803,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "美托洛尔",
+      "tail_type": "Drug",
+      "confidence": 0.797,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.797,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "氨氯地平",
+      "tail_type": "Drug",
+      "confidence": 0.795,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.795,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "活动后气促",
+      "tail_type": "Symptom",
+      "confidence": 0.792,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.792,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多饮",
+      "tail_type": "Symptom",
+      "confidence": 0.79,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.79,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "缬沙坦",
+      "tail_type": "Drug",
+      "confidence": 0.788,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.788,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多尿",
+      "tail_type": "Symptom",
+      "confidence": 0.785,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.456508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.785,
+          "timestamp": "2026-07-01T13:02:11.456508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "螺内酯",
+      "tail_type": "Drug",
+      "confidence": 0.784,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.457508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.784,
+          "timestamp": "2026-07-01T13:02:11.457508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "体重下降",
+      "tail_type": "Symptom",
+      "confidence": 0.782,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.457508+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.782,
+          "timestamp": "2026-07-01T13:02:11.457508+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "头晕",
+      "tail_type": "Symptom",
+      "confidence": 0.758,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.458513+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.758,
+          "timestamp": "2026-07-01T13:02:11.458513+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "relation_zh": "推荐药物",
+      "tail": "呋塞米",
+      "tail_type": "Drug",
+      "confidence": 0.75,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.458513+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.75,
+          "timestamp": "2026-07-01T13:02:11.458513+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "糖尿病",
+      "tail_type": "Disease",
+      "confidence": 0.745,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.458513+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.745,
+          "timestamp": "2026-07-01T13:02:11.458513+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "糖尿病肾病",
+      "tail_type": "Disease",
+      "confidence": 0.745,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.458513+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.745,
+          "timestamp": "2026-07-01T13:02:11.458513+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "夜间阵发性呼吸困难",
+      "tail_type": "Symptom",
+      "confidence": 0.745,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.459509+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.745,
+          "timestamp": "2026-07-01T13:02:11.459509+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "心悸",
+      "tail_type": "Symptom",
+      "confidence": 0.713,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.459509+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.713,
+          "timestamp": "2026-07-01T13:02:11.459509+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "冠心病",
+      "tail_type": "Disease",
+      "confidence": 0.641,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.464011+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.641,
+          "timestamp": "2026-07-01T13:02:11.464011+00:00"
+        }
+      ]
+    },
+    {
+      "head": "高血压",
+      "head_type": "Disease",
+      "relation": "complication",
+      "relation_zh": "并发",
+      "tail": "高血压",
+      "tail_type": "Disease",
+      "confidence": 0.592,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.465019+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.592,
+          "timestamp": "2026-07-01T13:02:11.465019+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "乏力",
+      "tail_type": "Symptom",
+      "confidence": 0.905,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.453510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.905,
+          "timestamp": "2026-07-01T13:02:11.453510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "活动后气促",
+      "tail_type": "Symptom",
+      "confidence": 0.903,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.453510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.903,
+          "timestamp": "2026-07-01T13:02:11.453510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多饮",
+      "tail_type": "Symptom",
+      "confidence": 0.903,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.453510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.903,
+          "timestamp": "2026-07-01T13:02:11.453510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "体重下降",
+      "tail_type": "Symptom",
+      "confidence": 0.902,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.453510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.902,
+          "timestamp": "2026-07-01T13:02:11.453510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "多尿",
+      "tail_type": "Symptom",
+      "confidence": 0.897,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.453510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.897,
+          "timestamp": "2026-07-01T13:02:11.453510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "夜间阵发性呼吸困难",
+      "tail_type": "Symptom",
+      "confidence": 0.89,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.454510+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.89,
+          "timestamp": "2026-07-01T13:02:11.454510+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "头晕",
+      "tail_type": "Symptom",
+      "confidence": 0.886,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.886,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "心悸",
+      "tail_type": "Symptom",
+      "confidence": 0.858,
+      "source": "new_case_cardiometabolic_input.txt",
+      "sources": [
+        "new_case_cardiometabolic_input.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T13:02:11.455416+00:00",
+      "provenance": [
+        {
+          "source_doc": "new_case_cardiometabolic_input.txt",
+          "source_hash": "9e41ecdc9333fab7868f5bcfd3f2e8e385b76f67e6cce97a995547c83840a626",
+          "chunk_id": "602f44470508eab570e8",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "心力衰竭@患者可出现活动后气促、乏力、下肢水肿和夜间阵发性呼吸困难。常用检查包括心电图、超声心动图、胸部X线和脑钠肽检测。治疗中可使用呋塞米、螺内酯等药物，并应评估高血压和冠心病等相关疾病。\n\n高血压@长期血压升高可伴头晕、头痛和心悸，并可能并发脑卒中、冠心病或慢性肾病。建议进行动态血压监测、肾功能检查和心电图检查。常见治疗药物包括氨氯地平、缬沙坦和美托洛尔。\n\n2型糖尿病@患者可有多饮、多尿、乏力和体重下降，也可能合并糖尿病肾病或高血压。需要检查空腹血糖、糖化血红蛋白和尿微",
+          "confidence": 0.858,
+          "timestamp": "2026-07-01T13:02:11.455416+00:00"
+        }
+      ]
+    }
+  ]
+}

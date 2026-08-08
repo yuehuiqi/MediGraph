@@ -1,0 +1,1593 @@
+{
+  "demo": "medical knowledge graph generation and QA",
+  "build": {
+    "mode": "new_graph",
+    "pipeline": [
+      "chunker",
+      "medical_ner",
+      "medical_re",
+      "triple_validator",
+      "graph_upsert"
+    ],
+    "source": "nexent_demo_diabetes.txt",
+    "ontology": {
+      "entity_types": {
+        "Disease": "疾病",
+        "Symptom": "症状",
+        "Drug": "药物",
+        "Examination": "检查",
+        "Procedure": "手术",
+        "Body": "身体部位",
+        "Department": "科室",
+        "Tumor": "肿瘤",
+        "Biomarker": "标志物",
+        "Gene": "基因",
+        "Morphology": "形态学特征",
+        "Epidemiology": "流行病学",
+        "SocialFactor": "社会因素",
+        "Prognosis": "预后",
+        "Other": "其他医学概念",
+        "Class": "类别",
+        "TestValue": "检查值",
+        "Frequency": "频率",
+        "Level": "程度",
+        "Reason": "原因",
+        "Duration": "持续时间",
+        "Amount": "用量",
+        "Method": "用药方法",
+        "Pathogenesis": "发病机制"
+      },
+      "relation_types": {
+        "has_symptom": "有症状",
+        "recommend_drug": "推荐药物",
+        "need_examination": "需做检查",
+        "complication": "并发",
+        "contraindication": "禁忌",
+        "treated_in_department": "就诊于",
+        "positive_marker": "阳性标志物",
+        "negative_marker": "阴性标志物",
+        "associated_gene": "关联基因",
+        "has_morphology": "形态学表现",
+        "located_in": "位于",
+        "subtype_of": "亚型",
+        "treated_by_procedure": "手术/操作治疗",
+        "adverse_reaction": "药物不良反应"
+      },
+      "relation_constraints": {
+        "has_symptom": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Symptom"
+          ]
+        },
+        "recommend_drug": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Drug"
+          ]
+        },
+        "need_examination": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Examination"
+          ]
+        },
+        "complication": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Disease",
+            "Tumor"
+          ]
+        },
+        "contraindication": {
+          "head_types": [
+            "Drug"
+          ],
+          "tail_types": [
+            "Disease",
+            "Symptom",
+            "Tumor"
+          ]
+        },
+        "treated_in_department": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Department"
+          ]
+        },
+        "positive_marker": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Biomarker"
+          ]
+        },
+        "negative_marker": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Biomarker"
+          ]
+        },
+        "associated_gene": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Gene"
+          ]
+        },
+        "has_morphology": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Morphology"
+          ]
+        },
+        "located_in": {
+          "head_types": [
+            "Disease",
+            "Symptom",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Body"
+          ]
+        },
+        "subtype_of": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Disease",
+            "Tumor"
+          ]
+        },
+        "treated_by_procedure": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Procedure"
+          ]
+        },
+        "adverse_reaction": {
+          "head_types": [
+            "Drug"
+          ],
+          "tail_types": [
+            "Disease",
+            "Symptom"
+          ]
+        }
+      },
+      "entity_type_count": 24,
+      "relation_type_count": 14
+    },
+    "quality": {
+      "entities_extracted": 6,
+      "candidate_triples": 5,
+      "valid_triples": 5,
+      "rejected_triples": 0,
+      "validation_pass_rate": 1.0,
+      "routing": {
+        "ner:L1_neural": 1,
+        "re:L1_neural": 1
+      }
+    },
+    "graph": {
+      "num_entities": 6,
+      "num_triples": 5,
+      "entity_type_counts": {
+        "Disease": 2,
+        "Drug": 1,
+        "Examination": 1,
+        "Symptom": 2
+      },
+      "relation_counts": {
+        "has_symptom": 2,
+        "need_examination": 1,
+        "recommend_drug": 1,
+        "complication": 1
+      },
+      "top_entities": [
+        {
+          "name": "2型糖尿病",
+          "degree": 5
+        },
+        {
+          "name": "糖尿病肾病",
+          "degree": 1
+        },
+        {
+          "name": "二甲双胍",
+          "degree": 1
+        },
+        {
+          "name": "糖化血红蛋白",
+          "degree": 1
+        },
+        {
+          "name": "多饮",
+          "degree": 1
+        },
+        {
+          "name": "多尿",
+          "degree": 1
+        }
+      ]
+    },
+    "sample_entities": [
+      {
+        "id": "2型糖尿病",
+        "type": "Disease",
+        "canonical_id": "MEDIGRAPH:51999f7b4dd71677",
+        "canonical_name": "2型糖尿病",
+        "surface_forms": [
+          "2型糖尿病"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "糖尿病肾病",
+        "type": "Disease",
+        "canonical_id": "MEDIGRAPH:0fb9522ad9f7a6ce",
+        "canonical_name": "糖尿病肾病",
+        "surface_forms": [
+          "糖尿病肾病"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      },
+      {
+        "id": "二甲双胍",
+        "type": "Drug",
+        "canonical_id": "MEDIGRAPH:bed1505c96c84566",
+        "canonical_name": "二甲双胍",
+        "surface_forms": [
+          "二甲双胍"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "糖化血红蛋白",
+        "type": "Examination",
+        "canonical_id": "MEDIGRAPH:d2191d7ec8ff37fe",
+        "canonical_name": "糖化血红蛋白",
+        "surface_forms": [
+          "糖化血红蛋白"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "多饮",
+        "type": "Symptom",
+        "canonical_id": "MEDIGRAPH:9d22627102ed624e",
+        "canonical_name": "多饮",
+        "surface_forms": [
+          "多饮"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      },
+      {
+        "id": "多尿",
+        "type": "Symptom",
+        "canonical_id": "MEDIGRAPH:349222cdd85e0418",
+        "canonical_name": "多尿",
+        "surface_forms": [
+          "多尿"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      }
+    ],
+    "sample_triples": [
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "has_symptom",
+        "relation_zh": "有症状",
+        "tail": "多尿",
+        "tail_type": "Symptom",
+        "confidence": 1.0,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 1.0,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "has_symptom",
+        "relation_zh": "有症状",
+        "tail": "多饮",
+        "tail_type": "Symptom",
+        "confidence": 1.0,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 1.0,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "need_examination",
+        "relation_zh": "需做检查",
+        "tail": "糖化血红蛋白",
+        "tail_type": "Examination",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "recommend_drug",
+        "relation_zh": "推荐药物",
+        "tail": "二甲双胍",
+        "tail_type": "Drug",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "complication",
+        "relation_zh": "并发",
+        "tail": "糖尿病肾病",
+        "tail_type": "Disease",
+        "confidence": 0.997,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.997,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      }
+    ],
+    "graph_file": "D:\\LLMagent\\CCF\\outputs\\nexent_demo_graph.json",
+    "graph_html": "D:\\LLMagent\\CCF\\outputs\\nexent_demo_graph.html"
+  },
+  "qa": {
+    "question": "2型糖尿病建议做什么检查，使用什么药物？",
+    "graph_file": "D:\\LLMagent\\CCF\\outputs\\nexent_demo_graph.json",
+    "graph_stats": {
+      "num_entities": 6,
+      "num_triples": 5,
+      "entity_type_counts": {
+        "Disease": 2,
+        "Drug": 1,
+        "Examination": 1,
+        "Symptom": 2
+      },
+      "relation_counts": {
+        "has_symptom": 2,
+        "need_examination": 1,
+        "recommend_drug": 1,
+        "complication": 1
+      },
+      "top_entities": [
+        {
+          "name": "2型糖尿病",
+          "degree": 5
+        },
+        {
+          "name": "糖尿病肾病",
+          "degree": 1
+        },
+        {
+          "name": "二甲双胍",
+          "degree": 1
+        },
+        {
+          "name": "糖化血红蛋白",
+          "degree": 1
+        },
+        {
+          "name": "多饮",
+          "degree": 1
+        },
+        {
+          "name": "多尿",
+          "degree": 1
+        }
+      ]
+    },
+    "answer": "根据现有证据，针对2型糖尿病，建议进行的检查是**糖化血红蛋白**，推荐使用的药物是**二甲双胍**。\n\n依据：\n- 2型糖尿病 --[需做检查]--> 糖化血红蛋白 (conf=0.999, 来源=nexent_demo_diabetes.txt)\n- 2型糖尿病 --[推荐药物]--> 二甲双胍 (conf=0.999, 来源=nexent_demo_diabetes.txt)",
+    "resolved_entities": [
+      "2型糖尿病"
+    ],
+    "intent_relations": [
+      "recommend_drug",
+      "need_examination"
+    ],
+    "retrieval_mode": "graph",
+    "evidence_total": 5,
+    "evidence_used": 2,
+    "evidence": [
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "recommend_drug",
+        "relation_zh": "推荐药物",
+        "tail": "二甲双胍",
+        "tail_type": "Drug",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "",
+            "chunk_id": "",
+            "sentence_id": "",
+            "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+            "model_version": "",
+            "evidence": "",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "need_examination",
+        "relation_zh": "需做检查",
+        "tail": "糖化血红蛋白",
+        "tail_type": "Examination",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "",
+            "chunk_id": "",
+            "sentence_id": "",
+            "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+            "model_version": "",
+            "evidence": "",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "id": 1,
+        "triple": "2型糖尿病 --[推荐药物]--> 二甲双胍",
+        "relation": "recommend_drug",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt"
+      },
+      {
+        "id": 2,
+        "triple": "2型糖尿病 --[需做检查]--> 糖化血红蛋白",
+        "relation": "need_examination",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt"
+      }
+    ],
+    "passages": [],
+    "reasoning_paths": [
+      {
+        "path_id": "path-3",
+        "anchor": "2型糖尿病",
+        "hops": 1,
+        "nodes": [
+          "2型糖尿病",
+          "糖化血红蛋白"
+        ],
+        "relations": [
+          "need_examination"
+        ],
+        "confidence": 0.999,
+        "steps": [
+          {
+            "head": "2型糖尿病",
+            "head_type": "Disease",
+            "relation": "need_examination",
+            "relation_zh": "需做检查",
+            "tail": "糖化血红蛋白",
+            "tail_type": "Examination",
+            "confidence": 0.999,
+            "source": "nexent_demo_diabetes.txt",
+            "sources": [
+              "nexent_demo_diabetes.txt"
+            ],
+            "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+            "timestamp": "2026-07-02T11:50:37.991094+00:00",
+            "provenance": [
+              {
+                "source_doc": "nexent_demo_diabetes.txt",
+                "source_hash": "",
+                "chunk_id": "",
+                "sentence_id": "",
+                "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+                "model_version": "",
+                "evidence": "",
+                "confidence": 0.999,
+                "timestamp": "2026-07-02T11:50:37.991094+00:00"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ]
+      },
+      {
+        "path_id": "path-4",
+        "anchor": "2型糖尿病",
+        "hops": 1,
+        "nodes": [
+          "2型糖尿病",
+          "二甲双胍"
+        ],
+        "relations": [
+          "recommend_drug"
+        ],
+        "confidence": 0.999,
+        "steps": [
+          {
+            "head": "2型糖尿病",
+            "head_type": "Disease",
+            "relation": "recommend_drug",
+            "relation_zh": "推荐药物",
+            "tail": "二甲双胍",
+            "tail_type": "Drug",
+            "confidence": 0.999,
+            "source": "nexent_demo_diabetes.txt",
+            "sources": [
+              "nexent_demo_diabetes.txt"
+            ],
+            "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+            "timestamp": "2026-07-02T11:50:37.991094+00:00",
+            "provenance": [
+              {
+                "source_doc": "nexent_demo_diabetes.txt",
+                "source_hash": "",
+                "chunk_id": "",
+                "sentence_id": "",
+                "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+                "model_version": "",
+                "evidence": "",
+                "confidence": 0.999,
+                "timestamp": "2026-07-02T11:50:37.991094+00:00"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ]
+      },
+      {
+        "path_id": "path-1",
+        "anchor": "2型糖尿病",
+        "hops": 1,
+        "nodes": [
+          "2型糖尿病",
+          "多尿"
+        ],
+        "relations": [
+          "has_symptom"
+        ],
+        "confidence": 1.0,
+        "steps": [
+          {
+            "head": "2型糖尿病",
+            "head_type": "Disease",
+            "relation": "has_symptom",
+            "relation_zh": "有症状",
+            "tail": "多尿",
+            "tail_type": "Symptom",
+            "confidence": 1.0,
+            "source": "nexent_demo_diabetes.txt",
+            "sources": [
+              "nexent_demo_diabetes.txt"
+            ],
+            "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+            "timestamp": "2026-07-02T11:50:37.991094+00:00",
+            "provenance": [
+              {
+                "source_doc": "nexent_demo_diabetes.txt",
+                "source_hash": "",
+                "chunk_id": "",
+                "sentence_id": "",
+                "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+                "model_version": "",
+                "evidence": "",
+                "confidence": 1.0,
+                "timestamp": "2026-07-02T11:50:37.991094+00:00"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ]
+      },
+      {
+        "path_id": "path-2",
+        "anchor": "2型糖尿病",
+        "hops": 1,
+        "nodes": [
+          "2型糖尿病",
+          "多饮"
+        ],
+        "relations": [
+          "has_symptom"
+        ],
+        "confidence": 1.0,
+        "steps": [
+          {
+            "head": "2型糖尿病",
+            "head_type": "Disease",
+            "relation": "has_symptom",
+            "relation_zh": "有症状",
+            "tail": "多饮",
+            "tail_type": "Symptom",
+            "confidence": 1.0,
+            "source": "nexent_demo_diabetes.txt",
+            "sources": [
+              "nexent_demo_diabetes.txt"
+            ],
+            "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+            "timestamp": "2026-07-02T11:50:37.991094+00:00",
+            "provenance": [
+              {
+                "source_doc": "nexent_demo_diabetes.txt",
+                "source_hash": "",
+                "chunk_id": "",
+                "sentence_id": "",
+                "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+                "model_version": "",
+                "evidence": "",
+                "confidence": 1.0,
+                "timestamp": "2026-07-02T11:50:37.991094+00:00"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ]
+      },
+      {
+        "path_id": "path-5",
+        "anchor": "2型糖尿病",
+        "hops": 1,
+        "nodes": [
+          "2型糖尿病",
+          "糖尿病肾病"
+        ],
+        "relations": [
+          "complication"
+        ],
+        "confidence": 0.997,
+        "steps": [
+          {
+            "head": "2型糖尿病",
+            "head_type": "Disease",
+            "relation": "complication",
+            "relation_zh": "并发",
+            "tail": "糖尿病肾病",
+            "tail_type": "Disease",
+            "confidence": 0.997,
+            "source": "nexent_demo_diabetes.txt",
+            "sources": [
+              "nexent_demo_diabetes.txt"
+            ],
+            "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+            "timestamp": "2026-07-02T11:50:37.991094+00:00",
+            "provenance": [
+              {
+                "source_doc": "nexent_demo_diabetes.txt",
+                "source_hash": "",
+                "chunk_id": "",
+                "sentence_id": "",
+                "extractor": "neural_gplinker/neural-gplinker-1.0.0",
+                "model_version": "",
+                "evidence": "",
+                "confidence": 0.997,
+                "timestamp": "2026-07-02T11:50:37.991094+00:00"
+              }
+            ]
+          }
+        ],
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ]
+      }
+    ],
+    "answer_confidence": {
+      "score": 0.9991,
+      "grade": "high",
+      "evidence_mean": 0.999,
+      "source_coverage": 1.0
+    },
+    "refused": false
+  },
+  "audit": {
+    "graph_file": "D:\\LLMagent\\CCF\\outputs\\nexent_demo_graph.json",
+    "ontology": {
+      "entity_types": {
+        "Disease": "疾病",
+        "Symptom": "症状",
+        "Drug": "药物",
+        "Examination": "检查",
+        "Procedure": "手术",
+        "Body": "身体部位",
+        "Department": "科室",
+        "Tumor": "肿瘤",
+        "Biomarker": "标志物",
+        "Gene": "基因",
+        "Morphology": "形态学特征",
+        "Epidemiology": "流行病学",
+        "SocialFactor": "社会因素",
+        "Prognosis": "预后",
+        "Other": "其他医学概念",
+        "Class": "类别",
+        "TestValue": "检查值",
+        "Frequency": "频率",
+        "Level": "程度",
+        "Reason": "原因",
+        "Duration": "持续时间",
+        "Amount": "用量",
+        "Method": "用药方法",
+        "Pathogenesis": "发病机制"
+      },
+      "relation_types": {
+        "has_symptom": "有症状",
+        "recommend_drug": "推荐药物",
+        "need_examination": "需做检查",
+        "complication": "并发",
+        "contraindication": "禁忌",
+        "treated_in_department": "就诊于",
+        "positive_marker": "阳性标志物",
+        "negative_marker": "阴性标志物",
+        "associated_gene": "关联基因",
+        "has_morphology": "形态学表现",
+        "located_in": "位于",
+        "subtype_of": "亚型",
+        "treated_by_procedure": "手术/操作治疗",
+        "adverse_reaction": "药物不良反应"
+      },
+      "relation_constraints": {
+        "has_symptom": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Symptom"
+          ]
+        },
+        "recommend_drug": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Drug"
+          ]
+        },
+        "need_examination": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Examination"
+          ]
+        },
+        "complication": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Disease",
+            "Tumor"
+          ]
+        },
+        "contraindication": {
+          "head_types": [
+            "Drug"
+          ],
+          "tail_types": [
+            "Disease",
+            "Symptom",
+            "Tumor"
+          ]
+        },
+        "treated_in_department": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Department"
+          ]
+        },
+        "positive_marker": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Biomarker"
+          ]
+        },
+        "negative_marker": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Biomarker"
+          ]
+        },
+        "associated_gene": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Gene"
+          ]
+        },
+        "has_morphology": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Morphology"
+          ]
+        },
+        "located_in": {
+          "head_types": [
+            "Disease",
+            "Symptom",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Body"
+          ]
+        },
+        "subtype_of": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Disease",
+            "Tumor"
+          ]
+        },
+        "treated_by_procedure": {
+          "head_types": [
+            "Disease",
+            "Tumor"
+          ],
+          "tail_types": [
+            "Procedure"
+          ]
+        },
+        "adverse_reaction": {
+          "head_types": [
+            "Drug"
+          ],
+          "tail_types": [
+            "Disease",
+            "Symptom"
+          ]
+        }
+      },
+      "entity_type_count": 24,
+      "relation_type_count": 14
+    },
+    "graph_stats": {
+      "num_entities": 6,
+      "num_triples": 5,
+      "entity_type_counts": {
+        "Disease": 2,
+        "Drug": 1,
+        "Examination": 1,
+        "Symptom": 2
+      },
+      "relation_counts": {
+        "has_symptom": 2,
+        "need_examination": 1,
+        "recommend_drug": 1,
+        "complication": 1
+      },
+      "top_entities": [
+        {
+          "name": "2型糖尿病",
+          "degree": 5
+        },
+        {
+          "name": "糖尿病肾病",
+          "degree": 1
+        },
+        {
+          "name": "二甲双胍",
+          "degree": 1
+        },
+        {
+          "name": "糖化血红蛋白",
+          "degree": 1
+        },
+        {
+          "name": "多饮",
+          "degree": 1
+        },
+        {
+          "name": "多尿",
+          "degree": 1
+        }
+      ]
+    },
+    "graph_audit": {
+      "entities": 6,
+      "triples": 5,
+      "canonical_id_coverage": 1.0,
+      "provenance_coverage": 1.0,
+      "illegal_triples": 0,
+      "illegal_examples": []
+    },
+    "sample_entities": [
+      {
+        "id": "2型糖尿病",
+        "type": "Disease",
+        "canonical_id": "MEDIGRAPH:51999f7b4dd71677",
+        "canonical_name": "2型糖尿病",
+        "surface_forms": [
+          "2型糖尿病"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "糖尿病肾病",
+        "type": "Disease",
+        "canonical_id": "MEDIGRAPH:0fb9522ad9f7a6ce",
+        "canonical_name": "糖尿病肾病",
+        "surface_forms": [
+          "糖尿病肾病"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      },
+      {
+        "id": "二甲双胍",
+        "type": "Drug",
+        "canonical_id": "MEDIGRAPH:bed1505c96c84566",
+        "canonical_name": "二甲双胍",
+        "surface_forms": [
+          "二甲双胍"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "糖化血红蛋白",
+        "type": "Examination",
+        "canonical_id": "MEDIGRAPH:d2191d7ec8ff37fe",
+        "canonical_name": "糖化血红蛋白",
+        "surface_forms": [
+          "糖化血红蛋白"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "DIAKG",
+        "confidence": 1.0
+      },
+      {
+        "id": "多饮",
+        "type": "Symptom",
+        "canonical_id": "MEDIGRAPH:9d22627102ed624e",
+        "canonical_name": "多饮",
+        "surface_forms": [
+          "多饮"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      },
+      {
+        "id": "多尿",
+        "type": "Symptom",
+        "canonical_id": "MEDIGRAPH:349222cdd85e0418",
+        "canonical_name": "多尿",
+        "surface_forms": [
+          "多尿"
+        ],
+        "link_score": 1.0,
+        "link_method": "exact",
+        "kb_source": "CM3KG",
+        "confidence": 1.0
+      }
+    ],
+    "sample_triples": [
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "has_symptom",
+        "relation_zh": "有症状",
+        "tail": "多尿",
+        "tail_type": "Symptom",
+        "confidence": 1.0,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 1.0,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "has_symptom",
+        "relation_zh": "有症状",
+        "tail": "多饮",
+        "tail_type": "Symptom",
+        "confidence": 1.0,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 1.0,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "need_examination",
+        "relation_zh": "需做检查",
+        "tail": "糖化血红蛋白",
+        "tail_type": "Examination",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "recommend_drug",
+        "relation_zh": "推荐药物",
+        "tail": "二甲双胍",
+        "tail_type": "Drug",
+        "confidence": 0.999,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.999,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      },
+      {
+        "head": "2型糖尿病",
+        "head_type": "Disease",
+        "relation": "complication",
+        "relation_zh": "并发",
+        "tail": "糖尿病肾病",
+        "tail_type": "Disease",
+        "confidence": 0.997,
+        "source": "nexent_demo_diabetes.txt",
+        "sources": [
+          "nexent_demo_diabetes.txt"
+        ],
+        "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+        "timestamp": "2026-07-02T11:50:37.991094+00:00",
+        "provenance": [
+          {
+            "source_doc": "nexent_demo_diabetes.txt",
+            "source_hash": "a49a9210e53205bb5e690b4124b0876ae98e3c25e9f3fda232f9f09f1e35ab20",
+            "chunk_id": "e5f7ab19d9aeea0d46f2",
+            "sentence_id": "",
+            "extractor": "neural_gplinker",
+            "model_version": "neural-gplinker-1.0.0",
+            "evidence": "2型糖尿病患者常有多饮、多尿，建议检查糖化血红蛋白，治疗可使用二甲双胍，并可能并发糖尿病肾病。",
+            "confidence": 0.997,
+            "timestamp": "2026-07-02T11:50:37.991094+00:00"
+          }
+        ]
+      }
+    ],
+    "evaluations": {
+      "public_cmeie_diakg": {
+        "samples": 2,
+        "model": "deepseek-ai/DeepSeek-V4-Pro",
+        "ner_strict_f1": 0.692,
+        "ner_relaxed_f1": 0.692,
+        "re_strict_f1": 0.762,
+        "re_relaxed_f1": 0.762
+      },
+      "cm3kg_controlled": {
+        "samples": 2,
+        "model": "deepseek-ai/DeepSeek-V4-Pro",
+        "ner_strict_f1": 0.95,
+        "ner_relaxed_f1": 0.95,
+        "re_strict_f1": 0.944,
+        "re_relaxed_f1": 0.944
+      },
+      "pathology_coverage_probe": {
+        "samples": 2,
+        "model": "deepseek-ai/DeepSeek-V4-Pro",
+        "ner_strict_f1": 0.846,
+        "ner_relaxed_f1": 1.0,
+        "re_strict_f1": 0.818,
+        "re_relaxed_f1": 1.0
+      }
+    },
+    "offline_evaluations": {
+      "neural_gplinker_cmeie_v2_dev": {
+        "extractor": "neural_gplinker",
+        "model_version": "neural-gplinker-1.0.0",
+        "encoder": "data/models/encoder/chinese-macbert-large",
+        "samples": 3585,
+        "entity_micro": {
+          "tp": 15526,
+          "fp": 4918,
+          "fn": 4546,
+          "precision": 0.75944,
+          "recall": 0.773515,
+          "f1": 0.766413
+        },
+        "end_to_end_triple_micro": {
+          "tp": 8275,
+          "fp": 6404,
+          "fn": 8022,
+          "precision": 0.56373,
+          "recall": 0.507762,
+          "f1": 0.534285
+        },
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": null,
+        "latency_ms": {
+          "mean": 23.4468,
+          "p50": 22.9482,
+          "p95": 28.1067,
+          "max": 211.3086
+        },
+        "ece_before": null,
+        "ece_after": null
+      },
+      "neural_gplinker_cmeie_v1_dev": {
+        "extractor": "neural_gplinker",
+        "model_version": "neural-gplinker-1.0.0",
+        "encoder": "data/models/encoder/chinese-macbert-large",
+        "samples": 3585,
+        "entity_micro": {
+          "tp": 11277,
+          "fp": 3510,
+          "fn": 2887,
+          "precision": 0.762629,
+          "recall": 0.796173,
+          "f1": 0.77904
+        },
+        "end_to_end_triple_micro": {
+          "tp": 6180,
+          "fp": 3285,
+          "fn": 4433,
+          "precision": 0.652932,
+          "recall": 0.582305,
+          "f1": 0.615599
+        },
+        "end_to_end_triple_micro_strict": {
+          "tp": 6174,
+          "fp": 3304,
+          "fn": 4439,
+          "precision": 0.651403,
+          "recall": 0.581739,
+          "f1": 0.614604
+        },
+        "triple_micro": null,
+        "latency_ms": {
+          "mean": 22.4625,
+          "p50": 21.5592,
+          "p95": 29.3723,
+          "max": 214.8151
+        },
+        "ece_before": null,
+        "ece_after": null
+      },
+      "neural_ensemble_cmeie_v2_dev": {
+        "extractor": null,
+        "model_version": null,
+        "encoder": null,
+        "samples": 3585,
+        "entity_micro": null,
+        "end_to_end_triple_micro": null,
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": {
+          "union": {
+            "tp": 9403,
+            "fp": 9368,
+            "fn": 6894,
+            "precision": 0.500932,
+            "recall": 0.576977,
+            "f1": 0.536272
+          },
+          "intersection": {
+            "tp": 7163,
+            "fp": 3968,
+            "fn": 9134,
+            "precision": 0.643518,
+            "recall": 0.439529,
+            "f1": 0.522313
+          },
+          "conf_union": {
+            "tp": 8760,
+            "fp": 7201,
+            "fn": 7537,
+            "precision": 0.548838,
+            "recall": 0.537522,
+            "f1": 0.543121
+          }
+        },
+        "latency_ms": null,
+        "ece_before": null,
+        "ece_after": null
+      },
+      "neural_ensemble_cmeie_v1_dev": {
+        "extractor": null,
+        "model_version": null,
+        "encoder": null,
+        "samples": 3585,
+        "entity_micro": null,
+        "end_to_end_triple_micro": null,
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": {
+          "union": {
+            "tp": 6776,
+            "fp": 4916,
+            "fn": 3837,
+            "precision": 0.579542,
+            "recall": 0.638462,
+            "f1": 0.607577
+          },
+          "intersection": {
+            "tp": 5177,
+            "fp": 1792,
+            "fn": 5436,
+            "precision": 0.742861,
+            "recall": 0.487798,
+            "f1": 0.588898
+          },
+          "conf_union": {
+            "tp": 6431,
+            "fp": 3942,
+            "fn": 4182,
+            "precision": 0.619975,
+            "recall": 0.605955,
+            "f1": 0.612885
+          }
+        },
+        "latency_ms": null,
+        "ece_before": null,
+        "ece_after": null
+      },
+      "fast_core_250": {
+        "extractor": "deterministic_non_neural_L1_baseline",
+        "model_version": null,
+        "encoder": null,
+        "samples": 250,
+        "entity_micro": {
+          "tp": 447,
+          "fp": 343,
+          "fn": 590,
+          "precision": 0.565823,
+          "recall": 0.431051,
+          "f1": 0.489327
+        },
+        "end_to_end_triple_micro": {
+          "tp": 162,
+          "fp": 260,
+          "fn": 594,
+          "precision": 0.383886,
+          "recall": 0.214286,
+          "f1": 0.275042
+        },
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": null,
+        "latency_ms": {
+          "mean": 0.502,
+          "p50": 0.2697,
+          "p95": 1.9614,
+          "max": 7.1893
+        },
+        "ece_before": null,
+        "ece_after": null
+      },
+      "fast_cmeie_full_dev": {
+        "extractor": "deterministic_non_neural_L1_baseline",
+        "model_version": null,
+        "encoder": null,
+        "samples": 300,
+        "entity_micro": {
+          "tp": 436,
+          "fp": 450,
+          "fn": 1232,
+          "precision": 0.492099,
+          "recall": 0.261391,
+          "f1": 0.341425
+        },
+        "end_to_end_triple_micro": {
+          "tp": 99,
+          "fp": 314,
+          "fn": 1263,
+          "precision": 0.239709,
+          "recall": 0.072687,
+          "f1": 0.111549
+        },
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": null,
+        "latency_ms": {
+          "mean": 0.29,
+          "p50": 0.2511,
+          "p95": 0.688,
+          "max": 1.1564
+        },
+        "ece_before": null,
+        "ece_after": null
+      },
+      "confidence_calibration": {
+        "extractor": null,
+        "model_version": null,
+        "encoder": null,
+        "samples": 300,
+        "entity_micro": null,
+        "end_to_end_triple_micro": null,
+        "end_to_end_triple_micro_strict": null,
+        "triple_micro": null,
+        "latency_ms": null,
+        "ece_before": 0.534679,
+        "ece_after": 0.033024
+      }
+    },
+    "operator_benchmark": {
+      "text_clean": {
+        "p50_ms": 0.0,
+        "p95_ms": 1.4,
+        "mean_ms": 0.5,
+        "runs": 3,
+        "throughput_samples_per_s": 2112.29,
+        "backend": "cpu",
+        "type": "rule"
+      },
+      "chunker": {
+        "p50_ms": 0.0,
+        "p95_ms": 0.0,
+        "mean_ms": 0.0,
+        "runs": 3,
+        "throughput_samples_per_s": 340078.7,
+        "backend": "cpu",
+        "type": "rule"
+      },
+      "medical_ner": {
+        "p50_ms": 12737.4,
+        "p95_ms": 14275.6,
+        "mean_ms": 12897.2,
+        "runs": 3,
+        "throughput_samples_per_s": 0.08,
+        "backend": "cpu+API",
+        "type": "llm"
+      },
+      "medical_re": {
+        "p50_ms": 26232.8,
+        "p95_ms": 29003.5,
+        "mean_ms": 24470.5,
+        "runs": 3,
+        "throughput_samples_per_s": 0.04,
+        "backend": "cpu+API",
+        "type": "llm"
+      },
+      "triple_validator": {
+        "p50_ms": 0.9,
+        "p95_ms": 1.0,
+        "mean_ms": 0.9,
+        "runs": 3,
+        "throughput_samples_per_s": 1132.37,
+        "backend": "cpu",
+        "type": "rule",
+        "note": "180 triples/run"
+      }
+    }
+  }
+}

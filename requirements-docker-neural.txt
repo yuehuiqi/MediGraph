@@ -1,0 +1,5 @@
+-r requirements-docker.txt
+
+# Optional CPU neural runtime. GPU passthrough depends on the host Docker setup.
+torch>=2.2.0
+transformers>=4.40.0

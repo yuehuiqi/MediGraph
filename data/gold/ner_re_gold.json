@@ -1,0 +1,10217 @@
+{
+ "description": "NER/RE gold standard mapped to the MediGraph ontology, from CMeIE-V2 dev + DiaKG. Matching is normalization-aware.",
+ "sources": [
+  "CMeIE-V2_dev",
+  "DiaKG"
+ ],
+ "samples": [
+  {
+   "text": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+   "entities": [
+    {
+     "name": "小细胞肺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "咳嗽",
+     "type": "Symptom"
+    },
+    {
+     "name": "呼吸困难",
+     "type": "Symptom"
+    },
+    {
+     "name": "咯血",
+     "type": "Symptom"
+    },
+    {
+     "name": "体重减轻",
+     "type": "Symptom"
+    },
+    {
+     "name": "发热",
+     "type": "Symptom"
+    },
+    {
+     "name": "关节痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "皮肤病变",
+     "type": "Symptom"
+    },
+    {
+     "name": "盗汗",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "咳嗽"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "呼吸困难"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "咯血"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "体重减轻"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "发热"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "关节痛"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "皮肤病变"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "has_symptom",
+     "tail": "盗汗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "十二、腺泡型软组织肉瘤 腺泡型软组织肉瘤（alveolar soft part sarcoma）是一临床-病理实体，小儿少见，多见于15岁左右的青少年，女性多于男性。切面呈黄白或灰红色，中央含坏死和出血区，肿瘤周围有较粗的血管。",
+   "entities": [
+    {
+     "name": "腺泡型软组织肉瘤",
+     "type": "Disease"
+    },
+    {
+     "name": "肿瘤周围有较粗的血管",
+     "type": "Symptom"
+    },
+    {
+     "name": "切面呈黄白或灰红色，中央含坏死和出血区",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "腺泡型软组织肉瘤",
+     "relation": "has_symptom",
+     "tail": "肿瘤周围有较粗的血管"
+    },
+    {
+     "head": "腺泡型软组织肉瘤",
+     "relation": "has_symptom",
+     "tail": "切面呈黄白或灰红色，中央含坏死和出血区"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胆管癌@## 病因学 感染，炎症和癌症之间有密切的关联。",
+   "entities": [
+    {
+     "name": "胆管癌",
+     "type": "Disease"
+    },
+    {
+     "name": "炎症",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胆管癌",
+     "relation": "has_symptom",
+     "tail": "炎症"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "转移性乳腺癌@### 肝功能检查 (LFT) 检查 结果 检查 所有转移性乳腺癌患者均需记录基础值并定期随访。 转移性乳腺癌@结合全血细胞计数，结果有时可提示癌症是否扩散至了骨或肝脏。",
+   "entities": [
+    {
+     "name": "转移性乳腺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "肝功能",
+     "type": "Examination"
+    },
+    {
+     "name": "全血细胞计数",
+     "type": "Examination"
+    },
+    {
+     "name": "骨",
+     "type": "Body"
+    },
+    {
+     "name": "肝脏",
+     "type": "Body"
+    },
+    {
+     "name": "定期随访",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "转移性乳腺癌",
+     "relation": "need_examination",
+     "tail": "肝功能"
+    },
+    {
+     "head": "转移性乳腺癌",
+     "relation": "need_examination",
+     "tail": "全血细胞计数"
+    },
+    {
+     "head": "转移性乳腺癌",
+     "relation": "located_in",
+     "tail": "骨"
+    },
+    {
+     "head": "转移性乳腺癌",
+     "relation": "located_in",
+     "tail": "肝脏"
+    },
+    {
+     "head": "转移性乳腺癌",
+     "relation": "need_examination",
+     "tail": "定期随访"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "（三）急性细菌性痢疾 细菌性痢疾夏季发病率高，患儿多有不洁食物史，潜伏期24～72小时。粪便培养可确诊。",
+   "entities": [
+    {
+     "name": "急性细菌性痢疾",
+     "type": "Disease"
+    },
+    {
+     "name": "粪便培养",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性细菌性痢疾",
+     "relation": "need_examination",
+     "tail": "粪便培养"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "细菌性脑膜炎@### 确诊感染：大肠杆菌和其他革兰氏阴性肠杆菌 查看全部   首选 –   抗生素靶向治疗 #### 第一选择 [ 庆大霉素 ](/druglink?dd=MARTINDALE) open_in_new : 新生儿：剂量请咨询指导专家；儿童：2 mg/kg，静脉给药分剂量每8 小时一次；成人：1mg/kg，静脉给药，每 8 小时一次。",
+   "entities": [
+    {
+     "name": "细菌性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "抗生素",
+     "type": "Drug"
+    },
+    {
+     "name": "庆大霉素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "细菌性脑膜炎",
+     "relation": "recommend_drug",
+     "tail": "抗生素"
+    },
+    {
+     "head": "细菌性脑膜炎",
+     "relation": "recommend_drug",
+     "tail": "庆大霉素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "（一）急性再障 （重型再障）的治疗 1.去除病因 对一切可疑的致病因素，均应立即停止接触、应用。 （5）大剂量丙种球蛋白。",
+   "entities": [
+    {
+     "name": "急性再障",
+     "type": "Disease"
+    },
+    {
+     "name": "大剂量丙种球蛋白",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性再障",
+     "relation": "recommend_drug",
+     "tail": "大剂量丙种球蛋白"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "骨性关节炎@在III期随机双盲试验中比较了878名有下腰痛或骨性关节炎疼痛（髋或膝）超过90天的患者对他喷他多和羟考酮快速释放的反应。",
+   "entities": [
+    {
+     "name": "骨性关节炎",
+     "type": "Disease"
+    },
+    {
+     "name": "他喷他多",
+     "type": "Drug"
+    },
+    {
+     "name": "羟考酮",
+     "type": "Drug"
+    },
+    {
+     "name": "下腰痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "骨性关节炎疼痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "髋",
+     "type": "Body"
+    },
+    {
+     "name": "膝",
+     "type": "Body"
+    },
+    {
+     "name": "随机双盲试验",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "骨性关节炎",
+     "relation": "recommend_drug",
+     "tail": "他喷他多"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "recommend_drug",
+     "tail": "羟考酮"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "has_symptom",
+     "tail": "下腰痛"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "has_symptom",
+     "tail": "骨性关节炎疼痛"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "located_in",
+     "tail": "髋"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "located_in",
+     "tail": "膝"
+    },
+    {
+     "head": "骨性关节炎",
+     "relation": "need_examination",
+     "tail": "随机双盲试验"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "儿童偏头痛@发作逐渐减少可能证明其他药物的作用：可选择的药物有阿米替林、丙戊酸、卡马西平和加巴喷丁，尽管每种药物开始使用都需要主任医生批准并且要严密监测不良反应。",
+   "entities": [
+    {
+     "name": "儿童偏头痛",
+     "type": "Disease"
+    },
+    {
+     "name": "阿米替林",
+     "type": "Drug"
+    },
+    {
+     "name": "丙戊酸",
+     "type": "Drug"
+    },
+    {
+     "name": "卡马西平",
+     "type": "Drug"
+    },
+    {
+     "name": "加巴喷丁",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "儿童偏头痛",
+     "relation": "recommend_drug",
+     "tail": "阿米替林"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "recommend_drug",
+     "tail": "丙戊酸"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "recommend_drug",
+     "tail": "卡马西平"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "recommend_drug",
+     "tail": "加巴喷丁"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "1%亚甲蓝以每次0. 1～0. 2ml/kg，稀释后缓慢推注，或维生素C以0. 5～1g用葡萄糖20ml稀释后静注；气促者给予吸氧。 19.毒蛇咬伤中毒 伤肢制动，以减慢毒素扩散；肢体伤口的近心端2～3cm处用绳或布条缚扎，每15～30分钟放松1 ～2分钟。",
+   "entities": [
+    {
+     "name": "毒蛇咬伤中毒",
+     "type": "Disease"
+    },
+    {
+     "name": "亚甲蓝",
+     "type": "Drug"
+    },
+    {
+     "name": "维生素C",
+     "type": "Drug"
+    },
+    {
+     "name": "气促",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "毒蛇咬伤中毒",
+     "relation": "recommend_drug",
+     "tail": "亚甲蓝"
+    },
+    {
+     "head": "毒蛇咬伤中毒",
+     "relation": "recommend_drug",
+     "tail": "维生素C"
+    },
+    {
+     "head": "毒蛇咬伤中毒",
+     "relation": "has_symptom",
+     "tail": "气促"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "感染性心内膜炎（infective endocarditis，IE ) 80%以上由链球菌和葡萄球菌所致,其他尚有真菌、衣原体、立克次体及病毒等。 免疫学征象:肾小球肾炎、Osler结节、Roth斑、类风湿因子阳性。",
+   "entities": [
+    {
+     "name": "感染性心内膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "Roth斑",
+     "type": "Symptom"
+    },
+    {
+     "name": "类风湿因子阳性",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "感染性心内膜炎",
+     "relation": "has_symptom",
+     "tail": "Roth斑"
+    },
+    {
+     "head": "感染性心内膜炎",
+     "relation": "has_symptom",
+     "tail": "类风湿因子阳性"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第六节 溶血性贫血 一、总 论 溶血性贫血（hemolytic anemia）是由多种病因引起红细胞寿命的缩短和过早地破坏，且红细胞的破坏超过了骨髓生血功能的代偿能力而发生循环中红细胞数和血红蛋白含量减少的一种贫血。因此，如轻度溶血时，外周血中的红细胞数能被骨髓造血功能的增加所完全代偿，此时，临床上虽有溶血存在但并不发生贫血；如果红细胞的破坏超过了骨髓造血的代偿能力，则发生溶血性贫血。",
+   "entities": [
+    {
+     "name": "溶血性贫血",
+     "type": "Disease"
+    },
+    {
+     "name": "红细胞数和血红蛋白含量减少",
+     "type": "Symptom"
+    },
+    {
+     "name": "红细胞寿命的缩短和过早地破坏",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "溶血性贫血",
+     "relation": "has_symptom",
+     "tail": "红细胞数和血红蛋白含量减少"
+    },
+    {
+     "head": "溶血性贫血",
+     "relation": "has_symptom",
+     "tail": "红细胞寿命的缩短和过早地破坏"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "类癌综合征@ 栓塞术使用可以重复，但其有效性随着反复操作而逐渐下降。",
+   "entities": [
+    {
+     "name": "类癌综合征",
+     "type": "Disease"
+    },
+    {
+     "name": "栓塞术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "类癌综合征",
+     "relation": "treated_by_procedure",
+     "tail": "栓塞术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "疟疾感染@应当使用氯喹（首选）或羟氯喹治疗感染，共 3 次给药。",
+   "entities": [
+    {
+     "name": "疟疾感染",
+     "type": "Disease"
+    },
+    {
+     "name": "氯喹",
+     "type": "Drug"
+    },
+    {
+     "name": "羟氯喹",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "疟疾感染",
+     "relation": "recommend_drug",
+     "tail": "氯喹"
+    },
+    {
+     "head": "疟疾感染",
+     "relation": "recommend_drug",
+     "tail": "羟氯喹"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "部分患儿对IVIG输注后无效，可重复使用1次，或选择使用糖皮质激素。 【预后】 川崎病为自限性疾病，多数预后良好。",
+   "entities": [
+    {
+     "name": "川崎病",
+     "type": "Disease"
+    },
+    {
+     "name": "IVIG",
+     "type": "Drug"
+    },
+    {
+     "name": "糖皮质激素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "川崎病",
+     "relation": "recommend_drug",
+     "tail": "IVIG"
+    },
+    {
+     "head": "川崎病",
+     "relation": "recommend_drug",
+     "tail": "糖皮质激素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性髓性白血病@结果 可能正常；血清钙、钾、磷、尿酸和乳酸水平可能升高；血清钙可能降低 ### 肾功能 检查 结果 检查 是一项基线检查，并在整个治疗过程中持续监测。",
+   "entities": [
+    {
+     "name": "急性髓性白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "血清钙、钾、磷、尿酸和乳酸水平可能升高",
+     "type": "Symptom"
+    },
+    {
+     "name": "血清钙可能降低",
+     "type": "Symptom"
+    },
+    {
+     "name": "肾功能",
+     "type": "Examination"
+    },
+    {
+     "name": "基线检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性髓性白血病",
+     "relation": "has_symptom",
+     "tail": "血清钙、钾、磷、尿酸和乳酸水平可能升高"
+    },
+    {
+     "head": "急性髓性白血病",
+     "relation": "has_symptom",
+     "tail": "血清钙可能降低"
+    },
+    {
+     "head": "急性髓性白血病",
+     "relation": "need_examination",
+     "tail": "肾功能"
+    },
+    {
+     "head": "急性髓性白血病",
+     "relation": "need_examination",
+     "tail": "基线检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性淋巴细胞白血病@检查 套细胞淋巴瘤、滤泡性淋巴瘤和淋巴浆细胞性白血病细胞可能模仿 CLL 形态。 慢性淋巴细胞白血病@CLL 细胞在流式细胞术检查中对 CD5 和 CD19 呈阳性。",
+   "entities": [
+    {
+     "name": "慢性淋巴细胞白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "流式细胞术",
+     "type": "Examination"
+    },
+    {
+     "name": "CD5 和 CD19 呈阳性",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性淋巴细胞白血病",
+     "relation": "need_examination",
+     "tail": "流式细胞术"
+    },
+    {
+     "head": "慢性淋巴细胞白血病",
+     "relation": "has_symptom",
+     "tail": "CD5 和 CD19 呈阳性"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "军团菌肺炎（legionaires disease）是一种严重的多系统损害性疾病，主要表现为发热和呼吸道症状。可加用利福平。",
+   "entities": [
+    {
+     "name": "军团菌肺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "发热",
+     "type": "Symptom"
+    },
+    {
+     "name": "呼吸道症状",
+     "type": "Symptom"
+    },
+    {
+     "name": "利福平",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "军团菌肺炎",
+     "relation": "has_symptom",
+     "tail": "发热"
+    },
+    {
+     "head": "军团菌肺炎",
+     "relation": "has_symptom",
+     "tail": "呼吸道症状"
+    },
+    {
+     "head": "军团菌肺炎",
+     "relation": "recommend_drug",
+     "tail": "利福平"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胃炎@通常的推荐意见是，根除治疗后，PPI停药7-14天，抗生素和铋剂停药至少28天可以采用尿素呼吸试验检测 _幽门螺杆菌_ 根除效果。",
+   "entities": [
+    {
+     "name": "胃炎",
+     "type": "Disease"
+    },
+    {
+     "name": "PPI",
+     "type": "Drug"
+    },
+    {
+     "name": "抗生素",
+     "type": "Drug"
+    },
+    {
+     "name": "铋剂",
+     "type": "Drug"
+    },
+    {
+     "name": "尿素呼吸试验",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胃炎",
+     "relation": "recommend_drug",
+     "tail": "PPI"
+    },
+    {
+     "head": "胃炎",
+     "relation": "recommend_drug",
+     "tail": "抗生素"
+    },
+    {
+     "head": "胃炎",
+     "relation": "recommend_drug",
+     "tail": "铋剂"
+    },
+    {
+     "head": "胃炎",
+     "relation": "need_examination",
+     "tail": "尿素呼吸试验"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性胰腺炎@约5%的胰腺炎患者会出现无症状性髓内脂肪坏死。",
+   "entities": [
+    {
+     "name": "慢性胰腺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "无症状性髓内脂肪坏死",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性胰腺炎",
+     "relation": "has_symptom",
+     "tail": "无症状性髓内脂肪坏死"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第五章 急性肝功能衰竭 【概述】 急性肝功能衰竭（acute liver failure，ALF）一般是指原无肝病者在短时间内发生的因肝细胞大量坏死导致合成、解毒、排泄和生物转化等功能发生严重障碍或失代偿，出现以凝血机制障碍和黄疸、肝性脑病、腹水等为主要表现的一组临床综合征。",
+   "entities": [
+    {
+     "name": "急性肝功能衰竭",
+     "type": "Disease"
+    },
+    {
+     "name": "凝血机制障碍",
+     "type": "Disease"
+    },
+    {
+     "name": "黄疸",
+     "type": "Disease"
+    },
+    {
+     "name": "肝性脑病",
+     "type": "Disease"
+    },
+    {
+     "name": "腹水",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性肝功能衰竭",
+     "relation": "has_symptom",
+     "tail": "凝血机制障碍"
+    },
+    {
+     "head": "急性肝功能衰竭",
+     "relation": "has_symptom",
+     "tail": "黄疸"
+    },
+    {
+     "head": "急性肝功能衰竭",
+     "relation": "has_symptom",
+     "tail": "肝性脑病"
+    },
+    {
+     "head": "急性肝功能衰竭",
+     "relation": "has_symptom",
+     "tail": "腹水"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "心肌炎@应用Swan－Ganz气囊漂浮导管，进行侵袭性血流动力学监测，可辨别发生低血压的病因，并为是否使用这些药物提供信息。",
+   "entities": [
+    {
+     "name": "心肌炎",
+     "type": "Disease"
+    },
+    {
+     "name": "Swan－Ganz气囊漂浮导管",
+     "type": "Examination"
+    },
+    {
+     "name": "低血压",
+     "type": "Disease"
+    },
+    {
+     "name": "侵袭性血流动力学监测",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心肌炎",
+     "relation": "need_examination",
+     "tail": "Swan－Ganz气囊漂浮导管"
+    },
+    {
+     "head": "低血压",
+     "relation": "need_examination",
+     "tail": "侵袭性血流动力学监测"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性淋巴细胞白血病@ 确诊需进行骨髓活检。急性淋巴细胞白血病@骨髓中原始细胞大于25%可明确急性淋巴细胞白血病（ALL）的诊断。",
+   "entities": [
+    {
+     "name": "急性淋巴细胞白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "骨髓活检",
+     "type": "Examination"
+    },
+    {
+     "name": "骨髓中原始细胞大于25%",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "need_examination",
+     "tail": "骨髓活检"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "has_symptom",
+     "tail": "骨髓中原始细胞大于25%"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【病因】 癫痫的病因复杂多样，构成癫痫发作的因素包括遗传因素、脑内致痫性损伤因素以及诱发性因素等，不同的年龄往往有不同的病因范围。原发性癫痫可表现为全身性发作或部分性发作，但全身性癫痫的遗传性因素高于部分性癫痫。",
+   "entities": [
+    {
+     "name": "原发性癫痫",
+     "type": "Disease"
+    },
+    {
+     "name": "全身性发作",
+     "type": "Symptom"
+    },
+    {
+     "name": "部分性发作",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "原发性癫痫",
+     "relation": "has_symptom",
+     "tail": "全身性发作"
+    },
+    {
+     "head": "原发性癫痫",
+     "relation": "has_symptom",
+     "tail": "部分性发作"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "稳定型缺血性心脏疾病@强化血糖控制能降低1型和2型糖尿病患者微血管并发症的发病率，包括视网膜病、肾病和神经病变。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "视网膜病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾病",
+     "type": "Disease"
+    },
+    {
+     "name": "神经病变",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "complication",
+     "tail": "视网膜病"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "complication",
+     "tail": "肾病"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "complication",
+     "tail": "神经病变"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "唇腭裂@### 积极的产前超声 在大约妊娠18周时可以通过常规产前超声识别有无唇裂的存在。",
+   "entities": [
+    {
+     "name": "唇腭裂",
+     "type": "Disease"
+    },
+    {
+     "name": "产前超声",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "唇腭裂",
+     "relation": "need_examination",
+     "tail": "产前超声"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "白内障@玻璃体的牵拉可以增加白内障术后发生黄斑水肿的风险和/或增加视网膜裂孔或视网膜脱离的风险。",
+   "entities": [
+    {
+     "name": "白内障",
+     "type": "Disease"
+    },
+    {
+     "name": "白内障术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "白内障",
+     "relation": "treated_by_procedure",
+     "tail": "白内障术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "结核性脑膜炎（tuberculous meningitis)，是小儿结核病中最严重的类型。 常规检查:脑脊液压力增高，外观无色透明或呈毛玻璃样,蛛网膜下腔阻塞时，可呈黄色,静置 12 ~ 24小时后’脑脊液中可有蜘蛛网状薄膜形成，取之涂片进行抗酸染色,结核分枝杆菌检出率较高。",
+   "entities": [
+    {
+     "name": "结核性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "脑脊液压力增高",
+     "type": "Symptom"
+    },
+    {
+     "name": "外观无色透明",
+     "type": "Symptom"
+    },
+    {
+     "name": "呈毛玻璃样",
+     "type": "Symptom"
+    },
+    {
+     "name": "蛛网膜下腔阻塞",
+     "type": "Symptom"
+    },
+    {
+     "name": "呈黄色",
+     "type": "Symptom"
+    },
+    {
+     "name": "脑脊液中可有蜘蛛网状薄膜形成",
+     "type": "Symptom"
+    },
+    {
+     "name": "抗酸染色",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "脑脊液压力增高"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "外观无色透明"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "呈毛玻璃样"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "蛛网膜下腔阻塞"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "呈黄色"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "脑脊液中可有蜘蛛网状薄膜形成"
+    },
+    {
+     "head": "结核性脑膜炎",
+     "relation": "need_examination",
+     "tail": "抗酸染色"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "唇腭裂@助听器通常要在手术后咨询耳鼻喉科和听力学家。唇腭裂@ ### 腭瘘 | 存在差异 | 低 大约 10% 至 20% 颚成形术发生腭瘘。",
+   "entities": [
+    {
+     "name": "唇腭裂",
+     "type": "Disease"
+    },
+    {
+     "name": "腭瘘",
+     "type": "Disease"
+    },
+    {
+     "name": "耳鼻喉科",
+     "type": "Department"
+    },
+    {
+     "name": "颚成形术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "唇腭裂",
+     "relation": "complication",
+     "tail": "腭瘘"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "treated_in_department",
+     "tail": "耳鼻喉科"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "treated_by_procedure",
+     "tail": "颚成形术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "凡符合HLH的临床诊断标准，或髙度怀疑HLH而未完全达到诊断标准且病情进展迅速者，应立即开始治疗。 维持治疗:DEX，每2周1次,静脉滴注或口服,10mg/(m2 • d) x3天;VP-16针剂，每2周1 次,每次150mg/m2 ； CsA，继续口服至40周,血药浓度应维持在200μg/L左右。",
+   "entities": [
+    {
+     "name": "HLH",
+     "type": "Disease"
+    },
+    {
+     "name": "DEX",
+     "type": "Drug"
+    },
+    {
+     "name": "VP-16",
+     "type": "Drug"
+    },
+    {
+     "name": "CsA",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "HLH",
+     "relation": "recommend_drug",
+     "tail": "DEX"
+    },
+    {
+     "head": "HLH",
+     "relation": "recommend_drug",
+     "tail": "VP-16"
+    },
+    {
+     "head": "HLH",
+     "relation": "recommend_drug",
+     "tail": "CsA"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "前列腺癌@骨转移的患者，可使用这些药物预防骨相关事件。 前列腺癌@附加 –   外照射 针对经选择患者组部分患者的治疗推荐 姑息性剂量的放疗可用于疼痛的骨转移灶。",
+   "entities": [
+    {
+     "name": "前列腺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "骨",
+     "type": "Body"
+    },
+    {
+     "name": "外照射",
+     "type": "Procedure"
+    },
+    {
+     "name": "放疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "疼痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "前列腺癌",
+     "relation": "located_in",
+     "tail": "骨"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "treated_by_procedure",
+     "tail": "外照射"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "treated_by_procedure",
+     "tail": "放疗"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "has_symptom",
+     "tail": "疼痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "缺血性卒中@使用近端球囊引导导管或大口径远端导管联合支架取栓器（而不是单用颈部引导导管）在某些谨慎选择的患者中也可能有帮助。缺血性卒中@另外，如在症状出现 6 小时内使用，使用辅助干预（例如动脉内溶栓）实现可接受的再灌注也可能是合理的。",
+   "entities": [
+    {
+     "name": "缺血性卒中",
+     "type": "Disease"
+    },
+    {
+     "name": "近端球囊引导导管或大口径远端导管联合支架取栓器",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "缺血性卒中",
+     "relation": "treated_by_procedure",
+     "tail": "近端球囊引导导管或大口径远端导管联合支架取栓器"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肝癌@血小板低提示肝硬化导致的门静脉高压。 肝癌@结果 小细胞性贫血和/或血小板减少症 ### 基础代谢生化检查 (BMP) 检查肝癌-基础代谢生化检查 (BMP)-实验室检查-> 结果 检查 患者可能因容量超负荷或应用利尿剂而导致低钠血症。",
+   "entities": [
+    {
+     "name": "肝癌",
+     "type": "Disease"
+    },
+    {
+     "name": "基础代谢生化检查",
+     "type": "Examination"
+    },
+    {
+     "name": "血小板低",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肝癌",
+     "relation": "need_examination",
+     "tail": "基础代谢生化检查"
+    },
+    {
+     "head": "肝癌",
+     "relation": "has_symptom",
+     "tail": "血小板低"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胆囊炎@## 鉴别诊断 ### 查看全部  ### 急性胆管炎 体征/症状 检查 体征/症状 典型症状为发热寒战、黄疸和腹痛（夏科三联征）。",
+   "entities": [
+    {
+     "name": "胆囊炎",
+     "type": "Disease"
+    },
+    {
+     "name": "发热寒战",
+     "type": "Symptom"
+    },
+    {
+     "name": "腹痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胆囊炎",
+     "relation": "has_symptom",
+     "tail": "发热寒战"
+    },
+    {
+     "head": "胆囊炎",
+     "relation": "has_symptom",
+     "tail": "腹痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "妊娠期高血压@妊娠期间，患者需定期监测血压和进行尿液分析以排除子痫前期和妊娠期糖尿病。 妊娠期高血压@轻度高血压可以通过改变生活方式和降压治疗进行处理。",
+   "entities": [
+    {
+     "name": "妊娠期高血压",
+     "type": "Disease"
+    },
+    {
+     "name": "监测血压",
+     "type": "Examination"
+    },
+    {
+     "name": "尿液分析",
+     "type": "Examination"
+    },
+    {
+     "name": "妊娠期糖尿病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "妊娠期高血压",
+     "relation": "need_examination",
+     "tail": "监测血压"
+    },
+    {
+     "head": "妊娠期高血压",
+     "relation": "need_examination",
+     "tail": "尿液分析"
+    },
+    {
+     "head": "妊娠期高血压",
+     "relation": "complication",
+     "tail": "妊娠期糖尿病"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第四节 先天性巨结肠 【发病率】 先天性巨结肠（Hirschsprung’s disease，HD）是一种比较常见的小儿消化道畸形，国外统计发病率为1/5000，其中男孩占70%～80%。 （六）结肠结缔组织病 近年来认为结肠结缔组织病是导致神经节细胞异位的原因之一，表现为肠管肌层的结缔组织完全或部分缺损，导致肠道蠕动功能受损。",
+   "entities": [
+    {
+     "name": "结肠结缔组织病",
+     "type": "Disease"
+    },
+    {
+     "name": "肠管肌层的结缔组织完全或部分缺损",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "结肠结缔组织病",
+     "relation": "has_symptom",
+     "tail": "肠管肌层的结缔组织完全或部分缺损"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "帕金森病@病史将包括提示运动迟缓、强直、静止性震颤和/或姿势不稳的症状。",
+   "entities": [
+    {
+     "name": "帕金森病",
+     "type": "Disease"
+    },
+    {
+     "name": "运动迟缓",
+     "type": "Symptom"
+    },
+    {
+     "name": "强直",
+     "type": "Symptom"
+    },
+    {
+     "name": "静止性震颤",
+     "type": "Symptom"
+    },
+    {
+     "name": "姿势不稳",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "帕金森病",
+     "relation": "has_symptom",
+     "tail": "运动迟缓"
+    },
+    {
+     "head": "帕金森病",
+     "relation": "has_symptom",
+     "tail": "强直"
+    },
+    {
+     "head": "帕金森病",
+     "relation": "has_symptom",
+     "tail": "静止性震颤"
+    },
+    {
+     "head": "帕金森病",
+     "relation": "has_symptom",
+     "tail": "姿势不稳"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "MRI可见两类改变：①T2相或增强扫描可见不规则片状高密影，可能系脑胶质增生或脱髓鞘病变；②T1相及增强扫描低密度改变，提示囊性改变。 【诊断】 根据先天性白内障、青光眼、智能及生长发育障碍，Fanconi综合征的典型表现，确诊Lowe眼-脑-肾综合征并不困难，诊断困难往往是因为只发现眼部先天性改变，而脑部与肾脏表现轻微或不典型，此时需作详细的血、尿的生化分析来帮助诊断，必要时动态观察肾脏及脑部的变化，对确立诊断有较大作用。",
+   "entities": [
+    {
+     "name": "Fanconi综合征",
+     "type": "Disease"
+    },
+    {
+     "name": "MRI",
+     "type": "Examination"
+    },
+    {
+     "name": "脑部",
+     "type": "Body"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    },
+    {
+     "name": "眼部",
+     "type": "Body"
+    },
+    {
+     "name": "血、尿的生化分析",
+     "type": "Examination"
+    },
+    {
+     "name": "T2相或增强扫描可见不规则片状高密影",
+     "type": "Disease"
+    },
+    {
+     "name": "Fanconi综合征",
+     "type": "Symptom"
+    },
+    {
+     "name": "T1相及增强扫描低密度改变",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "Fanconi综合征",
+     "relation": "need_examination",
+     "tail": "MRI"
+    },
+    {
+     "head": "Fanconi综合征",
+     "relation": "located_in",
+     "tail": "脑部"
+    },
+    {
+     "head": "Fanconi综合征",
+     "relation": "located_in",
+     "tail": "肾脏"
+    },
+    {
+     "head": "Fanconi综合征",
+     "relation": "located_in",
+     "tail": "眼部"
+    },
+    {
+     "head": "Fanconi综合征",
+     "relation": "need_examination",
+     "tail": "血、尿的生化分析"
+    },
+    {
+     "head": "T2相或增强扫描可见不规则片状高密影",
+     "relation": "has_symptom",
+     "tail": "Fanconi综合征"
+    },
+    {
+     "head": "T2相或增强扫描可见不规则片状高密影",
+     "relation": "has_symptom",
+     "tail": "T1相及增强扫描低密度改变"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "疟疾感染@[ HIV血清转换 ](/topics/zh-cn/555) ### 阿米巴肝脓肿 体征/症状 检查 体征/症状 不到50%的人有细菌性痢疾史。疟疾感染@常伴有触痛性肝肿大和右侧胸腔积液。",
+   "entities": [
+    {
+     "name": "疟疾感染",
+     "type": "Disease"
+    },
+    {
+     "name": "触痛性肝肿大",
+     "type": "Disease"
+    },
+    {
+     "name": "右侧胸腔积液",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "疟疾感染",
+     "relation": "complication",
+     "tail": "触痛性肝肿大"
+    },
+    {
+     "head": "疟疾感染",
+     "relation": "has_symptom",
+     "tail": "右侧胸腔积液"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胸部平片 可示肺部纹理增多、模糊或有片状阴影，心影可扩大。 【诊断和鉴别诊断】 诊断标准（表7-8) 表7-8川崎病的诊断标准 发热5天以上,伴下列5项临床表现中4项者，排除其他疾病后，即可诊断为川崎病： 四肢变化:急性期掌跖红斑，手足硬性水肿;恢复期指趾端膜状脱皮 多形性皮疹 眼结合膜充血，非化脓性 唇充血皲裂，口腔黏膜弥漫充血,舌乳头突起、充血呈草莓舌 (5)颈部淋巴结肿大 注:如5项临床表现中不足4项,但超声心动图有冠状动脉损害,亦可确诊为川崎病 IVIG非敏感型KD也称IVIG无反应型KDJVIG耐药型KD、难治型KD等。",
+   "entities": [
+    {
+     "name": "川崎病",
+     "type": "Disease"
+    },
+    {
+     "name": "胸部平片",
+     "type": "Examination"
+    },
+    {
+     "name": "急性期掌跖红斑",
+     "type": "Symptom"
+    },
+    {
+     "name": "恢复期指趾端膜状脱皮",
+     "type": "Symptom"
+    },
+    {
+     "name": "多形性皮疹",
+     "type": "Disease"
+    },
+    {
+     "name": "眼结合膜充血",
+     "type": "Symptom"
+    },
+    {
+     "name": "非化脓性 唇充血皲裂",
+     "type": "Symptom"
+    },
+    {
+     "name": "口腔黏膜弥漫充血",
+     "type": "Symptom"
+    },
+    {
+     "name": "舌乳头突起",
+     "type": "Symptom"
+    },
+    {
+     "name": "充血呈草莓舌",
+     "type": "Symptom"
+    },
+    {
+     "name": "颈部淋巴结肿大",
+     "type": "Symptom"
+    },
+    {
+     "name": "肺部纹理增多、模糊或有片状阴影",
+     "type": "Symptom"
+    },
+    {
+     "name": "心影可扩大",
+     "type": "Symptom"
+    },
+    {
+     "name": "超声心动图有冠状动脉损害",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "川崎病",
+     "relation": "need_examination",
+     "tail": "胸部平片"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "急性期掌跖红斑"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "恢复期指趾端膜状脱皮"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "多形性皮疹"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "眼结合膜充血"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "非化脓性 唇充血皲裂"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "口腔黏膜弥漫充血"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "舌乳头突起"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "充血呈草莓舌"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "颈部淋巴结肿大"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "肺部纹理增多、模糊或有片状阴影"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "心影可扩大"
+    },
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "超声心动图有冠状动脉损害"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "中毒患儿可出现刺激性呛咳、呼吸困难、发绀、肺水肿及呼吸节律不整，严重者导致呼吸中枢抑制或呼吸肌麻痹以及呼吸衰竭。",
+   "entities": [
+    {
+     "name": "中毒",
+     "type": "Disease"
+    },
+    {
+     "name": "刺激性呛咳",
+     "type": "Symptom"
+    },
+    {
+     "name": "呼吸困难",
+     "type": "Symptom"
+    },
+    {
+     "name": "发绀",
+     "type": "Symptom"
+    },
+    {
+     "name": "呼吸节律不整",
+     "type": "Symptom"
+    },
+    {
+     "name": "呼吸中枢抑制",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "中毒",
+     "relation": "has_symptom",
+     "tail": "刺激性呛咳"
+    },
+    {
+     "head": "中毒",
+     "relation": "has_symptom",
+     "tail": "呼吸困难"
+    },
+    {
+     "head": "中毒",
+     "relation": "has_symptom",
+     "tail": "发绀"
+    },
+    {
+     "head": "中毒",
+     "relation": "has_symptom",
+     "tail": "呼吸节律不整"
+    },
+    {
+     "head": "中毒",
+     "relation": "has_symptom",
+     "tail": "呼吸中枢抑制"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性胰腺炎@### 胰腺功能和结构检查 胰腺功能检查包括直接和间接两种方法。",
+   "entities": [
+    {
+     "name": "慢性胰腺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "胰腺",
+     "type": "Body"
+    },
+    {
+     "name": "胰腺功能和结构检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性胰腺炎",
+     "relation": "located_in",
+     "tail": "胰腺"
+    },
+    {
+     "head": "慢性胰腺炎",
+     "relation": "need_examination",
+     "tail": "胰腺功能和结构检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "痔@痔病表现为无痛性直肠出血或突发的肛周疼痛伴有触痛性包块。",
+   "entities": [
+    {
+     "name": "痔病",
+     "type": "Disease"
+    },
+    {
+     "name": "突发的肛周疼痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "触痛性包块",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "痔病",
+     "relation": "has_symptom",
+     "tail": "突发的肛周疼痛"
+    },
+    {
+     "head": "痔病",
+     "relation": "has_symptom",
+     "tail": "触痛性包块"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "GSDⅣ型（Andersen病）分支酶缺陷。受累组织主要为肝脏；心脏及肌肉较少累及。",
+   "entities": [
+    {
+     "name": "GSDⅣ型",
+     "type": "Disease"
+    },
+    {
+     "name": "肝脏",
+     "type": "Body"
+    },
+    {
+     "name": "心脏",
+     "type": "Body"
+    },
+    {
+     "name": "肌肉",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "GSDⅣ型",
+     "relation": "located_in",
+     "tail": "肝脏"
+    },
+    {
+     "head": "GSDⅣ型",
+     "relation": "located_in",
+     "tail": "心脏"
+    },
+    {
+     "head": "GSDⅣ型",
+     "relation": "located_in",
+     "tail": "肌肉"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "高血压紧急状态的治疗，目的在于在24小时内使血压降低。应先将患儿置于光线较暗、体位舒适的地方，30分钟后复测血压，若仍保持较高血压，先给予口服药治疗，如硝苯地平（心痛定）、卡托普利等，应监护患儿1～2小时，以确保治疗有效而无不良反应。",
+   "entities": [
+    {
+     "name": "高血压",
+     "type": "Disease"
+    },
+    {
+     "name": "硝苯地平",
+     "type": "Drug"
+    },
+    {
+     "name": "卡托普利",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "高血压",
+     "relation": "recommend_drug",
+     "tail": "硝苯地平"
+    },
+    {
+     "head": "高血压",
+     "relation": "recommend_drug",
+     "tail": "卡托普利"
+    },
+    {
+     "head": "高血压",
+     "relation": "recommend_drug",
+     "tail": "卡托普利"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "立克次体感染@立克次体是革兰阴性胞内寄生菌，生物学特征介于病毒和细菌之间，在动物宿主包括啮齿动物如鼠类和家畜等贮存宿主体内繁殖，传播途径主要是由节肢动物蜱、螨、蚤、虱等媒介的叮咬或暴露，以及气溶胶方式进行传播。立克次体感染@无论传统立克次体病还是新发立克次体病，其临床共同特点主要是不明原因高热（ ≥ 38 ℃ ） 、头痛、肌肉酸痛、皮疹、粒细胞小板减少，一般抗病毒药及抗生素治疗无效，而对多西环素、四环素、氯霉素等敏感。",
+   "entities": [
+    {
+     "name": "立克次体感染",
+     "type": "Disease"
+    },
+    {
+     "name": "不明原因高热（ ≥ 38 ℃ ）",
+     "type": "Symptom"
+    },
+    {
+     "name": "头痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "肌肉酸痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "皮疹",
+     "type": "Symptom"
+    },
+    {
+     "name": "粒细胞小板减少",
+     "type": "Symptom"
+    },
+    {
+     "name": "多西环素",
+     "type": "Drug"
+    },
+    {
+     "name": "四环素",
+     "type": "Drug"
+    },
+    {
+     "name": "氯霉素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "立克次体感染",
+     "relation": "has_symptom",
+     "tail": "不明原因高热（ ≥ 38 ℃ ）"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "has_symptom",
+     "tail": "头痛"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "has_symptom",
+     "tail": "肌肉酸痛"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "has_symptom",
+     "tail": "皮疹"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "has_symptom",
+     "tail": "粒细胞小板减少"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "recommend_drug",
+     "tail": "多西环素"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "recommend_drug",
+     "tail": "四环素"
+    },
+    {
+     "head": "立克次体感染",
+     "relation": "recommend_drug",
+     "tail": "氯霉素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "HIV 感染@痰培养结核分枝杆菌阳性，胸部 X 线检查结果也符合结核表现，从而确诊为肺结核。HIV 感染@目前正在服用的药物包括抗结核药和吡哆醇。",
+   "entities": [
+    {
+     "name": "肺结核",
+     "type": "Disease"
+    },
+    {
+     "name": "痰培养结核分枝杆菌阳性",
+     "type": "Symptom"
+    },
+    {
+     "name": "抗结核药",
+     "type": "Drug"
+    },
+    {
+     "name": "吡哆醇",
+     "type": "Drug"
+    },
+    {
+     "name": "胸部 X 线",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肺结核",
+     "relation": "has_symptom",
+     "tail": "痰培养结核分枝杆菌阳性"
+    },
+    {
+     "head": "肺结核",
+     "relation": "recommend_drug",
+     "tail": "抗结核药"
+    },
+    {
+     "head": "肺结核",
+     "relation": "recommend_drug",
+     "tail": "吡哆醇"
+    },
+    {
+     "head": "肺结核",
+     "relation": "need_examination",
+     "tail": "胸部 X 线"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "我国新中国成立前每年约100万新生儿死于破伤风，建国后发病率和死亡率显著下降，但在边远农村、山区及私自接生者新生儿破伤风仍不罕见。 （四）抗生素 青霉素：能杀灭破伤风梭菌，10万～20 万U/（kg•d），每天分2次，疗程10天左右。",
+   "entities": [
+    {
+     "name": "新生儿破伤风",
+     "type": "Disease"
+    },
+    {
+     "name": "抗生素",
+     "type": "Drug"
+    },
+    {
+     "name": "青霉素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "新生儿破伤风",
+     "relation": "recommend_drug",
+     "tail": "抗生素"
+    },
+    {
+     "head": "新生儿破伤风",
+     "relation": "recommend_drug",
+     "tail": "青霉素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【临床表现】 锌缺乏的临床表现是一种或多种锌的生物学活性降低的结果。 （二）厌食、食欲降低 缺锌后常引起口腔黏膜增生及角化不全，易于脱落，而大量脱落的上皮细胞可以掩盖和阻塞舌乳头中的味蕾小孔，使食物难以接触味蕾，不易引起味觉和促进食欲。",
+   "entities": [
+    {
+     "name": "锌缺乏",
+     "type": "Disease"
+    },
+    {
+     "name": "厌食",
+     "type": "Symptom"
+    },
+    {
+     "name": "食欲降低",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "锌缺乏",
+     "relation": "has_symptom",
+     "tail": "厌食"
+    },
+    {
+     "head": "锌缺乏",
+     "relation": "has_symptom",
+     "tail": "食欲降低"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肛门癌@对于 CD4 细胞计数＜200/μL 或出现其他 HIV 相关疾病体征或症状的患者，建议采用较低剂量的放疗和/或化疗。",
+   "entities": [
+    {
+     "name": "肛门癌",
+     "type": "Disease"
+    },
+    {
+     "name": "较低剂量的放疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "化疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "CD4 细胞计数＜200/μL",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肛门癌",
+     "relation": "treated_by_procedure",
+     "tail": "较低剂量的放疗"
+    },
+    {
+     "head": "肛门癌",
+     "relation": "treated_by_procedure",
+     "tail": "化疗"
+    },
+    {
+     "head": "肛门癌",
+     "relation": "has_symptom",
+     "tail": "CD4 细胞计数＜200/μL"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "HIV 感染@### 临床检查 从医生对患者的总体印象开始，应该确定患者身体状况良好还是不佳。HIV 感染@查体时应特别关注以下内容： * 体重和身高测量 * 检查是否有全身性淋巴结肿大，记录淋巴结的位置、大小和活动程度 * 皮肤视诊以查找 HIV 相关的皮疹和瘢痕（包括带状疱疹）、瘙痒性丘疹、真菌感染或卡波西肉瘤 * 检查口腔有无鹅口疮、口腔毛状白斑、卡波西肉瘤和牙周疾病。",
+   "entities": [
+    {
+     "name": "HIV 感染",
+     "type": "Disease"
+    },
+    {
+     "name": "皮肤视诊",
+     "type": "Examination"
+    },
+    {
+     "name": "检查口腔",
+     "type": "Examination"
+    },
+    {
+     "name": "真菌感染",
+     "type": "Disease"
+    },
+    {
+     "name": "牙周疾病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "HIV 感染",
+     "relation": "need_examination",
+     "tail": "皮肤视诊"
+    },
+    {
+     "head": "HIV 感染",
+     "relation": "need_examination",
+     "tail": "检查口腔"
+    },
+    {
+     "head": "HIV 感染",
+     "relation": "has_symptom",
+     "tail": "真菌感染"
+    },
+    {
+     "head": "HIV 感染",
+     "relation": "has_symptom",
+     "tail": "牙周疾病"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肝硬化@[ 男性性腺机能减退 ](/topics/zh-cn/1093) ### 肝性骨营养不良 | 存在差异 | 低 这一术语用来描述慢性肝病相关的骨质疏松症和骨软化症。",
+   "entities": [
+    {
+     "name": "肝硬化",
+     "type": "Disease"
+    },
+    {
+     "name": "男性性腺机能减退",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肝硬化",
+     "relation": "has_symptom",
+     "tail": "男性性腺机能减退"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "新生儿狼疮综合征@部分患儿由于母体的自身抗体，生后即出现短暂的皮肤及血液改变和持续的心脏异常等。",
+   "entities": [
+    {
+     "name": "新生儿狼疮综合征",
+     "type": "Disease"
+    },
+    {
+     "name": "皮肤及血液改变",
+     "type": "Symptom"
+    },
+    {
+     "name": "持续的心脏异常",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "新生儿狼疮综合征",
+     "relation": "has_symptom",
+     "tail": "皮肤及血液改变"
+    },
+    {
+     "head": "新生儿狼疮综合征",
+     "relation": "has_symptom",
+     "tail": "持续的心脏异常"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第三节 先天性肾病综合征 先天性肾病综合征（congenital nephrotic syndrome，CNS）指生后3个月内起病的肾病综合征。 免疫荧光检查病早期无Ig和补体沉着。",
+   "entities": [
+    {
+     "name": "先天性肾病综合征",
+     "type": "Disease"
+    },
+    {
+     "name": "免疫荧光检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "先天性肾病综合征",
+     "relation": "need_examination",
+     "tail": "免疫荧光检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【临床表现和实验室检査】 β地中海贫血 根据病情轻重的不同，分为以下三型。 实验室检查:成熟红细胞有轻度形态改变，红细胞渗透脆性正常或减低，血红蛋白电泳显示HbA2 含量增高（0. 035 ~ 0.060),这是本型的特点。",
+   "entities": [
+    {
+     "name": "β地中海贫血",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA2 含量增高",
+     "type": "Symptom"
+    },
+    {
+     "name": "成熟红细胞有轻度形态改变",
+     "type": "Symptom"
+    },
+    {
+     "name": "红细胞渗透脆性正常或减低",
+     "type": "Symptom"
+    },
+    {
+     "name": "血红蛋白电泳",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "β地中海贫血",
+     "relation": "has_symptom",
+     "tail": "HbA2 含量增高"
+    },
+    {
+     "head": "β地中海贫血",
+     "relation": "has_symptom",
+     "tail": "成熟红细胞有轻度形态改变"
+    },
+    {
+     "head": "β地中海贫血",
+     "relation": "has_symptom",
+     "tail": "红细胞渗透脆性正常或减低"
+    },
+    {
+     "head": "β地中海贫血",
+     "relation": "need_examination",
+     "tail": "血红蛋白电泳"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "广泛性焦虑障碍@结果 正常 ### 肺功能检查 检查 结果 检查 如果患者焦虑症状考虑为气短所致则需完善该检查排除肺部疾病。广泛性焦虑障碍@ 此种情况较少见。",
+   "entities": [
+    {
+     "name": "广泛性焦虑障碍",
+     "type": "Disease"
+    },
+    {
+     "name": "气短",
+     "type": "Symptom"
+    },
+    {
+     "name": "肺功能检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "广泛性焦虑障碍",
+     "relation": "has_symptom",
+     "tail": "气短"
+    },
+    {
+     "head": "广泛性焦虑障碍",
+     "relation": "need_examination",
+     "tail": "肺功能检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "前列腺癌@结果 异常细胞 ### 尿液生物标志物 检查 结果 检查 很多研究证实，通过尿液检测前列腺癌，在技术上是可行的，但很少有标志物得到了多个大样本研究的验证。 前列腺癌@结果 检测到特殊标志物 ### 血清标志物 检查 结果 检查 遗传标志物有可能有助于疾病的筛查、改善预后判断和提高对治疗反应的预测。",
+   "entities": [
+    {
+     "name": "前列腺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "尿液生物标志物 检查",
+     "type": "Examination"
+    },
+    {
+     "name": "血清标志物 检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "前列腺癌",
+     "relation": "need_examination",
+     "tail": "尿液生物标志物 检查"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "need_examination",
+     "tail": "血清标志物 检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第十三章 硬皮病 【概述】 硬皮病（scleroderma）是儿童时期少见的慢性结缔组织病。 主要病理表现结缔组织炎性细胞浸润，血管内膜增生，血管壁萎缩、纤维化，结果造成管腔狭窄或闭塞。",
+   "entities": [
+    {
+     "name": "硬皮病",
+     "type": "Disease"
+    },
+    {
+     "name": "结缔组织炎性细胞浸润",
+     "type": "Symptom"
+    },
+    {
+     "name": "血管内膜增生",
+     "type": "Symptom"
+    },
+    {
+     "name": "血管壁萎缩、纤维化",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "硬皮病",
+     "relation": "has_symptom",
+     "tail": "结缔组织炎性细胞浸润"
+    },
+    {
+     "head": "硬皮病",
+     "relation": "has_symptom",
+     "tail": "血管内膜增生"
+    },
+    {
+     "head": "硬皮病",
+     "relation": "has_symptom",
+     "tail": "血管壁萎缩、纤维化"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "白内障@初始眼科评估还包括眼内压测量。",
+   "entities": [
+    {
+     "name": "白内障",
+     "type": "Disease"
+    },
+    {
+     "name": "眼内压测量",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "白内障",
+     "relation": "need_examination",
+     "tail": "眼内压测量"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性膀胱炎@附加 –   尿痛症状的缓解 针对经选择患者组部分患者的治疗推荐 #### 第一选择 [ 非那吡啶 ](/druglink?dd=MARTINDALE) open_in_new : 需要时，每次口服 200mg，每日三次，共 2 日 为缓解尿痛症状，可以在抗生素治疗时应用非那吡啶。",
+   "entities": [
+    {
+     "name": "急性膀胱炎",
+     "type": "Disease"
+    },
+    {
+     "name": "非那吡啶",
+     "type": "Drug"
+    },
+    {
+     "name": "尿痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性膀胱炎",
+     "relation": "recommend_drug",
+     "tail": "非那吡啶"
+    },
+    {
+     "head": "急性膀胱炎",
+     "relation": "has_symptom",
+     "tail": "尿痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "PKU患者苯丙氨酸羟化酶缺乏，酪氨酸及正常代谢产物减少，血Phe含量增加，刺激转氨酶发育，次要代谢途径增强，生成苯丙酮酸、苯乙酸和苯乳酸，并从尿中大量排出，故称苯丙酮尿症。高浓度的Phe及其异常代谢产物抑制酪氨酸酶，使黑色素合成障碍。",
+   "entities": [
+    {
+     "name": "PKU",
+     "type": "Disease"
+    },
+    {
+     "name": "苯丙氨酸羟化酶缺乏",
+     "type": "Symptom"
+    },
+    {
+     "name": "酪氨酸及正常代谢产物减少",
+     "type": "Symptom"
+    },
+    {
+     "name": "血Phe含量增加",
+     "type": "Symptom"
+    },
+    {
+     "name": "刺激转氨酶发育",
+     "type": "Symptom"
+    },
+    {
+     "name": "次要代谢途径增强",
+     "type": "Symptom"
+    },
+    {
+     "name": "苯丙酮尿症",
+     "type": "Disease"
+    },
+    {
+     "name": "黑色素合成障碍",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "苯丙氨酸羟化酶缺乏"
+    },
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "酪氨酸及正常代谢产物减少"
+    },
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "血Phe含量增加"
+    },
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "刺激转氨酶发育"
+    },
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "次要代谢途径增强"
+    },
+    {
+     "head": "苯丙酮尿症",
+     "relation": "has_symptom",
+     "tail": "黑色素合成障碍"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "乳腺原位癌@乳腺导管原位癌的其他不常见症状包括乳头溢液或乳房肿块。乳腺原位癌@ 诊断为 DCIS 男性的首发症状通常是乳头血性分泌物。",
+   "entities": [
+    {
+     "name": "乳腺导管原位癌",
+     "type": "Disease"
+    },
+    {
+     "name": "乳头溢液",
+     "type": "Symptom"
+    },
+    {
+     "name": "乳房肿块",
+     "type": "Symptom"
+    },
+    {
+     "name": "DCIS",
+     "type": "Disease"
+    },
+    {
+     "name": "乳头血性分泌物",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "乳腺导管原位癌",
+     "relation": "has_symptom",
+     "tail": "乳头溢液"
+    },
+    {
+     "head": "乳腺导管原位癌",
+     "relation": "has_symptom",
+     "tail": "乳房肿块"
+    },
+    {
+     "head": "DCIS",
+     "relation": "has_symptom",
+     "tail": "乳头血性分泌物"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "宫颈癌@已经表明，根治性子宫切除术后进行辅助放疗可增加治疗相关并发症的风险，并且不改善无疾病进展生存期或总生存期。 宫颈癌@### 非妊娠IIB-IVA期：局部晚期宫颈癌 查看全部   首选 –   放化疗 #### 第一选择 [ 顺铂 ](/druglink?dd=MARTINDALE) open_in_new 和 [ 放疗 ](/druglink?dd=MARTINDALE) open_in_new 大多数研究证实，与放疗±羟基脲相比，顺铂±氟尿嘧啶联合放疗可以改善无进展生存期。",
+   "entities": [
+    {
+     "name": "宫颈癌",
+     "type": "Disease"
+    },
+    {
+     "name": "根治性子宫切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "放疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "顺铂",
+     "type": "Drug"
+    },
+    {
+     "name": "羟基脲",
+     "type": "Drug"
+    },
+    {
+     "name": "氟尿嘧啶",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "宫颈癌",
+     "relation": "treated_by_procedure",
+     "tail": "根治性子宫切除术"
+    },
+    {
+     "head": "宫颈癌",
+     "relation": "treated_by_procedure",
+     "tail": "放疗"
+    },
+    {
+     "head": "宫颈癌",
+     "relation": "recommend_drug",
+     "tail": "顺铂"
+    },
+    {
+     "head": "宫颈癌",
+     "relation": "recommend_drug",
+     "tail": "羟基脲"
+    },
+    {
+     "head": "宫颈癌",
+     "relation": "recommend_drug",
+     "tail": "氟尿嘧啶"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "18-三体综合征@还可出现食管气管瘘。18-三体综合征@右肺异常分叶或缺如。",
+   "entities": [
+    {
+     "name": "18-三体综合征",
+     "type": "Disease"
+    },
+    {
+     "name": "食管气管瘘",
+     "type": "Disease"
+    },
+    {
+     "name": "右肺异常分叶或缺如",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "18-三体综合征",
+     "relation": "complication",
+     "tail": "食管气管瘘"
+    },
+    {
+     "head": "18-三体综合征",
+     "relation": "has_symptom",
+     "tail": "右肺异常分叶或缺如"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "癫痫持续状态@诊断非惊厥性 SE 很难，但是识别很重要，因为快速阻止有助于防止严重脑损伤，尤其对意识障碍的患者。",
+   "entities": [
+    {
+     "name": "非惊厥性 SE",
+     "type": "Disease"
+    },
+    {
+     "name": "意识障碍",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "非惊厥性 SE",
+     "relation": "has_symptom",
+     "tail": "意识障碍"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "在小儿时期慢性TIN还可由代谢病引起，如①胱氨酸病：见本章第四节。②草酸盐过度产生或小肠过度吸收，造成肾排出草酸盐增多，则肾小管内草酸钙结晶沉积，受累小管萎缩，周围炎症细胞浸润和纤维化。",
+   "entities": [
+    {
+     "name": "慢性TIN",
+     "type": "Disease"
+    },
+    {
+     "name": "受累小管萎缩",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性TIN",
+     "relation": "has_symptom",
+     "tail": "受累小管萎缩"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "类癌综合征@患者还需要输注奥曲肽以防止类癌危象，应用时间是手术开始前至少 2 小时，直到手术后 48 小时。",
+   "entities": [
+    {
+     "name": "类癌危象",
+     "type": "Disease"
+    },
+    {
+     "name": "奥曲肽",
+     "type": "Drug"
+    },
+    {
+     "name": "类癌综合征",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "类癌危象",
+     "relation": "recommend_drug",
+     "tail": "奥曲肽"
+    },
+    {
+     "head": "类癌综合征",
+     "relation": "complication",
+     "tail": "类癌危象"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【实验室检查】 1.新生儿筛查 新生儿期的PKU患儿无任何临床表现，生后3个月后才渐渐出现PKU的表现。 6.脑电图 约80%病儿有脑电图异常，可表现为高峰节律紊乱及灶性棘波等。",
+   "entities": [
+    {
+     "name": "PKU",
+     "type": "Disease"
+    },
+    {
+     "name": "新生儿筛查",
+     "type": "Examination"
+    },
+    {
+     "name": "脑电图",
+     "type": "Examination"
+    },
+    {
+     "name": "脑电图异常",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "PKU",
+     "relation": "need_examination",
+     "tail": "新生儿筛查"
+    },
+    {
+     "head": "PKU",
+     "relation": "need_examination",
+     "tail": "脑电图"
+    },
+    {
+     "head": "PKU",
+     "relation": "has_symptom",
+     "tail": "脑电图异常"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "初期即发生胸膜炎者，有咳嗽、胸闷，胸痛及上腹痛明显，可痰中带血。肺内囊肿、脓肿可穿破至胸腔，发生胸水、脓胸或脓气胸等体征。",
+   "entities": [
+    {
+     "name": "胸膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "咳嗽",
+     "type": "Symptom"
+    },
+    {
+     "name": "胸闷",
+     "type": "Symptom"
+    },
+    {
+     "name": "胸痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "上腹痛明显",
+     "type": "Symptom"
+    },
+    {
+     "name": "痰中带血",
+     "type": "Symptom"
+    },
+    {
+     "name": "肺内囊肿、脓肿可穿破至胸腔",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "咳嗽"
+    },
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "胸闷"
+    },
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "胸痛"
+    },
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "上腹痛明显"
+    },
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "痰中带血"
+    },
+    {
+     "head": "胸膜炎",
+     "relation": "has_symptom",
+     "tail": "肺内囊肿、脓肿可穿破至胸腔"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "非小细胞肺癌@可经开胸术达到肺部，然而，微创手术（如胸腔镜手术）凭借其住院周期短和术后疼痛轻而越来越普遍。",
+   "entities": [
+    {
+     "name": "非小细胞肺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "肺部",
+     "type": "Body"
+    },
+    {
+     "name": "胸腔镜手术",
+     "type": "Procedure"
+    },
+    {
+     "name": "开胸术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "非小细胞肺癌",
+     "relation": "located_in",
+     "tail": "肺部"
+    },
+    {
+     "head": "非小细胞肺癌",
+     "relation": "treated_by_procedure",
+     "tail": "胸腔镜手术"
+    },
+    {
+     "head": "非小细胞肺癌",
+     "relation": "treated_by_procedure",
+     "tail": "开胸术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "B族链球菌感染@ ### 癫痫发作 | 短期 | 低 可见于 B族链球菌感染性脑膜患者，应给予苯二氮卓类或抗惊厥药物治疗。",
+   "entities": [
+    {
+     "name": "癫痫",
+     "type": "Disease"
+    },
+    {
+     "name": "苯二氮卓类",
+     "type": "Drug"
+    },
+    {
+     "name": "抗惊厥药物",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "癫痫",
+     "relation": "recommend_drug",
+     "tail": "苯二氮卓类"
+    },
+    {
+     "head": "癫痫",
+     "relation": "recommend_drug",
+     "tail": "抗惊厥药物"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "基底细胞癌@合理应用Mohs手术进行治疗的复发率很低（2%至5%），并且除了可以应用在影响美观的部位，Mohs手术也考虑作为大的硬斑病型基底细胞癌，或边界不清的基底细胞癌的治疗手段。",
+   "entities": [
+    {
+     "name": "基底细胞癌",
+     "type": "Disease"
+    },
+    {
+     "name": "Mohs手术",
+     "type": "Procedure"
+    },
+    {
+     "name": "大的硬斑病型基底细胞癌",
+     "type": "Disease"
+    },
+    {
+     "name": "边界不清的基底细胞癌",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "基底细胞癌",
+     "relation": "treated_by_procedure",
+     "tail": "Mohs手术"
+    },
+    {
+     "head": "大的硬斑病型基底细胞癌",
+     "relation": "treated_by_procedure",
+     "tail": "Mohs手术"
+    },
+    {
+     "head": "边界不清的基底细胞癌",
+     "relation": "treated_by_procedure",
+     "tail": "Mohs手术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "大动脉炎@ 胸部X线片可显示主动脉钙化或主动脉增宽，超声波检查可显示周围动脉或主动脉等狭窄部位及程度，动脉造影和MRI可显示狭窄或扩张的部位及程度，以及血流减少的程度。",
+   "entities": [
+    {
+     "name": "大动脉炎",
+     "type": "Disease"
+    },
+    {
+     "name": "胸部X线片",
+     "type": "Examination"
+    },
+    {
+     "name": "主动脉增宽",
+     "type": "Symptom"
+    },
+    {
+     "name": "动脉造影",
+     "type": "Examination"
+    },
+    {
+     "name": "MRI",
+     "type": "Examination"
+    },
+    {
+     "name": "超声波",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "大动脉炎",
+     "relation": "need_examination",
+     "tail": "胸部X线片"
+    },
+    {
+     "head": "大动脉炎",
+     "relation": "has_symptom",
+     "tail": "主动脉增宽"
+    },
+    {
+     "head": "大动脉炎",
+     "relation": "need_examination",
+     "tail": "动脉造影"
+    },
+    {
+     "head": "大动脉炎",
+     "relation": "need_examination",
+     "tail": "MRI"
+    },
+    {
+     "head": "大动脉炎",
+     "relation": "need_examination",
+     "tail": "超声波"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【治疗】 凡诊断为GER的患儿，特别是有合并症或影响生长发育者必须及时进行治疗。 促胃肠动力药(prokinetic agents):疗程4周。",
+   "entities": [
+    {
+     "name": "GER",
+     "type": "Disease"
+    },
+    {
+     "name": "促胃肠动力药",
+     "type": "Drug"
+    },
+    {
+     "name": "影响生长发育",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "GER",
+     "relation": "recommend_drug",
+     "tail": "促胃肠动力药"
+    },
+    {
+     "head": "GER",
+     "relation": "has_symptom",
+     "tail": "影响生长发育"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性阑尾炎@应当开始静脉输液，例如给予乳酸林格氏液。 急性阑尾炎@不应延误实施阑尾切除术。",
+   "entities": [
+    {
+     "name": "急性阑尾炎",
+     "type": "Disease"
+    },
+    {
+     "name": "阑尾切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "乳酸林格氏液",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性阑尾炎",
+     "relation": "treated_by_procedure",
+     "tail": "阑尾切除术"
+    },
+    {
+     "head": "急性阑尾炎",
+     "relation": "recommend_drug",
+     "tail": "乳酸林格氏液"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "类风湿关节炎@常用的治疗方案为每日口服小剂量泼尼松龙（≤5mg），每日剂量很少需要超过10mg。",
+   "entities": [
+    {
+     "name": "类风湿关节炎",
+     "type": "Disease"
+    },
+    {
+     "name": "泼尼松龙",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "类风湿关节炎",
+     "relation": "recommend_drug",
+     "tail": "泼尼松龙"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "如病人有肾上腺功能不全，常需要葡萄糖、钾及肾上腺皮质激素的补充。",
+   "entities": [
+    {
+     "name": "肾上腺功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "葡萄糖",
+     "type": "Drug"
+    },
+    {
+     "name": "钾",
+     "type": "Drug"
+    },
+    {
+     "name": "肾上腺皮质激素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾上腺功能不全",
+     "relation": "recommend_drug",
+     "tail": "葡萄糖"
+    },
+    {
+     "head": "肾上腺功能不全",
+     "relation": "recommend_drug",
+     "tail": "钾"
+    },
+    {
+     "head": "肾上腺功能不全",
+     "relation": "recommend_drug",
+     "tail": "肾上腺皮质激素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "单纯型膨出在其基底部做一横行切口，约0. 5～0. 8cm左右即可；异位型输尿管膨出则在其最下端纵行切开0. 5～0. 8cm。如效果不满意或出现反流，应做膨出切除及抗反流性输尿管膀胱再吻合术，并同时修复输尿管膨出后侧薄弱的膀胱壁。",
+   "entities": [
+    {
+     "name": "异位型输尿管膨出",
+     "type": "Disease"
+    },
+    {
+     "name": "膨出切除",
+     "type": "Procedure"
+    },
+    {
+     "name": "抗反流性输尿管膀胱再吻合术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "异位型输尿管膨出",
+     "relation": "treated_by_procedure",
+     "tail": "膨出切除"
+    },
+    {
+     "head": "异位型输尿管膨出",
+     "relation": "treated_by_procedure",
+     "tail": "抗反流性输尿管膀胱再吻合术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "遗传性胰腺炎起病年龄多见于5～10岁。CT或超声检查显示缩小的、钙化胰腺伴导管扩张。",
+   "entities": [
+    {
+     "name": "遗传性胰腺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "CT",
+     "type": "Examination"
+    },
+    {
+     "name": "超声",
+     "type": "Examination"
+    },
+    {
+     "name": "缩小的、钙化胰腺伴导管扩张",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "遗传性胰腺炎",
+     "relation": "need_examination",
+     "tail": "CT"
+    },
+    {
+     "head": "遗传性胰腺炎",
+     "relation": "need_examination",
+     "tail": "超声"
+    },
+    {
+     "head": "遗传性胰腺炎",
+     "relation": "has_symptom",
+     "tail": "缩小的、钙化胰腺伴导管扩张"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "绝大多数的右室双出口伴有室间隔缺损，室间隔缺损可以是膜周型、肌部、远离大动脉或双动脉下。",
+   "entities": [
+    {
+     "name": "右室双出口",
+     "type": "Disease"
+    },
+    {
+     "name": "室间隔缺损",
+     "type": "Disease"
+    },
+    {
+     "name": "肌部",
+     "type": "Body"
+    },
+    {
+     "name": "远离大动脉",
+     "type": "Body"
+    },
+    {
+     "name": "双动脉下",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "右室双出口",
+     "relation": "complication",
+     "tail": "室间隔缺损"
+    },
+    {
+     "head": "室间隔缺损",
+     "relation": "located_in",
+     "tail": "肌部"
+    },
+    {
+     "head": "室间隔缺损",
+     "relation": "located_in",
+     "tail": "远离大动脉"
+    },
+    {
+     "head": "室间隔缺损",
+     "relation": "located_in",
+     "tail": "双动脉下"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "（三）进一步检查 对呕吐原发病的位置和性质有初步判断后，应及时做进一步的检查，以明确诊断。对胃十二指肠、小肠部位的先天畸形，钡餐造影可帮助诊断，须注意检查结束时应洗胃，将胃内钡剂洗出，防止呕吐时钡剂吸入。",
+   "entities": [
+    {
+     "name": "呕吐原发病",
+     "type": "Disease"
+    },
+    {
+     "name": "钡餐造影",
+     "type": "Examination"
+    },
+    {
+     "name": "胃十二指肠、小肠部位的先天畸形",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "呕吐原发病",
+     "relation": "need_examination",
+     "tail": "钡餐造影"
+    },
+    {
+     "head": "胃十二指肠、小肠部位的先天畸形",
+     "relation": "need_examination",
+     "tail": "钡餐造影"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "第八节 肾小管间质性肾炎 肾小管间质性肾炎（tubulointerstitial nephritis，TIN）是指主要累及肾小管和肾间质的炎症，而肾小球及血管受累相对不明显的一种疾患。近年认识到它是引起小儿肾衰竭的重要原因；据估计成年人TIN占急性肾衰竭的5%～15%，进入终末期肾衰中占25%：小儿则分别为5%和6%～8%。",
+   "entities": [
+    {
+     "name": "肾小管间质性肾炎",
+     "type": "Disease"
+    },
+    {
+     "name": "肾小管",
+     "type": "Body"
+    },
+    {
+     "name": "肾间质",
+     "type": "Body"
+    },
+    {
+     "name": "肾小球",
+     "type": "Body"
+    },
+    {
+     "name": "血管",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾小管间质性肾炎",
+     "relation": "located_in",
+     "tail": "肾小管"
+    },
+    {
+     "head": "肾小管间质性肾炎",
+     "relation": "located_in",
+     "tail": "肾间质"
+    },
+    {
+     "head": "肾小管间质性肾炎",
+     "relation": "located_in",
+     "tail": "肾小球"
+    },
+    {
+     "head": "肾小管间质性肾炎",
+     "relation": "located_in",
+     "tail": "血管"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "（二）其他睡眠障碍 梦呓的发生常常与其他睡眠障碍有关，如阻塞性睡眠呼吸暂停综合征、REM睡眠行为障碍、夜惊，鉴别诊断有赖于其他睡眠障碍的确定。",
+   "entities": [
+    {
+     "name": "夜惊",
+     "type": "Disease"
+    },
+    {
+     "name": "梦呓",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "夜惊",
+     "relation": "has_symptom",
+     "tail": "梦呓"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "髓鞘化障碍是婴幼儿神经系统疾病，尤其是神经变性病和代谢病的主要表现之一。",
+   "entities": [
+    {
+     "name": "代谢病",
+     "type": "Disease"
+    },
+    {
+     "name": "髓鞘化障碍",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "代谢病",
+     "relation": "has_symptom",
+     "tail": "髓鞘化障碍"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "癫痫持续状态@对于这种情况，需要进行持续性脑电图监测，因为该方法可以诊断持续性全身 SE 小发作。",
+   "entities": [
+    {
+     "name": "癫痫持续状态",
+     "type": "Disease"
+    },
+    {
+     "name": "脑电图",
+     "type": "Examination"
+    },
+    {
+     "name": "持续性全身 SE 小发作",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "癫痫持续状态",
+     "relation": "need_examination",
+     "tail": "脑电图"
+    },
+    {
+     "head": "持续性全身 SE 小发作",
+     "relation": "need_examination",
+     "tail": "脑电图"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "小细胞肺癌@结果 正常或增高 ### 血清钠 检查 结果 检查 低钠血症可见于抗利尿激素分泌异常综合症。",
+   "entities": [
+    {
+     "name": "小细胞肺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "血清钠",
+     "type": "Examination"
+    },
+    {
+     "name": "低钠血症",
+     "type": "Disease"
+    },
+    {
+     "name": "抗利尿激素分泌异常综合症",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "小细胞肺癌",
+     "relation": "need_examination",
+     "tail": "血清钠"
+    },
+    {
+     "head": "低钠血症",
+     "relation": "need_examination",
+     "tail": "血清钠"
+    },
+    {
+     "head": "抗利尿激素分泌异常综合症",
+     "relation": "need_examination",
+     "tail": "血清钠"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "垂体功能减退@ 3.炎性和浸润性病变 * 淋巴细胞性垂体炎典型表现为垂体肿块病变，导致部分或进行性垂体功能减退，特别是在妊娠或产后的情况下。垂体功能减退@ 它被认为是一种淋巴细胞和浆细胞浸润垂体的自身免疫性疾病。",
+   "entities": [
+    {
+     "name": "垂体功能减退",
+     "type": "Disease"
+    },
+    {
+     "name": "垂体肿块病变",
+     "type": "Symptom"
+    },
+    {
+     "name": "淋巴细胞性垂体炎",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "垂体功能减退",
+     "relation": "has_symptom",
+     "tail": "垂体肿块病变"
+    },
+    {
+     "head": "淋巴细胞性垂体炎",
+     "relation": "has_symptom",
+     "tail": "垂体肿块病变"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "一旦红细胞破坏过多存在，溶血性贫血的诊断成立，然后，再根据抗人球蛋白（Coombs）直接及间接试验的阳性与否区分免疫性（Coombs试验阳性，血型不合溶血除外）与非免疫性（Coombs试验阴性）；非免疫性溶血性贫血可根据红细胞形态、脆性试验、葡萄糖孵育脆性试验、高铁血红蛋白还原试验、酸溶血试验（Ham）、红细胞酶谱分析、红细胞CD55/CD59流式细胞仪分析、珠蛋白小体（Hein’s body）、血红蛋白电泳等试验区分各种原因引起的溶血性贫血。",
+   "entities": [
+    {
+     "name": "非免疫性溶血性贫血",
+     "type": "Disease"
+    },
+    {
+     "name": "红细胞形态",
+     "type": "Examination"
+    },
+    {
+     "name": "脆性试验",
+     "type": "Examination"
+    },
+    {
+     "name": "葡萄糖孵育脆性试验",
+     "type": "Examination"
+    },
+    {
+     "name": "高铁血红蛋白还原试验",
+     "type": "Examination"
+    },
+    {
+     "name": "酸溶血试验",
+     "type": "Examination"
+    },
+    {
+     "name": "红细胞酶谱分析",
+     "type": "Examination"
+    },
+    {
+     "name": "红细胞CD55/CD59流式细胞仪分析",
+     "type": "Examination"
+    },
+    {
+     "name": "血红蛋白电泳",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "红细胞形态"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "脆性试验"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "葡萄糖孵育脆性试验"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "高铁血红蛋白还原试验"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "酸溶血试验"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "红细胞酶谱分析"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "红细胞CD55/CD59流式细胞仪分析"
+    },
+    {
+     "head": "非免疫性溶血性贫血",
+     "relation": "need_examination",
+     "tail": "血红蛋白电泳"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【诊断与鉴别诊断】 慢性胃炎无特殊性表现，单凭临床症状诊断较为困难，对反复腹痛与消化不良症状的患儿确诊主要依靠胃镜检查与病理组织活体检查。根据有无腺体萎缩诊断为慢性浅表性胃炎或慢性萎缩性胃炎。",
+   "entities": [
+    {
+     "name": "慢性胃炎",
+     "type": "Disease"
+    },
+    {
+     "name": "腹痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "消化不良",
+     "type": "Symptom"
+    },
+    {
+     "name": "胃镜",
+     "type": "Examination"
+    },
+    {
+     "name": "病理组织活体检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性胃炎",
+     "relation": "has_symptom",
+     "tail": "腹痛"
+    },
+    {
+     "head": "慢性胃炎",
+     "relation": "has_symptom",
+     "tail": "消化不良"
+    },
+    {
+     "head": "慢性胃炎",
+     "relation": "need_examination",
+     "tail": "胃镜"
+    },
+    {
+     "head": "慢性胃炎",
+     "relation": "need_examination",
+     "tail": "病理组织活体检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "食管癌@手术状况差和不适合行放化疗的患者，可行直接针对局部肿瘤的替代疗法用以减轻肿瘤相关症状。食管癌@应用激光及光动力疗法（PDT）可缓解症状，尽管该PDT可导致食管狭窄。",
+   "entities": [
+    {
+     "name": "食管癌",
+     "type": "Disease"
+    },
+    {
+     "name": "放化疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "食管癌",
+     "relation": "treated_by_procedure",
+     "tail": "放化疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "类风湿关节炎@皮质类固醇还具有某种程度的疾病改善作用，因此有助于疾病的整体控制。",
+   "entities": [
+    {
+     "name": "类风湿关节炎",
+     "type": "Disease"
+    },
+    {
+     "name": "皮质类固醇",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "类风湿关节炎",
+     "relation": "recommend_drug",
+     "tail": "皮质类固醇"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性淋巴细胞白血病@治疗还包括鞘内化疗。急性淋巴细胞白血病@ 初始腰椎穿刺可分为：CNS1级：阴性；CNS2:非创伤性，≤5个白细胞/μL，含母细胞的脑脊液；CNS3：非创伤性性，>5个白细胞/μL，含母细胞的脑脊液；TLP(+)：创伤性（>10红细胞/ml或可见血色）伴母细胞；TLP(-):创伤性无母细胞。",
+   "entities": [
+    {
+     "name": "急性淋巴细胞白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "鞘内化疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "腰椎穿刺",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "treated_by_procedure",
+     "tail": "鞘内化疗"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "need_examination",
+     "tail": "腰椎穿刺"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "气管狭窄的表现视其程度而定。轻度狭窄常无症状，较严重时，可出现气急，发绀，吸气时可闻喘鸣音。",
+   "entities": [
+    {
+     "name": "气管狭窄",
+     "type": "Disease"
+    },
+    {
+     "name": "气急",
+     "type": "Symptom"
+    },
+    {
+     "name": "发绀",
+     "type": "Symptom"
+    },
+    {
+     "name": "吸气时可闻喘鸣音",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "气管狭窄",
+     "relation": "has_symptom",
+     "tail": "气急"
+    },
+    {
+     "head": "气管狭窄",
+     "relation": "has_symptom",
+     "tail": "发绀"
+    },
+    {
+     "head": "气管狭窄",
+     "relation": "has_symptom",
+     "tail": "吸气时可闻喘鸣音"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "targetUrl=http://cochraneclinicalanswers.com/doi/10.1002/cca.539/full) ## 证据评分 住院时间：有质量差的证据表明，早期胆囊切除术（在诊断时或症状发作 7 日内）可能比延后的胆囊切除术（在症状发作后 6 周或以上）更有效地缩短住院时间。 胆囊炎@住院时间：有质量差的证据表明，腹腔镜胆囊切除术可能比开腹胆囊切除术更有效地缩短住院时间。",
+   "entities": [
+    {
+     "name": "胆囊炎",
+     "type": "Disease"
+    },
+    {
+     "name": "腹腔镜胆囊切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "开腹胆囊切除术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胆囊炎",
+     "relation": "treated_by_procedure",
+     "tail": "腹腔镜胆囊切除术"
+    },
+    {
+     "head": "胆囊炎",
+     "relation": "treated_by_procedure",
+     "tail": "开腹胆囊切除术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "对于内部浸润型肿瘤，无法手术，主要靠放射治疗。",
+   "entities": [
+    {
+     "name": "内部浸润型肿瘤",
+     "type": "Disease"
+    },
+    {
+     "name": "放射治疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "内部浸润型肿瘤",
+     "relation": "treated_by_procedure",
+     "tail": "放射治疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "口腔黏膜炎@对于接受化疗的患者，保持良好的口腔卫生可以减轻口腔黏膜炎。",
+   "entities": [
+    {
+     "name": "口腔黏膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "化疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "口腔黏膜炎",
+     "relation": "treated_by_procedure",
+     "tail": "化疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "二、广泛性焦虑症 广泛性焦虑症（generalized anxiety disorder）的基本特征为广泛和持续的焦虑，但不一定是在某一特殊情境中发生。",
+   "entities": [
+    {
+     "name": "广泛性焦虑症",
+     "type": "Disease"
+    },
+    {
+     "name": "广泛和持续的焦虑",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "广泛性焦虑症",
+     "relation": "has_symptom",
+     "tail": "广泛和持续的焦虑"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "中耳炎@对抗生素无反应或严重疼痛 – 联合 –   鼓膜穿刺术 针对经选择患者组全部患者的治疗推荐 鼓膜穿刺除了用于诊断病因外，还可以缓解中耳腔的压力，并缓解耳痛。",
+   "entities": [
+    {
+     "name": "中耳炎",
+     "type": "Disease"
+    },
+    {
+     "name": "鼓膜穿刺术",
+     "type": "Procedure"
+    },
+    {
+     "name": "耳痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "严重疼痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "中耳炎",
+     "relation": "treated_by_procedure",
+     "tail": "鼓膜穿刺术"
+    },
+    {
+     "head": "中耳炎",
+     "relation": "has_symptom",
+     "tail": "耳痛"
+    },
+    {
+     "head": "中耳炎",
+     "relation": "has_symptom",
+     "tail": "严重疼痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "小儿口炎在婴幼儿较多见，可以单独发病，也可继发于腹泻、营养不良、急性感染和久病体弱等全身性疾病。根据致病因素分为感染性口炎和非感染性口炎。",
+   "entities": [
+    {
+     "name": "小儿口炎",
+     "type": "Disease"
+    },
+    {
+     "name": "营养不良",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "小儿口炎",
+     "relation": "has_symptom",
+     "tail": "营养不良"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "但抗原检测可以有假阳性，因此抗原检测的阳性结果只能提示可能有GBS感染，同时应结合感染的临床表现来综合判断。 【治疗】 GBS感染的初期治疗包括青霉素和氨基糖苷类。",
+   "entities": [
+    {
+     "name": "GBS感染",
+     "type": "Disease"
+    },
+    {
+     "name": "抗原检测",
+     "type": "Examination"
+    },
+    {
+     "name": "青霉素",
+     "type": "Drug"
+    },
+    {
+     "name": "氨基糖苷类",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "GBS感染",
+     "relation": "need_examination",
+     "tail": "抗原检测"
+    },
+    {
+     "head": "GBS感染",
+     "relation": "recommend_drug",
+     "tail": "青霉素"
+    },
+    {
+     "head": "GBS感染",
+     "relation": "recommend_drug",
+     "tail": "氨基糖苷类"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "右位 心@在胸部X线平片上，异位引流的肺静脉在右肺野表现为“短弯刀”样阴影。",
+   "entities": [
+    {
+     "name": "右位 心",
+     "type": "Disease"
+    },
+    {
+     "name": "胸部X线",
+     "type": "Examination"
+    },
+    {
+     "name": "“短弯刀”样阴影",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "右位 心",
+     "relation": "need_examination",
+     "tail": "胸部X线"
+    },
+    {
+     "head": "右位 心",
+     "relation": "has_symptom",
+     "tail": "“短弯刀”样阴影"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "川崎病@ （二）急性期后的治疗 在起病后6～8周应复查血小板、血沉及心脏超声波。川崎病@如实验室检查均正常，且没有冠状动脉损伤，阿司匹林可停药。",
+   "entities": [
+    {
+     "name": "川崎病",
+     "type": "Disease"
+    },
+    {
+     "name": "没有冠状动脉损伤",
+     "type": "Symptom"
+    },
+    {
+     "name": "阿司匹林",
+     "type": "Drug"
+    },
+    {
+     "name": "心脏超声波",
+     "type": "Examination"
+    },
+    {
+     "name": "血小板",
+     "type": "Examination"
+    },
+    {
+     "name": "血沉",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "川崎病",
+     "relation": "has_symptom",
+     "tail": "没有冠状动脉损伤"
+    },
+    {
+     "head": "川崎病",
+     "relation": "recommend_drug",
+     "tail": "阿司匹林"
+    },
+    {
+     "head": "川崎病",
+     "relation": "need_examination",
+     "tail": "心脏超声波"
+    },
+    {
+     "head": "川崎病",
+     "relation": "need_examination",
+     "tail": "血小板"
+    },
+    {
+     "head": "川崎病",
+     "relation": "need_examination",
+     "tail": "血沉"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性膀胱炎@在治疗复杂性急性膀胱炎患者期间，有必要经常复查尿常规和尿培养，以确保感染已得到治愈。",
+   "entities": [
+    {
+     "name": "复杂性急性膀胱炎",
+     "type": "Disease"
+    },
+    {
+     "name": "尿常规",
+     "type": "Examination"
+    },
+    {
+     "name": "尿培养",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "复杂性急性膀胱炎",
+     "relation": "need_examination",
+     "tail": "尿常规"
+    },
+    {
+     "head": "复杂性急性膀胱炎",
+     "relation": "need_examination",
+     "tail": "尿培养"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "成人哮喘@### 第 6 级：重度持续，对高剂量 ICS+辅助药物反应不佳 查看全部   首选 –   口服糖皮质激素 #### 第一选择 [ 泼尼松龙 ](/druglink?dd=MARTINDALE) open_in_new : 0.5 mg/kg/日，口服，分 1-2 次给药，持续 3-5 天 重度持续定义为：症状持续，活动受限，急性发作频繁，夜间症状频繁，FEV1≤60% 预计值，PEFR 变异率>60%。",
+   "entities": [
+    {
+     "name": "成人哮喘",
+     "type": "Disease"
+    },
+    {
+     "name": "糖皮质激素",
+     "type": "Drug"
+    },
+    {
+     "name": "泼尼松龙",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "成人哮喘",
+     "relation": "recommend_drug",
+     "tail": "糖皮质激素"
+    },
+    {
+     "head": "成人哮喘",
+     "relation": "recommend_drug",
+     "tail": "泼尼松龙"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "腹主动脉瘤@ * 并发症包括心肺事件、肠系膜缺血、肾功能衰竭、出血、伤口和移植物感染、脊髓缺血/截瘫、栓塞/肢体缺血、迟发性移植物并发症（即：主动脉肠瘘和主动脉假性动脉瘤）。",
+   "entities": [
+    {
+     "name": "腹主动脉瘤",
+     "type": "Disease"
+    },
+    {
+     "name": "肠系膜缺血",
+     "type": "Disease"
+    },
+    {
+     "name": "肾功能衰竭",
+     "type": "Disease"
+    },
+    {
+     "name": "移植物感染",
+     "type": "Disease"
+    },
+    {
+     "name": "脊髓缺血",
+     "type": "Disease"
+    },
+    {
+     "name": "截瘫",
+     "type": "Disease"
+    },
+    {
+     "name": "栓塞",
+     "type": "Disease"
+    },
+    {
+     "name": "肢体缺血",
+     "type": "Disease"
+    },
+    {
+     "name": "迟发性移植物并发症",
+     "type": "Disease"
+    },
+    {
+     "name": "主动脉假性动脉瘤",
+     "type": "Disease"
+    },
+    {
+     "name": "主动脉肠瘘",
+     "type": "Disease"
+    },
+    {
+     "name": "出血",
+     "type": "Symptom"
+    },
+    {
+     "name": "伤口",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "肠系膜缺血"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "肾功能衰竭"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "移植物感染"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "脊髓缺血"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "截瘫"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "栓塞"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "肢体缺血"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "迟发性移植物并发症"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "主动脉假性动脉瘤"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "complication",
+     "tail": "主动脉肠瘘"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "出血"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "伤口"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "(―)一般治疗 ①保温:将婴儿置于暖箱或辐射式抢救台上,保持皮肤温度在36. 5℃ ;②监测:体温、呼吸、心率、血压和动脉血气;③保证液体和营养供应:第1天液体量为70 ~80ml/(kg • d)，以后逐渐增加，液体量不宜过多，否则易导致动脉导管开放，甚至发生肺水肿;④抗生素:RDS患儿在败血症被排除前，建议常规使用抗生素。 (二）氧疗（oxygen therapy)和辅助通气 吸氧 轻症可选用鼻导管、面罩、头罩或鼻塞吸氧，维持PaO250 ~80mmHg(6.7~10.6kPa)和经皮血氧饱和度（TcS02)90% ~ 95%为宜。",
+   "entities": [
+    {
+     "name": "RDS",
+     "type": "Disease"
+    },
+    {
+     "name": "抗生素",
+     "type": "Drug"
+    },
+    {
+     "name": "监测",
+     "type": "Examination"
+    },
+    {
+     "name": "保证液体和营养供应",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "RDS",
+     "relation": "recommend_drug",
+     "tail": "抗生素"
+    },
+    {
+     "head": "RDS",
+     "relation": "need_examination",
+     "tail": "监测"
+    },
+    {
+     "head": "RDS",
+     "relation": "need_examination",
+     "tail": "保证液体和营养供应"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "喉癌@ ### 喘息 无论何种组织类型喉癌晚期都可出现呼吸道梗阻。喉癌@少数声门上型喉癌患者喘息为首发症状。",
+   "entities": [
+    {
+     "name": "喉癌",
+     "type": "Disease"
+    },
+    {
+     "name": "喘息",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "喉癌",
+     "relation": "has_symptom",
+     "tail": "喘息"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "垂体功能减退@### 疲乏 肾上腺皮质功能不全。",
+   "entities": [
+    {
+     "name": "垂体功能减退",
+     "type": "Disease"
+    },
+    {
+     "name": "疲乏",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "垂体功能减退",
+     "relation": "has_symptom",
+     "tail": "疲乏"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "腹主动脉瘤@组织学检查发现，动脉中层和外膜的胶原蛋白和弹性蛋白消失，平滑肌细胞减少和继发的中层壁逐渐变薄，淋巴细胞和巨噬细胞浸润，新生血管形成。",
+   "entities": [
+    {
+     "name": "腹主动脉瘤",
+     "type": "Disease"
+    },
+    {
+     "name": "动脉中层和外膜的胶原蛋白和弹性蛋白消失",
+     "type": "Symptom"
+    },
+    {
+     "name": "平滑肌细胞减少",
+     "type": "Symptom"
+    },
+    {
+     "name": "继发的中层壁逐渐变薄",
+     "type": "Symptom"
+    },
+    {
+     "name": "淋巴细胞和巨噬细胞浸润",
+     "type": "Symptom"
+    },
+    {
+     "name": "新生血管形成",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "动脉中层和外膜的胶原蛋白和弹性蛋白消失"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "平滑肌细胞减少"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "继发的中层壁逐渐变薄"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "淋巴细胞和巨噬细胞浸润"
+    },
+    {
+     "head": "腹主动脉瘤",
+     "relation": "has_symptom",
+     "tail": "新生血管形成"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性淋巴细胞白血病@对于白细胞超过25 x 10^9/L (25 000/μL)的高白血病负荷患者，建议有一个谨慎细胞减少的阶段，可联合使用皮质类固醇和长春新碱或环磷酰胺。急性淋巴细胞白血病@另外，对于有白细胞瘀滞症状的患者，治疗开始前需进行白细胞去除术。",
+   "entities": [
+    {
+     "name": "急性淋巴细胞白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "白细胞去除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "皮质类固醇",
+     "type": "Drug"
+    },
+    {
+     "name": "长春新碱",
+     "type": "Drug"
+    },
+    {
+     "name": "环磷酰胺",
+     "type": "Drug"
+    },
+    {
+     "name": "白细胞瘀滞",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "treated_by_procedure",
+     "tail": "白细胞去除术"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "recommend_drug",
+     "tail": "皮质类固醇"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "recommend_drug",
+     "tail": "长春新碱"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "recommend_drug",
+     "tail": "环磷酰胺"
+    },
+    {
+     "head": "急性淋巴细胞白血病",
+     "relation": "has_symptom",
+     "tail": "白细胞瘀滞"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "病毒性脑膜炎@ 艾滋病病毒的病毒负载量测试可在血清转换前诊断急性 HIV 感染。 病毒性脑膜炎@结果 可能呈阳性 ### 新兴检查 ### 查看全部   ### 脑脊液 C 反应蛋白 (CRP) 检查 结果 检查 脑脊液 CRP 低对细菌性脑膜炎的阴性预测值＞97%。",
+   "entities": [
+    {
+     "name": "病毒性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "脑脊液 C 反应蛋白 (CRP)",
+     "type": "Examination"
+    },
+    {
+     "name": "细菌性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "脑脊液 CRP",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "病毒性脑膜炎",
+     "relation": "need_examination",
+     "tail": "脑脊液 C 反应蛋白 (CRP)"
+    },
+    {
+     "head": "细菌性脑膜炎",
+     "relation": "need_examination",
+     "tail": "脑脊液 CRP"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性胰腺炎@胸腔镜内脏神经切除术短期疼痛缓解作用与CPB治疗类似，然而由于尚无比较两种治疗方法的RCT研究、缺乏长期随访资料，且约16%的患者可出现术后并发症，因此该治疗手段仍需要进一步研究。",
+   "entities": [
+    {
+     "name": "慢性胰腺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "胸腔镜内脏神经切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "CPB治疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性胰腺炎",
+     "relation": "treated_by_procedure",
+     "tail": "胸腔镜内脏神经切除术"
+    },
+    {
+     "head": "慢性胰腺炎",
+     "relation": "treated_by_procedure",
+     "tail": "CPB治疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "少量多餐，重症不能进食者给予静脉营养。 （二）病因治疗 绝大多数重症肺炎由细菌感染引起，或混合感染，需采用抗生素治疗。",
+   "entities": [
+    {
+     "name": "肺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "抗生素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肺炎",
+     "relation": "recommend_drug",
+     "tail": "抗生素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "持续性抑郁症@重性抑郁或心境恶劣的可卡因使用者，使用文拉法辛治疗并未能改善情绪或可卡因使用结局。",
+   "entities": [
+    {
+     "name": "持续性抑郁症",
+     "type": "Disease"
+    },
+    {
+     "name": "文拉法辛",
+     "type": "Drug"
+    },
+    {
+     "name": "可卡因",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "持续性抑郁症",
+     "relation": "recommend_drug",
+     "tail": "文拉法辛"
+    },
+    {
+     "head": "持续性抑郁症",
+     "relation": "recommend_drug",
+     "tail": "可卡因"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "唇腭裂@在系统的文献综述中发现口腔颌面裂通过常规二维超声检出率较低。",
+   "entities": [
+    {
+     "name": "口腔颌面裂",
+     "type": "Disease"
+    },
+    {
+     "name": "二维超声",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "口腔颌面裂",
+     "relation": "need_examination",
+     "tail": "二维超声"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "非小细胞肺癌@术前常规进行心电图检查。",
+   "entities": [
+    {
+     "name": "非小细胞肺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "心电图",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "非小细胞肺癌",
+     "relation": "need_examination",
+     "tail": "心电图"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胆管癌@### 胰腺癌 体征/症状 检查 体征/症状 一个特征是显著的体重下降。胆管癌@患者也可能会出现上腹或腰背痛，这在胆管癌中不常见。",
+   "entities": [
+    {
+     "name": "胰腺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "体重下降",
+     "type": "Symptom"
+    },
+    {
+     "name": "胆管癌",
+     "type": "Disease"
+    },
+    {
+     "name": "上腹或腰背痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胰腺癌",
+     "relation": "has_symptom",
+     "tail": "体重下降"
+    },
+    {
+     "head": "胆管癌",
+     "relation": "has_symptom",
+     "tail": "上腹或腰背痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "疟疾感染@在恢复期，血清学抗体滴度较急性升高，但在疾病早期无帮助 [ 流感 ](/topics/zh-cn/6) ### 伤寒（伤寒菌感染） 体征/症状 检查 体征/症状 在印度最常见。疟疾感染@偶尔需要骨髓培养。",
+   "entities": [
+    {
+     "name": "疟疾感染",
+     "type": "Disease"
+    },
+    {
+     "name": "骨髓培养",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "疟疾感染",
+     "relation": "need_examination",
+     "tail": "骨髓培养"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "急性化脓性扁桃体炎起病急，局部及全身症状均较重，咽痛剧烈，吞咽困难，疼痛常向耳部放射。下颌角淋巴结肿大。",
+   "entities": [
+    {
+     "name": "急性化脓性扁桃体炎",
+     "type": "Disease"
+    },
+    {
+     "name": "下颌角淋巴结肿大",
+     "type": "Symptom"
+    },
+    {
+     "name": "咽痛剧烈",
+     "type": "Symptom"
+    },
+    {
+     "name": "吞咽困难",
+     "type": "Symptom"
+    },
+    {
+     "name": "耳部",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性化脓性扁桃体炎",
+     "relation": "has_symptom",
+     "tail": "下颌角淋巴结肿大"
+    },
+    {
+     "head": "急性化脓性扁桃体炎",
+     "relation": "has_symptom",
+     "tail": "咽痛剧烈"
+    },
+    {
+     "head": "急性化脓性扁桃体炎",
+     "relation": "has_symptom",
+     "tail": "吞咽困难"
+    },
+    {
+     "head": "急性化脓性扁桃体炎",
+     "relation": "located_in",
+     "tail": "耳部"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "小细胞肺癌@例如，放疗后患者可能出现肺炎。",
+   "entities": [
+    {
+     "name": "小细胞肺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "肺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "放疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "小细胞肺癌",
+     "relation": "complication",
+     "tail": "肺炎"
+    },
+    {
+     "head": "小细胞肺癌",
+     "relation": "treated_by_procedure",
+     "tail": "放疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肥厚型心肌病@附加 –   转诊，心脏移植 针对经选择患者组部分患者的治疗推荐 如果患者药物治疗无效，建议转诊，考虑行心脏移植手术。",
+   "entities": [
+    {
+     "name": "肥厚型心肌病",
+     "type": "Disease"
+    },
+    {
+     "name": "心脏移植手术",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肥厚型心肌病",
+     "relation": "treated_by_procedure",
+     "tail": "心脏移植手术"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "胃炎@ 在蜂窝织炎性胃炎中，化脓性病变主要累及胃壁的黏膜下层和肌层。",
+   "entities": [
+    {
+     "name": "蜂窝织炎性胃炎",
+     "type": "Disease"
+    },
+    {
+     "name": "胃壁的黏膜下层",
+     "type": "Body"
+    },
+    {
+     "name": "肌层",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "蜂窝织炎性胃炎",
+     "relation": "located_in",
+     "tail": "胃壁的黏膜下层"
+    },
+    {
+     "head": "蜂窝织炎性胃炎",
+     "relation": "located_in",
+     "tail": "肌层"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "前列腺癌@ 如果淋巴结阳性的患者决定接受期待疗法，，则应每3~6个月复查PSA及进行体检（包括直肠指检）。前列腺癌@ 如PSA停止下降或连续两次升高时，应考虑给予包括LHRH激动剂的雄激素剥夺治疗。",
+   "entities": [
+    {
+     "name": "前列腺癌",
+     "type": "Disease"
+    },
+    {
+     "name": "直肠指检",
+     "type": "Examination"
+    },
+    {
+     "name": "LHRH激动剂的雄激素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "前列腺癌",
+     "relation": "need_examination",
+     "tail": "直肠指检"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "recommend_drug",
+     "tail": "LHRH激动剂的雄激素"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性髓性白血病@### 慢性期 标准初始治疗是伊马替尼。",
+   "entities": [
+    {
+     "name": "慢性髓性白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "伊马替尼",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性髓性白血病",
+     "relation": "recommend_drug",
+     "tail": "伊马替尼"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "骨性关节炎@### 手术 在使用多种治疗方法后仍然存在疼痛的骨关节炎患者或疼痛需要常规阿片类药物或引起严重功能障碍时，则应当转诊征求骨外科的意见并应当考虑关节置换术。",
+   "entities": [
+    {
+     "name": "骨关节炎",
+     "type": "Disease"
+    },
+    {
+     "name": "关节置换术",
+     "type": "Procedure"
+    },
+    {
+     "name": "疼痛",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "骨关节炎",
+     "relation": "treated_by_procedure",
+     "tail": "关节置换术"
+    },
+    {
+     "head": "骨关节炎",
+     "relation": "has_symptom",
+     "tail": "疼痛"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "③维持血糖在正常范围。 2. 控制惊厥 惊厥是重度HIE常见症状。",
+   "entities": [
+    {
+     "name": "HIE",
+     "type": "Disease"
+    },
+    {
+     "name": "惊厥",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "HIE",
+     "relation": "has_symptom",
+     "tail": "惊厥"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "有些病儿直到尸检时才发现其为化脑。 （六）特异性细菌抗原测定 利用免疫学技术检查患儿脑脊液、血、尿中细菌抗原为快速确定病原菌的特异方法。",
+   "entities": [
+    {
+     "name": "化脑",
+     "type": "Disease"
+    },
+    {
+     "name": "特异性细菌抗原测定",
+     "type": "Examination"
+    },
+    {
+     "name": "尸检",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "化脑",
+     "relation": "need_examination",
+     "tail": "特异性细菌抗原测定"
+    },
+    {
+     "head": "化脑",
+     "relation": "need_examination",
+     "tail": "尸检"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肾小球肾炎@[ 高甘油三酯血症 ](/topics/zh-cn/146) ### 高凝状态 | 短期 | 中 与狼疮（抗磷脂抗体）和肾病综合征（抗凝因子Ⅲ从尿中丢失，蛋白 C 和蛋白 S 水平的变化，血小板聚集能力增强）相关。肾小球肾炎@可能需要给予肝素和华法林抗凝。",
+   "entities": [
+    {
+     "name": "肾小球肾炎",
+     "type": "Disease"
+    },
+    {
+     "name": "肝素",
+     "type": "Drug"
+    },
+    {
+     "name": "华法林",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾小球肾炎",
+     "relation": "recommend_drug",
+     "tail": "肝素"
+    },
+    {
+     "head": "肾小球肾炎",
+     "relation": "recommend_drug",
+     "tail": "华法林"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【治疗】 （一）治疗原则 ALL以化学治疗（化疗）为主要手段。 1.诱导缓解治疗 ALL诱导缓解治疗首选国内外常用的标准方案VDLP方案：即长春新碱（VCR）1. 5mg/m2，每周1 次×4次；柔红霉素（DNR）30mg/m2，每周1次，共2～3次（HR-ALL用3次，SR-ALL用2次）；左旋-门冬酰胺酶（L-Asparaginase，L-ASP）6000～10 000U/m2，隔天1次共6～8次（HR-ALL用8次，SR-ALL用6次）；泼尼松（Prednisone）每天60mg/m2，分三次口服，共28天，减停7天。",
+   "entities": [
+    {
+     "name": "ALL",
+     "type": "Disease"
+    },
+    {
+     "name": "化学治疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "长春新碱",
+     "type": "Drug"
+    },
+    {
+     "name": "柔红霉素",
+     "type": "Drug"
+    },
+    {
+     "name": "左旋-门冬酰胺酶",
+     "type": "Drug"
+    },
+    {
+     "name": "泼尼松",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "ALL",
+     "relation": "treated_by_procedure",
+     "tail": "化学治疗"
+    },
+    {
+     "head": "ALL",
+     "relation": "recommend_drug",
+     "tail": "长春新碱"
+    },
+    {
+     "head": "ALL",
+     "relation": "recommend_drug",
+     "tail": "柔红霉素"
+    },
+    {
+     "head": "ALL",
+     "relation": "recommend_drug",
+     "tail": "左旋-门冬酰胺酶"
+    },
+    {
+     "head": "ALL",
+     "relation": "recommend_drug",
+     "tail": "泼尼松"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【临床表现】 各种细菌所致化脑的临床表现大致相仿，可归纳为感染、颅压增高及脑膜刺激症状。",
+   "entities": [
+    {
+     "name": "化脑",
+     "type": "Disease"
+    },
+    {
+     "name": "感染",
+     "type": "Disease"
+    },
+    {
+     "name": "颅压增高",
+     "type": "Disease"
+    },
+    {
+     "name": "脑膜刺激症",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "化脑",
+     "relation": "has_symptom",
+     "tail": "感染"
+    },
+    {
+     "head": "化脑",
+     "relation": "has_symptom",
+     "tail": "颅压增高"
+    },
+    {
+     "head": "化脑",
+     "relation": "has_symptom",
+     "tail": "脑膜刺激症"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "肾细胞癌@ * 替西罗莫司是一种 m-TOR 抑制剂，已经证实它可以改善无既往治疗史和预后不良的转移性 RCC 患者的总生存率。",
+   "entities": [
+    {
+     "name": "肾细胞癌",
+     "type": "Disease"
+    },
+    {
+     "name": "替西罗莫",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾细胞癌",
+     "relation": "recommend_drug",
+     "tail": "替西罗莫"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "病毒性脑膜炎@### 检查 最重要的一项为脑脊液检查，应当对所有疑似脑膜炎患者进行该检查。",
+   "entities": [
+    {
+     "name": "病毒性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "脑脊液检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "病毒性脑膜炎",
+     "relation": "need_examination",
+     "tail": "脑脊液检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "广泛性焦虑障碍@或 [ 帕罗西汀 ](/druglink?dd=MARTINDALE) open_in_new : 起始剂量为每天早晨口服一次10mg/d（速释型），后可每周增加10mg/d，最高剂量为60mg/d。",
+   "entities": [
+    {
+     "name": "广泛性焦虑障碍",
+     "type": "Disease"
+    },
+    {
+     "name": "帕罗西汀",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "广泛性焦虑障碍",
+     "relation": "recommend_drug",
+     "tail": "帕罗西汀"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "妊娠胆汁淤积@由于降低胆汁酸并达到有意义的疗效所需剂量会导致严重的腹胀、痉挛和便秘，很多患者无法忍受考来烯胺。",
+   "entities": [
+    {
+     "name": "妊娠胆汁淤积",
+     "type": "Disease"
+    },
+    {
+     "name": "严重的腹胀",
+     "type": "Symptom"
+    },
+    {
+     "name": "痉挛",
+     "type": "Symptom"
+    },
+    {
+     "name": "便秘",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "妊娠胆汁淤积",
+     "relation": "has_symptom",
+     "tail": "严重的腹胀"
+    },
+    {
+     "head": "妊娠胆汁淤积",
+     "relation": "has_symptom",
+     "tail": "痉挛"
+    },
+    {
+     "head": "妊娠胆汁淤积",
+     "relation": "has_symptom",
+     "tail": "便秘"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【辅助检査】 脑电图 以弥漫性或局限性异常慢波背景活动为特征少数伴有棘波、棘-慢复合波。某些病毒性脑膜炎患者脑电图也可正常。",
+   "entities": [
+    {
+     "name": "病毒性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "脑电图",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "病毒性脑膜炎",
+     "relation": "need_examination",
+     "tail": "脑电图"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "B族链球菌感染@这通常包括定期反复进行全血细胞计数、C反应蛋白、尿素和电解质检查，直至炎症消退。",
+   "entities": [
+    {
+     "name": "B族链球菌感染",
+     "type": "Disease"
+    },
+    {
+     "name": "全血细胞计数",
+     "type": "Examination"
+    },
+    {
+     "name": "C反应蛋白",
+     "type": "Examination"
+    },
+    {
+     "name": "尿素",
+     "type": "Examination"
+    },
+    {
+     "name": "电解质",
+     "type": "Examination"
+    },
+    {
+     "name": "炎症",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "B族链球菌感染",
+     "relation": "need_examination",
+     "tail": "全血细胞计数"
+    },
+    {
+     "head": "B族链球菌感染",
+     "relation": "need_examination",
+     "tail": "C反应蛋白"
+    },
+    {
+     "head": "B族链球菌感染",
+     "relation": "need_examination",
+     "tail": "尿素"
+    },
+    {
+     "head": "B族链球菌感染",
+     "relation": "need_examination",
+     "tail": "电解质"
+    },
+    {
+     "head": "B族链球菌感染",
+     "relation": "has_symptom",
+     "tail": "炎症"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "病毒性脑膜炎@### 免疫抑制 细胞介导性免疫受损与巨细胞病毒和水痘带状疱疹病毒感染风险增加相关。",
+   "entities": [
+    {
+     "name": "病毒性脑膜炎",
+     "type": "Disease"
+    },
+    {
+     "name": "细胞介导性免疫受损",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "病毒性脑膜炎",
+     "relation": "has_symptom",
+     "tail": "细胞介导性免疫受损"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "心房扑动@ 除此之外，可见运动不能耐受、心力衰竭症状加重以及肺部不适。心房扑动@ 相对少见的是以低血压、晕厥或者栓塞事件为首发症状。",
+   "entities": [
+    {
+     "name": "心力衰竭症状加重",
+     "type": "Disease"
+    },
+    {
+     "name": "心房扑动",
+     "type": "Symptom"
+    },
+    {
+     "name": "运动不能耐受",
+     "type": "Symptom"
+    },
+    {
+     "name": "肺部不适",
+     "type": "Symptom"
+    },
+    {
+     "name": "心房扑动",
+     "type": "Disease"
+    },
+    {
+     "name": "晕厥",
+     "type": "Symptom"
+    },
+    {
+     "name": "栓塞事件",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心力衰竭症状加重",
+     "relation": "has_symptom",
+     "tail": "心房扑动"
+    },
+    {
+     "head": "心力衰竭症状加重",
+     "relation": "has_symptom",
+     "tail": "运动不能耐受"
+    },
+    {
+     "head": "心力衰竭症状加重",
+     "relation": "has_symptom",
+     "tail": "肺部不适"
+    },
+    {
+     "head": "心房扑动",
+     "relation": "has_symptom",
+     "tail": "晕厥"
+    },
+    {
+     "head": "心房扑动",
+     "relation": "has_symptom",
+     "tail": "栓塞事件"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "【临床表现】 维生素A缺乏症的临床表现与其缺乏的阶段和程度有密切关系（图5-3)，在边缘型维生素A缺乏和亚临床缺乏阶段主要表现为非特异的临床表现,如感染增加和贫血等，在重度缺乏阶段才表现为维生素A缺乏的经典表现——干眼症。继而角膜发生干燥、浑浊、软化，自觉畏光、眼痛,常用手揉搓眼部导致感染。",
+   "entities": [
+    {
+     "name": "维生素A缺乏症",
+     "type": "Disease"
+    },
+    {
+     "name": "角膜发生干燥、浑浊、软化",
+     "type": "Symptom"
+    },
+    {
+     "name": "自觉畏光",
+     "type": "Symptom"
+    },
+    {
+     "name": "眼痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "边缘型维生素A缺乏",
+     "type": "Disease"
+    },
+    {
+     "name": "感染增加",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "维生素A缺乏症",
+     "relation": "has_symptom",
+     "tail": "角膜发生干燥、浑浊、软化"
+    },
+    {
+     "head": "维生素A缺乏症",
+     "relation": "has_symptom",
+     "tail": "自觉畏光"
+    },
+    {
+     "head": "维生素A缺乏症",
+     "relation": "has_symptom",
+     "tail": "眼痛"
+    },
+    {
+     "head": "边缘型维生素A缺乏",
+     "relation": "has_symptom",
+     "tail": "感染增加"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "儿童偏头痛@有先兆的偏头痛最初是以与临床受累区域相对应的大脑皮质的特异病征性扩散的血量减少为特征的，并常常超越该区域。",
+   "entities": [
+    {
+     "name": "儿童偏头痛",
+     "type": "Disease"
+    },
+    {
+     "name": "受累区域相对应的大脑皮质的特异病征性扩散的血量减少",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "儿童偏头痛",
+     "relation": "has_symptom",
+     "tail": "受累区域相对应的大脑皮质的特异病征性扩散的血量减少"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "GSDⅤ型（McArdle综合征）肌磷酸化酶缺陷。缺血运动试验后血乳酸不升高。",
+   "entities": [
+    {
+     "name": "GSDⅤ型",
+     "type": "Disease"
+    },
+    {
+     "name": "缺血运动试验后血乳酸不升高",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "GSDⅤ型",
+     "relation": "has_symptom",
+     "tail": "缺血运动试验后血乳酸不升高"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "（一）婴儿感染 1.先天感染 生后2周内实验室证实有HCMV感染，可诊断之。外周血异型淋巴细胞（简称异淋）增多，脑脊液蛋白增高和血清肝酶增高。",
+   "entities": [
+    {
+     "name": "婴儿感染",
+     "type": "Disease"
+    },
+    {
+     "name": "脑脊液蛋白增高",
+     "type": "Symptom"
+    },
+    {
+     "name": "血清肝酶增高",
+     "type": "Symptom"
+    },
+    {
+     "name": "血异型淋巴细胞（简称异淋）增多",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "婴儿感染",
+     "relation": "has_symptom",
+     "tail": "脑脊液蛋白增高"
+    },
+    {
+     "head": "婴儿感染",
+     "relation": "has_symptom",
+     "tail": "血清肝酶增高"
+    },
+    {
+     "head": "婴儿感染",
+     "relation": "has_symptom",
+     "tail": "血异型淋巴细胞（简称异淋）增多"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "四、治 疗 ICH治疗原则是迅速控制出血，适时进行外科手术治疗，预防并发症与后遗症。 （二）手术治疗 早期手术清除血肿，适用于出血量大，有严重脑实质损害症状或出现脑疝危险症候的病例。",
+   "entities": [
+    {
+     "name": "ICH",
+     "type": "Disease"
+    },
+    {
+     "name": "手术治疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "严重脑实质损害症状",
+     "type": "Symptom"
+    },
+    {
+     "name": "脑疝",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "ICH",
+     "relation": "treated_by_procedure",
+     "tail": "手术治疗"
+    },
+    {
+     "head": "ICH",
+     "relation": "has_symptom",
+     "tail": "严重脑实质损害症状"
+    },
+    {
+     "head": "ICH",
+     "relation": "has_symptom",
+     "tail": "脑疝"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "喉癌@纤维喉镜检查示右侧室带及声带可见坏死溃疡样肿物，累及会厌及杓会厌皱襞。喉癌@右侧声带固定，声门部分阻塞。",
+   "entities": [
+    {
+     "name": "喉癌",
+     "type": "Disease"
+    },
+    {
+     "name": "纤维喉镜检查示右侧室带及声带可见坏死溃疡样肿物",
+     "type": "Symptom"
+    },
+    {
+     "name": "累及会厌及杓会厌皱襞",
+     "type": "Symptom"
+    },
+    {
+     "name": "右侧声带固定",
+     "type": "Symptom"
+    },
+    {
+     "name": "声门部分阻塞",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "喉癌",
+     "relation": "has_symptom",
+     "tail": "纤维喉镜检查示右侧室带及声带可见坏死溃疡样肿物"
+    },
+    {
+     "head": "喉癌",
+     "relation": "has_symptom",
+     "tail": "累及会厌及杓会厌皱襞"
+    },
+    {
+     "head": "喉癌",
+     "relation": "has_symptom",
+     "tail": "右侧声带固定"
+    },
+    {
+     "head": "喉癌",
+     "relation": "has_symptom",
+     "tail": "声门部分阻塞"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "非ST段抬高型心肌梗死@复极异常心电图随着时间变化表现为超急性T波，而后ST段抬高，T波倒置，最后出现病理性Q波。",
+   "entities": [
+    {
+     "name": "非ST段抬高型心肌梗死",
+     "type": "Disease"
+    },
+    {
+     "name": "ST段抬高",
+     "type": "Symptom"
+    },
+    {
+     "name": "病理性Q波",
+     "type": "Symptom"
+    },
+    {
+     "name": "心电图随着时间变化表现为超急性T波",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "非ST段抬高型心肌梗死",
+     "relation": "has_symptom",
+     "tail": "ST段抬高"
+    },
+    {
+     "head": "非ST段抬高型心肌梗死",
+     "relation": "has_symptom",
+     "tail": "病理性Q波"
+    },
+    {
+     "head": "非ST段抬高型心肌梗死",
+     "relation": "has_symptom",
+     "tail": "心电图随着时间变化表现为超急性T波"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "登革热@### 初始实验室检查 对于有症状的患者应首先进行全血细胞计数（FBC）。 登革热@白细胞减少，结合束臂试验阳性，在登革热流行地区阳性预测值为70%-80%。",
+   "entities": [
+    {
+     "name": "登革热",
+     "type": "Disease"
+    },
+    {
+     "name": "全血细胞计数",
+     "type": "Examination"
+    },
+    {
+     "name": "白细胞减少",
+     "type": "Symptom"
+    },
+    {
+     "name": "结合束臂试验阳性",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "登革热",
+     "relation": "need_examination",
+     "tail": "全血细胞计数"
+    },
+    {
+     "head": "登革热",
+     "relation": "has_symptom",
+     "tail": "白细胞减少"
+    },
+    {
+     "head": "登革热",
+     "relation": "has_symptom",
+     "tail": "结合束臂试验阳性"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "儿童偏头痛@高血压、心动过缓、意识水平改变或任何局灶性神经系统缺陷的出现提示一种更严重的损伤或可能的诊断，并且是进行紧急中枢神经系统影像学检查的指征。",
+   "entities": [
+    {
+     "name": "儿童偏头痛",
+     "type": "Disease"
+    },
+    {
+     "name": "心动过缓",
+     "type": "Symptom"
+    },
+    {
+     "name": "意识水平改变",
+     "type": "Symptom"
+    },
+    {
+     "name": "局灶性神经系统缺陷",
+     "type": "Symptom"
+    },
+    {
+     "name": "紧急中枢神经系统影像学检查",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "儿童偏头痛",
+     "relation": "has_symptom",
+     "tail": "心动过缓"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "has_symptom",
+     "tail": "意识水平改变"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "has_symptom",
+     "tail": "局灶性神经系统缺陷"
+    },
+    {
+     "head": "儿童偏头痛",
+     "relation": "need_examination",
+     "tail": "紧急中枢神经系统影像学检查"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "唇腭裂@## 检查 ### 首要检查 ### 查看全部   ### 听力图 检查 结果 检查 所有口腔颌面裂的新生儿口都应接受听力筛查测试，以评估有无相关的听力损失。 唇腭裂@结果 听力丧失 ### 需要考虑的检查 ### 查看全部   ### 听力脑干诱发电位（ABR）测试 检查 结果 检查 如果听力敏度图结果不确定，进行检查以评估是否存在相关听力受损。",
+   "entities": [
+    {
+     "name": "唇腭裂",
+     "type": "Disease"
+    },
+    {
+     "name": "听力图 检查",
+     "type": "Examination"
+    },
+    {
+     "name": "听力筛查",
+     "type": "Examination"
+    },
+    {
+     "name": "听力丧失",
+     "type": "Symptom"
+    },
+    {
+     "name": "听力受损",
+     "type": "Symptom"
+    },
+    {
+     "name": "脑干诱发电位（ABR）测试",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "唇腭裂",
+     "relation": "need_examination",
+     "tail": "听力图 检查"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "need_examination",
+     "tail": "听力筛查"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "has_symptom",
+     "tail": "听力丧失"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "has_symptom",
+     "tail": "听力受损"
+    },
+    {
+     "head": "唇腭裂",
+     "relation": "need_examination",
+     "tail": "脑干诱发电位（ABR）测试"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "狂犬病@[ 肠梗阻 ](/topics/zh-cn/995) ### 尿崩症 | 短期 | 中 出现在第二周。狂犬病@应该避免使用利尿剂。",
+   "entities": [
+    {
+     "name": "狂犬病",
+     "type": "Disease"
+    },
+    {
+     "name": "利尿剂",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "狂犬病",
+     "relation": "recommend_drug",
+     "tail": "利尿剂"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "慢性胰腺炎@ ### 胆管梗阻 | 长期 | 低 总体发生率为5%-10%。 慢性胰腺炎@手术治疗是首选的治疗方式。",
+   "entities": [
+    {
+     "name": "慢性胰腺炎",
+     "type": "Disease"
+    },
+    {
+     "name": "手术治疗",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性胰腺炎",
+     "relation": "treated_by_procedure",
+     "tail": "手术治疗"
+    }
+   ],
+   "source": "CMeIE-V2"
+  },
+  {
+   "text": "中国成人2型糖尿病胰岛素促泌剂应用的专家共识",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "随着社会经济的发展，糖尿病患病率逐渐增加，已成为严重的世界性问题。糖尿病特别是其慢性并发症影响患者的生活质量，甚至威胁患者的生命，给社会、家庭以及患者带来沉重的经济负担。中国的流行病学调查显示，中国20岁以上人群2型糖尿病患病率达9.7%；且近2/3的患者HbA1c得不到有效控制(HbA1c≤7%)；60.7%的患者因未被诊断而无法及早进行有效的治疗和指导。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "中国成人2型糖尿病发生的病理生理特点与欧美国家存在差异，β细胞胰岛素分泌功能下降比胰岛素敏感性降低更明显，且糖尿病肾病发生率更高(2c级，2b级)。因此根据中国2型糖尿病患者自身特点，进行合理的降糖治疗，努力控制其他多种血管病变危险因素，降低血管并发症风险和提高患者生活质量是目前亟需解决的问题。尽管随着糖尿病防治进展，新降糖药物不断问世，而多数权威指南仍将胰岛素促泌剂作为成人2型糖尿病治疗的一线药物。英国糖尿病前瞻性研究(UKPDS)及其后续研究与糖尿病和心血管疾病行动(ADVANCE)等多个大型临床研究证实，磺脲类促泌剂或以其为基础的降糖治疗可显著提高2型糖尿病患者的血糖达标率，降低糖尿病血管并发症风险(1b级)。由于胰岛素促泌剂的发展，其种类逐渐增多，为了针对中国成人2型糖尿病患者的自身特点，更有效指导临床正确使用胰岛素促泌剂，中华医学会内分泌分会组织专家对胰岛素促泌剂在中国成人2型糖尿病的临床应用进行了多次认真的讨论并达成了共识。",
+   "entities": [
+    {
+     "name": "糖尿病肾病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血管",
+     "type": "Body"
+    },
+    {
+     "name": "血管病变",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "心血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病肾病",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "血管"
+    },
+    {
+     "head": "血管病变",
+     "relation": "located_in",
+     "tail": "血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "心血管疾病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "磺脲类促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(1)短效促泌剂：短效磺脲类及格列奈类促泌剂半衰期短，作用迅速，主要降低2型糖尿病患者餐后血糖，主要包括：格列喹酮和格列吡嗪、瑞格列奈和那格列奈等。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "短效磺脲类",
+     "type": "Drug"
+    },
+    {
+     "name": "格列奈类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "餐后血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "那格列奈",
+     "type": "Drug"
+    },
+    {
+     "name": "格列喹酮",
+     "type": "Drug"
+    },
+    {
+     "name": "格列吡嗪",
+     "type": "Drug"
+    },
+    {
+     "name": "瑞格列奈",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "短效磺脲类"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列奈类促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "餐后血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "那格列奈"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列喹酮"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列吡嗪"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(2)中长效促泌剂：中长效磺脲类促泌剂半衰期长，作用较持久，明显降低2型糖尿病患者空腹和餐后血糖。包括自身半衰期较长的普通剂型磺脲类促泌剂，如格列本脲和格列美脲，以及剂型改良后的缓控释制剂，如格列齐特缓释片、格列吡嗪控释片。格列本脲与β细胞膜SUR亲和力强，降糖疗效强，但低血糖的发生率高(1a级)。格列美脲与β细胞膜SUR结合及解离的速度较格列本脲为快，低血糖发生率有所降低(2b级)；且在血糖控制相同的情况下格列美脲较格列本脲治疗时的空腹及餐后胰岛素和C肽水平为低(2b级)。格列吡嗪控释片通过胃肠道治疗系统(GITS)技术实现控释，格列齐特缓释片采用以亲水性羟丙甲纤维素为基质的缓释技术，可保持全天血药浓度平稳。其活性成分的释放更符合2型糖尿病患者24h血糖变化特点，低血糖尤其是严重低血糖的发生更少(4级)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "24h血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "中长效磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "空腹和餐后血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "格列美脲",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "24h血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "中长效磺脲类促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "空腹和餐后血糖"
+    },
+    {
+     "head": "格列本脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列美脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列本脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.格列奈类促泌剂：格列奈类促泌剂直接刺激胰岛β细胞分泌胰岛素，其最大特点是改善早相分泌，起效快、作用时间短，以降低餐后血糖为主，且低血糖风险小、受肾功能影响小(3b级)。一般需1日多次服用。",
+   "entities": [
+    {
+     "name": "格列奈类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "格列奈类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "二、减少或延缓微血管及大血管并发症发生和发展的效果",
+   "entities": [
+    {
+     "name": "大血管并发症",
+     "type": "Disease"
+    },
+    {
+     "name": "微血管",
+     "type": "Body"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "大血管并发症",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "大血管并发症",
+     "relation": "located_in",
+     "tail": "大血管"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.大血管并发症：对新诊断的2型糖尿病患者，UKPDS以格列本脲和氯磺丙脲为基础的降糖治疗，其后续研究5年随访未显示明显的大血管获益，10年随访心肌梗死风险下降15%(P=0.01，1b级)。对病程较长且合并心血管高危因素的患者，ADVANCE发现以格列齐特缓释片为基础的降糖治疗5年，HbA1c降至6.5%时，心血管死亡相对风险下降12%(P=0.12，1b级)。对伴有持续性微量白蛋白尿的非超重2型糖尿病患者，Steno-2研究结果显示，采用以格列齐特为基础的降糖治疗，结合多因素强化干预，心血管疾病相对风险下降53%(P=0.008，1b级)。对UKPDS和ADVANCE等研究的meta分析结果显示，以氯磺丙脲、格列本脲和格列齐特缓释片为基础的降糖治疗可使2型糖尿病患者非致死性心肌梗死风险显著降低17%、冠心病风险显著降低15%(1a级)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "氯磺丙脲",
+     "type": "Drug"
+    },
+    {
+     "name": "心肌梗死",
+     "type": "Disease"
+    },
+    {
+     "name": "心肌",
+     "type": "Body"
+    },
+    {
+     "name": "格列齐特",
+     "type": "Drug"
+    },
+    {
+     "name": "心血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "格列齐特缓释片",
+     "type": "Drug"
+    },
+    {
+     "name": "非致死性心肌梗死",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "氯磺丙脲"
+    },
+    {
+     "head": "心肌梗死",
+     "relation": "located_in",
+     "tail": "心肌"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列齐特"
+    },
+    {
+     "head": "心血管疾病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "氯磺丙脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列齐特缓释片"
+    },
+    {
+     "head": "非致死性心肌梗死",
+     "relation": "located_in",
+     "tail": "心肌"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "由于糖尿病使心脏病或卒中风险加倍，多数医生和患者非常关注心脑血管疾病，而糖尿病导致死亡的其他因素却较少受到关注。近期的一项研究显示，40%的糖尿病患者死于非心血管疾病，包括肾病、感染、癌症、老年痴呆症、慢性阻塞性肺疾病、神经系统疾病等，提示关注糖尿病患者全因死亡非常重要(2b级)。",
+   "entities": [
+    {
+     "name": "心脏病",
+     "type": "Disease"
+    },
+    {
+     "name": "心脏",
+     "type": "Body"
+    },
+    {
+     "name": "心脑血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心脑血管",
+     "type": "Body"
+    },
+    {
+     "name": "心血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "肾病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "慢性阻塞性肺疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "肺",
+     "type": "Body"
+    },
+    {
+     "name": "神经系统疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "神经",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心脏病",
+     "relation": "located_in",
+     "tail": "心脏"
+    },
+    {
+     "head": "心脑血管疾病",
+     "relation": "located_in",
+     "tail": "心脑血管"
+    },
+    {
+     "head": "心血管疾病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "肾病",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "慢性阻塞性肺疾病",
+     "relation": "located_in",
+     "tail": "肺"
+    },
+    {
+     "head": "神经系统疾病",
+     "relation": "located_in",
+     "tail": "神经"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "磺脲类促泌剂可导致低血糖的发生，但剂型改良后的缓释、控释制剂、格列奈类及格列美脲低血糖发生率相对较低。GUIDE研究结果显示，在血糖水平控制相似的情况下，不同磺脲类促泌剂所致低血糖发生风险不同(1b级)。ADVANCE以格列齐特缓释片为基础的降糖治疗严重低血糖年发生率仅为UKPDS采用格列本脲和氯磺丙脲为基础的降糖治疗的1/4(1b级)。因此，应根据不同胰岛素促泌剂的特点及糖尿病患者的血糖谱选择合适的胰岛素促泌剂，从而在保证降糖疗效的同时降低低血糖发生风险。",
+   "entities": [
+    {
+     "name": "磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "格列美脲",
+     "type": "Drug"
+    },
+    {
+     "name": "格列齐特缓释片",
+     "type": "Drug"
+    },
+    {
+     "name": "严重低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列美脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列齐特缓释片",
+     "relation": "adverse_reaction",
+     "tail": "严重低血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "肥胖是多种慢性疾病特别是心脑血管疾病发生、进展的危险因素，因此应该高度重视。一般认为磺脲类药物治疗可引起体重增加。",
+   "entities": [
+    {
+     "name": "心脑血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心脑血管",
+     "type": "Body"
+    },
+    {
+     "name": "磺脲类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "体重增加",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心脑血管疾病",
+     "relation": "located_in",
+     "tail": "心脑血管"
+    },
+    {
+     "head": "磺脲类药物",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "UKPDS表明，以格列本脲为基础的降糖治疗，患者体重增加1.7kg(1b级)。",
+   "entities": [
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "体重增加",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "格列本脲",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "UKPDS的结果显示，接受格列本脲和氯磺丙脲治疗的患者β细胞胰岛素分泌功能有下降趋势，但与采用二甲双胍治疗和单纯饮食控制相似(2b级)。糖尿病进展实验(ADOPT)对比了3种不同类型降糖药物(罗格列酮、格列本脲和二甲双胍)在新诊断2型糖尿病患者中的疗效，对该研究分析发现，格列本脲组在治疗早期对β细胞胰岛素分泌功能显著优于罗格列酮和二甲双胍(2b级)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "罗格列酮",
+     "type": "Drug"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "罗格列酮"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "研究表明2型糖尿病患者的肿瘤风险增加，目前没有胰岛素促泌剂增加肿瘤风险的确切证据。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "美国大学组糖尿病研究项目(UGDP)研究提出，甲苯磺丁脲可能增加2型糖尿病患者心血管死亡风险。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "甲苯磺丁脲",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "甲苯磺丁脲"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "胰岛素促泌剂其他少见不良反应包括头晕、乏力、头痛、皮疹、恶心和胃肠道不良反应(呕吐、腹痛、腹泻等)。",
+   "entities": [
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "头晕",
+     "type": "Symptom"
+    },
+    {
+     "name": "乏力",
+     "type": "Symptom"
+    },
+    {
+     "name": "头痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "皮疹",
+     "type": "Symptom"
+    },
+    {
+     "name": "恶心",
+     "type": "Symptom"
+    },
+    {
+     "name": "胃肠道不良反应",
+     "type": "Symptom"
+    },
+    {
+     "name": "呕吐",
+     "type": "Symptom"
+    },
+    {
+     "name": "腹痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "腹泻",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "头晕"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "乏力"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "头痛"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "皮疹"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "恶心"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "胃肠道不良反应"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "呕吐"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "腹痛"
+    },
+    {
+     "head": "胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "腹泻"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "1.胰岛素促泌剂的适应证：胰岛素促泌剂可作为2型糖尿病患者的一线用药。一般而言，有一定β细胞功能、无胰岛素促泌剂使用禁忌的2型糖尿病患者可考虑选用胰岛素促泌剂，为不适合使用二甲双胍的2型糖尿病患者的治疗首选，或其他口服降糖药物治疗血糖控制不佳的2型糖尿病患者联合用药方案首选(5级)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.胰岛素促泌剂的禁忌证：药物过敏、1型糖尿病、糖尿病酮症酸中毒、高糖性高渗透压综合征、严重肝或肾损伤和哺乳期患者等。",
+   "entities": [
+    {
+     "name": "严重肝或肾损伤",
+     "type": "Disease"
+    },
+    {
+     "name": "肝",
+     "type": "Body"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "严重肝或肾损伤",
+     "relation": "located_in",
+     "tail": "肝"
+    },
+    {
+     "head": "严重肝或肾损伤",
+     "relation": "located_in",
+     "tail": "肾"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "3.胰岛素促泌剂的联合用药原则：2型糖尿病患者，若胰岛素促泌剂单药治疗血糖控制不佳，应与其他降糖药物如双胍类、α-糖苷酶抑制剂或噻唑烷二酮类药物联用。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "噻唑烷二酮类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "α-糖苷酶抑制剂",
+     "type": "Drug"
+    },
+    {
+     "name": "双胍类",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "噻唑烷二酮类药物"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "α-糖苷酶抑制剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "双胍类"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "在选择胰岛素促泌剂治疗时，可根据患者血糖选择不同类型胰岛素促泌剂(5级)：(1)以餐后血糖(PPG)升高为主者，宜选择格列吡嗪、格列奈类促泌剂；(2)以空腹血糖(FPG)升高为主者，宜选择依从性好、低血糖发生风险低的中长效磺脲类促泌剂；(3)餐后血糖和空腹血糖均升高者，宜选择依从性好、低血糖发生风险低的中长效磺脲类促泌剂。",
+   "entities": [
+    {
+     "name": "中长效磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "中长效磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "中长效磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "老年患者应根据脏器功能、认知功能以级预期寿命选择不同胰岛素促泌剂治疗，但总体而言，治疗措施应尽量简单易行，并充分考虑肝肾功能减退程度(5级)。若患者既往有严重低血糖史、合并其他严重疾病、预期生存期较短，宜选择作用时间较短的格列奈类促泌剂；若患者脏器功能和认知能力良好、预期生存期较长，可选择低血糖少等安全性较好的磺脲类促泌剂。",
+   "entities": [
+    {
+     "name": "磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "糖尿病病程长(>15年)、有“无感知”低血糖病史、存在肝肾功能不全或全天血糖波动较大并反复出现低血糖症状的患者给予胰岛素促泌剂治疗时，应选择格列奈类促泌剂或低血糖风险较低的磺脲类促泌剂(1b级，5级)；一般应小剂量开始使用。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "格列奈类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素促泌剂治",
+     "type": "Drug"
+    },
+    {
+     "name": "肝肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肝",
+     "type": "Body"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列奈类促泌剂"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂治"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肝"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "格列奈类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对伴有中度肾功能不全患者，应首选胰岛素，也可选择经肾排泄少的胰岛素促泌剂，如瑞格列奈或格列喹酮，并根据肾功能水平适当降低胰岛素促泌剂的使用剂量。",
+   "entities": [
+    {
+     "name": "中度肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "瑞格列奈",
+     "type": "Drug"
+    },
+    {
+     "name": "格列喹酮",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "中度肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "中度肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "中度肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "中度肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "中度肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "格列喹酮"
+    },
+    {
+     "head": "中度肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对依从性差的患者，尤其是在中国农村地区的患者，宜选择低血糖风险低、对体重影响小及廉价的1日1次磺脲类促泌剂(4级)。",
+   "entities": [
+    {
+     "name": "磺脲类促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "磺脲类促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "迄今为止，胰岛素促泌剂在2型糖尿病治疗中仍占据不可或缺的地位，为多数权威2型糖尿病防治指南中的一线降糖药物。中国成人2型糖尿病患者体重指数较低、糖尿病肾病发生率较高且β细胞胰岛素分泌功能比胰岛素敏感性降低更明显，胰岛素促泌剂更符合中国成人2型糖尿病患者特点。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "糖尿病肾病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "糖尿病肾病",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "1.微血管并发症：UKPDS证实，以氯磺丙脲、格列本脲为基础的降糖治疗，可减少新诊断2型糖尿病患者的微血管复合终点风险25%(P=0.0099)，其中视网膜病变风险下降29%(P=0.0031，1b级)；9年随防时微量白蛋白尿和大量白蛋白尿发生的相对风险分别下降24%(P=0.00062)和33%(P=0.026，1b级)。ADVANCE对病程较长，合并心血管高危因素的2型糖尿病患者采用以格列齐特缓释片为基础的降糖治疗，主要微血管事件减少14%(P=0.01)，肾脏事件减少21%(P=0.006，1b级)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "氯磺丙脲",
+     "type": "Drug"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "微血管",
+     "type": "Body"
+    },
+    {
+     "name": "视网膜病变",
+     "type": "Disease"
+    },
+    {
+     "name": "视网膜",
+     "type": "Body"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "格列齐特缓释片",
+     "type": "Drug"
+    },
+    {
+     "name": "微血管事件",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏事件",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "氯磺丙脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "视网膜病变",
+     "relation": "located_in",
+     "tail": "视网膜"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "格列齐特缓释片"
+    },
+    {
+     "head": "微血管事件",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "肾脏事件",
+     "relation": "located_in",
+     "tail": "肾脏"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "优化的降糖治疗不仅只针对胰岛素分泌缺陷，还应同时关注其他发病机制(如胰岛素抵抗、能量摄取等)。胰岛素促泌剂与其他作用机制互补的药物联用，可多方面干预糖尿病发病环节，使患者血糖得到长期、有效、平稳及安全的控制。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素促泌剂"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "中国成人2型糖尿病HbA1c控制目标的专家共识",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "目前，2型糖尿病及其并发症已经成为危害公众健康的主要疾病之一，控制血糖是延缓糖尿病进展及其并发症发生的重要措施之一。虽然HbA1c是评价血糖控制水平的公认指标，但应该控制的理想水平即目标值究竟是多少还存在争议。糖尿病控制与并发症试验(DCCT，1993)、熊本(Kumamoto，1995)、英国前瞻性糖尿病研究(UKPDS，1998)等高质量临床研究已经证实，对新诊断的糖尿病患者或病情较轻的患者进行严格的血糖控制会延缓糖尿病微血管病变的发生、发展，其后续研究DCCT-EDIC(2005)、UKPDS一80(2008)还证实早期有效控制血糖对大血管也有保护作用。这些研究终点的HbA1c控制在7.5%左右，那么年龄较大、糖尿病病程较长、部分已有心血管疾病(CVD)或伴CVD极高危因素的糖尿病人群进一步降低血糖，对CVD的影响将会如何?糖尿病患者心血管风险干预研究(ACCORD)、退伍军人糖尿病研究(VADT)和糖尿病与心血管疾病行动研究(ADVANCE)等对该类人群平均5年左右的干预，结果显示强化降糖治疗使HbA1c<6.5%，患者死亡风险和大血管事件发生并无进一步减少，ACCORD甚至表明控制HbA1c水平接近正常值(<6.4%)会增加这类患者死亡率。这些与理论或预期不一致结果产生的原因尚不确定，可能与人组人群差异、低血糖、体重增加、随访时间长短及评估方法等诸多因素有关，但过分苛求血糖正常化可能是主要原因之一。ACCORD、VADT数据分析提示对病程长、有低血糖史、有CVD或合并CVD极高危的患者，盲目地进行强化达标治疗，会明显增加低血糖和心血管事件发生。各权威组织推荐的血糖控制目标HbA1c的水平也不尽相同，美国糖尿病协会(ADA)认为一般情况下血糖控制目标值HbA1c<7%；国际糖尿病联盟(IDF)、美国内分泌医师协会/美国内分泌协会(AACE/ACE)、英国健康与临床优化研究所(NICE)、全球有效管理糖尿病合作组织(GPEDM)和加拿大糖尿病协会(CDA)则建议一般情况时HbA1c<6.5%；中华医学会糖尿病分会推荐的一般HbA1c目标值为<6.5%。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "糖尿病微血管病变",
+     "type": "Disease"
+    },
+    {
+     "name": "微血管",
+     "type": "Body"
+    },
+    {
+     "name": "心血管疾病(CVD)",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "心血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "大血管事件",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    },
+    {
+     "name": "心血管事件",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病微血管病变",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病微血管病变",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "心血管疾病(CVD)",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "心血管疾病",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "大血管事件",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "大血管事件",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "大血管事件",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "心血管事件",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "糖尿病患者血糖控制目标应该遵循个体化原则，即对血糖控制的风险(risk)与获益(benefit)、成本(cost)与效益(effectiveness)和可行性(feasibility)方面进行科学评估，寻找较为合理的平衡，这一点已是专家共识。在我国，多数糖尿病患者居住在县以下及农村地区，经济、受教育程度、医疗保障及医疗水平等诸多影响血糖控制的因素差别极大，地域差别较强，因此临床医生在设定糖尿病血糖控制目标时除考虑病理生理因素即病情外，还必须考虑社会因素，社会因素的重要性在某些特定患者甚至超过病情。比如自我血糖监测(SMBG)在我国开展不普遍，因此防范严重低血糖的发生必须放在首位，HbA1c目标的制定应统筹考虑安全性、可行性和科学性。我们不主张笼统推荐成人2型糖尿病的HbA1c控制目标，而是根据病情分层和社会因素的差异建议相对合理的HbA1c值，力争做到安全达标。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "自我血糖监测(SMBG)",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "自我血糖监测(SMBG)"
+    },
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "1.一般将HbA1c控制于<6.5%，若降糖治疗无低血糖或体重增加等不良反应者可使HbA1c<6%。目前，新诊断糖尿病患者的人数逐年增加，越来越年轻化，尤其是30—39岁比例增加引起了临床医生的关注。这些患者绝大多数除糖尿病外并无并发症和其他疾病，考虑对患者预期寿命和生活质量的影响，应该严格控制血糖，目标值HbA1c<6.5%，我们也同意并推荐IDF的建议，对于年轻、病程较短、治疗后无低血糖或体重增加等不良反应发生的患者，血糖控制目标值应该尽量使HbAIc<6%。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "HbAIc",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbAIc"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "研究表明，随着HbA1c水平的升高，发生CVD的危险性相对增加，而且糖尿病病史越长的患者治疗后CVD危险性减低越小；流行病学调查结果的meta分析显示，HbA1c每增加1%，2型糖尿病心血管事件的相对危险性为1.18，1型糖尿病为1.15；ACCORD亚组分析也提示，既往无CVD且HbA1c<8%的患者强化治疗后CVD的发生及其死亡率明显下降，这与总体患者(平均病程10年，35%发生过CVD)的研究结果恰恰相反。另一方面，DCCT-EDIC经过后续8年的随访证实1型糖尿病患者早期强化治疗对微血管有持久的保护作用，并延缓动脉粥样硬化的发展；UKPDS-80经过后续10年的长期随访发现对新诊断的2型糖尿病患者，强化降糖治疗不仅能减少微血管并发症的发生，还能显著降低患者的心肌梗死发生率和总死亡率。所以，观察到严格控制血糖对大血管的保护作用可能需要较长的时间。总之，不管从病理生理还是流行病学的角度，在糖尿病诊断时就严格控制血糖，同时控制体重、血脂、血压，抗血小板治疗，全面降低CVD危险因素会延缓慢性并发症的发生、发展。",
+   "entities": [
+    {
+     "name": "CVD",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管事件",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "1型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "微血管",
+     "type": "Body"
+    },
+    {
+     "name": "动脉粥样硬化",
+     "type": "Disease"
+    },
+    {
+     "name": "动脉",
+     "type": "Body"
+    },
+    {
+     "name": "心肌梗死",
+     "type": "Disease"
+    },
+    {
+     "name": "心肌",
+     "type": "Body"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "血脂",
+     "type": "Examination"
+    },
+    {
+     "name": "血压",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "心血管事件",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "1型糖尿病",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "动脉粥样硬化",
+     "relation": "located_in",
+     "tail": "动脉"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "心肌梗死",
+     "relation": "located_in",
+     "tail": "心肌"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血脂"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血压"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.口服降糖药物未达标加用或改用胰岛素的患者，其血糖控制目标值可适当放宽至HbA1c<7%，以减少低血糖和体重增加这两大不良反应。Miller等对1055例2型糖尿病患者(平均年龄61岁，病程10.8年)的低血糖发生情况调查显示，在随访的7个月中有24.5%的患者至少发生过一次低血糖(有低血糖症状并且血糖<3.3mmol/L)，其中生活方式干预组(HbA1c<6%)占11.8%，口服药物治疗组(HbA1c<7%)占16.2%，胰岛素治疗组(HbA1c<8.1%)占30.5%，而且随访过程中发生的5例严重低血糖事件(0.5%)均在胰岛素治疗组。UKPDS和ACCORD均发现胰岛素使体重增加，若体重增加，可能加重胰岛素抵抗，增加CVD风险。",
+   "entities": [
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "严重低血糖事件",
+     "type": "Symptom"
+    },
+    {
+     "name": "体重增加",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "严重低血糖事件"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "糖尿病病史长，已患CVD或处于CVD极高危，我们推荐HbA1c≤7.5%，因为他们发生或再次发生CVD风险明显增加，低血糖风险较高，目前还没有足够的证据证明HbA1c控制在7%以下对大血管的益处。大规模随机对照试验，如ACCORD、VADT和ADVANCE的结果表明，强化降糖5年内并未发现大血管受益，ACCORD甚至显示总死亡风险反而有所增加。分析ACCORD的研究资料发现对病情较重的入组患者(平均年龄62岁，病程10年，伴CVD占35%)进行强化降糖，可能是主要原因之一。对这些年龄大、病程长、并发症和伴发疾病多的患者严格控制血糖，若发生低血糖可能诱发CVD，增加患者的死亡风险。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    },
+    {
+     "name": "CVD",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "ACCORD中3或4种降糖药物同时应用力求快速达到控制目标(HbA1c<6.0%)，这明显增加低血糖的发生率和总死亡率。",
+   "entities": [
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "ADVANCE与ACCORD不同，其血糖控制力求平稳，低血糖发生率较低，效果也更好，至少没有增加CVD事件和死亡率。",
+   "entities": [
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对伴CVD或CVD极高危患者血糖控制目标要适当放宽，治疗过程中要避免血糖下降速度过快和发生低血糖；并且该组患者多同时服用其他干预CVD危险因素的药物，应慎重选择降糖药物，注意药物的禁忌证和药物间的相互作用。",
+   "entities": [
+    {
+     "name": "CVD",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "多数指南并未单独设定老年糖尿病患者(>65岁)的血糖控制目标，这是因为老年患者的身体健康状况、脏器功能、认知功能以及预期寿命差异较大，不能一概而论；同时缺乏相关的循证医学证据指导制定个体化治疗目标。本共识专家认为应该就此特殊人群制定血糖控制目标，本共识专家认为应该就此特殊人群制定血糖控制目标，参考国外文献，建议血糖控制目标：若患者脏器功能和认知能力良好、预期生存期>15年，应严格控制HbA1c<7%；若患者合并其他疾病、预期生存期5~15年，可适当放宽HbA1c<8%；若患者既往有严重低血糖史、合并其他严重疾病、预期生存期<5年，美国退伍军人事务局推荐控制目标可放宽到HbA1c<9%。HbA1c较高者应避免发生高血糖症状、急性代谢紊乱和感染。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "高血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "急性代谢紊乱",
+     "type": "Disease"
+    },
+    {
+     "name": "感染",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "高血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "急性代谢紊乱",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "感染",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对老年尤其高龄(>80岁)患者的血糖控制目标总体放宽主要原因是，老年人的神经反应比较迟钝或存在神经病变，容易发生无感知低血糖，患者常常在没有任何征兆的情况下发生低血糖昏迷，这种情况如果发生在夜间非常危险，往往因错过抢救时机导致严重脑损伤甚至死亡；而且老年人多伴有心脑血管动脉粥样硬化，一旦发生低血糖可诱发心肌梗死及脑卒中。",
+   "entities": [
+    {
+     "name": "无感知低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "脑损伤",
+     "type": "Disease"
+    },
+    {
+     "name": "脑",
+     "type": "Body"
+    },
+    {
+     "name": "心脑血管动脉粥样硬化",
+     "type": "Disease"
+    },
+    {
+     "name": "心脑血管",
+     "type": "Body"
+    },
+    {
+     "name": "心肌梗死",
+     "type": "Disease"
+    },
+    {
+     "name": "心肌",
+     "type": "Body"
+    },
+    {
+     "name": "脑卒中",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "无感知低血糖",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "脑损伤",
+     "relation": "located_in",
+     "tail": "脑"
+    },
+    {
+     "head": "心脑血管动脉粥样硬化",
+     "relation": "located_in",
+     "tail": "心脑血管"
+    },
+    {
+     "head": "心肌梗死",
+     "relation": "located_in",
+     "tail": "心肌"
+    },
+    {
+     "head": "脑卒中",
+     "relation": "located_in",
+     "tail": "脑"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "因此，对老年糖尿病患者的血糖控制目标放宽程度应该因人而异，治疗措施应该简单易行，控制高血糖药物选择还需充分考虑患者脏器功能的减退程度。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "糖尿病病程>15年、有无感知低血糖病史、有严重伴发病如肝肾功能不全或全天血糖波动较大并反复出现低血糖症状的患者，很难设定其HbA1c的靶目标，最重要的是避免低血糖的发生，也许HbA1c控制在7%~9%是可以接受的。因为Stratton等对4585例2型糖尿病患者10年的随访表明，HbA1c<7%患者慢性并发症的发生和死亡风险最低；HbA1c控制在7%~9%，上述风险虽然增加，但是相对增长缓慢；一旦HbA1c>9%，风险明显增加甚至翻倍。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "肝肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肝",
+     "type": "Body"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肝"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "所有大样本随机对照研究都证实强化治疗使低血糖的发生率明显增加，虽然严重低血糖事件发生率少，但对UKPDS、前瞻性吡格列酮对大血管事件影响的临床研究(PROactive)、ADVANCE、VADT和ACCORD五大临床研究的meta分析显示强化治疗组的严重低血糖发生率为2.3%，常规治疗组为1.2%，可见，强化治疗增加低血糖发生率是不可避免的。但是，如前面所述，低血糖除了直接造成相应的严重临床后果外，频繁或严重的低血糖影响糖尿病患者的治疗。调查表明患者一旦出现频繁或严重的低血糖会明显降低患者对血糖控制达标的积极性。",
+   "entities": [
+    {
+     "name": "大血管事件",
+     "type": "Disease"
+    },
+    {
+     "name": "吡格列酮",
+     "type": "Drug"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    },
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "大血管事件",
+     "relation": "recommend_drug",
+     "tail": "吡格列酮"
+    },
+    {
+     "head": "大血管事件",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "因此低血糖高危人群的个体化血糖控制格外重要。",
+   "entities": [
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "低血糖",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对于计划妊娠的糖尿病患者，应严格控制血糖目标值HbA1c<6.5%，如应用胰岛素可适当放宽HbA1c<7%以防止低血糖发生。不建议HbA1c>8%的患者妊娠，这些患者应首先应控制血糖，因为高血糖会明显增加早期流产和胎儿畸形风险。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "妊娠期高血糖包括糖尿病合并妊娠(妊娠前糖尿病)、妊娠期发现的糖尿病(overt diabetes，指妊娠期HbA1c或血糖达到糖尿病诊断标准)和妊娠糖尿病(GDM)三种情况。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "妊娠前糖尿病或妊娠期发现的糖尿病在不发生低血糖前提下孕期血糖控制，理想目标值为HbA1c<6%；毛细血管血糖餐前、睡前及夜间不高于5.4mmol/L，餐后峰值不高于7.1mmol/L。GDM毛细血管血糖餐前<5.3mmol/L，餐后1h<7.8mmol/L或2h<6.7mmol/L。",
+   "entities": [
+    {
+     "name": "妊娠前糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "毛细血管血糖餐前、睡前及夜间",
+     "type": "Examination"
+    },
+    {
+     "name": "餐后峰值",
+     "type": "Examination"
+    },
+    {
+     "name": "GDM",
+     "type": "Disease"
+    },
+    {
+     "name": "毛细血管血糖餐前",
+     "type": "Examination"
+    },
+    {
+     "name": "餐后1h",
+     "type": "Examination"
+    },
+    {
+     "name": "2h",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "妊娠前糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "妊娠前糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "妊娠前糖尿病",
+     "relation": "need_examination",
+     "tail": "毛细血管血糖餐前、睡前及夜间"
+    },
+    {
+     "head": "妊娠前糖尿病",
+     "relation": "need_examination",
+     "tail": "餐后峰值"
+    },
+    {
+     "head": "GDM",
+     "relation": "need_examination",
+     "tail": "毛细血管血糖餐前"
+    },
+    {
+     "head": "GDM",
+     "relation": "need_examination",
+     "tail": "餐后1h"
+    },
+    {
+     "head": "GDM",
+     "relation": "need_examination",
+     "tail": "2h"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "临床研究显示，相对于餐前血糖而言，餐后血糖的良好控制可更好地减少并发症，尤其是巨大儿出生；相对于餐后2h血糖，控制好餐后1h血糖，产科结局更好。",
+   "entities": [
+    {
+     "name": "巨大儿",
+     "type": "Disease"
+    },
+    {
+     "name": "餐前血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "餐后血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "巨大儿",
+     "relation": "need_examination",
+     "tail": "餐前血糖"
+    },
+    {
+     "head": "巨大儿",
+     "relation": "need_examination",
+     "tail": "餐后血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "与2型糖尿病并存的其他疾病比较多，这些情况下血糖控制目标目前缺乏相应的循证医学证据和共识。比如：恶性肿瘤、老年痴呆症、癫痫等。若患者预期寿命<5年者，HbA1c不应超过9%；预期寿命更长者，HbA1c可控制在7%左右。执行治疗方案较困难的情况，如精神或智力障碍者、视力障碍者、老年、高龄及独居者等，其血糖的控制目标应适当放宽，HbA1c不应超过9%，主要防止血糖过高引起的症状、急性代谢紊乱、感染和低血糖的发生。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "精神或智力障碍",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "视力障碍",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "精神或智力障碍",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "精神或智力障碍",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "视力障碍",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "视力障碍",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "社会因素是决定血糖控制目标的另一个重要且必须考虑的问题，对美国不同种族的糖尿病患者在降糖治疗过程中的依从性和血糖控制情况的调查表明，那些医疗保障差的患者，治疗的依从性、血糖的自我管理能力和血糖的控制水平明显下降。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "但是，医疗保障差的人群总花销并不比平均水平低，这主要是因为忽视糖尿病治疗导致血糖过低或过高，引起相关疾病发生而入院诊治。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "在我国，很多糖尿病患者居住在县以下及农村地区，家庭收入和受教育程度较低、医疗保障及医疗条件差，他们对糖尿病相关知识知之甚少，对糖尿病的危险性认识不够、依从性差、几乎不能进行血糖自我监测(SMBG)，这类患者的血糖控制目标应依据患者的病情综合考虑，适当放宽，尽量避免因严重的低血糖或高血糖发生，加重患者病情和经济负担。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖自我监测(SMBG)",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖自我监测(SMBG)"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对中国成人2型糖尿病HbA1c目标值的适用人群以HbA1c水平分层，总结于表1。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "总之，糖尿病患者的血糖控制目标要因人而异，像GPEDM倡导的“量体裁衣”(tailoring)式管理血糖，有些患者可适当放宽，不要因为过分强调HbA1c达标或正常化增加患者低血糖和死亡风险。HbA1c受检测方法和血红蛋白、红细胞转换、年龄等诸多因素的影响，也不能反映瞬时血糖水平及血糖波动，常规开展HbA1c测定还有困难，且目前国内尚缺乏检测方法的标准化，因此必须充分结合血糖监测才能真正了解糖代谢的控制情况。HbA1c的监测可依据病情每3~6个月进行一次。应该依据病情、治疗方案的不同结合患者的经济、文化、对治疗的依从性、医疗条件等多种因素，制定个体化的降糖策略，达到安全平稳降糖。必须强调血糖以外的CVD风险因素如血压、血脂、体重以及促凝状态等控制，戒烟及生活方式干预对防止、延缓或减少糖尿病并发症的发生同样十分重要。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "CVD",
+     "type": "Disease"
+    },
+    {
+     "name": "血压",
+     "type": "Examination"
+    },
+    {
+     "name": "血脂",
+     "type": "Examination"
+    },
+    {
+     "name": "戒烟",
+     "type": "Procedure"
+    },
+    {
+     "name": "生活方式干预",
+     "type": "Procedure"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血压"
+    },
+    {
+     "head": "CVD",
+     "relation": "need_examination",
+     "tail": "血脂"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "treated_by_procedure",
+     "tail": "戒烟"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "treated_by_procedure",
+     "tail": "生活方式干预"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "成人2型糖尿病胰岛素临床应用的中国专家共识",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "糖尿病已成为严重威胁国人健康的最重要的慢性非传染性疾病之一，但糖尿病控制状况在我国并不容乐观，甚至按纵向比较，血糖控制情况亦无显著改善。2011年公布现状调查显示口服药联合胰岛素治疗的患者中85%HbA1c控制未达标(≥7.o%)糖尿病相关治疗费用中约80%用于糖尿病并发症的治疗。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "众所周知，2型糖尿病患者胰岛β细胞功能随病程进展逐渐恶化。由此推论，随病程进展，为取得血糖最佳控制，大部分2型糖尿病患者似乎最终均需胰岛素治疗。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "因此，规范胰岛素治疗对于改善糖尿病管理、提高广大医护人员的临床实践水平具有重要意义。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "目前临床应用的胰岛素包括动物胰岛素、人胰岛素及胰岛素类似物。其中，人胰岛素具有免疫原性低、长期使用安全可靠、效价比高等优点，在临床中应用最为广泛，在2型糖尿病血糖管理中作用突出。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "对于2型糖尿病患者而言，尽早启动胰岛素治疗能减轻胰岛β细胞的负荷，尽快纠正高血糖状态，迅速解除高糖毒性，改善胰岛素抵抗，保护甚至逆转残存β细胞功能。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "多项研究表明，亚裔不仅胰岛β细胞胰岛素分泌储备能力较西方白种人低，糖脂毒性及氧化应激等对β细胞毒害作用亦更为显著。因此，中国2型糖尿病患者应适时启动胰岛素治疗。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "本共识建议，对于2型糖尿病患者，以下情况应给予胰岛素治疗：(1)急性并发症或严重慢性并发症；(2)应激情况(感染、外伤、手术等)；(3)严重合并症，肝肾功能不全；(4)妊娠期间。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "肝肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肝",
+     "type": "Body"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肝"
+    },
+    {
+     "head": "肝肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "以下情况可给予胰岛素单药治疗，亦可给予口服药和胰岛素联合应用：(1)新诊断2型糖尿病患者，HbA1c≥9.0%且糖尿病症状明显；(2)在采用有效的生活方式干预及2种或2种以上口服降糖药物次大剂量治疗3个月后血糖仍不达标(HbA1c≥7.0%)的患者；(3)病程中出现无明显诱因的体重下降者。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "临床医师在制定胰岛素方案、剂量调整和设定糖尿病血糖控制目标时，除考虑病理生理因素外，还必须考虑社会经济因素，并统筹考虑安全性、可行性和科学性，制定个体化的血糖控制目标和起始治疗方案。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "1.制定个体化的治疗目标：(1)长期血糖控制目标：一般而言，以反映最近2~3个月血糖控制情况的HbA1c为主要目标，兼顾空腹和餐后血糖达标(具体可参照《中国成人2型糖尿病Hbh1c控制目标的专家共识》，表3)。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "Hbh1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "Hbh1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "总体而言，预混胰岛素治疗达标率更高，基础胰岛素治疗低血糖发生率相对较低。亚裔糖尿病患者中以餐后血糖增高更常见，餐后血糖在血糖控制中的作用尤为重要。中国2型糖尿病防治指南(2010年版)指出，每日1次基础胰岛素或每日1~2次预混胰岛素均可作为胰岛素起始治疗方案，如基础胰岛素或预混胰岛素与口服药物联合治疗控制血糖不达标则应将治疗方案调整为多次胰岛素治疗(基础胰岛素加餐时胰岛素或每日3次预混胰岛素。",
+   "entities": [
+    {
+     "name": "基础胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "餐后血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "预混胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "基础胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "need_examination",
+     "tail": "餐后血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "基础胰岛素"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "预混胰岛素"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "药物经济学已经成为评价临床治疗方案的重要手段之一。在选择2型糖尿病治疗方案时，应综合考虑控制医疗费用、患者病情及其支付能力等多方面因素。作为发展中国家，我国医疗资源仍相对匮乏，且糖尿病患者人数众多且增长迅猛，在为2型糖尿病制定胰岛素治疗方案时需考虑以上诸多因素。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "人胰岛素经济、安全、有效，在2型糖尿病治疗中发挥重要的作用。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "人胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "人胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "目前用于临床的胰岛素包括动物胰岛素、人胰岛素和胰岛素类似物。由于潜在免疫原性等问题，动物胰岛素在大多数地区使用逐渐减少，人胰岛素和胰岛素类似物使用逐渐增多。人胰岛素与人体自身分泌的胰岛素结构完全相同，胰岛素类似物通过改变胰岛素结构而改变胰岛素药代动力学特性。短期研究表明，胰岛素类似物与人胰岛素相比，控制HbA1c的能力相似，但使用更方便，在减少低血糖发生的潜在危险方面胰岛素类似物优于人胰岛素，这一优势主要表现在1型糖尿病患者。目前尚缺乏胰岛素类似物对患者长期终点事件，如死亡率、糖尿病相关微血管和大血管并发症等方面的证据。多项meta分析及临床研究显示，在2型糖尿病患者中，胰岛素类似物在HbA1c达标率、胰岛素剂量、体重、日问低血糖、严重低血糖和不良反应方面与人胰岛素相当，长效胰岛素类似物对夜间低血糖的改善优于NPH。",
+   "entities": [
+    {
+     "name": "胰岛素类似物",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "人胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "1型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "微血管",
+     "type": "Body"
+    },
+    {
+     "name": "大血管",
+     "type": "Body"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "长效胰岛素类似物",
+     "type": "Drug"
+    },
+    {
+     "name": "NPH",
+     "type": "Drug"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胰岛素类似物",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "人胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "1型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素类似物"
+    },
+    {
+     "head": "1型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "人胰岛素"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素类似物"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "微血管"
+    },
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "大血管"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素类似物"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "人胰岛素"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "长效胰岛素类似物"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "NPH"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "1.在积极使用胰岛素的同时，应合理使用胰岛素，避免过度应用。对于肥胖(体重指数>28kg/m2)的患者，应在口服药充分治疗的基础上起始胰岛素治疗。",
+   "entities": [
+    {
+     "name": "肥胖",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肥胖",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.合理的联合用药，避免药物不良反应的产生和叠加。单独使用胰岛素的主要不良反应是低血糖和体重增加。推荐采用胰岛素/口服药联合方案，以增加降糖疗效，同时减少低血糖和体重增加的不良反应。二甲双胍与胰岛素联用可减少体重增加，减少外源性胰岛素用量。α-葡萄糖苷酶抑制剂与胰岛素联用在有效改善血糖的同时，减少胰岛素使用剂量，减少体重增加的幅度和趋势。因此，在无禁忌证的2型糖尿病患者中均可采用二甲双胍或α糖苷酶抑制剂与胰岛素联用。",
+   "entities": [
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "体重增加",
+     "type": "Symptom"
+    },
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "α糖苷酶抑制剂",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    },
+    {
+     "head": "二甲双胍",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "α糖苷酶抑制剂"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "促泌剂可发生低血糖和体重增加的不良反应，因此，除基础胰岛素外，不建议胰岛素和促泌剂联合使用。",
+   "entities": [
+    {
+     "name": "促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "体重增加",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "体重增加"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "3.对已合并心脑血管疾病或危险因素的2型糖尿病患者，或老年糖尿病患者，过于激进的降糖治疗策略可能产生潜在的风险，进而抵消或掩盖其潜在的心血管获益。由于脑组织代谢的特殊性，卒中患者对低血糖的耐受性更低，在使用胰岛素时，应采取相对宽松的降糖治疗策略与目标值，避免低血糖的发生。",
+   "entities": [
+    {
+     "name": "心脑血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心脑血管",
+     "type": "Body"
+    },
+    {
+     "name": "卒中",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心脑血管疾病",
+     "relation": "located_in",
+     "tail": "心脑血管"
+    },
+    {
+     "head": "卒中",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "低血糖",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    },
+    {
+     "head": "胰岛素",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "4.肾功能不全时肾脏对胰岛素的降解明显减少，同时胰岛素排出速率下降，胰岛素可能在体内蓄积，患者出现氮质血症即血液中的尿素氮达9mmol[/L(25mg/d1)以上、肌酐达178μmol/L以上时，应根据血糖的监测及时减少和调整胰岛素的用量，使血糖维持在适当的范围内。",
+   "entities": [
+    {
+     "name": "肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "氮质血症",
+     "type": "Disease"
+    },
+    {
+     "name": "尿素氮",
+     "type": "Examination"
+    },
+    {
+     "name": "肌酐",
+     "type": "Examination"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "氮质血症",
+     "relation": "need_examination",
+     "tail": "尿素氮"
+    },
+    {
+     "head": "氮质血症",
+     "relation": "need_examination",
+     "tail": "肌酐"
+    },
+    {
+     "head": "氮质血症",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "基于以上，成人2型糖尿病胰岛素临床应用中国专家共识推荐如下：",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "合理把握胰岛素启动治疗时机。新诊断2型糖尿病患者HbA1c≥9.0%同时合并明显临床症状，或合并严重并发症，2种或2种以上口服降糖药次大剂量治疗3个月后仍不达标者(HbA1c≥7.0%)，应启动胰岛素治疗。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "胰岛素",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "recommend_drug",
+     "tail": "胰岛素"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2型糖尿病合并慢性肾脏病患者口服降糖药用药原则中国专家共识",
+   "entities": [
+    {
+     "name": "慢性肾脏病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性肾脏病",
+     "relation": "located_in",
+     "tail": "肾脏"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "慢性肾脏病(CKD)是严重威胁人类健康的常见慢性病，病因多种多样，由糖尿病所引发的肾脏病称为糖尿病肾脏病(DKD)。T2DM常合并CKD，高血糖是CKD发展的主要原因之一，降糖治疗至关重要。",
+   "entities": [
+    {
+     "name": "慢性肾脏病(CKD)",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    },
+    {
+     "name": "糖尿病肾脏病(DKD)",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏病",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "慢性肾脏病(CKD)",
+     "relation": "located_in",
+     "tail": "肾脏"
+    },
+    {
+     "head": "糖尿病肾脏病(DKD)",
+     "relation": "located_in",
+     "tail": "肾脏"
+    },
+    {
+     "head": "肾脏病",
+     "relation": "located_in",
+     "tail": "肾脏"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "近年来，T2DM合并CKD患者中口服降糖药治疗证据不断丰富，国外糖尿病及肾脏病权威指南规范了口服降糖药的应用，但我国尚缺乏T2DM合并CKD用药指南或共识。",
+   "entities": [
+    {
+     "name": "肾脏病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肾脏病",
+     "relation": "located_in",
+     "tail": "肾脏"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "我国糖尿病患病率逐年升高，目前糖尿病患者约9240万，其中T2DM占90%以上。糖尿病与CKD关系密切。糖尿病患者CKD发生风险较非糖尿病者增加2.6倍。近年，各地CKD流行病学调查成年人CKD的患病率存在一定差异，为9%~14%。近期全国CKD流行病学调查显示，我国成年人中CKD患病率为10.8%，据此估算18岁以上人群CKD患者人数约1.195亿。在发达国家，糖尿病已是导致CKD的主要病因，而且在发展中国家，糖尿病正逐渐成为CKD的主要致病原因。美国流行病学调查显示，年龄≥20岁的T2DM患者有39.7%合并CKD。对我国住院糖尿病患者的回顾性研究表明，33.6%的糖尿病患者合并肾脏并发症。",
+   "entities": [
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "肾脏",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖尿病",
+     "relation": "located_in",
+     "tail": "肾脏"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "CKD是指肾脏结构或功能异常持续超过3个月，其诊断标准见表1。目前国内外大部分指南是根据GFR来进行CKD的肾功能分期。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    },
+    {
+     "name": "肾功能",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "肾功能"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "GFR是评价肾脏功能的重要指标之一，我国估算肾小球滤过率(eGFR)课题协作组改良简化MDRD方程，制定了适合我国CKD患者的eGFR的评估公式：eGFR[ml/(min·1.73m2)]=175×Scr-1.234(mg/dL)×年龄-0.179(女性×0.79)。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    },
+    {
+     "name": "肾小球滤过率(eGFR)",
+     "type": "Examination"
+    },
+    {
+     "name": "eGFR",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "肾小球滤过率(eGFR)"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "eGFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "eGFR"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "2.血糖控制目标值：对T2DM合并CKD患者的血糖控制目标应遵循个体化原则，尽量避免低血糖的发生。《中国成人2型糖尿病HbA1c控制目标的专家共识》建议对T2DM合并CKD患者的HbA1c可适当放宽控制在7%~9%，一方面避免血糖水平控制过低而出现低血糖，另一方面避免血糖水平过高而出现代谢异常及感染。当CKD导致红细胞寿命缩短时，HbA1c检测结果可能被低估。在晚期CKD患者，使用糖化血清蛋白反映血糖控制水平可能更可靠。",
+   "entities": [
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "晚期CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "糖化血清蛋白",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "晚期CKD",
+     "relation": "need_examination",
+     "tail": "糖化血清蛋白"
+    },
+    {
+     "head": "晚期CKD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "3.口服降糖药的选择：口服降糖药作为临床最常用的降糖手段，对于T2DM合并CKD患者的血糖控制具有重要意义。",
+   "entities": [
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "CKD",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(1)双胍类：目前，国内外指南均一致推荐二甲双胍作为T2DM控制血糖的一线用药，其主要药理作用是通过减少肝糖输出和改善外周胰岛素抵抗而降低血糖。二甲双胍可使HbA1c降低1%~2%，并可减轻体重且不增加低血糖风险。英国前瞻性糖尿病研究(UKPDS)显示，二甲双胍可降低肥胖T2DM患者心血管事件和死亡风险。二甲双胍直接以原形经肾脏排泄，当肾功能损害时易发生二甲双胍与乳酸在体内蓄积，从而增加乳酸性酸中毒风险。二甲双胍用于CKD3a期患者时减量，当GFR<45ml/(min·1.73m2)停用。",
+   "entities": [
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    },
+    {
+     "name": "血糖",
+     "type": "Examination"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "肥胖",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管事件",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    },
+    {
+     "name": "肾功能损害",
+     "type": "Disease"
+    },
+    {
+     "name": "乳酸性酸中毒",
+     "type": "Symptom"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "CKD3a期",
+     "type": "Disease"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "血糖"
+    },
+    {
+     "head": "二甲双胍",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "肥胖",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "心血管事件",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "心血管事件",
+     "relation": "located_in",
+     "tail": "心血管"
+    },
+    {
+     "head": "肾功能损害",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "二甲双胍",
+     "relation": "adverse_reaction",
+     "tail": "乳酸性酸中毒"
+    },
+    {
+     "head": "肾功能损害",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "肾功能损害",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "CKD3a期",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    },
+    {
+     "head": "CKD3a期",
+     "relation": "need_examination",
+     "tail": "GFR"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(2)磺脲类：为胰岛素促泌剂，主要药理作用是通过刺激胰岛β细胞释放胰岛素，增加体内的胰岛素水平而降低血糖。磺脲类药物可降低HbA1c1%~2%，是目前国内外指南中推荐的控制T2DM患者高血糖的主要用药。",
+   "entities": [
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "磺脲类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "高血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "磺脲类药物"
+    },
+    {
+     "head": "高血糖",
+     "relation": "recommend_drug",
+     "tail": "磺脲类药物"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "高血糖",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "第一代磺脲类药物(如氯磺丙脲、妥拉磺脲、甲苯磺丁脲)的药物原型及其活性代谢产物主要依赖肾脏排泄，在CKD患者应用时半衰期延长，低血糖风险明显增加，因此禁用于该类患者，目前此类药物在临床上已基本被淘汰。在第二代磺脲类药物中，格列本脲的半衰期较长，其活性代谢产物约50%经肾脏排泄，可在CKD患者体内积聚，可能引起严重的低血糖，且持续时间超过24h。格列本脲仅可用于CKD1~2期的患者；3~5期禁用。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "第一代磺脲类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "氯磺丙脲",
+     "type": "Drug"
+    },
+    {
+     "name": "妥拉磺脲",
+     "type": "Drug"
+    },
+    {
+     "name": "甲苯磺丁脲",
+     "type": "Drug"
+    },
+    {
+     "name": "第二代磺脲类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "严重的低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "CKD1~2期",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "第一代磺脲类药物"
+    },
+    {
+     "head": "第一代磺脲类药物",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "氯磺丙脲"
+    },
+    {
+     "head": "氯磺丙脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "妥拉磺脲"
+    },
+    {
+     "head": "妥拉磺脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "甲苯磺丁脲"
+    },
+    {
+     "head": "甲苯磺丁脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "第二代磺脲类药物"
+    },
+    {
+     "head": "第二代磺脲类药物",
+     "relation": "adverse_reaction",
+     "tail": "严重的低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    },
+    {
+     "head": "格列本脲",
+     "relation": "adverse_reaction",
+     "tail": "严重的低血糖"
+    },
+    {
+     "head": "CKD1~2期",
+     "relation": "recommend_drug",
+     "tail": "格列本脲"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "格列美脲的代谢产物仍有降糖活性，其代谢产物及原型的60%经肾脏排泄。格列美脲用于CKD1~2期患者无需调整剂量；3a期减量；3b~5期禁用。",
+   "entities": [
+    {
+     "name": "CKD1~2期",
+     "type": "Disease"
+    },
+    {
+     "name": "格列美脲",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD1~2期",
+     "relation": "recommend_drug",
+     "tail": "格列美脲"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "格列吡嗪和格列齐特的代谢产物均无降糖活性，虽然主要经肾脏排泄，但低血糖风险小于格列本脲和格列美脲。格列吡嗪用于CKD1~2期患者无需调整剂量；3期减量，4~5期禁用。格列齐特用于CKD1~2期患者无需调整剂量；在3a期减量，3b期用药经验有限，需谨慎用药；4~5期禁用。",
+   "entities": [
+    {
+     "name": "格列吡嗪",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "格列齐特",
+     "type": "Drug"
+    },
+    {
+     "name": "格列本脲",
+     "type": "Drug"
+    },
+    {
+     "name": "格列美脲",
+     "type": "Drug"
+    },
+    {
+     "name": "CKD1~2期",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "格列吡嗪",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列齐特",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列本脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列美脲",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD1~2期",
+     "relation": "recommend_drug",
+     "tail": "格列吡嗪"
+    },
+    {
+     "head": "CKD1~2期",
+     "relation": "recommend_drug",
+     "tail": "格列齐特"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "格列喹酮的代谢产物无降糖作用且大部分从粪便排泄，仅5%经肾脏排泄，受肾功能影响较小，但用于CKD患者的临床证据有限，格列喹酮曾用于GFR10~50ml/(min·1.73m2)患者，但试验设计不尽完善。格列喹酮可用于CKD1~3期的患者且无需调整剂量；4期用药经验有限，需谨慎用药；5期禁用。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "格列喹酮",
+     "type": "Drug"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    },
+    {
+     "name": "CKD1~3期",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "格列喹酮"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "格列喹酮"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD1~3期",
+     "relation": "recommend_drug",
+     "tail": "格列喹酮"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(3)格列奈类：格列奈类降糖药为非磺脲类胰岛素促泌剂，主要通过刺激早相胰岛素分泌而降低餐后血糖，具有吸收快、起效快和作用时间短的特点，可降低HbA1c0.5%~2.0%，其低血糖的风险和程度较磺脲类药物轻。格列奈类主要代表药物为那格列奈和瑞格列奈。那格列奈及其代谢产物83%经肾脏排泄，随着肾功能的降低，那格列奈的活性代谢产物水平增加，而瑞格列奈却未发现此现象。瑞格列奈及其代谢产物仅8%经肾脏排泄。瑞格列奈Ⅰ期临床试验表明，使用瑞格列奈7d后，肾功能正常患者与不同程度CKD患者相比，血药浓度没有明显差别，提示瑞格列奈在CKD患者体内无蓄积。一项入选281例伴或不伴肾功能不全T2DM患者的多中心研究提示，使用瑞格列奈替换原有降糖治疗，不同程度肾功能不全亚组患者(正常、轻、中、重、极重肾功能损害)低血糖发生率均低于2%，且瑞格列奈治疗期低血糖发生率与肾功能损害程度无关。瑞格列奈用于CKD1~5期的患者无需调整剂量；如起始用药，应0.5mg起始。那格列奈用于CKD1~3a期患者时，无需调整剂量；3b~4期减量；5期禁用。",
+   "entities": [
+    {
+     "name": "格列奈类",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "格列奈类降糖药",
+     "type": "Drug"
+    },
+    {
+     "name": "非磺脲类胰岛素促泌剂",
+     "type": "Drug"
+    },
+    {
+     "name": "磺脲类药物",
+     "type": "Drug"
+    },
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "瑞格列奈",
+     "type": "Drug"
+    },
+    {
+     "name": "肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "肾",
+     "type": "Body"
+    },
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "正常、轻、中、重、极重肾功能损害",
+     "type": "Disease"
+    },
+    {
+     "name": "肾功能损害",
+     "type": "Disease"
+    },
+    {
+     "name": "CKD1~5期",
+     "type": "Disease"
+    },
+    {
+     "name": "CKD1~3a期",
+     "type": "Disease"
+    },
+    {
+     "name": "那格列奈",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "格列奈类",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "格列奈类降糖药",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "非磺脲类胰岛素促泌剂",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "磺脲类药物",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "正常、轻、中、重、极重肾功能损害",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "肾功能不全",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "瑞格列奈",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "肾功能不全",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "正常、轻、中、重、极重肾功能损害",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "瑞格列奈",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "肾功能损害",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "肾功能损害",
+     "relation": "located_in",
+     "tail": "肾"
+    },
+    {
+     "head": "CKD1~5期",
+     "relation": "recommend_drug",
+     "tail": "瑞格列奈"
+    },
+    {
+     "head": "CKD1~3a期",
+     "relation": "recommend_drug",
+     "tail": "那格列奈"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(4)噻唑烷二酮类：噻唑烷二酮类为胰岛素增敏剂，主要通过增加靶细胞对IS而降低血糖，可降低HbA1c1.0%~1.5%。主要代表药物为吡格列酮和罗格列酮，均经肝脏代谢，不增加低血糖风险。该类药物的常见不良反应是液体潴留，因而对于重度心力衰竭患者应慎用。此外，绝经后妇女服用该类药物发生骨折及骨质疏松的风险增加，因此慎用于潜在骨疾病的患者(如肾性骨营养不良)。吡格列酮用于CKD1~3a期患者时，无需调整剂量；3b~5期患者用药经验有限，需谨慎用药。罗格列酮因增加心血管风险的安全性问题引起了国内外的警惕，目前美国食品药品监督管理局(FDA)已严格限制其使用。",
+   "entities": [
+    {
+     "name": "吡格列酮",
+     "type": "Drug"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    },
+    {
+     "name": "罗格列酮",
+     "type": "Drug"
+    },
+    {
+     "name": "心力衰竭",
+     "type": "Disease"
+    },
+    {
+     "name": "心",
+     "type": "Body"
+    },
+    {
+     "name": "肾性骨营养不良",
+     "type": "Disease"
+    },
+    {
+     "name": "骨",
+     "type": "Body"
+    },
+    {
+     "name": "CKD1~3a期",
+     "type": "Disease"
+    },
+    {
+     "name": "增加心血管风险",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "吡格列酮",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "罗格列酮",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    },
+    {
+     "head": "心力衰竭",
+     "relation": "located_in",
+     "tail": "心"
+    },
+    {
+     "head": "肾性骨营养不良",
+     "relation": "located_in",
+     "tail": "骨"
+    },
+    {
+     "head": "CKD1~3a期",
+     "relation": "recommend_drug",
+     "tail": "吡格列酮"
+    },
+    {
+     "head": "罗格列酮",
+     "relation": "adverse_reaction",
+     "tail": "增加心血管风险"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(5)α-糖苷酶抑制剂：α-糖苷酶抑制剂通过延缓碳水化合物在小肠上段的吸收而降低餐后血糖，适用于饮食结构以碳水化合物为主且餐后血糖升高的患者，可降低HbA1c0.5%~0.8%，不增加体重且有减轻体重的趋势。主要代表药物有阿卡波糖、伏格列波糖等。阿卡波糖口服后很少部分被吸收，随着肾功能的降低，阿卡波糖及其代谢产物的血药浓度显著增加。阿卡波糖可用于CKD1~3期患者；4~5期禁用。",
+   "entities": [
+    {
+     "name": "CKD1~3期",
+     "type": "Disease"
+    },
+    {
+     "name": "阿卡波糖",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD1~3期",
+     "relation": "recommend_drug",
+     "tail": "阿卡波糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "伏格列波糖可用于CKD1~3期患者；4~5期禁用。",
+   "entities": [
+    {
+     "name": "CKD1~3期",
+     "type": "Disease"
+    },
+    {
+     "name": "伏格列波糖",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD1~3期",
+     "relation": "recommend_drug",
+     "tail": "伏格列波糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "西格列汀用于GFR≥50ml/(min·1.73m2)的CKD患者时无需调整剂量；GFR在30~50ml/(min·1.73m2)时减量至50mg，qd；GFR<30ml/(min·1.73m2)时用药经验有限，减量至25mg，qd。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "西格列汀",
+     "type": "Drug"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "西格列汀"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "沙格列汀用于GFR≥50ml/(min·1.73m2)的CKD患者时无需调整剂量，当GFR在30~49ml/(min·1.73m2)时减量；CKD4~5期患者禁用。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "沙格列汀",
+     "type": "Drug"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "沙格列汀"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "维格列汀用于GFR≥50ml/(min·1.73m2)的CKD患者时无需调整剂量，当GFR<50ml/(min·1.73m2)时禁用。",
+   "entities": [
+    {
+     "name": "CKD",
+     "type": "Disease"
+    },
+    {
+     "name": "维格列汀",
+     "type": "Drug"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD",
+     "relation": "recommend_drug",
+     "tail": "维格列汀"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "CKD",
+     "relation": "need_examination",
+     "tail": "GFR"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "一项为期52周的随机、双盲试验评估了利格列汀的疗效及安全性。受试者为既往接受其他降糖药治疗的T2DM患者，GFR<30ml/(min·1.73m2)，分别给予利格列汀或安慰剂，结果显示与安慰剂组相比，利格列汀降低HbA1c达0.6%，但利格列汀组低血糖发生率高于安慰剂组。",
+   "entities": [
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "GFR",
+     "type": "Examination"
+    },
+    {
+     "name": "利格列汀",
+     "type": "Drug"
+    },
+    {
+     "name": "HbA1c",
+     "type": "Examination"
+    },
+    {
+     "name": "低血糖",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "GFR"
+    },
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "利格列汀"
+    },
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "利格列汀"
+    },
+    {
+     "head": "T2DM",
+     "relation": "need_examination",
+     "tail": "HbA1c"
+    },
+    {
+     "head": "利格列汀",
+     "relation": "adverse_reaction",
+     "tail": "低血糖"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "利格列汀用于CKD1~4期患者时无需调整剂量，5期患者用药经验有限。",
+   "entities": [
+    {
+     "name": "CKD1~4期",
+     "type": "Disease"
+    },
+    {
+     "name": "利格列汀",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "CKD1~4期",
+     "relation": "recommend_drug",
+     "tail": "利格列汀"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(1)儿童和青少年T2DM合并CKD患者：在儿童和青少年T2DM合并CKD患者中，缺乏对高血糖、高血压和血脂异常治疗的相关数据。但是生活方式的改变(饮食、锻炼、减肥)对减少以上危险因素有益，因此对高血糖的起始干预应从改变生活方式开始。若生活方式干预不能控制血糖，应考虑降糖药治疗。尽管ADA推荐口服降糖药作为儿童和青少年T2DM患者的一线治疗，但其中仅二甲双胍被FDA批准用于10岁以上的儿童，其使用注意事项与成人相同。",
+   "entities": [
+    {
+     "name": "高血糖",
+     "type": "Disease"
+    },
+    {
+     "name": "生活方式的改变",
+     "type": "Procedure"
+    },
+    {
+     "name": "饮食",
+     "type": "Procedure"
+    },
+    {
+     "name": "锻炼",
+     "type": "Procedure"
+    },
+    {
+     "name": "减肥",
+     "type": "Procedure"
+    },
+    {
+     "name": "改变生活方式",
+     "type": "Procedure"
+    },
+    {
+     "name": "T2DM",
+     "type": "Disease"
+    },
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "高血糖",
+     "relation": "treated_by_procedure",
+     "tail": "生活方式的改变"
+    },
+    {
+     "head": "高血糖",
+     "relation": "treated_by_procedure",
+     "tail": "饮食"
+    },
+    {
+     "head": "高血糖",
+     "relation": "treated_by_procedure",
+     "tail": "锻炼"
+    },
+    {
+     "head": "高血糖",
+     "relation": "treated_by_procedure",
+     "tail": "减肥"
+    },
+    {
+     "head": "高血糖",
+     "relation": "treated_by_procedure",
+     "tail": "改变生活方式"
+    },
+    {
+     "head": "T2DM",
+     "relation": "recommend_drug",
+     "tail": "二甲双胍"
+    }
+   ],
+   "source": "DiaKG"
+  },
+  {
+   "text": "(2)老年T2DM合并CKD患者：老年T2DM合并CKD患者通常有多种合并症，尤其是心血管疾病以及认知功能障碍，因此应加强对多种危险因素的管理。",
+   "entities": [
+    {
+     "name": "心血管疾病",
+     "type": "Disease"
+    },
+    {
+     "name": "心血管",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "心血管疾病",
+     "relation": "located_in",
+     "tail": "心血管"
+    }
+   ],
+   "source": "DiaKG"
+  }
+ ]
+}

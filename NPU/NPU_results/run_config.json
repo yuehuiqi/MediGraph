@@ -1,0 +1,11 @@
+{
+  "run_id": "20260627_212142_full",
+  "mode": "full",
+  "rows": 200000,
+  "labels": 32,
+  "iterations": 200,
+  "latency_iterations": 200,
+  "repeats": 5,
+  "block_dim": 40,
+  "temperature": 1.35
+}

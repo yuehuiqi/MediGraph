@@ -1,0 +1,531 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4-Pro",
+  "samples": 16,
+  "gold_file": "D:\\LLMagent\\CCF\\benchmarks\\nl2sql_gold.json",
+  "gold_sha256": "49ed8ca91d760cb13429c810dbaf5efa6e0750d3853bbbfdf68eedee77dec8e5",
+  "execution_accuracy": 1.0,
+  "correct": 16,
+  "dual_database_execution_accuracy": 1.0,
+  "dual_database_correct": 16,
+  "generation_mode_breakdown": {
+    "deterministic_template": {
+      "n": 16,
+      "correct": 16,
+      "accuracy": 1.0
+    }
+  },
+  "alternate_seed": 137,
+  "evaluation_note": "Dual-database match executes gold and prediction on independently seeded databases; it is a stronger logical-equivalence proxy than one-database execution match.",
+  "details": [
+    {
+      "question": "每个科室的就诊量是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT department, COUNT(*) FROM patient_visits GROUP BY department",
+      "pred_sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "每个科室的就诊量是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "department"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 7,
+      "primary_pred_rows": 7
+    },
+    {
+      "question": "高血压患者的平均年龄是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT AVG(age) FROM patient_visits WHERE disease='高血压'",
+      "pred_sql": "SELECT AVG(age) AS avg_age FROM patient_visits WHERE disease='高血压'",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "高血压患者的平均年龄是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "age"
+        ],
+        "values": [
+          {
+            "field": "disease",
+            "value": "高血压",
+            "match": "literal"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "sql": "SELECT AVG(age) AS avg_age FROM patient_visits WHERE disease='高血压'",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "各疾病的就诊人次有多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT disease, COUNT(*) FROM patient_visits GROUP BY disease",
+      "pred_sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "各疾病的就诊人次有多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "disease"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 61,
+      "primary_pred_rows": 61
+    },
+    {
+      "question": "2024年每个月的就诊量分别是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT substr(visit_date,1,7) AS m, COUNT(*) FROM patient_visits GROUP BY m",
+      "pred_sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "2024年每个月的就诊量分别是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 11,
+      "primary_pred_rows": 11
+    },
+    {
+      "question": "开具次数最多的5种药物是哪些",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT drug, COUNT(*) AS c FROM prescriptions GROUP BY drug ORDER BY c DESC LIMIT 5",
+      "pred_sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 5",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "开具次数最多的5种药物是哪些",
+        "aliases": {},
+        "tables": [
+          "prescriptions"
+        ],
+        "columns": [
+          "drug"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 5",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 5,
+      "primary_pred_rows": 5
+    },
+    {
+      "question": "男性和女性的就诊人次各是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT gender, COUNT(*) FROM patient_visits GROUP BY gender",
+      "pred_sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "男性和女性的就诊人次各是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "gender"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 2,
+      "primary_pred_rows": 2
+    },
+    {
+      "question": "内科的平均就诊费用是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT AVG(cost) FROM patient_visits WHERE department='内科'",
+      "pred_sql": "SELECT AVG(cost) AS avg_cost FROM patient_visits WHERE department='内科'",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "内科的平均就诊费用是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "cost"
+        ],
+        "values": [
+          {
+            "field": "department",
+            "value": "内科",
+            "match": "literal"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "sql": "SELECT AVG(cost) AS avg_cost FROM patient_visits WHERE department='内科'",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "总共有多少次就诊",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "总共有多少次就诊",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT COUNT(*) AS cnt FROM patient_visits",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "60岁以上的患者有多少次就诊",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE age>60",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE age>60",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "60岁以上的患者有多少次就诊",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "age"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE age>60",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "每个科室的平均就诊费用是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT department, AVG(cost) FROM patient_visits GROUP BY department",
+      "pred_sql": "SELECT department, AVG(cost) AS avg_cost FROM patient_visits GROUP BY department ORDER BY avg_cost DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "每个科室的平均就诊费用是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "department",
+          "cost"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT department, AVG(cost) AS avg_cost FROM patient_visits GROUP BY department ORDER BY avg_cost DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 7,
+      "primary_pred_rows": 7
+    },
+    {
+      "question": "阿司匹林肠溶片一共被开具了多少次",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='阿司匹林肠溶片'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM prescriptions WHERE drug='阿司匹林肠溶片'",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "阿司匹林肠溶片一共被开具了多少次",
+        "aliases": {},
+        "tables": [
+          "prescriptions"
+        ],
+        "columns": [
+          "drug"
+        ],
+        "values": [
+          {
+            "field": "drug",
+            "value": "阿司匹林肠溶片",
+            "match": "literal"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "sql": "SELECT COUNT(*) AS cnt FROM prescriptions WHERE drug='阿司匹林肠溶片'",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "每种疾病患者的平均年龄是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT disease, AVG(age) FROM patient_visits GROUP BY disease",
+      "pred_sql": "SELECT disease, AVG(age) AS avg_age FROM patient_visits GROUP BY disease ORDER BY avg_age DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "每种疾病患者的平均年龄是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "age",
+          "disease"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT disease, AVG(age) AS avg_age FROM patient_visits GROUP BY disease ORDER BY avg_age DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 61,
+      "primary_pred_rows": 61
+    },
+    {
+      "question": "所有就诊的总费用是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT SUM(cost) FROM patient_visits",
+      "pred_sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "所有就诊的总费用是多少",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "cost"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "女性高血压患者有多少次就诊",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='高血压'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE disease='高血压' AND gender='女'",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "女性高血压患者有多少次就诊",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "gender"
+        ],
+        "values": [
+          {
+            "field": "disease",
+            "value": "高血压",
+            "match": "literal"
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE disease='高血压' AND gender='女'",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 1,
+      "primary_pred_rows": 1
+    },
+    {
+      "question": "每个检查项目的异常次数是多少",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT test_name, SUM(abnormal) FROM lab_tests GROUP BY test_name",
+      "pred_sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "每个检查项目的异常次数是多少",
+        "aliases": {},
+        "tables": [
+          "lab_tests"
+        ],
+        "columns": [
+          "test_name",
+          "abnormal"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 253,
+      "primary_pred_rows": 253
+    },
+    {
+      "question": "就诊量最高的3个科室",
+      "match": true,
+      "alt_seed_match": true,
+      "dual_database_match": true,
+      "gold_sql": "SELECT department, COUNT(*) AS c FROM patient_visits GROUP BY department ORDER BY c DESC LIMIT 3",
+      "pred_sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 3",
+      "generation_mode": "deterministic_template",
+      "schema_links": {
+        "normalized_question": "就诊量最高的3个科室",
+        "aliases": {},
+        "tables": [
+          "patient_visits"
+        ],
+        "columns": [
+          "department"
+        ],
+        "values": []
+      },
+      "attempts": [
+        {
+          "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 3",
+          "error": "",
+          "source": "deterministic_template"
+        }
+      ],
+      "error": "",
+      "primary_gold_rows": 3,
+      "primary_pred_rows": 3
+    }
+  ],
+  "llm_stats": {
+    "calls": 0,
+    "total_seconds": 0.0,
+    "avg_latency_s": 0.0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  }
+}

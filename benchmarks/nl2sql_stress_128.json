@@ -1,0 +1,645 @@
+{
+  "description": "128-question deterministic compositional stress set. Template-generated for reproducibility and coverage; report separately from the hand-written gold set.",
+  "samples": [
+    {
+      "question": "总共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "全部就诊记录一共有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "就诊总数是多少",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "请统计就诊次数",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "所有患者合计多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "累计有多少人次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "数据库中的就诊总数",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "总共记录了多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits",
+      "category": "scalar_count"
+    },
+    {
+      "question": "30岁以上的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>30",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄30岁以上共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>30",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "30岁以下的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<30",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄30岁以下共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<30",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "40岁以上的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>40",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄40岁以上共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>40",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "40岁以下的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<40",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄40岁以下共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<40",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "50岁以上的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>50",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄50岁以上共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>50",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "50岁以下的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<50",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄50岁以下共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<50",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "60岁以上的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>60",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄60岁以上共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>60",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "60岁以下的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<60",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄60岁以下共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<60",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "70岁以上的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>70",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄70岁以上共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>70",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "70岁以下的患者有多少人次",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<70",
+      "category": "age_filter"
+    },
+    {
+      "question": "年龄70岁以下共有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age<70",
+      "category": "age_filter_paraphrase"
+    },
+    {
+      "question": "女性高血压患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='高血压'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "女性糖尿病足患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='糖尿病足'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "女性冠心病患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='冠心病'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "女性老年痴呆患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='老年痴呆'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "男性高血压患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='男' AND disease='高血压'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "男性糖尿病足患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='男' AND disease='糖尿病足'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "男性冠心病患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='男' AND disease='冠心病'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "男性老年痴呆患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='男' AND disease='老年痴呆'",
+      "category": "multi_condition"
+    },
+    {
+      "question": "每个科室的就诊量是多少",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+      "category": "group_count_department"
+    },
+    {
+      "question": "各科室分别有多少人次",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+      "category": "group_count_department"
+    },
+    {
+      "question": "按科室统计就诊次数",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+      "category": "group_count_department"
+    },
+    {
+      "question": "科室就诊数量排名",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+      "category": "group_count_department"
+    },
+    {
+      "question": "每个科室的平均就诊费用是多少",
+      "sql": "SELECT department, AVG(cost) AS avg_cost FROM patient_visits GROUP BY department ORDER BY avg_cost DESC",
+      "category": "group_avg_cost_department"
+    },
+    {
+      "question": "各科室患者的平均年龄",
+      "sql": "SELECT department, AVG(age) AS avg_age FROM patient_visits GROUP BY department ORDER BY avg_age DESC",
+      "category": "group_avg_age_department"
+    },
+    {
+      "question": "每个疾病的就诊量是多少",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "category": "group_count_disease"
+    },
+    {
+      "question": "各疾病分别有多少人次",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "category": "group_count_disease"
+    },
+    {
+      "question": "按疾病统计就诊次数",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "category": "group_count_disease"
+    },
+    {
+      "question": "疾病就诊数量排名",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC",
+      "category": "group_count_disease"
+    },
+    {
+      "question": "每个疾病的平均就诊费用是多少",
+      "sql": "SELECT disease, AVG(cost) AS avg_cost FROM patient_visits GROUP BY disease ORDER BY avg_cost DESC",
+      "category": "group_avg_cost_disease"
+    },
+    {
+      "question": "各疾病患者的平均年龄",
+      "sql": "SELECT disease, AVG(age) AS avg_age FROM patient_visits GROUP BY disease ORDER BY avg_age DESC",
+      "category": "group_avg_age_disease"
+    },
+    {
+      "question": "每个性别的就诊量是多少",
+      "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+      "category": "group_count_gender"
+    },
+    {
+      "question": "各性别分别有多少人次",
+      "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+      "category": "group_count_gender"
+    },
+    {
+      "question": "按性别统计就诊次数",
+      "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+      "category": "group_count_gender"
+    },
+    {
+      "question": "性别就诊数量排名",
+      "sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC",
+      "category": "group_count_gender"
+    },
+    {
+      "question": "每个性别的平均就诊费用是多少",
+      "sql": "SELECT gender, AVG(cost) AS avg_cost FROM patient_visits GROUP BY gender ORDER BY avg_cost DESC",
+      "category": "group_avg_cost_gender"
+    },
+    {
+      "question": "各性别患者的平均年龄",
+      "sql": "SELECT gender, AVG(age) AS avg_age FROM patient_visits GROUP BY gender ORDER BY avg_age DESC",
+      "category": "group_avg_age_gender"
+    },
+    {
+      "question": "就诊量最高的1个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 1",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的1种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 1",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的1种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 1",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的2个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 2",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的2种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 2",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的2种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 2",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的3个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 3",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的3种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 3",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的3种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 3",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的4个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 4",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的4种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 4",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的4种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 4",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的5个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 5",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的5种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 5",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的5种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 5",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的6个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 6",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的6种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 6",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的6种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 6",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的7个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 7",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的7种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 7",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的7种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 7",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的8个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 8",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的8种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 8",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的8种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 8",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的9个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 9",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的9种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 9",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的9种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 9",
+      "category": "top_disease"
+    },
+    {
+      "question": "就诊量最高的10个科室",
+      "sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC LIMIT 10",
+      "category": "top_department"
+    },
+    {
+      "question": "开具次数最多的10种药物",
+      "sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 10",
+      "category": "top_drug"
+    },
+    {
+      "question": "就诊人次最高的10种疾病",
+      "sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 10",
+      "category": "top_disease"
+    },
+    {
+      "question": "2024年每个月的就诊量分别是多少",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "月度就诊人次趋势",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "每月就诊数量变化",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "按月份统计就诊量",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "每个月有多少次就诊",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "就诊量的月度趋势",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "各月患者人次",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "年度内每月就诊量",
+      "sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+      "category": "monthly_trend"
+    },
+    {
+      "question": "每个检查项目的异常次数是多少",
+      "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "category": "lab_abnormal_count"
+    },
+    {
+      "question": "按检查项目统计异常数量",
+      "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "category": "lab_abnormal_count"
+    },
+    {
+      "question": "各检查的异常结果次数",
+      "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "category": "lab_abnormal_count"
+    },
+    {
+      "question": "检查项目异常数排名",
+      "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "category": "lab_abnormal_count"
+    },
+    {
+      "question": "所有检验项目分别有多少次异常",
+      "sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC",
+      "category": "lab_abnormal_count"
+    },
+    {
+      "question": "检查结果异常率最高的检查项目",
+      "sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC",
+      "category": "lab_abnormal_rate"
+    },
+    {
+      "question": "各检查项目的异常比例",
+      "sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC",
+      "category": "lab_abnormal_rate"
+    },
+    {
+      "question": "按检验项目统计异常率",
+      "sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC",
+      "category": "lab_abnormal_rate"
+    },
+    {
+      "question": "检查异常率排名",
+      "sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC",
+      "category": "lab_abnormal_rate"
+    },
+    {
+      "question": "每项检查的异常率是多少",
+      "sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC",
+      "category": "lab_abnormal_rate"
+    },
+    {
+      "question": "所有就诊的总费用是多少",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "全部患者费用总计",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "费用总计是多少",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "累计就诊总费用",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "请计算所有记录的总费用",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "患者总费用共计多少",
+      "sql": "SELECT SUM(cost) AS total_cost FROM patient_visits",
+      "category": "total_cost"
+    },
+    {
+      "question": "内科的平均就诊费用是多少",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE department='内科'",
+      "category": "department_avg_cost"
+    },
+    {
+      "question": "外科的平均就诊费用是多少",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE department='外科'",
+      "category": "department_avg_cost"
+    },
+    {
+      "question": "儿科的平均就诊费用是多少",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE department='儿科'",
+      "category": "department_avg_cost"
+    },
+    {
+      "question": "肝病的平均就诊费用是多少",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE department='肝病'",
+      "category": "department_avg_cost"
+    },
+    {
+      "question": "高血压患者的平均年龄是多少",
+      "sql": "SELECT AVG(age) FROM patient_visits WHERE disease='高血压'",
+      "category": "disease_avg_age"
+    },
+    {
+      "question": "高血压患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='高血压'",
+      "category": "disease_count"
+    },
+    {
+      "question": "诊断为高血压的就诊人次是多少",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='高血压'",
+      "category": "disease_count_paraphrase"
+    },
+    {
+      "question": "糖尿病足患者的平均年龄是多少",
+      "sql": "SELECT AVG(age) FROM patient_visits WHERE disease='糖尿病足'",
+      "category": "disease_avg_age"
+    },
+    {
+      "question": "糖尿病足患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='糖尿病足'",
+      "category": "disease_count"
+    },
+    {
+      "question": "诊断为糖尿病足的就诊人次是多少",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='糖尿病足'",
+      "category": "disease_count_paraphrase"
+    },
+    {
+      "question": "急性心肌梗死患者的平均年龄是多少",
+      "sql": "SELECT AVG(age) FROM patient_visits WHERE disease='急性心肌梗死'",
+      "category": "disease_avg_age"
+    },
+    {
+      "question": "急性心肌梗死患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='急性心肌梗死'",
+      "category": "disease_count"
+    },
+    {
+      "question": "诊断为急性心肌梗死的就诊人次是多少",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='急性心肌梗死'",
+      "category": "disease_count_paraphrase"
+    },
+    {
+      "question": "冠心病患者的平均年龄是多少",
+      "sql": "SELECT AVG(age) FROM patient_visits WHERE disease='冠心病'",
+      "category": "disease_avg_age"
+    },
+    {
+      "question": "冠心病患者有多少次就诊",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='冠心病'",
+      "category": "disease_count"
+    },
+    {
+      "question": "诊断为冠心病的就诊人次是多少",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='冠心病'",
+      "category": "disease_count_paraphrase"
+    },
+    {
+      "question": "阿司匹林肠溶片一共被开具了多少次",
+      "sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='阿司匹林肠溶片'",
+      "category": "drug_count"
+    },
+    {
+      "question": "苯磺酸氨氯地平胶囊一共被开具了多少次",
+      "sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='苯磺酸氨氯地平胶囊'",
+      "category": "drug_count"
+    },
+    {
+      "question": "硝苯地平缓释片Ⅰ一共被开具了多少次",
+      "sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='硝苯地平缓释片Ⅰ'",
+      "category": "drug_count"
+    },
+    {
+      "question": "胰岛素注射液一共被开具了多少次",
+      "sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='胰岛素注射液'",
+      "category": "drug_count"
+    }
+  ]
+}

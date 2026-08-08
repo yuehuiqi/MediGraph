@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<title>MediGraph Agent · 证据总览</title>
+<style>
+body{font-family:Segoe UI,Microsoft YaHei,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;color:#222}
+h1{color:#2c3e50} h2{color:#34495e;border-bottom:2px solid #eef6ff;padding-bottom:4px;margin-top:36px}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}
+th{background:#f5f7fa} td.num{text-align:right;font-variant-numeric:tabular-nums}
+code{background:#f5f5f5;padding:1px 4px;border-radius:3px;font-size:.85em}
+.status-success{color:#256029} .status-failed{color:#c0392b}
+ul.charts{line-height:2} ul.charts li.missing{color:#999}
+.note{background:#fff8e1;border-left:4px solid #f39c12;padding:10px 14px;margin:16px 0;font-size:.92em}
+</style></head><body>
+<h1>MediGraph Agent · 证据总览</h1>
+<p class="note">本页仅汇总/链接仓内已落盘的产物，不重新计算任何指标；每个数字旁标注了来源 JSON，
+可直接打开核对。生成命令：<code>python scripts/build_evidence_overview.py</code>；
+完整口径见 <code>docs/EVIDENCE_MAP.md</code>、<code>docs/EVALUATION_PROTOCOL.md</code>。</p>
+
+<h2>核心实测指标</h2>
+<table><tr><th>指标</th><th>结果</th><th>证据文件</th></tr><tr><td>CMeIE-V1 严格 SPO-F1</td><td class='num'>0.6146</td><td><code>outputs/eval_neural_cmeie_v1_dev.json</code></td></tr><tr><td>CMeIE-V2 dev 实体 F1</td><td class='num'>0.7664</td><td><code>outputs/eval_neural_cmeie_dev.json</code></td></tr><tr><td>实体链接 in-KB / NIL 拒绝</td><td class='num'>0.9727 / 1.0</td><td><code>outputs/eval_entity_linking.json</code></td></tr><tr><td>自产知识图谱规模</td><td class='num'>43566 实体 / 70790 三元组</td><td><code>outputs/kg_scale_report.json</code></td></tr><tr><td>NL2SQL 非模板集（双库执行等价）</td><td class='num'>1.0（44 题）</td><td><code>outputs/eval_nl2sql_nl2sql_hard_natural.json</code></td></tr><tr><td>0.8B LoRA 编排 DAG 准确率</td><td class='num'>0.973</td><td><code>finetune/outputs/eval_orchestrator.json</code></td></tr><tr><td>NPU 融合算子吞吐 / 能效</td><td class='num'>3.12× / 3.00×</td><td><code>NPU/NPU_results/summary.json</code></td></tr><tr><td>GraphRAG 真实回答（Ragas）</td><td class='num'>faithfulness=0.5 / answer_relevancy=0.7383 / context_precision=0.1046 / context_recall=0.2111</td><td><code>outputs/eval_ragas_kg_qa.json</code></td></tr></table>
+
+<h2>任务一 · DAG 执行血缘（最近一次运行）</h2>
+<p>目标：读取并清洗医疗文档，检查质量和隐私，抽取并规范化实体关系，校验三元组　（5/5 节点成功，0.009s，产物 6 条有效三元组）</p><table><tr><th>节点</th><th>算子</th><th>状态</th><th>耗时</th></tr><tr><td>n1</td><td>text_clean</td><td class='status-success'>success</td><td class='num'>0.002s</td></tr><tr><td>n2</td><td>chunker</td><td class='status-success'>success</td><td class='num'>0.0s</td></tr><tr><td>n3</td><td>medical_ner</td><td class='status-success'>success</td><td class='num'>0.007s</td></tr><tr><td>n4</td><td>medical_re</td><td class='status-success'>success</td><td class='num'>0.0s</td></tr><tr><td>n5</td><td>triple_validator</td><td class='status-success'>success</td><td class='num'>0.0s</td></tr></table>
+
+<h2>BI / 图谱可视化产物</h2>
+<ul class='charts'><li><a href='../outputs/task3_complete_bar.html'>任务三 · 各疾病就诊人次（柱状图）</a></li><li><a href='../outputs/task3_complete_line.html'>任务三 · 月度就诊量趋势（折线图）</a></li><li><a href='../outputs/task3_complete_pie.html'>任务三 · 男女就诊比例（饼图）</a></li><li><a href='../outputs/task3_complete_graph.html'>任务三 · 高血压并发症/用药关系（图谱）</a></li><li><a href='../outputs/task3_closed_loop.html'>任务三 · 数据-知识-洞察闭环示例</a></li><li><a href='../outputs/new_case_cardiometabolic_20260701.html'>端到端案例 · 心血管代谢新病例建图</a></li><li><a href='../outputs/nexent_demo_graph.html'>Nexent 演示 · 知识图谱可视化</a></li><li><a href='../outputs/top10_disease_has_symptom_bar.html'>Top10 疾病症状关联数（柱状图）</a></li><li><a href='../outputs/top5_cost_patients.html'>Top5 高花费患者</a></li></ul>
+
+<h2>复现命令</h2>
+<pre style="background:#f5f5f5;padding:12px;overflow-x:auto">python -m pytest -q
+python scripts/check_release.py
+python scripts/check_claims.py --ci
+python benchmarks/eval_nl2sql.py
+python benchmarks/eval_nl2sql.py --gold benchmarks/nl2sql_hard_natural.json
+python benchmarks/eval_ragas_kg_qa.py
+python demos/demo_task3_complete.py</pre>
+</body></html>

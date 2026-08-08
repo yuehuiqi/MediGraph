@@ -1,0 +1,43 @@
+{
+  "samples": 3585,
+  "models": [
+    "neural_extractor_base(roberta-base)",
+    "neural_extractor(macbert-large)"
+  ],
+  "entity_micro_union": {
+    "tp": 16522,
+    "fp": 6878,
+    "fn": 3550,
+    "precision": 0.706068,
+    "recall": 0.823137,
+    "f1": 0.760121
+  },
+  "triple_micro": {
+    "union": {
+      "tp": 9403,
+      "fp": 9368,
+      "fn": 6894,
+      "precision": 0.500932,
+      "recall": 0.576977,
+      "f1": 0.536272
+    },
+    "intersection": {
+      "tp": 7163,
+      "fp": 3968,
+      "fn": 9134,
+      "precision": 0.643518,
+      "recall": 0.439529,
+      "f1": 0.522313
+    },
+    "conf_union": {
+      "tp": 8760,
+      "fp": 7201,
+      "fn": 7537,
+      "precision": 0.548838,
+      "recall": 0.537522,
+      "f1": 0.543121
+    }
+  },
+  "latency_ms_p50": 40.601,
+  "min_conf": 0.75
+}

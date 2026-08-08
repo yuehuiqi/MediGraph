@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DataMate Cleaning Pipeline (subset)",
+    "description": "Minimal OpenAPI subset for Nexent's 'API转换为MCP'. Exposes creating and querying a DataMate cleaning task (operator pipeline). Server URL is the DataMate gateway. Use this as a zero-code alternative to the run_datamate_pipeline MCP tool.",
+    "version": "1.0.0"
+  },
+  "servers": [{"url": "http://host.docker.internal:8080/api"}],
+  "paths": {
+    "/cleaning/tasks": {
+      "post": {
+        "operationId": "create_cleaning_task",
+        "summary": "创建并自动执行一个 DataMate 清洗任务（数据处理流水线）",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "description", "srcDatasetId", "srcDatasetName", "destDatasetName", "destDatasetType"],
+                "properties": {
+                  "name": {"type": "string", "description": "任务名称"},
+                  "description": {"type": "string", "description": "任务描述"},
+                  "srcDatasetId": {"type": "string", "description": "源数据集ID（已上传文档的数据集）"},
+                  "srcDatasetName": {"type": "string", "description": "源数据集名称"},
+                  "destDatasetName": {"type": "string", "description": "目标数据集名称（不存在则新建）"},
+                  "destDatasetType": {"type": "string", "description": "目标数据集类型 TEXT/IMAGE/VIDEO/AUDIO/OTHER"},
+                  "templateId": {"type": "string", "description": "清洗模板ID（算子DAG），与 instance 二选一"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"200": {"description": "任务已创建并执行，返回任务信息（含 data.id 任务ID 与 data.status 状态）"}}
+      }
+    },
+    "/cleaning/tasks/{task_id}": {
+      "get": {
+        "operationId": "get_cleaning_task",
+        "summary": "查询清洗任务状态与进度",
+        "parameters": [{"name": "task_id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "任务详情（data.status / data.progress）"}}
+      }
+    }
+  }
+}

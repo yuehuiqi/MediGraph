@@ -1,0 +1,51 @@
+{
+  "shape": [
+    200000,
+    32
+  ],
+  "iters": 200,
+  "results": [
+    {
+      "device": "cpu",
+      "rows": 200000,
+      "iters": 200,
+      "throughput_mode": "async_batch",
+      "latency_mode": "launch_plus_sync",
+      "total_s": 1.496153,
+      "throughput_rows_per_s": 26735226.5,
+      "latency_p50_ms": 3.160872,
+      "latency_p95_ms": 56.317978,
+      "latency_p99_ms": 60.020983,
+      "latency_mean_ms": 7.479304,
+      "system": "cpu_torch"
+    },
+    {
+      "device": "npu:0",
+      "rows": 200000,
+      "iters": 200,
+      "throughput_mode": "async_batch",
+      "latency_mode": "launch_plus_sync",
+      "total_s": 0.03179,
+      "throughput_rows_per_s": 1258244802.2,
+      "latency_p50_ms": 0.208557,
+      "latency_p95_ms": 0.214256,
+      "latency_p99_ms": 0.221491,
+      "latency_mean_ms": 0.208714,
+      "system": "npu_torch"
+    },
+    {
+      "system": "npu_ascendc",
+      "rows": 200000,
+      "labels": 32,
+      "block_dim": 40,
+      "throughput_rows_per_s": 3415587803.4,
+      "batch_latency_mean_ms": 0.058555,
+      "latency_mean_ms": 0.100275,
+      "latency_p50_ms": 0.099992,
+      "latency_p95_ms": 0.103852,
+      "latency_p99_ms": 0.110962,
+      "end_to_end_mean_ms": 3.175337,
+      "max_abs_diff_vs_cpu": 1.490116119e-07
+    }
+  ]
+}

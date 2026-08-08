@@ -1,0 +1,41 @@
+# Secrets
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Local environments
+.venv/
+.venv-neural/
+venv/
+env/
+
+# Third-party encoder weights (re-downloadable via scripts/download_encoder.py)
+data/models/encoder/
+# Large self-produced KG export (regenerable via scripts/build_scaled_kg.py;
+# stats + SHA captured in outputs/kg_scale_report.json). Use git-LFS if shipping.
+outputs/graph_scaled.json
+
+# Runtime/transient files
+*.log
+*.tmp
+*.bak
+*.bak-*
+outputs/analytics_eval_alt.db
+outputs/reproduce_*.log
+dist/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+docs/MediGraphModelEngine技术报告.docx

@@ -1,0 +1,34 @@
+{
+  "operation": "temperature+label_mask+softmax",
+  "shape": [
+    200000,
+    32
+  ],
+  "temperature": 1.35,
+  "idle_mean_power_w": 98.0,
+  "systems": {
+    "npu_torch_composed": {
+      "throughput_rows_per_s": 1007413935.1663195,
+      "mean_power_w": 139.67222222222222,
+      "median_power_w": 146.8,
+      "dynamic_power_w": 41.67222222222222,
+      "gross_rows_per_joule": 7212700.7012424925,
+      "dynamic_rows_per_joule": 24174711.14917178,
+      "power_samples": 36
+    },
+    "npu_ascendc_fused": {
+      "throughput_rows_per_s": 3175369967.2,
+      "mean_power_w": 146.7235294117647,
+      "median_power_w": 153.05,
+      "dynamic_power_w": 48.7235294117647,
+      "gross_rows_per_joule": 21641859.215972416,
+      "dynamic_rows_per_joule": 65171181.26572498,
+      "power_samples": 34
+    }
+  },
+  "speedup": {
+    "throughput": 3.15200123440397,
+    "gross_energy_efficiency": 3.0005209022806523,
+    "dynamic_energy_efficiency": 2.6958411566360216
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "n_vectors": 100000,
+  "dim": 1024,
+  "n_queries": 100,
+  "k": 10,
+  "distribution": "gaussian",
+  "cluster_params": null,
+  "hnsw": {
+    "m": 16,
+    "ef_construction": 64
+  },
+  "load_seconds_copy": 696.72,
+  "index_build_seconds": 97.76,
+  "numpy_bruteforce": {
+    "recall_at_10": 1.0,
+    "latency_ms_p50": 6.64,
+    "latency_ms_p99": 8.03
+  },
+  "hnsw_curve": [
+    {
+      "ef_search": 10,
+      "recall_at_10": 0.007,
+      "latency_ms_p50": 5.73,
+      "latency_ms_p99": 12.46
+    },
+    {
+      "ef_search": 20,
+      "recall_at_10": 0.018,
+      "latency_ms_p50": 5.9,
+      "latency_ms_p99": 14.06
+    },
+    {
+      "ef_search": 40,
+      "recall_at_10": 0.033,
+      "latency_ms_p50": 7.5,
+      "latency_ms_p99": 14.22
+    },
+    {
+      "ef_search": 100,
+      "recall_at_10": 0.078,
+      "latency_ms_p50": 11.08,
+      "latency_ms_p99": 13.92
+    },
+    {
+      "ef_search": 200,
+      "recall_at_10": 0.137,
+      "latency_ms_p50": 16.92,
+      "latency_ms_p99": 23.18
+    }
+  ],
+  "interpretation": "The numpy row is the LocalVectorStore production path: exact (recall 1.0) but O(N) per query, holding the full matrix in the API process. The HNSW curve shows the ef_search dial: raise it for recall, lower it for latency. Latencies are client-side and include one pooled round-trip for pgvector. The 'clustered' distribution mimics real text embeddings (same-topic cosine ~0.67, cross-topic ~0); the 'gaussian' run (bench_vector_search_gaussian.json) is ANN's adversarial worst case -- i.i.d. high-dim vectors where all cosines concentrate near 0 and HNSW recall collapses -- kept published as the floor. Honest flip side: at 100k vectors a single in-process matmul is still latency-competitive with a pgvector round-trip; the index's wins are recall-at-scale headroom (numpy is O(N), HNSW ~O(log N)), keeping hundreds of MB of vectors out of the API process, and server-side concurrency."
+}

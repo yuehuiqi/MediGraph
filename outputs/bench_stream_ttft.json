@@ -1,0 +1,115 @@
+{
+  "base_url": "http://127.0.0.1:8020",
+  "graph": "graph.json",
+  "hops": 2,
+  "questions": 3,
+  "repeats": 2,
+  "blocking_time_to_first_output": {
+    "n": 6,
+    "mean_s": 13.101,
+    "p50_s": 10.293,
+    "min_s": 8.882,
+    "max_s": 20.918
+  },
+  "streaming_time_to_first_byte": {
+    "n": 6,
+    "mean_s": 0.015,
+    "p50_s": 0.017,
+    "min_s": 0.004,
+    "max_s": 0.021
+  },
+  "streaming_time_to_first_token": {
+    "n": 6,
+    "mean_s": 16.159,
+    "p50_s": 8.369,
+    "min_s": 5.578,
+    "max_s": 45.482
+  },
+  "streaming_total": {
+    "n": 6,
+    "mean_s": 20.046,
+    "p50_s": 9.953,
+    "min_s": 6.882,
+    "max_s": 52.539
+  },
+  "improvement": {
+    "first_token_p50_speedup_x": 1.23,
+    "first_token_p50_saved_s": 1.92,
+    "first_byte_p50_speedup_x": 605.5
+  },
+  "interpretation": "Blocking shows nothing until the answer is complete, so its total latency IS its time-to-first-output. Streaming leaves total generation time unchanged and improves perceived latency in two steps: the SSE `meta` frame arrives in milliseconds (time-to-first-byte, so the UI can render immediately), and answer tokens start at time-to-first-token. The remaining first-token gap is dominated by the retrieval phase, which runs a blocking LLM NER call on the question plus graph traversal before composition begins -- that is the next optimisation target, not streaming.",
+  "detail": [
+    {
+      "repeat": 1,
+      "question": "高血压有哪些并发症？",
+      "blocking_total_s": 10.067,
+      "blocking_chars": 138,
+      "stream_ttfb_s": 0.0167,
+      "stream_ttft_s": 5.578,
+      "stream_total_s": 6.882,
+      "stream_deltas": 66,
+      "stream_chars": 125,
+      "refused": false
+    },
+    {
+      "repeat": 1,
+      "question": "2型糖尿病推荐使用哪些药物？",
+      "blocking_total_s": 8.882,
+      "blocking_chars": 186,
+      "stream_ttfb_s": 0.0205,
+      "stream_ttft_s": 6.653,
+      "stream_total_s": 9.953,
+      "stream_deltas": 127,
+      "stream_chars": 208,
+      "refused": false
+    },
+    {
+      "repeat": 1,
+      "question": "冠心病的临床表现有哪些？",
+      "blocking_total_s": 20.918,
+      "blocking_chars": 558,
+      "stream_ttfb_s": 0.0144,
+      "stream_ttft_s": 45.482,
+      "stream_total_s": 52.539,
+      "stream_deltas": 362,
+      "stream_chars": 604,
+      "refused": false
+    },
+    {
+      "repeat": 2,
+      "question": "高血压有哪些并发症？",
+      "blocking_total_s": 10.293,
+      "blocking_chars": 152,
+      "stream_ttfb_s": 0.0038,
+      "stream_ttft_s": 8.369,
+      "stream_total_s": 9.825,
+      "stream_deltas": 71,
+      "stream_chars": 126,
+      "refused": false
+    },
+    {
+      "repeat": 2,
+      "question": "2型糖尿病推荐使用哪些药物？",
+      "blocking_total_s": 9.1,
+      "blocking_chars": 180,
+      "stream_ttfb_s": 0.0139,
+      "stream_ttft_s": 5.985,
+      "stream_total_s": 8.727,
+      "stream_deltas": 109,
+      "stream_chars": 188,
+      "refused": false
+    },
+    {
+      "repeat": 2,
+      "question": "冠心病的临床表现有哪些？",
+      "blocking_total_s": 19.348,
+      "blocking_chars": 498,
+      "stream_ttfb_s": 0.0196,
+      "stream_ttft_s": 24.888,
+      "stream_total_s": 32.348,
+      "stream_deltas": 375,
+      "stream_chars": 616,
+      "refused": false
+    }
+  ]
+}

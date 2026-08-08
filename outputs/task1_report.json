@@ -1,0 +1,109 @@
+{
+  "goal": "读取并清洗医疗文档，检查质量和隐私，抽取并规范化实体关系，校验三元组",
+  "mode": "offline",
+  "dag": [
+    {
+      "id": "n1",
+      "op": "text_clean",
+      "args": {},
+      "deps": [],
+      "retry_args": [],
+      "on_error": {}
+    },
+    {
+      "id": "n2",
+      "op": "chunker",
+      "args": {
+        "max_chars": 1200
+      },
+      "deps": [
+        "n1"
+      ],
+      "retry_args": [],
+      "on_error": {}
+    },
+    {
+      "id": "n3",
+      "op": "medical_ner",
+      "args": {},
+      "deps": [
+        "n2"
+      ],
+      "retry_args": [],
+      "on_error": {}
+    },
+    {
+      "id": "n4",
+      "op": "medical_re",
+      "args": {},
+      "deps": [
+        "n3"
+      ],
+      "retry_args": [],
+      "on_error": {}
+    },
+    {
+      "id": "n5",
+      "op": "triple_validator",
+      "args": {
+        "min_confidence": 0.5
+      },
+      "deps": [
+        "n4"
+      ],
+      "retry_args": [],
+      "on_error": {}
+    }
+  ],
+  "report": {
+    "nodes_total": 5,
+    "nodes_success": 5,
+    "nodes_failed": 0,
+    "nodes_skipped": 0,
+    "total_seconds": 0.009,
+    "produced_chunks": 1,
+    "produced_entities": 8,
+    "produced_valid_triples": 6,
+    "recoveries": 0,
+    "layers": 5,
+    "max_layer_width": 1
+  },
+  "lineage": [
+    {
+      "node": "n1",
+      "op": "text_clean",
+      "status": "success",
+      "seconds": 0.002,
+      "layer": 0
+    },
+    {
+      "node": "n2",
+      "op": "chunker",
+      "status": "success",
+      "seconds": 0.0,
+      "layer": 1
+    },
+    {
+      "node": "n3",
+      "op": "medical_ner",
+      "status": "success",
+      "seconds": 0.007,
+      "layer": 2
+    },
+    {
+      "node": "n4",
+      "op": "medical_re",
+      "status": "success",
+      "seconds": 0.0,
+      "layer": 3
+    },
+    {
+      "node": "n5",
+      "op": "triple_validator",
+      "status": "success",
+      "seconds": 0.0,
+      "layer": 4
+    }
+  ],
+  "note": "offline mode is for deterministic CLI reproduction; use --mode llm or the Nexent/DataMate browser flow for live LLM execution."
+}

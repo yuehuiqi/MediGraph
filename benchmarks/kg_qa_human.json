@@ -1,0 +1,752 @@
+{
+  "description": "Human/grounded QA set for Ragas evaluation of QAAgent (see module docstring). References and contexts are extracted from and verified against graph_scaled.json at generation time -- not hand-typed.",
+  "graph_file": "D:\\LLMagent\\CCF\\outputs\\graph_scaled.json",
+  "counts": {
+    "1hop": 20,
+    "2hop": 10,
+    "3hop": 4,
+    "negative": 6
+  },
+  "samples": [
+    {
+      "question": "糖尿病可能与哪些情况相关？",
+      "category": "cmeie:related_cause",
+      "hops": 1,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "卒中",
+        "失明",
+        "截肢",
+        "早亡",
+        "溃疡"
+      ],
+      "reference": "糖尿病可能与以下情况相关：卒中、失明、截肢、早亡、溃疡。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 卒中",
+        "糖尿病 --[相关（导致）]--> 失明",
+        "糖尿病 --[相关（导致）]--> 截肢",
+        "糖尿病 --[相关（导致）]--> 早亡",
+        "糖尿病 --[相关（导致）]--> 溃疡"
+      ]
+    },
+    {
+      "question": "糖尿病有哪些辅助或非药物治疗方式？",
+      "category": "cmeie:adjuvant_therapy",
+      "hops": 1,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "调脂",
+        "运动",
+        "透析",
+        "降压",
+        "饮食"
+      ],
+      "reference": "糖尿病的辅助治疗方式包括调脂、运动、透析、降压、饮食。",
+      "reference_context": [
+        "糖尿病 --[辅助治疗]--> 调脂",
+        "糖尿病 --[辅助治疗]--> 运动",
+        "糖尿病 --[辅助治疗]--> 透析",
+        "糖尿病 --[辅助治疗]--> 降压",
+        "糖尿病 --[辅助治疗]--> 饮食"
+      ]
+    },
+    {
+      "question": "高血压常用的治疗药物有哪些？",
+      "category": "cmeie:drug_treatment",
+      "hops": 1,
+      "anchor": "高血压",
+      "gold_entities": [
+        "利尿剂",
+        "呋塞米",
+        "噻嗪类",
+        "心痛定",
+        "氯沙坦"
+      ],
+      "reference": "高血压常用的治疗药物包括利尿剂、呋塞米、噻嗪类、心痛定、氯沙坦。",
+      "reference_context": [
+        "高血压 --[药物治疗]--> 利尿剂",
+        "高血压 --[药物治疗]--> 呋塞米",
+        "高血压 --[药物治疗]--> 噻嗪类",
+        "高血压 --[药物治疗]--> 心痛定",
+        "高血压 --[药物治疗]--> 氯沙坦"
+      ]
+    },
+    {
+      "question": "高血压可能与哪些情况相关？",
+      "category": "cmeie:related_cause",
+      "hops": 1,
+      "anchor": "高血压",
+      "gold_entities": [
+        "卒中",
+        "LVH",
+        "冠心病",
+        "蛋白尿",
+        "心肌梗死"
+      ],
+      "reference": "高血压可能与以下情况相关：卒中、LVH、冠心病、蛋白尿、心肌梗死。",
+      "reference_context": [
+        "高血压 --[相关（导致）]--> 卒中",
+        "高血压 --[相关（导致）]--> LVH",
+        "高血压 --[相关（导致）]--> 冠心病",
+        "高血压 --[相关（导致）]--> 蛋白尿",
+        "高血压 --[相关（导致）]--> 心肌梗死"
+      ]
+    },
+    {
+      "question": "冠心病的高危因素有哪些？",
+      "category": "cmeie:high_risk_factor",
+      "hops": 1,
+      "anchor": "冠心病",
+      "gold_entities": [
+        "吸烟",
+        "肥胖",
+        "糖尿病",
+        "腹型肥胖",
+        "血脂异常"
+      ],
+      "reference": "冠心病的高危因素包括吸烟、肥胖、糖尿病、腹型肥胖、血脂异常。",
+      "reference_context": [
+        "冠心病 --[高危因素]--> 吸烟",
+        "冠心病 --[高危因素]--> 肥胖",
+        "冠心病 --[高危因素]--> 糖尿病",
+        "冠心病 --[高危因素]--> 腹型肥胖",
+        "冠心病 --[高危因素]--> 血脂异常"
+      ]
+    },
+    {
+      "question": "冠心病常见的并发症有哪些？",
+      "category": "cmeie:complication",
+      "hops": 1,
+      "anchor": "冠心病",
+      "gold_entities": [
+        "HUA",
+        "糖尿病",
+        "心血管疾病",
+        "脑血管疾病"
+      ],
+      "reference": "冠心病常见的并发症包括HUA、糖尿病、心血管疾病、脑血管疾病。",
+      "reference_context": [
+        "冠心病 --[并发症]--> HUA",
+        "冠心病 --[并发症]--> 糖尿病",
+        "冠心病 --[并发症]--> 心血管疾病",
+        "冠心病 --[并发症]--> 脑血管疾病"
+      ]
+    },
+    {
+      "question": "脑炎的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "脑炎",
+      "gold_entities": [
+        "Q热",
+        "乏力",
+        "偏瘫",
+        "偏盲",
+        "冷漠"
+      ],
+      "reference": "脑炎的常见临床表现包括Q热、乏力、偏瘫、偏盲、冷漠。",
+      "reference_context": [
+        "脑炎 --[临床表现]--> Q热",
+        "脑炎 --[临床表现]--> 乏力",
+        "脑炎 --[临床表现]--> 偏瘫",
+        "脑炎 --[临床表现]--> 偏盲",
+        "脑炎 --[临床表现]--> 冷漠"
+      ]
+    },
+    {
+      "question": "脑炎常见的病因有哪些？",
+      "category": "cmeie:etiology",
+      "hops": 1,
+      "anchor": "脑炎",
+      "gold_entities": [
+        "原虫",
+        "病毒",
+        "真菌",
+        "细菌",
+        "CMV"
+      ],
+      "reference": "脑炎常见的病因包括原虫、病毒、真菌、细菌、CMV。",
+      "reference_context": [
+        "脑炎 --[病因]--> 原虫",
+        "脑炎 --[病因]--> 病毒",
+        "脑炎 --[病因]--> 真菌",
+        "脑炎 --[病因]--> 细菌",
+        "脑炎 --[病因]--> CMV"
+      ]
+    },
+    {
+      "question": "急性胰腺炎的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "急性胰腺炎",
+      "gold_entities": [
+        "低热",
+        "出汗",
+        "出血",
+        "压痛",
+        "厌食"
+      ],
+      "reference": "急性胰腺炎的常见临床表现包括低热、出汗、出血、压痛、厌食。",
+      "reference_context": [
+        "急性胰腺炎 --[临床表现]--> 低热",
+        "急性胰腺炎 --[临床表现]--> 出汗",
+        "急性胰腺炎 --[临床表现]--> 出血",
+        "急性胰腺炎 --[临床表现]--> 压痛",
+        "急性胰腺炎 --[临床表现]--> 厌食"
+      ]
+    },
+    {
+      "question": "急性胰腺炎常用的治疗药物有哪些？",
+      "category": "cmeie:drug_treatment",
+      "hops": 1,
+      "anchor": "急性胰腺炎",
+      "gold_entities": [
+        "叶酸",
+        "硫胺",
+        "他汀类",
+        "加贝酯",
+        "奥曲肽"
+      ],
+      "reference": "急性胰腺炎常用的治疗药物包括叶酸、硫胺、他汀类、加贝酯、奥曲肽。",
+      "reference_context": [
+        "急性胰腺炎 --[药物治疗]--> 叶酸",
+        "急性胰腺炎 --[药物治疗]--> 硫胺",
+        "急性胰腺炎 --[药物治疗]--> 他汀类",
+        "急性胰腺炎 --[药物治疗]--> 加贝酯",
+        "急性胰腺炎 --[药物治疗]--> 奥曲肽"
+      ]
+    },
+    {
+      "question": "非小细胞肺癌的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "非小细胞肺癌",
+      "gold_entities": [
+        "乏力",
+        "出血",
+        "发烧",
+        "呕吐",
+        "咯血"
+      ],
+      "reference": "非小细胞肺癌的常见临床表现包括乏力、出血、发烧、呕吐、咯血。",
+      "reference_context": [
+        "非小细胞肺癌 --[临床表现]--> 乏力",
+        "非小细胞肺癌 --[临床表现]--> 出血",
+        "非小细胞肺癌 --[临床表现]--> 发烧",
+        "非小细胞肺癌 --[临床表现]--> 呕吐",
+        "非小细胞肺癌 --[临床表现]--> 咯血"
+      ]
+    },
+    {
+      "question": "非小细胞肺癌常用的治疗药物有哪些？",
+      "category": "cmeie:drug_treatment",
+      "hops": 1,
+      "anchor": "非小细胞肺癌",
+      "gold_entities": [
+        "铂类",
+        "顺铂",
+        "抗生素",
+        "伊匹单抗",
+        "克唑替尼"
+      ],
+      "reference": "非小细胞肺癌常用的治疗药物包括铂类、顺铂、抗生素、伊匹单抗、克唑替尼。",
+      "reference_context": [
+        "非小细胞肺癌 --[药物治疗]--> 铂类",
+        "非小细胞肺癌 --[药物治疗]--> 顺铂",
+        "非小细胞肺癌 --[药物治疗]--> 抗生素",
+        "非小细胞肺癌 --[药物治疗]--> 伊匹单抗",
+        "非小细胞肺癌 --[药物治疗]--> 克唑替尼"
+      ]
+    },
+    {
+      "question": "HIV感染可能与哪些情况相关？",
+      "category": "cmeie:related_cause",
+      "hops": 1,
+      "anchor": "HIV感染",
+      "gold_entities": [
+        "抑郁",
+        "焦虑",
+        "皮炎",
+        "皮疹",
+        "肝炎"
+      ],
+      "reference": "HIV感染可能与以下情况相关：抑郁、焦虑、皮炎、皮疹、肝炎。",
+      "reference_context": [
+        "HIV感染 --[相关（导致）]--> 抑郁",
+        "HIV感染 --[相关（导致）]--> 焦虑",
+        "HIV感染 --[相关（导致）]--> 皮炎",
+        "HIV感染 --[相关（导致）]--> 皮疹",
+        "HIV感染 --[相关（导致）]--> 肝炎"
+      ]
+    },
+    {
+      "question": "HIV感染的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "HIV感染",
+      "gold_entities": [
+        "发热",
+        "呕吐",
+        "咽炎",
+        "困倦",
+        "头晕"
+      ],
+      "reference": "HIV感染的常见临床表现包括发热、呕吐、咽炎、困倦、头晕。",
+      "reference_context": [
+        "HIV感染 --[临床表现]--> 发热",
+        "HIV感染 --[临床表现]--> 呕吐",
+        "HIV感染 --[临床表现]--> 咽炎",
+        "HIV感染 --[临床表现]--> 困倦",
+        "HIV感染 --[临床表现]--> 头晕"
+      ]
+    },
+    {
+      "question": "慢性胰腺炎的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "慢性胰腺炎",
+      "gold_entities": [
+        "低热",
+        "出血",
+        "厌食",
+        "发热",
+        "呕吐"
+      ],
+      "reference": "慢性胰腺炎的常见临床表现包括低热、出血、厌食、发热、呕吐。",
+      "reference_context": [
+        "慢性胰腺炎 --[临床表现]--> 低热",
+        "慢性胰腺炎 --[临床表现]--> 出血",
+        "慢性胰腺炎 --[临床表现]--> 厌食",
+        "慢性胰腺炎 --[临床表现]--> 发热",
+        "慢性胰腺炎 --[临床表现]--> 呕吐"
+      ]
+    },
+    {
+      "question": "慢性胰腺炎可能与哪些情况相关？",
+      "category": "cmeie:related_cause",
+      "hops": 1,
+      "anchor": "慢性胰腺炎",
+      "gold_entities": [
+        "感染",
+        "梗阻",
+        "腹泻",
+        "钙化",
+        "骨折"
+      ],
+      "reference": "慢性胰腺炎可能与以下情况相关：感染、梗阻、腹泻、钙化、骨折。",
+      "reference_context": [
+        "慢性胰腺炎 --[相关（导致）]--> 感染",
+        "慢性胰腺炎 --[相关（导致）]--> 梗阻",
+        "慢性胰腺炎 --[相关（导致）]--> 腹泻",
+        "慢性胰腺炎 --[相关（导致）]--> 钙化",
+        "慢性胰腺炎 --[相关（导致）]--> 骨折"
+      ]
+    },
+    {
+      "question": "登革热的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "登革热",
+      "gold_entities": [
+        "便秘",
+        "出汗",
+        "出血",
+        "利尿",
+        "压痛"
+      ],
+      "reference": "登革热的常见临床表现包括便秘、出汗、出血、利尿、压痛。",
+      "reference_context": [
+        "登革热 --[临床表现]--> 便秘",
+        "登革热 --[临床表现]--> 出汗",
+        "登革热 --[临床表现]--> 出血",
+        "登革热 --[临床表现]--> 利尿",
+        "登革热 --[临床表现]--> 压痛"
+      ]
+    },
+    {
+      "question": "登革热可能与哪些情况相关？",
+      "category": "cmeie:related_cause",
+      "hops": 1,
+      "anchor": "登革热",
+      "gold_entities": [
+        "休克",
+        "感染",
+        "死亡",
+        "癫痫",
+        "肝炎"
+      ],
+      "reference": "登革热可能与以下情况相关：休克、感染、死亡、癫痫、肝炎。",
+      "reference_context": [
+        "登革热 --[相关（导致）]--> 休克",
+        "登革热 --[相关（导致）]--> 感染",
+        "登革热 --[相关（导致）]--> 死亡",
+        "登革热 --[相关（导致）]--> 癫痫",
+        "登革热 --[相关（导致）]--> 肝炎"
+      ]
+    },
+    {
+      "question": "疟疾感染的常见临床表现有哪些？",
+      "category": "cmeie:clinical_manifestation",
+      "hops": 1,
+      "anchor": "疟疾感染",
+      "gold_entities": [
+        "乏力",
+        "出汗",
+        "出血",
+        "厌食",
+        "发热"
+      ],
+      "reference": "疟疾感染的常见临床表现包括乏力、出汗、出血、厌食、发热。",
+      "reference_context": [
+        "疟疾感染 --[临床表现]--> 乏力",
+        "疟疾感染 --[临床表现]--> 出汗",
+        "疟疾感染 --[临床表现]--> 出血",
+        "疟疾感染 --[临床表现]--> 厌食",
+        "疟疾感染 --[临床表现]--> 发热"
+      ]
+    },
+    {
+      "question": "疟疾感染通常需要做哪些实验室检查？",
+      "category": "cmeie:laboratory_examination",
+      "hops": 1,
+      "anchor": "疟疾感染",
+      "gold_entities": [
+        "凝血",
+        "尿素",
+        "肌酐",
+        "血糖",
+        "PCR"
+      ],
+      "reference": "疟疾感染通常需要的实验室检查包括凝血、尿素、肌酐、血糖、PCR。",
+      "reference_context": [
+        "疟疾感染 --[实验室检查]--> 凝血",
+        "疟疾感染 --[实验室检查]--> 尿素",
+        "疟疾感染 --[实验室检查]--> 肌酐",
+        "疟疾感染 --[实验室检查]--> 血糖",
+        "疟疾感染 --[实验室检查]--> PCR"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是低血糖，低血糖的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "发绀",
+        "嗜睡",
+        "多汗",
+        "头痛"
+      ],
+      "reference": "低血糖的常见临床表现包括发绀、嗜睡、多汗、头痛。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 低血糖",
+        "低血糖 --[临床表现]--> 发绀",
+        "低血糖 --[临床表现]--> 嗜睡",
+        "低血糖 --[临床表现]--> 多汗",
+        "低血糖 --[临床表现]--> 头痛"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是脑疝，脑疝的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "四肢瘫痪",
+        "生命体征改变"
+      ],
+      "reference": "脑疝的常见临床表现包括四肢瘫痪、生命体征改变。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 脑疝",
+        "脑疝 --[临床表现]--> 四肢瘫痪",
+        "脑疝 --[临床表现]--> 生命体征改变"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是乳腺癌，乳腺癌的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "骨折",
+        "骨痛",
+        "乳头溢液 单边溢液"
+      ],
+      "reference": "乳腺癌的常见临床表现包括骨折、骨痛、乳头溢液 单边溢液。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 乳腺癌",
+        "乳腺癌 --[临床表现]--> 骨折",
+        "乳腺癌 --[临床表现]--> 骨痛",
+        "乳腺癌 --[临床表现]--> 乳头溢液 单边溢液"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是稳定型缺血性心脏疾病，稳定型缺血性心脏疾病的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "出汗",
+        "发热",
+        "呕吐",
+        "头晕"
+      ],
+      "reference": "稳定型缺血性心脏疾病的常见临床表现包括出汗、发热、呕吐、头晕。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 稳定型缺血性心脏疾病",
+        "稳定型缺血性心脏疾病 --[临床表现]--> 出汗",
+        "稳定型缺血性心脏疾病 --[临床表现]--> 发热",
+        "稳定型缺血性心脏疾病 --[临床表现]--> 呕吐",
+        "稳定型缺血性心脏疾病 --[临床表现]--> 头晕"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是高血压，高血压的常见临床表现有哪些？",
+      "category": "cmeie:complication+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "盐潴留",
+        "反射增强",
+        "容量扩张",
+        "血脂异常"
+      ],
+      "reference": "高血压的常见临床表现包括盐潴留、反射增强、容量扩张、血脂异常。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> 高血压",
+        "高血压 --[临床表现]--> 盐潴留",
+        "高血压 --[临床表现]--> 反射增强",
+        "高血压 --[临床表现]--> 容量扩张",
+        "高血压 --[临床表现]--> 血脂异常"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是感染，感染的常见临床表现有哪些？",
+      "category": "cmeie:complication+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "发热",
+        "咳嗽",
+        "皮疹",
+        "神萎"
+      ],
+      "reference": "感染的常见临床表现包括发热、咳嗽、皮疹、神萎。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> 感染",
+        "感染 --[临床表现]--> 发热",
+        "感染 --[临床表现]--> 咳嗽",
+        "感染 --[临床表现]--> 皮疹",
+        "感染 --[临床表现]--> 神萎"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是心脏病，心脏病常用的治疗药物有哪些？",
+      "category": "cmeie:related_cause+cmeie:drug_treatment",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "阿司匹林",
+        "他汀类药物",
+        "β受体阻滞剂"
+      ],
+      "reference": "心脏病常用的治疗药物包括阿司匹林、他汀类药物、β受体阻滞剂。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 心脏病",
+        "心脏病 --[药物治疗]--> 阿司匹林",
+        "心脏病 --[药物治疗]--> 他汀类药物",
+        "心脏病 --[药物治疗]--> β受体阻滞剂"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是子宫内膜癌，子宫内膜癌的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "乏力",
+        "出血",
+        "呕吐",
+        "尿急"
+      ],
+      "reference": "子宫内膜癌的常见临床表现包括乏力、出血、呕吐、尿急。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 子宫内膜癌",
+        "子宫内膜癌 --[临床表现]--> 乏力",
+        "子宫内膜癌 --[临床表现]--> 出血",
+        "子宫内膜癌 --[临床表现]--> 呕吐",
+        "子宫内膜癌 --[临床表现]--> 尿急"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是肺结核，肺结核的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "发热",
+        "咯血",
+        "咳嗽",
+        "疲乏"
+      ],
+      "reference": "肺结核的常见临床表现包括发热、咯血、咳嗽、疲乏。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 肺结核",
+        "肺结核 --[临床表现]--> 发热",
+        "肺结核 --[临床表现]--> 咯血",
+        "肺结核 --[临床表现]--> 咳嗽",
+        "肺结核 --[临床表现]--> 疲乏"
+      ]
+    },
+    {
+      "question": "糖尿病的相关（导致）之一是溃疡，溃疡的常见临床表现有哪些？",
+      "category": "cmeie:related_cause+cmeie:clinical_manifestation",
+      "hops": 2,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "出血",
+        "穿孔",
+        "触痛明显",
+        "强烈的坏死组织臭味"
+      ],
+      "reference": "溃疡的常见临床表现包括出血、穿孔、触痛明显、强烈的坏死组织臭味。",
+      "reference_context": [
+        "糖尿病 --[相关（导致）]--> 溃疡",
+        "溃疡 --[临床表现]--> 出血",
+        "溃疡 --[临床表现]--> 穿孔",
+        "溃疡 --[临床表现]--> 触痛明显",
+        "溃疡 --[临床表现]--> 强烈的坏死组织臭味"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是CKD，CKD的并发症之一是贫血，贫血的常见临床表现有哪些？",
+      "category": "3hop_complication_chain",
+      "hops": 3,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "乏力",
+        "多血",
+        "头晕"
+      ],
+      "reference": "贫血的常见临床表现包括乏力、多血、头晕。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> CKD",
+        "CKD --[并发症]--> 贫血",
+        "贫血 --[临床表现]--> 乏力",
+        "贫血 --[临床表现]--> 多血",
+        "贫血 --[临床表现]--> 头晕"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是CKD，CKD的并发症之一是高钾血症，高钾血症的常见临床表现有哪些？",
+      "category": "3hop_complication_chain",
+      "hops": 3,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "心室颤动",
+        "心脏扰动",
+        "肌肉无力"
+      ],
+      "reference": "高钾血症的常见临床表现包括心室颤动、心脏扰动、肌肉无力。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> CKD",
+        "CKD --[并发症]--> 高钾血症",
+        "高钾血症 --[临床表现]--> 心室颤动",
+        "高钾血症 --[临床表现]--> 心脏扰动",
+        "高钾血症 --[临床表现]--> 肌肉无力"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是CKD，CKD的并发症之一是代谢性酸中毒，代谢性酸中毒的常见临床表现有哪些？",
+      "category": "3hop_complication_chain",
+      "hops": 3,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "便秘",
+        "呕吐",
+        "嗜睡"
+      ],
+      "reference": "代谢性酸中毒的常见临床表现包括便秘、呕吐、嗜睡。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> CKD",
+        "CKD --[并发症]--> 代谢性酸中毒",
+        "代谢性酸中毒 --[临床表现]--> 便秘",
+        "代谢性酸中毒 --[临床表现]--> 呕吐",
+        "代谢性酸中毒 --[临床表现]--> 嗜睡"
+      ]
+    },
+    {
+      "question": "糖尿病的并发症之一是CKD，CKD的相关（导致）之一是HUA，HUA的常见临床表现有哪些？",
+      "category": "3hop_complication_chain",
+      "hops": 3,
+      "anchor": "糖尿病",
+      "gold_entities": [
+        "低比重尿",
+        "夜尿增多",
+        "小分子蛋白"
+      ],
+      "reference": "HUA的常见临床表现包括低比重尿、夜尿增多、小分子蛋白。",
+      "reference_context": [
+        "糖尿病 --[并发症]--> CKD",
+        "CKD --[相关（导致）]--> HUA",
+        "HUA --[临床表现]--> 低比重尿",
+        "HUA --[临床表现]--> 夜尿增多",
+        "HUA --[临床表现]--> 小分子蛋白"
+      ]
+    },
+    {
+      "question": "幻想性紫罗兰综合征的常见并发症有哪些？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    },
+    {
+      "question": "第九型星际眩晕症通常需要做哪些检查？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    },
+    {
+      "question": "蓝焰热病的推荐治疗药物是什么？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    },
+    {
+      "question": "零号漂浮症的病理分型有哪些？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    },
+    {
+      "question": "逆光性骨骼软化综合征的高危因素有哪些？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    },
+    {
+      "question": "幽冥回响病的病因是什么？",
+      "category": "safe_rejection",
+      "hops": 0,
+      "anchor": null,
+      "gold_entities": [],
+      "reference": "图谱中未收录该实体，应明确说明证据不足，不得编造答案。",
+      "reference_context": []
+    }
+  ]
+}

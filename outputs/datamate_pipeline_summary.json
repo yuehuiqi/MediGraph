@@ -1,0 +1,14 @@
+{
+  "dataset_id": "4784ce63-8c95-4523-a4c2-d5223e7c1f5d",
+  "template_id": "0dd49928-ab80-41e2-a7ff-c15aff05014a",
+  "task_id": "97bcd640-4b0a-40fc-8521-8b554c8aba0d",
+  "status": "COMPLETED",
+  "progress": {
+    "process": 100.0,
+    "successRate": 100.0,
+    "totalFileNum": 3,
+    "succeedFileNum": 3,
+    "failedFileNum": 0,
+    "finishedFileNum": 3
+  }
+}

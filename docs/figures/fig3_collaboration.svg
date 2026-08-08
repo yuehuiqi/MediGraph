@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 720" width="1180" height="720">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#334155"/></marker>
+<marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2E5AAC"/></marker>
+<marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#6A4C93"/></marker>
+<marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#526174"/></marker>
+</defs>
+<rect x="0" y="0" width="1180" height="720" fill="#FFFFFF"/>
+<text x="590" y="34" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#172033">Fig. 3  Multi-Agent Collaboration: Nexent x MCP x A2A</text>
+
+<!-- top row -->
+<rect x="70" y="74" width="190" height="46" rx="12" fill="#FFFFFF" stroke="#334155" stroke-width="1.6"/>
+<text x="165" y="102" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#172033">User request</text>
+<line x1="260" y1="97" x2="470" y2="97" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="470" y="68" width="240" height="58" rx="12" fill="#E8EFFA" stroke="#2E5AAC" stroke-width="1.6"/>
+<text x="590" y="91" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#172033">Supervisor Agent</text>
+<text x="590" y="111" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#526174">collaboration_supervisor</text>
+<rect x="850" y="72" width="230" height="50" rx="12" fill="#EEE8F5" stroke="#6A4C93" stroke-width="1.6"/>
+<text x="965" y="91" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">A2A Agent</text>
+<text x="965" y="111" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">MediGraphAnalyst</text>
+<line x1="710" y1="97" x2="850" y2="97" stroke="#6A4C93" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowPurple)"/>
+
+<!-- supervisor -> managed agents (orthogonal bus) -->
+<path d="M590 126 L590 158" fill="none" stroke="#2E5AAC" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M212 158 L962 158" fill="none" stroke="#2E5AAC" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="212" y1="158" x2="212" y2="201" stroke="#2E5AAC" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowBlue)"/>
+<line x1="587" y1="158" x2="587" y2="201" stroke="#2E5AAC" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowBlue)"/>
+<line x1="962" y1="158" x2="962" y2="201" stroke="#2E5AAC" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowBlue)"/>
+
+<!-- managed agents -->
+<rect x="95" y="205" width="235" height="64" rx="12" fill="#E2F3F4" stroke="#178C9E" stroke-width="1.6"/>
+<text x="212.5" y="231" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">Data Agent</text>
+<text x="212.5" y="251" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">DataMate DAG / status</text>
+<rect x="470" y="205" width="235" height="64" rx="12" fill="#E5F3EA" stroke="#2E8B57" stroke-width="1.6"/>
+<text x="587.5" y="231" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">KG QA Agent</text>
+<text x="587.5" y="251" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">Build KG / GraphRAG</text>
+<rect x="845" y="205" width="235" height="64" rx="12" fill="#FBEEDF" stroke="#C9732B" stroke-width="1.6"/>
+<text x="962.5" y="231" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">BI Agent</text>
+<text x="962.5" y="251" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">SQL/GRAPH / HTML</text>
+
+<!-- agents -> MCP (orthogonal bus) -->
+<path d="M212 269 L212 312" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M962 269 L962 312" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M212 312 L962 312" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="587" y1="269" x2="587" y2="356" stroke="#334155" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+
+<!-- MCP service -->
+<rect x="250" y="360" width="680" height="62" rx="12" fill="#EBEEF2" stroke="#334155" stroke-width="1.6"/>
+<text x="590" y="385" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#172033">MCP Service: MediGraphOperators</text>
+<text x="590" y="406" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#526174">17 tools: IE, KG, QA, analytics, DataMate pipeline, audit</text>
+
+<!-- MCP -> backends (orthogonal bus) -->
+<path d="M590 422 L590 466" fill="none" stroke="#526174" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M190 466 L1000 466" fill="none" stroke="#526174" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="190" y1="466" x2="190" y2="508" stroke="#526174" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowGray)"/>
+<line x1="460" y1="466" x2="460" y2="508" stroke="#526174" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowGray)"/>
+<line x1="730" y1="466" x2="730" y2="508" stroke="#526174" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowGray)"/>
+<line x1="1000" y1="466" x2="1000" y2="508" stroke="#526174" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowGray)"/>
+
+<!-- A2A -> planner along the right margin, no crossings -->
+<path d="M1080 97 L1146 97 L1146 541" fill="none" stroke="#6A4C93" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="1146" y1="541" x2="1116" y2="541" stroke="#6A4C93" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowPurple)"/>
+
+<!-- backends -->
+<rect x="80" y="512" width="220" height="58" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.6"/>
+<text x="190" y="535" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">DataMate</text>
+<text x="190" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">dataset/template/task REST</text>
+<rect x="350" y="512" width="220" height="58" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.6"/>
+<text x="460" y="535" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">Medical KG</text>
+<text x="460" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">LocalStore / Neo4j optional</text>
+<rect x="620" y="512" width="220" height="58" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.6"/>
+<text x="730" y="535" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">Analytics DB</text>
+<text x="730" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">SQLite read-only</text>
+<rect x="890" y="512" width="226" height="58" rx="12" fill="#FFFFFF" stroke="#B8860B" stroke-width="1.6"/>
+<text x="1003" y="535" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">0.8B planner</text>
+<text x="1003" y="555" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">local chat-completions API</text>
+
+<!-- legend -->
+<rect x="160" y="634" width="860" height="48" rx="12" fill="#FBFCFE" stroke="#D7DEE8" stroke-width="1.6"/>
+<text x="590" y="653" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#172033">Line legend</text>
+<text x="590" y="672" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#526174">blue dashed = managed agents; purple dashed = A2A; gray/dark dashed = MCP tool calls and backends</text>
+</svg>

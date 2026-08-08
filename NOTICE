@@ -1,0 +1,30 @@
+MediGraph Agent
+Copyright (c) 2026 MediGraph Agent contributors
+
+The source code authored for this project is distributed under the MIT License.
+
+External projects and services
+------------------------------
+MediGraph integrates with the open-source ModelEngine ecosystem, including
+Nexent and DataMate. Their names and source code remain the property of their
+respective contributors and are governed by their own licenses.
+
+Datasets
+--------
+CMeIE-V2, DIAKG and CM3KG are third-party research datasets. They are not
+relicensed under this repository's MIT License. The project stores derived
+evaluation/model artifacts with source labels and checksums; anyone
+redistributing raw or derived data must independently comply with the original
+dataset terms and citation requirements.
+
+Models and APIs
+---------------
+Qwen and other externally hosted/downloaded model weights are not covered by
+this repository's MIT License. API outputs and model weights remain subject to
+their providers' terms. No API key may be committed or included in a submission
+archive.
+
+Medical disclaimer
+------------------
+This project is a competition/research prototype. Its outputs are not medical
+advice, diagnosis or treatment recommendations and require professional review.

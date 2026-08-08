@@ -1,0 +1,7 @@
+# This GitHub distribution ships no file above 25 MB, so nothing needs Git LFS.
+# The training checkpoints, encoder weights and demo recordings that did need it
+# are not part of this tree -- see README for where to get them.
+
+# Normalize text
+*.py text eol=lf
+*.md text eol=lf

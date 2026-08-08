@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "format": "medigraph_graph",
+    "schema_version": "2.0.0",
+    "exported_at": "2026-07-01T09:10:53.824579+00:00",
+    "stats": {
+      "num_entities": 9,
+      "num_triples": 6,
+      "entity_type_counts": {
+        "Disease": 3,
+        "Symptom": 6
+      },
+      "relation_counts": {
+        "has_symptom": 6
+      },
+      "top_entities": [
+        {
+          "name": "小细胞肺癌",
+          "degree": 6
+        },
+        {
+          "name": "咳嗽",
+          "degree": 1
+        },
+        {
+          "name": "呼吸困难",
+          "degree": 1
+        },
+        {
+          "name": "体重减轻",
+          "degree": 1
+        },
+        {
+          "name": "发热",
+          "degree": 1
+        },
+        {
+          "name": "皮肤病变",
+          "degree": 1
+        },
+        {
+          "name": "盗汗",
+          "degree": 1
+        },
+        {
+          "name": "咯血",
+          "degree": 0
+        },
+        {
+          "name": "关节痛",
+          "degree": 0
+        }
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "小细胞肺癌",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:f9f2729a24d73cd4",
+      "canonical_name": "小细胞肺癌",
+      "surface_forms": [
+        "小细胞肺癌"
+      ],
+      "link_score": 0.0,
+      "link_method": "unlinked_local_id",
+      "kb_source": "MediGraph-local",
+      "confidence": 1.0
+    },
+    {
+      "id": "咳嗽",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:6680b0777c0f2e83",
+      "canonical_name": "咳嗽",
+      "surface_forms": [
+        "咳嗽"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "呼吸困难",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:11c975c594a55e33",
+      "canonical_name": "呼吸困难",
+      "surface_forms": [
+        "呼吸困难"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "咯血",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:0bdfa785ccfa1266",
+      "canonical_name": "咯血",
+      "surface_forms": [
+        "咯血"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "体重减轻",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:dfcc55503b7ae895",
+      "canonical_name": "体重减轻",
+      "surface_forms": [
+        "体重减轻"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "发热",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:de3cbc2b183a03f5",
+      "canonical_name": "发热",
+      "surface_forms": [
+        "发热"
+      ],
+      "link_score": 0.0,
+      "link_method": "unlinked_local_id",
+      "kb_source": "MediGraph-local",
+      "confidence": 1.0
+    },
+    {
+      "id": "关节痛",
+      "type": "Disease",
+      "canonical_id": "MEDIGRAPH:4b1e101f137e50f8",
+      "canonical_name": "关节痛",
+      "surface_forms": [
+        "关节痛"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    },
+    {
+      "id": "皮肤病变",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:31a0b6b0cc14ecf4",
+      "canonical_name": "皮肤病变",
+      "surface_forms": [
+        "皮肤病变"
+      ],
+      "link_score": 0.0,
+      "link_method": "unlinked_local_id",
+      "kb_source": "MediGraph-local",
+      "confidence": 0.774
+    },
+    {
+      "id": "盗汗",
+      "type": "Symptom",
+      "canonical_id": "MEDIGRAPH:0dcd256f729ca542",
+      "canonical_name": "盗汗",
+      "surface_forms": [
+        "盗汗"
+      ],
+      "link_score": 1.0,
+      "link_method": "exact",
+      "kb_source": "CM3KG",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "盗汗",
+      "tail_type": "Symptom",
+      "confidence": 1.0,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.810934+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 1.0,
+          "timestamp": "2026-07-01T09:10:53.810934+00:00"
+        }
+      ]
+    },
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "体重减轻",
+      "tail_type": "Symptom",
+      "confidence": 1.0,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.813441+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 1.0,
+          "timestamp": "2026-07-01T09:10:53.813441+00:00"
+        }
+      ]
+    },
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "咳嗽",
+      "tail_type": "Symptom",
+      "confidence": 1.0,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.816451+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 1.0,
+          "timestamp": "2026-07-01T09:10:53.816451+00:00"
+        }
+      ]
+    },
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "呼吸困难",
+      "tail_type": "Symptom",
+      "confidence": 1.0,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.818452+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 1.0,
+          "timestamp": "2026-07-01T09:10:53.818452+00:00"
+        }
+      ]
+    },
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "发热",
+      "tail_type": "Symptom",
+      "confidence": 1.0,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.821054+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 1.0,
+          "timestamp": "2026-07-01T09:10:53.821054+00:00"
+        }
+      ]
+    },
+    {
+      "head": "小细胞肺癌",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "relation_zh": "有症状",
+      "tail": "皮肤病变",
+      "tail_type": "Symptom",
+      "confidence": 0.91,
+      "source": "nexent_neural_demo.txt",
+      "sources": [
+        "nexent_neural_demo.txt"
+      ],
+      "operator_version": "neural_gplinker/neural-gplinker-1.0.0",
+      "timestamp": "2026-07-01T09:10:53.823569+00:00",
+      "provenance": [
+        {
+          "source_doc": "nexent_neural_demo.txt",
+          "source_hash": "793791b9d54533bc7c391ec78b3e3b3a879de2d40234788385ad9a5a38919dd6",
+          "chunk_id": "68b945b755313da071c3",
+          "sentence_id": "",
+          "extractor": "neural_gplinker",
+          "model_version": "neural-gplinker-1.0.0",
+          "evidence": "小细胞肺癌@可有特征性的咳嗽、呼吸困难、咯血、体重减轻、发热、关节痛、皮肤病变、盗汗，或者无症状。",
+          "confidence": 0.91,
+          "timestamp": "2026-07-01T09:10:53.823569+00:00"
+        }
+      ]
+    }
+  ]
+}

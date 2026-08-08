@@ -1,0 +1,78 @@
+{
+  "scale": {
+    "visits": 200000,
+    "n_prescriptions": 274530,
+    "n_lab_tests": 297658,
+    "n_kg_triples": 26774
+  },
+  "load_seconds_copy": 4.974,
+  "index_build_seconds": 2.114,
+  "repeats": 5,
+  "queries": {
+    "point_filter_age": "SELECT AVG(cost) FROM patient_visits WHERE disease = '高血压' AND age > 60",
+    "group_by_department": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt DESC",
+    "month_trend": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month",
+    "drug_point_lookup": "SELECT COUNT(*) FROM prescriptions WHERE drug = '二甲双胍'",
+    "abnormal_join": "SELECT v.disease, COUNT(*) AS n FROM patient_visits v JOIN lab_tests t ON v.visit_id = t.visit_id WHERE t.abnormal = 1 GROUP BY v.disease ORDER BY n DESC LIMIT 5",
+    "kg_head_relation": "SELECT tail FROM kg_triples WHERE head = '高血压' AND relation = 'recommend_drug'"
+  },
+  "results": {
+    "point_filter_age": {
+      "before_ms": 9.062,
+      "after_ms": 0.106,
+      "speedup_x": 85.5,
+      "scan_before": "Seq Scan(patient_visits)",
+      "scan_after": "Bitmap Heap Scan(patient_visits)"
+    },
+    "group_by_department": {
+      "before_ms": 21.043,
+      "after_ms": 21.487,
+      "speedup_x": 1.0,
+      "scan_before": "Seq Scan(patient_visits)",
+      "scan_after": "Seq Scan(patient_visits)"
+    },
+    "month_trend": {
+      "before_ms": 28.903,
+      "after_ms": 28.915,
+      "speedup_x": 1.0,
+      "scan_before": "Seq Scan(patient_visits)",
+      "scan_after": "Seq Scan(patient_visits)"
+    },
+    "drug_point_lookup": {
+      "before_ms": 10.296,
+      "after_ms": 0.029,
+      "speedup_x": 355.0,
+      "scan_before": "Seq Scan(prescriptions)",
+      "scan_after": "Bitmap Heap Scan(prescriptions)"
+    },
+    "abnormal_join": {
+      "before_ms": 55.776,
+      "after_ms": 54.918,
+      "speedup_x": 1.0,
+      "scan_before": "Seq Scan(patient_visits)",
+      "scan_after": "Seq Scan(patient_visits)"
+    },
+    "kg_head_relation": {
+      "before_ms": 1.301,
+      "after_ms": 0.031,
+      "speedup_x": 42.0,
+      "scan_before": "Seq Scan(kg_triples)",
+      "scan_after": "Bitmap Heap Scan(kg_triples)"
+    }
+  },
+  "connection_pooling": {
+    "queries": 200,
+    "pooled": {
+      "p50_ms": 2.003,
+      "p99_ms": 3.153,
+      "mean_ms": 2.046
+    },
+    "connect_per_query": {
+      "p50_ms": 13.266,
+      "p99_ms": 36.321,
+      "mean_ms": 19.994
+    },
+    "p50_speedup_x": 6.6
+  },
+  "interpretation": "Measured at 200k visits because index benefit is a function of table size: on the 600-row demo DB a sequential scan wins and the honest result would be 'indexes are noise'. Point lookups and selective filters gain the most (Seq Scan -> Index/Bitmap Scan); whole-table aggregates (GROUP BY over every row, substr() trends) keep scanning by design and gain little -- both outcomes are listed. Pooling amortises per-connection setup; its win shows up in p50 of short queries."
+}

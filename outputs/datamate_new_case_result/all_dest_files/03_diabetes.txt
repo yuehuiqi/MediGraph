@@ -1,0 +1,93 @@
+{
+  "valid": [
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "多饮",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "多尿",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "乏力",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "has_symptom",
+      "tail": "体重下降",
+      "tail_type": "Symptom",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "糖尿病肾病",
+      "tail_type": "Disease",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "complication",
+      "tail": "高血压",
+      "tail_type": "Disease",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "空腹血糖",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "糖化血红蛋白",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "need_examination",
+      "tail": "尿微量白蛋白",
+      "tail_type": "Examination",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "二甲双胍",
+      "tail_type": "Drug",
+      "confidence": 0.95
+    },
+    {
+      "head": "2型糖尿病",
+      "head_type": "Disease",
+      "relation": "recommend_drug",
+      "tail": "恩格列净",
+      "tail_type": "Drug",
+      "confidence": 0.95
+    }
+  ],
+  "rejected": []
+}

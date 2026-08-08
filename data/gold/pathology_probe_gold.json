@@ -1,0 +1,823 @@
+{
+ "description": "Curated ontology-coverage probe (pathology/clinical facts) demonstrating ALL 11 entity types and 14 relations are populated & extractable; entities verbatim in text. Coverage probe, not headline benchmark.",
+ "source": "PathologyProbe",
+ "samples": [
+  {
+   "text": "胃肠间质瘤是一种间叶源性肿瘤，CD117 和 DOG1 多呈阳性，S-100 通常阴性，常与 KIT 基因突变相关，镜下多为梭形细胞，好发于胃壁。",
+   "entities": [
+    {
+     "name": "胃肠间质瘤",
+     "type": "Tumor"
+    },
+    {
+     "name": "CD117",
+     "type": "Biomarker"
+    },
+    {
+     "name": "DOG1",
+     "type": "Biomarker"
+    },
+    {
+     "name": "S-100",
+     "type": "Biomarker"
+    },
+    {
+     "name": "KIT",
+     "type": "Gene"
+    },
+    {
+     "name": "梭形细胞",
+     "type": "Morphology"
+    },
+    {
+     "name": "胃壁",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胃肠间质瘤",
+     "relation": "positive_marker",
+     "tail": "CD117"
+    },
+    {
+     "head": "胃肠间质瘤",
+     "relation": "positive_marker",
+     "tail": "DOG1"
+    },
+    {
+     "head": "胃肠间质瘤",
+     "relation": "negative_marker",
+     "tail": "S-100"
+    },
+    {
+     "head": "胃肠间质瘤",
+     "relation": "associated_gene",
+     "tail": "KIT"
+    },
+    {
+     "head": "胃肠间质瘤",
+     "relation": "has_morphology",
+     "tail": "梭形细胞"
+    },
+    {
+     "head": "胃肠间质瘤",
+     "relation": "located_in",
+     "tail": "胃壁"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "神经母细胞瘤好发于肾上腺髓质，NSE 与 Syn 常呈阳性，多伴 MYCN 基因扩增，镜下可见 Homer-Wright 菊形团。",
+   "entities": [
+    {
+     "name": "神经母细胞瘤",
+     "type": "Tumor"
+    },
+    {
+     "name": "肾上腺髓质",
+     "type": "Body"
+    },
+    {
+     "name": "NSE",
+     "type": "Biomarker"
+    },
+    {
+     "name": "Syn",
+     "type": "Biomarker"
+    },
+    {
+     "name": "MYCN",
+     "type": "Gene"
+    },
+    {
+     "name": "菊形团",
+     "type": "Morphology"
+    }
+   ],
+   "triples": [
+    {
+     "head": "神经母细胞瘤",
+     "relation": "located_in",
+     "tail": "肾上腺髓质"
+    },
+    {
+     "head": "神经母细胞瘤",
+     "relation": "positive_marker",
+     "tail": "NSE"
+    },
+    {
+     "head": "神经母细胞瘤",
+     "relation": "positive_marker",
+     "tail": "Syn"
+    },
+    {
+     "head": "神经母细胞瘤",
+     "relation": "associated_gene",
+     "tail": "MYCN"
+    },
+    {
+     "head": "神经母细胞瘤",
+     "relation": "has_morphology",
+     "tail": "菊形团"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "弥漫大B细胞淋巴瘤是非霍奇金淋巴瘤的一种亚型，CD20 呈阳性，CD3 阴性，常用利妥昔单抗治疗。",
+   "entities": [
+    {
+     "name": "弥漫大B细胞淋巴瘤",
+     "type": "Tumor"
+    },
+    {
+     "name": "非霍奇金淋巴瘤",
+     "type": "Tumor"
+    },
+    {
+     "name": "CD20",
+     "type": "Biomarker"
+    },
+    {
+     "name": "CD3",
+     "type": "Biomarker"
+    },
+    {
+     "name": "利妥昔单抗",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "弥漫大B细胞淋巴瘤",
+     "relation": "subtype_of",
+     "tail": "非霍奇金淋巴瘤"
+    },
+    {
+     "head": "弥漫大B细胞淋巴瘤",
+     "relation": "positive_marker",
+     "tail": "CD20"
+    },
+    {
+     "head": "弥漫大B细胞淋巴瘤",
+     "relation": "negative_marker",
+     "tail": "CD3"
+    },
+    {
+     "head": "弥漫大B细胞淋巴瘤",
+     "relation": "recommend_drug",
+     "tail": "利妥昔单抗"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "二甲双胍禁用于严重肾功能不全患者；顺铂可引起恶心和耳鸣等不良反应。",
+   "entities": [
+    {
+     "name": "二甲双胍",
+     "type": "Drug"
+    },
+    {
+     "name": "肾功能不全",
+     "type": "Disease"
+    },
+    {
+     "name": "顺铂",
+     "type": "Drug"
+    },
+    {
+     "name": "恶心",
+     "type": "Symptom"
+    },
+    {
+     "name": "耳鸣",
+     "type": "Symptom"
+    }
+   ],
+   "triples": [
+    {
+     "head": "二甲双胍",
+     "relation": "contraindication",
+     "tail": "肾功能不全"
+    },
+    {
+     "head": "顺铂",
+     "relation": "adverse_reaction",
+     "tail": "恶心"
+    },
+    {
+     "head": "顺铂",
+     "relation": "adverse_reaction",
+     "tail": "耳鸣"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "急性阑尾炎常需行阑尾切除术，患者多在普外科就诊，可并发腹膜炎。",
+   "entities": [
+    {
+     "name": "急性阑尾炎",
+     "type": "Disease"
+    },
+    {
+     "name": "阑尾切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "普外科",
+     "type": "Department"
+    },
+    {
+     "name": "腹膜炎",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性阑尾炎",
+     "relation": "treated_by_procedure",
+     "tail": "阑尾切除术"
+    },
+    {
+     "head": "急性阑尾炎",
+     "relation": "treated_in_department",
+     "tail": "普外科"
+    },
+    {
+     "head": "急性阑尾炎",
+     "relation": "complication",
+     "tail": "腹膜炎"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "急性心肌梗死的典型症状为胸痛和大汗，需检查心电图和肌钙蛋白，可使用阿司匹林。",
+   "entities": [
+    {
+     "name": "急性心肌梗死",
+     "type": "Disease"
+    },
+    {
+     "name": "胸痛",
+     "type": "Symptom"
+    },
+    {
+     "name": "大汗",
+     "type": "Symptom"
+    },
+    {
+     "name": "心电图",
+     "type": "Examination"
+    },
+    {
+     "name": "肌钙蛋白",
+     "type": "Examination"
+    },
+    {
+     "name": "阿司匹林",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性心肌梗死",
+     "relation": "has_symptom",
+     "tail": "胸痛"
+    },
+    {
+     "head": "急性心肌梗死",
+     "relation": "has_symptom",
+     "tail": "大汗"
+    },
+    {
+     "head": "急性心肌梗死",
+     "relation": "need_examination",
+     "tail": "心电图"
+    },
+    {
+     "head": "急性心肌梗死",
+     "relation": "need_examination",
+     "tail": "肌钙蛋白"
+    },
+    {
+     "head": "急性心肌梗死",
+     "relation": "recommend_drug",
+     "tail": "阿司匹林"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "肝细胞癌位于肝脏，AFP 常升高呈阳性，可与 TP53 基因突变相关，早期可行肝部分切除术，常在肝胆外科就诊。",
+   "entities": [
+    {
+     "name": "肝细胞癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "肝脏",
+     "type": "Body"
+    },
+    {
+     "name": "AFP",
+     "type": "Biomarker"
+    },
+    {
+     "name": "TP53",
+     "type": "Gene"
+    },
+    {
+     "name": "肝部分切除术",
+     "type": "Procedure"
+    },
+    {
+     "name": "肝胆外科",
+     "type": "Department"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肝细胞癌",
+     "relation": "located_in",
+     "tail": "肝脏"
+    },
+    {
+     "head": "肝细胞癌",
+     "relation": "positive_marker",
+     "tail": "AFP"
+    },
+    {
+     "head": "肝细胞癌",
+     "relation": "associated_gene",
+     "tail": "TP53"
+    },
+    {
+     "head": "肝细胞癌",
+     "relation": "treated_by_procedure",
+     "tail": "肝部分切除术"
+    },
+    {
+     "head": "肝细胞癌",
+     "relation": "treated_in_department",
+     "tail": "肝胆外科"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "乳腺癌中 HER2 阳性者可用曲妥珠单抗治疗，ER 阴性提示预后较差，镜下可见浸润性导管结构，好发于乳腺。",
+   "entities": [
+    {
+     "name": "乳腺癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "HER2",
+     "type": "Biomarker"
+    },
+    {
+     "name": "曲妥珠单抗",
+     "type": "Drug"
+    },
+    {
+     "name": "ER",
+     "type": "Biomarker"
+    },
+    {
+     "name": "浸润性导管",
+     "type": "Morphology"
+    },
+    {
+     "name": "乳腺",
+     "type": "Body"
+    }
+   ],
+   "triples": [
+    {
+     "head": "乳腺癌",
+     "relation": "positive_marker",
+     "tail": "HER2"
+    },
+    {
+     "head": "乳腺癌",
+     "relation": "recommend_drug",
+     "tail": "曲妥珠单抗"
+    },
+    {
+     "head": "乳腺癌",
+     "relation": "negative_marker",
+     "tail": "ER"
+    },
+    {
+     "head": "乳腺癌",
+     "relation": "has_morphology",
+     "tail": "浸润性导管"
+    },
+    {
+     "head": "乳腺癌",
+     "relation": "located_in",
+     "tail": "乳腺"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "2型糖尿病是糖尿病的常见亚型，可并发糖尿病视网膜病变，患者多在内分泌科就诊，需检测糖化血红蛋白。",
+   "entities": [
+    {
+     "name": "2型糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "糖尿病",
+     "type": "Disease"
+    },
+    {
+     "name": "糖尿病视网膜病变",
+     "type": "Disease"
+    },
+    {
+     "name": "内分泌科",
+     "type": "Department"
+    },
+    {
+     "name": "糖化血红蛋白",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "2型糖尿病",
+     "relation": "subtype_of",
+     "tail": "糖尿病"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "complication",
+     "tail": "糖尿病视网膜病变"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "treated_in_department",
+     "tail": "内分泌科"
+    },
+    {
+     "head": "2型糖尿病",
+     "relation": "need_examination",
+     "tail": "糖化血红蛋白"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "胃腺癌好发于胃窦，CEA 可呈阳性，HER2 部分阳性，镜下可见印戒细胞，与 CDH1 基因相关。",
+   "entities": [
+    {
+     "name": "胃腺癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "胃窦",
+     "type": "Body"
+    },
+    {
+     "name": "CEA",
+     "type": "Biomarker"
+    },
+    {
+     "name": "HER2",
+     "type": "Biomarker"
+    },
+    {
+     "name": "印戒细胞",
+     "type": "Morphology"
+    },
+    {
+     "name": "CDH1",
+     "type": "Gene"
+    }
+   ],
+   "triples": [
+    {
+     "head": "胃腺癌",
+     "relation": "located_in",
+     "tail": "胃窦"
+    },
+    {
+     "head": "胃腺癌",
+     "relation": "positive_marker",
+     "tail": "CEA"
+    },
+    {
+     "head": "胃腺癌",
+     "relation": "positive_marker",
+     "tail": "HER2"
+    },
+    {
+     "head": "胃腺癌",
+     "relation": "has_morphology",
+     "tail": "印戒细胞"
+    },
+    {
+     "head": "胃腺癌",
+     "relation": "associated_gene",
+     "tail": "CDH1"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "糖皮质激素长期使用可引起骨质疏松和血糖升高，禁用于活动性消化性溃疡患者。",
+   "entities": [
+    {
+     "name": "糖皮质激素",
+     "type": "Drug"
+    },
+    {
+     "name": "骨质疏松",
+     "type": "Disease"
+    },
+    {
+     "name": "血糖升高",
+     "type": "Symptom"
+    },
+    {
+     "name": "消化性溃疡",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "糖皮质激素",
+     "relation": "adverse_reaction",
+     "tail": "骨质疏松"
+    },
+    {
+     "head": "糖皮质激素",
+     "relation": "adverse_reaction",
+     "tail": "血糖升高"
+    },
+    {
+     "head": "糖皮质激素",
+     "relation": "contraindication",
+     "tail": "消化性溃疡"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "急性白血病常采用化疗，患者可出现发热和贫血，需检查血常规。",
+   "entities": [
+    {
+     "name": "急性白血病",
+     "type": "Disease"
+    },
+    {
+     "name": "化疗",
+     "type": "Procedure"
+    },
+    {
+     "name": "发热",
+     "type": "Symptom"
+    },
+    {
+     "name": "贫血",
+     "type": "Symptom"
+    },
+    {
+     "name": "血常规",
+     "type": "Examination"
+    }
+   ],
+   "triples": [
+    {
+     "head": "急性白血病",
+     "relation": "treated_by_procedure",
+     "tail": "化疗"
+    },
+    {
+     "head": "急性白血病",
+     "relation": "has_symptom",
+     "tail": "发热"
+    },
+    {
+     "head": "急性白血病",
+     "relation": "has_symptom",
+     "tail": "贫血"
+    },
+    {
+     "head": "急性白血病",
+     "relation": "need_examination",
+     "tail": "血常规"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "肺腺癌位于肺，TTF-1 常呈阳性，与 EGFR 基因突变相关，相应患者可用吉非替尼治疗。",
+   "entities": [
+    {
+     "name": "肺腺癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "肺",
+     "type": "Body"
+    },
+    {
+     "name": "TTF-1",
+     "type": "Biomarker"
+    },
+    {
+     "name": "EGFR",
+     "type": "Gene"
+    },
+    {
+     "name": "吉非替尼",
+     "type": "Drug"
+    }
+   ],
+   "triples": [
+    {
+     "head": "肺腺癌",
+     "relation": "located_in",
+     "tail": "肺"
+    },
+    {
+     "head": "肺腺癌",
+     "relation": "positive_marker",
+     "tail": "TTF-1"
+    },
+    {
+     "head": "肺腺癌",
+     "relation": "associated_gene",
+     "tail": "EGFR"
+    },
+    {
+     "head": "肺腺癌",
+     "relation": "recommend_drug",
+     "tail": "吉非替尼"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "前列腺癌可使 PSA 升高呈阳性，需行前列腺穿刺活检，患者多在泌尿外科就诊。",
+   "entities": [
+    {
+     "name": "前列腺癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "PSA",
+     "type": "Biomarker"
+    },
+    {
+     "name": "前列腺穿刺活检",
+     "type": "Examination"
+    },
+    {
+     "name": "泌尿外科",
+     "type": "Department"
+    }
+   ],
+   "triples": [
+    {
+     "head": "前列腺癌",
+     "relation": "positive_marker",
+     "tail": "PSA"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "need_examination",
+     "tail": "前列腺穿刺活检"
+    },
+    {
+     "head": "前列腺癌",
+     "relation": "treated_in_department",
+     "tail": "泌尿外科"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "恶性黑色素瘤好发于皮肤，S-100 与 HMB-45 呈阳性，镜下可见色素颗粒，可并发淋巴结转移。",
+   "entities": [
+    {
+     "name": "恶性黑色素瘤",
+     "type": "Tumor"
+    },
+    {
+     "name": "皮肤",
+     "type": "Body"
+    },
+    {
+     "name": "S-100",
+     "type": "Biomarker"
+    },
+    {
+     "name": "HMB-45",
+     "type": "Biomarker"
+    },
+    {
+     "name": "色素颗粒",
+     "type": "Morphology"
+    },
+    {
+     "name": "淋巴结转移",
+     "type": "Disease"
+    }
+   ],
+   "triples": [
+    {
+     "head": "恶性黑色素瘤",
+     "relation": "located_in",
+     "tail": "皮肤"
+    },
+    {
+     "head": "恶性黑色素瘤",
+     "relation": "positive_marker",
+     "tail": "S-100"
+    },
+    {
+     "head": "恶性黑色素瘤",
+     "relation": "positive_marker",
+     "tail": "HMB-45"
+    },
+    {
+     "head": "恶性黑色素瘤",
+     "relation": "has_morphology",
+     "tail": "色素颗粒"
+    },
+    {
+     "head": "恶性黑色素瘤",
+     "relation": "complication",
+     "tail": "淋巴结转移"
+    }
+   ],
+   "source": "PathologyProbe"
+  },
+  {
+   "text": "甲状腺乳头状癌是甲状腺癌的一种亚型，TG 与 TTF-1 阳性，常与 BRAF 基因突变相关，镜下可见毛玻璃样核。",
+   "entities": [
+    {
+     "name": "甲状腺乳头状癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "甲状腺癌",
+     "type": "Tumor"
+    },
+    {
+     "name": "TG",
+     "type": "Biomarker"
+    },
+    {
+     "name": "TTF-1",
+     "type": "Biomarker"
+    },
+    {
+     "name": "BRAF",
+     "type": "Gene"
+    },
+    {
+     "name": "毛玻璃样核",
+     "type": "Morphology"
+    }
+   ],
+   "triples": [
+    {
+     "head": "甲状腺乳头状癌",
+     "relation": "subtype_of",
+     "tail": "甲状腺癌"
+    },
+    {
+     "head": "甲状腺乳头状癌",
+     "relation": "positive_marker",
+     "tail": "TG"
+    },
+    {
+     "head": "甲状腺乳头状癌",
+     "relation": "positive_marker",
+     "tail": "TTF-1"
+    },
+    {
+     "head": "甲状腺乳头状癌",
+     "relation": "associated_gene",
+     "tail": "BRAF"
+    },
+    {
+     "head": "甲状腺乳头状癌",
+     "relation": "has_morphology",
+     "tail": "毛玻璃样核"
+    }
+   ],
+   "source": "PathologyProbe"
+  }
+ ]
+}

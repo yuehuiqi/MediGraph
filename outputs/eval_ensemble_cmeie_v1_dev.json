@@ -1,0 +1,52 @@
+{
+  "samples": 3585,
+  "dataset": "CMeIE_dev.jsonl",
+  "models": [
+    "data/models/neural_extractor_v1_base",
+    "data/models/neural_extractor_v1"
+  ],
+  "entity_micro_union": {
+    "tp": 11914,
+    "fp": 5058,
+    "fn": 2250,
+    "precision": 0.70198,
+    "recall": 0.841147,
+    "f1": 0.765288
+  },
+  "triple_micro": {
+    "union": {
+      "tp": 6776,
+      "fp": 4916,
+      "fn": 3837,
+      "precision": 0.579542,
+      "recall": 0.638462,
+      "f1": 0.607577
+    },
+    "intersection": {
+      "tp": 5177,
+      "fp": 1792,
+      "fn": 5436,
+      "precision": 0.742861,
+      "recall": 0.487798,
+      "f1": 0.588898
+    },
+    "conf_union": {
+      "tp": 6431,
+      "fp": 3942,
+      "fn": 4182,
+      "precision": 0.619975,
+      "recall": 0.605955,
+      "f1": 0.612885
+    }
+  },
+  "triple_micro_strict_conf_union": {
+    "tp": 6425,
+    "fp": 3959,
+    "fn": 4188,
+    "precision": 0.61874,
+    "recall": 0.60539,
+    "f1": 0.611992
+  },
+  "latency_ms_p50": 51.446,
+  "min_conf": 0.75
+}

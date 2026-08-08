@@ -1,0 +1,35 @@
+{
+  "operation": "temperature+label_mask+softmax",
+  "shape": [
+    200000,
+    32
+  ],
+  "temperature": 1.35,
+  "repeats": 5,
+  "iterations": 200,
+  "scope": "device_resident",
+  "results": {
+    "npu_torch_composed": {
+      "throughput_median_rows_per_s": 1011846371.9506794,
+      "throughput_cv_percent": 0.10474191113756103,
+      "p50_median_ms": 0.2792254090309143,
+      "p99_median_ms": 0.3100931644439697
+    },
+    "npu_ascendc_fused": {
+      "throughput_median_rows_per_s": 3156300373.3207912,
+      "throughput_cv_percent": 0.40915468351679746,
+      "p50_median_ms": 0.12651830911636353,
+      "p99_median_ms": 0.1453682780265808
+    }
+  },
+  "speedup": {
+    "throughput": 3.119347423498633,
+    "p50": 2.2069960544137563,
+    "p99": 2.133155655783917
+  },
+  "correctness": {
+    "max_abs_diff": 0.0,
+    "row_sum_error": 2.384185791015625e-07,
+    "masked_probability_max": 0.0
+  }
+}

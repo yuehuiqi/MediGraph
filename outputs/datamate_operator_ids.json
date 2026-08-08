@@ -1,0 +1,7 @@
+{
+  "text_clean": "TextClean",
+  "chunker": "MedicalChunker",
+  "medical_ner": "MedicalNER",
+  "medical_re": "MedicalRE",
+  "triple_validator": "TripleValidator"
+}

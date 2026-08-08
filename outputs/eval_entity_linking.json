@@ -1,0 +1,305 @@
+{
+  "kb_entries": 39369,
+  "sampled_entities": 2000,
+  "normalization_variant_accuracy": 0.9645,
+  "typo_variant_accuracy_fuzzy": 0.9832,
+  "in_kb_linking_accuracy": 0.9727,
+  "nil_rejection_rate": 1.0,
+  "overall_accuracy": 0.9741,
+  "counts": {
+    "norm": [
+      4233,
+      4389
+    ],
+    "typo": [
+      3402,
+      3460
+    ],
+    "nil": [
+      418,
+      418
+    ]
+  },
+  "error_examples": [
+    {
+      "kind": "norm",
+      "surface": "３６/１００ ０００",
+      "gold": "36/100 000",
+      "got": "３６/１００ ０００",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "PＡS",
+      "gold": "PAS",
+      "got": "PＡS",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "干扰素α２a",
+      "gold": "干扰素α2a",
+      "got": "干扰素α２a",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "多发于１０ ～ １５岁",
+      "gold": "多发于10 ～ 15岁",
+      "got": "多发于１０ ～ １５岁",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "ＡLL的家族史",
+      "gold": "ALL的家族史",
+      "got": "ＡLL的家族史",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Rh和ＡＢO血型不合溶血病",
+      "gold": "Rh和ABO血型不合溶血病",
+      "got": "Rh和ＡＢO血型不合溶血病",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "５-羟色胺再摄取抑制剂",
+      "gold": "5-羟色胺再摄取抑制剂",
+      "got": "５-羟色胺再摄取抑制剂",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "头颈部ＣT",
+      "gold": "头颈部CT",
+      "got": "头颈部ＣT",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "减少了２０%",
+      "gold": "减少了20%",
+      "got": "减少了２０%",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "０.９%的生理盐水",
+      "gold": "0.9%的生理盐水",
+      "got": "０.９%的生理盐水",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "ＣHI",
+      "gold": "CHI",
+      "got": "ＣHI",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "２%-４%",
+      "gold": "2%-4%",
+      "got": "２%-４%",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ｃourvoisier's征阳性",
+      "gold": "Courvoisier's征阳性",
+      "got": "Ｃourvoisier's征阳性",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "６-硫鸟嘌呤（６-TG）",
+      "gold": "6-硫鸟嘌呤（6-TG）",
+      "got": "６-硫鸟嘌呤（６-TG）",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "体温超过 ３８°Ｃ",
+      "gold": "体温超过 38°C",
+      "got": "体温超过 ３８°Ｃ",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "８. ７‰",
+      "gold": "8. 7‰",
+      "got": "８. ７‰",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "男女比例３∶１",
+      "gold": "男女比例3∶1",
+      "got": "男女比例３∶１",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "ＣD",
+      "gold": "CD",
+      "got": "ＣD",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "尿儿茶酚胺（ＣＡ）",
+      "gold": "尿儿茶酚胺（CA）",
+      "got": "尿儿茶酚胺（ＣＡ）",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "血铅水平在 ２.２ 至 ３.３ μmol/L （４５~４６ μg/dL）之间",
+      "gold": "血铅水平在 2.2 至 3.3 μmol/L (45~46 μg/dL)之间",
+      "got": "血铅水平在 ２.２ 至 ３.３ μmol/L （４５~４６ μg/dL）之间",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "NMIＢＣ",
+      "gold": "NMIBC",
+      "got": "NMIＢＣ",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "男女患病率比为１:２",
+      "gold": "男女患病率比为1:2",
+      "got": "男女患病率比为１:２",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ｂ淋巴祖细胞性",
+      "gold": "B淋巴祖细胞性",
+      "got": "Ｂ淋巴祖细胞性",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "每天吸烟≥２０支",
+      "gold": "每天吸烟≥20支",
+      "got": "每天吸烟≥２０支",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "年龄＞２ 岁",
+      "gold": "年龄＞2 岁",
+      "got": "年龄＞２ 岁",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "TＡR综合征",
+      "gold": "TAR综合征",
+      "got": "TＡR综合征",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "IIＢ 期",
+      "gold": "IIB 期",
+      "got": "II期",
+      "method": "fuzzy"
+    },
+    {
+      "kind": "norm",
+      "surface": "１１/１０万",
+      "gold": "11/10万",
+      "got": "１１/１０万",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "PNＡＣ",
+      "gold": "PNAC",
+      "got": "PNＡＣ",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ｃ反应蛋白（ＣRP）",
+      "gold": "C反应蛋白（CRP）",
+      "got": "Ｃ反应蛋白（ＣRP）",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "１５% 到 ３０%",
+      "gold": "15% 到 30%",
+      "got": "１５% 到 ３０%",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "４～７次/秒的θ波",
+      "gold": "4～7次/秒的θ波",
+      "got": "４～７次/秒的θ波",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "强效ＣYP３Ａ４/５抑制剂",
+      "gold": "强效CYP3A4/5抑制剂",
+      "got": "强效ＣYP３Ａ４/５抑制剂",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "维生素Ｂ１２水平的下降",
+      "gold": "维生素B12水平的下降",
+      "got": "维生素Ｂ１２水平的下降",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ａ 级或 Ｂ 级肝硬化",
+      "gold": "A 级或 B 级肝硬化",
+      "got": "Ａ 级或 Ｂ 级肝硬化",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "VＡＣ",
+      "gold": "VAC",
+      "got": "VＡＣ",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ｂence Jones 蛋白＞１２ g/２４ 小时",
+      "gold": "Bence Jones 蛋白＞12 g/24 小时",
+      "got": "Ｂence Jones 蛋白＞１２ g/２４ 小时",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "JＣV 抗阳性",
+      "gold": "JCV 抗阳性",
+      "got": "JＣV 抗阳性",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "Ａ型",
+      "gold": "A型",
+      "got": "Ａ型",
+      "method": "unlinked_local_id"
+    },
+    {
+      "kind": "norm",
+      "surface": "LOＡD",
+      "gold": "LOAD",
+      "got": "LOＡD",
+      "method": "unlinked_local_id"
+    }
+  ]
+}

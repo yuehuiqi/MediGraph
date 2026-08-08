@@ -1,0 +1,31 @@
+{
+  "base_url": "http://127.0.0.1:8020",
+  "path": "/api/v1/analysis/nl2sql",
+  "question": "各科室的就诊量是多少",
+  "concurrency": 16,
+  "requests": 320,
+  "successful": 320,
+  "error_rate": 0.0,
+  "wall_seconds": 0.554,
+  "throughput_rps": 577.5,
+  "latency_ms": {
+    "mean": 24.87,
+    "p50": 21.68,
+    "p90": 39.33,
+    "p95": 48.4,
+    "p99": 54.77,
+    "max": 72.35
+  },
+  "status_counts": {
+    "200": 320
+  },
+  "cache_events": {
+    "scraped": true,
+    "events": {
+      "miss": 1,
+      "hit": 329
+    },
+    "cache_active": true
+  },
+  "note": "Deterministic template route: no LLM call, so this measures the service path (middleware, metrics, validation, schema linking, guarded SQLite execution). LLM-backed routes are bounded by provider latency, not by this path -- see bench_stream_ttft.json for those."
+}

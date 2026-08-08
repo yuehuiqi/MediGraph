@@ -1,0 +1,191 @@
+{
+  "description": "Held-out probe: questions written fresh, present in none of nl2sql_gold.json / nl2sql_stress_128.json / nl2sql_hard_natural.json, and never used to tune the router. Deterministic path only (no LLM call).",
+  "samples": 26,
+  "router_answered": 25,
+  "deferred_to_llm": 1,
+  "correct": 25,
+  "router_accuracy": 1.0,
+  "failures": [],
+  "details": [
+    {
+      "question": "儿科的平均就诊费用是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT AVG(cost) FROM patient_visits WHERE department='儿科'",
+      "pred_sql": "SELECT AVG(cost) AS avg_cost FROM patient_visits WHERE department='儿科'"
+    },
+    {
+      "question": "脂肪肝患者的平均年龄是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT AVG(age) FROM patient_visits WHERE disease='脂肪肝'",
+      "pred_sql": "SELECT AVG(age) AS avg_age FROM patient_visits WHERE disease='脂肪肝'"
+    },
+    {
+      "question": "肿瘤科有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE department='肿瘤科'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE department='肿瘤科'"
+    },
+    {
+      "question": "贫血患者有多少人次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='贫血'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE disease='贫血'"
+    },
+    {
+      "question": "45岁以上的患者有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE age>45",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE age>45"
+    },
+    {
+      "question": "男性患者一共有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='男'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE gender='男'"
+    },
+    {
+      "question": "女性脂肪肝患者有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='脂肪肝'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE disease='脂肪肝' AND gender='女'"
+    },
+    {
+      "question": "各科室的平均就诊年龄是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT department, AVG(age) AS a FROM patient_visits GROUP BY department ORDER BY a DESC",
+      "pred_sql": "SELECT department, AVG(age) AS avg_age FROM patient_visits GROUP BY department ORDER BY avg_age DESC"
+    },
+    {
+      "question": "就诊量最少的科室是哪个",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT department, COUNT(*) AS c FROM patient_visits GROUP BY department ORDER BY c ASC LIMIT 1",
+      "pred_sql": "SELECT department, COUNT(*) AS cnt FROM patient_visits GROUP BY department ORDER BY cnt ASC LIMIT 1"
+    },
+    {
+      "question": "平均就诊费用最高的科室是哪个",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT department, AVG(cost) AS a FROM patient_visits GROUP BY department ORDER BY a DESC LIMIT 1",
+      "pred_sql": "SELECT department, AVG(cost) AS avg_cost FROM patient_visits GROUP BY department ORDER BY avg_cost DESC LIMIT 1"
+    },
+    {
+      "question": "就诊人次最高的5种疾病",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT disease, COUNT(*) AS c FROM patient_visits GROUP BY disease ORDER BY c DESC LIMIT 5",
+      "pred_sql": "SELECT disease, COUNT(*) AS cnt FROM patient_visits GROUP BY disease ORDER BY cnt DESC LIMIT 5"
+    },
+    {
+      "question": "开具次数最多的3种药物",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT drug, COUNT(*) AS c FROM prescriptions GROUP BY drug ORDER BY c DESC LIMIT 3",
+      "pred_sql": "SELECT drug, COUNT(*) AS cnt FROM prescriptions GROUP BY drug ORDER BY cnt DESC LIMIT 3"
+    },
+    {
+      "question": "清凉油一共被开具了多少次",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='清凉油'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM prescriptions WHERE drug='清凉油'"
+    },
+    {
+      "question": "跌打丸开了多少次",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='跌打丸'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM prescriptions WHERE drug='跌打丸'"
+    },
+    {
+      "question": "每个月分别有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT substr(visit_date,1,7) AS m, COUNT(*) AS v FROM patient_visits GROUP BY m ORDER BY m",
+      "pred_sql": "SELECT substr(visit_date,1,7) AS month, COUNT(*) AS visits FROM patient_visits GROUP BY month ORDER BY month"
+    },
+    {
+      "question": "所有就诊的费用总计是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT SUM(cost) FROM patient_visits",
+      "pred_sql": "SELECT SUM(cost) AS total_cost FROM patient_visits"
+    },
+    {
+      "question": "血常规的异常次数是多少",
+      "routed": "llm",
+      "gold_sql": "SELECT SUM(abnormal) FROM lab_tests WHERE test_name='血常规'"
+    },
+    {
+      "question": "各检查项目的异常次数是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT test_name, SUM(abnormal) AS a FROM lab_tests GROUP BY test_name ORDER BY a DESC",
+      "pred_sql": "SELECT test_name, SUM(abnormal) AS abnormal_count FROM lab_tests GROUP BY test_name ORDER BY abnormal_count DESC"
+    },
+    {
+      "question": "异常率最高的检查项目是哪个",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT test_name, AVG(abnormal) AS r FROM lab_tests GROUP BY test_name ORDER BY r DESC",
+      "pred_sql": "SELECT test_name, AVG(abnormal) AS abnormal_rate FROM lab_tests GROUP BY test_name ORDER BY abnormal_rate DESC"
+    },
+    {
+      "question": "按性别统计就诊人次",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT gender, COUNT(*) AS c FROM patient_visits GROUP BY gender ORDER BY c DESC",
+      "pred_sql": "SELECT gender, COUNT(*) AS cnt FROM patient_visits GROUP BY gender ORDER BY cnt DESC"
+    },
+    {
+      "question": "每种疾病的平均就诊费用是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT disease, AVG(cost) AS a FROM patient_visits GROUP BY disease ORDER BY a DESC",
+      "pred_sql": "SELECT disease, AVG(cost) AS avg_cost FROM patient_visits GROUP BY disease ORDER BY avg_cost DESC"
+    },
+    {
+      "question": "肝病科接诊了多少人次",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE department='肝病'",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE department='肝病'"
+    },
+    {
+      "question": "20到40岁的患者有多少次就诊",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT COUNT(*) FROM patient_visits WHERE age BETWEEN 20 AND 40",
+      "pred_sql": "SELECT COUNT(*) AS cnt FROM patient_visits WHERE age BETWEEN 20 AND 40"
+    },
+    {
+      "question": "高血脂患者的平均住院费用是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT AVG(cost) FROM patient_visits WHERE disease='高血脂'",
+      "pred_sql": "SELECT AVG(cost) AS avg_cost FROM patient_visits WHERE disease='高血脂'"
+    },
+    {
+      "question": "外科的平均就诊年龄是多少",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT AVG(age) FROM patient_visits WHERE department='外科'",
+      "pred_sql": "SELECT AVG(age) AS avg_age FROM patient_visits WHERE department='外科'"
+    },
+    {
+      "question": "费用最高的3次就诊是哪些患者",
+      "routed": "deterministic_template",
+      "match": true,
+      "gold_sql": "SELECT patient_id, cost FROM patient_visits ORDER BY cost DESC LIMIT 3",
+      "pred_sql": "SELECT patient_id, cost FROM patient_visits ORDER BY cost DESC LIMIT 3"
+    }
+  ]
+}

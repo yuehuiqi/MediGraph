@@ -1,0 +1,23 @@
+{
+  "eval_size": 112,
+  "results": [
+    {
+      "system": "Qwen3.5-0.8B (base)",
+      "dag_accuracy": 0.161,
+      "executable_rate": 0.83,
+      "n": 112
+    },
+    {
+      "system": "Qwen3.5-0.8B (LoRA)",
+      "dag_accuracy": 0.973,
+      "executable_rate": 1.0,
+      "n": 112
+    },
+    {
+      "system": "big API (Qwen/Qwen3.6-35B-A3B)",
+      "dag_accuracy": 0.741,
+      "executable_rate": 0.964,
+      "n": 112
+    }
+  ]
+}

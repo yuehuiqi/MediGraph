@@ -1,0 +1,180 @@
+{
+  "samples": [
+    {
+      "question": "哪个科室接诊的不同病人数量最多？",
+      "sql": "SELECT department FROM patient_visits GROUP BY department ORDER BY COUNT(DISTINCT patient_id) DESC LIMIT 1"
+    },
+    {
+      "question": "开具过阿司匹林肠溶片的病人平均年龄是多少？",
+      "sql": "SELECT AVG(v.age) FROM patient_visits v JOIN prescriptions p ON v.visit_id = p.visit_id WHERE p.drug = '阿司匹林肠溶片'"
+    },
+    {
+      "question": "住院花费高于全院平均花费的就诊有多少次？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE cost > (SELECT AVG(cost) FROM patient_visits)"
+    },
+    {
+      "question": "男性强直性脊柱炎患者的总花费是多少？",
+      "sql": "SELECT SUM(cost) FROM patient_visits WHERE gender = '男' AND disease = '强直性脊柱炎'"
+    },
+    {
+      "question": "被开具总天数最多的是哪种药？",
+      "sql": "SELECT drug FROM prescriptions GROUP BY drug ORDER BY SUM(days) DESC LIMIT 1"
+    },
+    {
+      "question": "检验结果异常的就诊里，最常见的疾病是哪个？",
+      "sql": "SELECT v.disease FROM patient_visits v JOIN lab_tests t ON v.visit_id = t.visit_id WHERE t.abnormal = 1 GROUP BY v.disease ORDER BY COUNT(DISTINCT v.visit_id) DESC LIMIT 1"
+    },
+    {
+      "question": "六十岁以上高血压患者的平均住院费用是多少？",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE age > 60 AND disease = '高血压'"
+    },
+    {
+      "question": "每种性别分别有多少个不同的病人？",
+      "sql": "SELECT gender, COUNT(DISTINCT patient_id) FROM patient_visits GROUP BY gender"
+    },
+    {
+      "question": "开药天数超过七天的处方一共涉及多少种不同的药？",
+      "sql": "SELECT COUNT(DISTINCT drug) FROM prescriptions WHERE days > 7"
+    },
+    {
+      "question": "接诊高血压病人最多的前三个科室是哪些？",
+      "sql": "SELECT department FROM patient_visits WHERE disease = '高血压' GROUP BY department ORDER BY COUNT(*) DESC LIMIT 3"
+    },
+    {
+      "question": "花费最高的那次就诊对应的是什么疾病？",
+      "sql": "SELECT disease FROM patient_visits ORDER BY cost DESC LIMIT 1"
+    },
+    {
+      "question": "冠心病患者一共用过哪些不同的药物？",
+      "sql": "SELECT DISTINCT p.drug FROM prescriptions p JOIN patient_visits v ON p.visit_id = v.visit_id WHERE v.disease = '冠心病'"
+    },
+    {
+      "question": "各疾病的平均就诊年龄是多少，按平均年龄从高到低排列？",
+      "sql": "SELECT disease, AVG(age) AS a FROM patient_visits GROUP BY disease ORDER BY a DESC"
+    },
+    {
+      "question": "做过两种及以上不同检验项目的就诊有多少次？",
+      "sql": "SELECT COUNT(*) FROM (SELECT visit_id FROM lab_tests GROUP BY visit_id HAVING COUNT(DISTINCT test_name) >= 2)"
+    },
+    {
+      "question": "五十岁以下的患者一共有多少人次？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age < 50"
+    },
+    {
+      "question": "强直性脊柱炎患者中年龄超过七十岁的有几次就诊？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='强直性脊柱炎' AND age > 70"
+    },
+    {
+      "question": "就诊人次第二多的疾病是什么？",
+      "sql": "SELECT disease FROM patient_visits GROUP BY disease ORDER BY COUNT(*) DESC LIMIT 1 OFFSET 1"
+    },
+    {
+      "question": "高血压病患者一共有多少位不同的病人？",
+      "sql": "SELECT COUNT(DISTINCT patient_id) FROM patient_visits WHERE disease='高血压'"
+    },
+    {
+      "question": "心梗患者的平均住院费用是多少？",
+      "sql": "SELECT AVG(cost) FROM patient_visits WHERE disease='急性心肌梗死'"
+    },
+    {
+      "question": "糖肾患者用过哪些不同的药物？",
+      "sql": "SELECT DISTINCT p.drug FROM prescriptions p JOIN patient_visits v ON p.visit_id=v.visit_id WHERE v.disease='糖尿病肾病'"
+    },
+    {
+      "question": "平均就诊费用最低的科室是哪个？",
+      "sql": "SELECT department FROM patient_visits GROUP BY department ORDER BY AVG(cost) ASC LIMIT 1"
+    },
+    {
+      "question": "30到50岁之间的患者有多少次就诊？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age BETWEEN 30 AND 50"
+    },
+    {
+      "question": "女性患者占总就诊人次的比例是多少？",
+      "sql": "SELECT CAST(SUM(CASE WHEN gender='女' THEN 1 ELSE 0 END) AS REAL)/COUNT(*) FROM patient_visits"
+    },
+    {
+      "question": "开具过两种及以上不同药物的就诊有多少次？",
+      "sql": "SELECT COUNT(*) FROM (SELECT visit_id FROM prescriptions GROUP BY visit_id HAVING COUNT(DISTINCT drug) >= 2)"
+    },
+    {
+      "question": "除了内科以外，就诊人次最多的科室是哪个？",
+      "sql": "SELECT department FROM patient_visits WHERE department != '内科' GROUP BY department ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+      "question": "2024年哪个月的就诊量最高？",
+      "sql": "SELECT substr(visit_date,1,7) AS m FROM patient_visits GROUP BY m ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+      "question": "2024年3月的就诊量是多少？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE substr(visit_date,1,7)='2024-03'"
+    },
+    {
+      "question": "做过检验但结果都正常的就诊有多少次？",
+      "sql": "SELECT COUNT(*) FROM patient_visits v WHERE EXISTS (SELECT 1 FROM lab_tests t WHERE t.visit_id=v.visit_id) AND NOT EXISTS (SELECT 1 FROM lab_tests t WHERE t.visit_id=v.visit_id AND t.abnormal=1)"
+    },
+    {
+      "question": "数据库里一共记录了多少种不同的疾病？",
+      "sql": "SELECT COUNT(DISTINCT disease) FROM patient_visits"
+    },
+    {
+      "question": "处方中一共涉及多少种不同的药物？",
+      "sql": "SELECT COUNT(DISTINCT drug) FROM prescriptions"
+    },
+    {
+      "question": "年龄最大的患者对应的是什么疾病？",
+      "sql": "SELECT disease FROM patient_visits ORDER BY age DESC LIMIT 1"
+    },
+    {
+      "question": "花费最低的那次就诊对应的是什么疾病？",
+      "sql": "SELECT disease FROM patient_visits ORDER BY cost ASC LIMIT 1"
+    },
+    {
+      "question": "一共有多少位不同的病人就诊过？",
+      "sql": "SELECT COUNT(DISTINCT patient_id) FROM patient_visits"
+    },
+    {
+      "question": "六十岁以上的女性患者一共有多少次就诊？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE age > 60 AND gender='女'"
+    },
+    {
+      "question": "就诊人次超过五十次的科室有哪几个？",
+      "sql": "SELECT department FROM patient_visits GROUP BY department HAVING COUNT(*) > 50"
+    },
+    {
+      "question": "血压检查的异常次数是多少？",
+      "sql": "SELECT SUM(abnormal) FROM lab_tests WHERE test_name='血压'"
+    },
+    {
+      "question": "2024年上半年高血压患者的就诊次数是多少？",
+      "sql": "SELECT COUNT(*) FROM patient_visits WHERE disease='高血压' AND substr(visit_date,1,7) BETWEEN '2024-01' AND '2024-06'"
+    },
+    {
+      "question": "一共涉及多少个不同的科室？",
+      "sql": "SELECT COUNT(DISTINCT department) FROM patient_visits"
+    },
+    {
+      "question": "强直性脊柱炎患者的处方平均用药天数是多少？",
+      "sql": "SELECT AVG(p.days) FROM prescriptions p JOIN patient_visits v ON p.visit_id=v.visit_id WHERE v.disease='强直性脊柱炎'"
+    },
+    {
+      "question": "哪种疾病的就诊人次最多？",
+      "sql": "SELECT disease FROM patient_visits GROUP BY disease ORDER BY COUNT(*) DESC LIMIT 1"
+    },
+    {
+      "question": "高血压在知识图谱中一共关联了多少种推荐药物？",
+      "sql": "SELECT COUNT(*) FROM kg_triples WHERE head='高血压' AND relation='recommend_drug'"
+    },
+    {
+      "question": "冠心病在知识图谱中的并发症有哪些？",
+      "sql": "SELECT tail FROM kg_triples WHERE head='冠心病' AND relation='complication'"
+    },
+    {
+      "question": "花费最高的那次就诊都用了哪些药？",
+      "sql": "SELECT drug FROM prescriptions WHERE visit_id = (SELECT visit_id FROM patient_visits ORDER BY cost DESC LIMIT 1)"
+    },
+    {
+      "question": "每个科室各接诊了多少位不同的病人？",
+      "sql": "SELECT department, COUNT(DISTINCT patient_id) AS n FROM patient_visits GROUP BY department ORDER BY n DESC"
+    }
+  ]
+}

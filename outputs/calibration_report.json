@@ -1,0 +1,163 @@
+{
+  "method": "temperature_scaling",
+  "fit_split": "CMeIE-V2_dev",
+  "samples": 300,
+  "predictions": 3070,
+  "positive_predictions": 1013,
+  "ece_before": 0.534679,
+  "ece_after": 0.033024,
+  "calibrator": {
+    "method": "temperature_scaling",
+    "temperature": 1.08829834,
+    "bias": -2.87724255,
+    "fitted_samples": 3070,
+    "nll_before": 1.43629456,
+    "nll_after": 0.55001601
+  },
+  "reliability_before": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 9,
+      "mean_confidence": 0.672,
+      "accuracy": 0.0
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 937,
+      "mean_confidence": 0.735997,
+      "accuracy": 0.14301
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 719,
+      "mean_confidence": 0.852008,
+      "accuracy": 0.223922
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "count": 1405,
+      "mean_confidence": 0.958145,
+      "accuracy": 0.511032
+    }
+  ],
+  "reliability_after": [
+    {
+      "lower": 0.0,
+      "upper": 0.1,
+      "count": 9,
+      "mean_confidence": 0.098129,
+      "accuracy": 0.0
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "count": 1160,
+      "mean_confidence": 0.138305,
+      "accuracy": 0.155172
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "count": 501,
+      "mean_confidence": 0.243432,
+      "accuracy": 0.231537
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "count": 237,
+      "mean_confidence": 0.345561,
+      "accuracy": 0.333333
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "count": 180,
+      "mean_confidence": 0.455288,
+      "accuracy": 0.227778
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "count": 983,
+      "mean_confidence": 0.57566,
+      "accuracy": 0.607325
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    },
+    {
+      "lower": 0.9,
+      "upper": 1.0,
+      "count": 0,
+      "mean_confidence": null,
+      "accuracy": null
+    }
+  ],
+  "artifact_sha256": "3f16d81fbf3b1ec1869de0da836152d23e1a09b132a3b2e046fb290649c7c049",
+  "note": "ECE is measured over emitted entity predictions; missed gold spans have no confidence."
+}

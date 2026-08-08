@@ -1,0 +1,154 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4-Pro",
+  "samples": 2,
+  "gold": "pathology_probe_gold.json",
+  "ner_strict": {
+    "precision": 0.846,
+    "recall": 0.846,
+    "f1": 0.846,
+    "tp": 11,
+    "fp": 2,
+    "fn": 2
+  },
+  "ner_relaxed": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 13,
+    "fp": 0,
+    "fn": 0
+  },
+  "re_strict": {
+    "precision": 0.818,
+    "recall": 0.818,
+    "f1": 0.818,
+    "tp": 9,
+    "fp": 2,
+    "fn": 2
+  },
+  "re_relaxed": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 11,
+    "fp": 0,
+    "fn": 0
+  },
+  "by_source": {
+    "PathologyProbe": {
+      "ner_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 13,
+        "fp": 0,
+        "fn": 0
+      },
+      "re_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 11,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "ner": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 13,
+    "fp": 0,
+    "fn": 0
+  },
+  "re": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "tp": 11,
+    "fp": 0,
+    "fn": 0
+  },
+  "per_sample": [
+    {
+      "sample": 1,
+      "source": "PathologyProbe",
+      "ner_strict": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "ner_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "re_strict": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "re_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "sample": 2,
+      "source": "PathologyProbe",
+      "ner_strict": {
+        "precision": 0.667,
+        "recall": 0.667,
+        "f1": 0.667,
+        "tp": 4,
+        "fp": 2,
+        "fn": 2
+      },
+      "ner_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "re_strict": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6,
+        "tp": 3,
+        "fp": 2,
+        "fn": 2
+      },
+      "re_relaxed": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  ],
+  "llm_stats": {
+    "calls": 4,
+    "total_seconds": 55.634,
+    "avg_latency_s": 13.909,
+    "prompt_tokens": 4227,
+    "completion_tokens": 2159
+  }
+}

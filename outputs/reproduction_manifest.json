@@ -1,0 +1,95 @@
+{
+  "started_at": "2026-07-31T04:37:50.430617+00:00",
+  "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "quick": true,
+  "success": false,
+  "commands": [
+    {
+      "command": [
+        "D:\\LLMagent\\CCF\\.venv-neural\\Scripts\\python.exe",
+        "data/prep/build_fast_extractor.py"
+      ],
+      "returncode": 1,
+      "seconds": 0.137
+    }
+  ],
+  "artifacts": {
+    "data/models/fast_extractor.json": {
+      "bytes": 23885493,
+      "sha256": "3f16d81fbf3b1ec1869de0da836152d23e1a09b132a3b2e046fb290649c7c049"
+    },
+    "data/models/entity_linker.json": {
+      "bytes": 5110136,
+      "sha256": "ed66869ac4956490b893fb8da021e5aa4d068255acdc7cf991c153607dfbc7f0"
+    },
+    "data/models/temperature_calibration.json": {
+      "bytes": 177,
+      "sha256": "231c83b4c7088b3935def0df3694368d3d971b105c3b2f7aa2205313c956f392"
+    },
+    "outputs/calibration_report.json": {
+      "bytes": 3387,
+      "sha256": "fba3cb284defc6fb473acc63697501c2ca906d51a96abfc4eee2cc0566926ee6"
+    },
+    "outputs/eval_fast_core.json": {
+      "bytes": 313153,
+      "sha256": "3fdcf651d7c4fb07dcc56a2bcaec22bc01759436e3ab9c7c1e905d9b61230795"
+    },
+    "outputs/eval_fast_cmeie_dev.json": {
+      "bytes": 488685,
+      "sha256": "89b382542354fa80c76381e3417c92226fa9df5efff16f27bb062262e84138da"
+    },
+    "outputs/eval_neural_cmeie_dev.json": {
+      "bytes": 198246,
+      "sha256": "9f2db79d871308df4f3bb4d2abe40682ec7b86c6de62ee9c7646f2ab8b3484e3"
+    },
+    "outputs/eval_ensemble_cmeie_dev.json": {
+      "bytes": 853,
+      "sha256": "db8e23e64a3c8e1e65050d985dbf537d07456aefad70f456a5a7a3837a0a9812"
+    },
+    "outputs/eval_neural_cmeie_v1_dev.json": {
+      "bytes": 196814,
+      "sha256": "391fe1fc9bc1e9e29df97293a17ed90ded3131a56836ef4aa3300ae1e8a94da4"
+    },
+    "outputs/eval_ensemble_cmeie_v1_dev.json": {
+      "bytes": 1053,
+      "sha256": "31fd64874b2765925eb0f0f41acdd1c716c9e9b560063797d0c50d5c7bb2128f"
+    },
+    "outputs/eval_entity_linking.json": {
+      "bytes": 8057,
+      "sha256": "440b6e676c26f44641d71d7301860163bccc975878999dbcda64dbcafb5ae121"
+    },
+    "outputs/eval_entity_linking_real.json": {
+      "bytes": 5691,
+      "sha256": "23751719b04eb4bd34d49e00c4a4c05c4cb14d6e086be1dc3ca65b9066ad05b6"
+    },
+    "outputs/eval_kg_qa.json": {
+      "bytes": 5692,
+      "sha256": "2e92703b8548513b15be0e33c036ffca3d3e1857118dd745c0269804e5e3bfe5"
+    },
+    "outputs/eval_nl2sql_nl2sql_hard_natural.json": {
+      "bytes": 51020,
+      "sha256": "cc14c65c417cfc5278de258b2f388be8cd6b4b354d2336d0fee7776c826afb86"
+    },
+    "outputs/CMeIE_test_pred.jsonl": {
+      "bytes": 3308272,
+      "sha256": "d3a152c29763895295a1e053b0ff038b11b052055bde60a5dd4a0b23cf6741ed"
+    },
+    "outputs/kg_scale_report.json": {
+      "bytes": 6494,
+      "sha256": "8a291ec9dc4916553b83fc156d3593b5b11177a1537380310d34aae9c02fa446"
+    },
+    "outputs/eval_nl2sql.json": {
+      "bytes": 17219,
+      "sha256": "0c31d1a88596a4d248bfe45f8ae37325bd1f75911f71f8cb7f6d8b54de12818b"
+    },
+    "outputs/eval_nl2sql_nl2sql_stress_128.json": {
+      "bytes": 131051,
+      "sha256": "3428fe67256e159f95e6b43cfd6eb58307776f6179f2a80d4505c3731cf156f4"
+    },
+    "data/models/neural_extractor/train_log.json": {
+      "bytes": 2970,
+      "sha256": "f480d04c9fda40745eff12f34bd23247365738c0ddb7664b2f897cd7be2ab34c"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-4.19.90-vhulk2211.3.0.h1543.eulerosv2r10.aarch64-aarch64-with-glibc2.28",
+  "machine": "aarch64",
+  "python": "3.11.10 (main, Oct  3 2024, 07:21:51) [GCC 11.2.0]",
+  "numpy": "1.26.4",
+  "torch": "2.7.1+cpu",
+  "torch_npu": "2.7.1",
+  "npu_available": true,
+  "cmake": "cmake version 3.16.5",
+  "gcc": "gcc (GCC) 7.3.0",
+  "npu_smi_version": "+------------------------------------------------------------------------------------------------+",
+  "environment": {
+    "ASCEND_HOME_PATH": "/usr/local/Ascend/ascend-toolkit/latest",
+    "ASCEND_OPP_PATH": "/usr/local/Ascend/ascend-toolkit/latest/opp",
+    "PYTHONPATH": "/usr/local/Ascend/ascend-toolkit/latest/toolkit/python/site-packages/:/usr/local/Ascend/ascend-toolkit/latest/hccl/python/site-packages/:/usr/local/Ascend/ascend-toolkit/latest/compiler/python/site-packages/:/usr/local/Ascend/ascend-toolkit/8.3.RC1/pyACL/python/site-packages/acl:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe:/usr/local/Ascend/ascend-toolkit/latest/tools/ms_fmk_transplt/torch_npu_bridge:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/seccomponent/lib:/home/ma-user/infer/model/1:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/",
+    "LD_LIBRARY_PATH": "/usr/local/Ascend/ascend-toolkit/latest/opp/lib64:/usr/local/Ascend/ascend-toolkit/8.3.RC1/tools/ncs/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aoe/lib64:/usr/local/Ascend/ascend-toolkit/latest/toolkit/tools/adump/lib64/:/usr/local/Ascend/ascend-toolkit/latest/toolkit/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/toolkit/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/hccl/lib64:/usr/local/Ascend/ascend-toolkit/latest/hccl/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/hccl/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/runtime/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64:/usr/local/Ascend/toolbox/latest/Ascend-DMI/lib64:/usr/lib/aarch64-linux-gnu/hdf5/serial:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/:/usr/local/seccomponent/lib/:/usr/local/seccomponent/lib/openssl/:/usr/local/Ascend/ascend-toolkit/latest/compiler/lib64/stub:/usr/local/Ascend/ascend-toolkit/latest/hccl/lib64/stub"
+  }
+}

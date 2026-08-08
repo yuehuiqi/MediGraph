@@ -1,0 +1,21 @@
+{
+  "description": "NL2SQL gold set over the Task-3 SQLite analytics schema. Each item has a question and a reference (gold) SQL. Evaluation = Execution Accuracy: run predicted vs gold SQL and compare result sets (order-insensitive).",
+  "samples": [
+    {"question": "每个科室的就诊量是多少", "sql": "SELECT department, COUNT(*) FROM patient_visits GROUP BY department"},
+    {"question": "高血压患者的平均年龄是多少", "sql": "SELECT AVG(age) FROM patient_visits WHERE disease='高血压'"},
+    {"question": "各疾病的就诊人次有多少", "sql": "SELECT disease, COUNT(*) FROM patient_visits GROUP BY disease"},
+    {"question": "2024年每个月的就诊量分别是多少", "sql": "SELECT substr(visit_date,1,7) AS m, COUNT(*) FROM patient_visits GROUP BY m"},
+    {"question": "开具次数最多的5种药物是哪些", "sql": "SELECT drug, COUNT(*) AS c FROM prescriptions GROUP BY drug ORDER BY c DESC LIMIT 5"},
+    {"question": "男性和女性的就诊人次各是多少", "sql": "SELECT gender, COUNT(*) FROM patient_visits GROUP BY gender"},
+    {"question": "内科的平均就诊费用是多少", "sql": "SELECT AVG(cost) FROM patient_visits WHERE department='内科'"},
+    {"question": "总共有多少次就诊", "sql": "SELECT COUNT(*) FROM patient_visits"},
+    {"question": "60岁以上的患者有多少次就诊", "sql": "SELECT COUNT(*) FROM patient_visits WHERE age>60"},
+    {"question": "每个科室的平均就诊费用是多少", "sql": "SELECT department, AVG(cost) FROM patient_visits GROUP BY department"},
+    {"question": "阿司匹林肠溶片一共被开具了多少次", "sql": "SELECT COUNT(*) FROM prescriptions WHERE drug='阿司匹林肠溶片'"},
+    {"question": "每种疾病患者的平均年龄是多少", "sql": "SELECT disease, AVG(age) FROM patient_visits GROUP BY disease"},
+    {"question": "所有就诊的总费用是多少", "sql": "SELECT SUM(cost) FROM patient_visits"},
+    {"question": "女性高血压患者有多少次就诊", "sql": "SELECT COUNT(*) FROM patient_visits WHERE gender='女' AND disease='高血压'"},
+    {"question": "每个检查项目的异常次数是多少", "sql": "SELECT test_name, SUM(abnormal) FROM lab_tests GROUP BY test_name"},
+    {"question": "就诊量最高的3个科室", "sql": "SELECT department, COUNT(*) AS c FROM patient_visits GROUP BY department ORDER BY c DESC LIMIT 3"}
+  ]
+}

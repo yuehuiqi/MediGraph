@@ -1,0 +1,41 @@
+{
+  "idle_power": {
+    "samples": 5,
+    "mean_w": 98.1,
+    "min_w": 97.9,
+    "max_w": 98.2,
+    "p50_w": 98.1
+  },
+  "results": [
+    {
+      "system": "npu_torch",
+      "launches": 125696,
+      "seconds": 20.018669418990612,
+      "rows_per_s": 1255787758.6085627,
+      "power": {
+        "samples": 15,
+        "mean_w": 132.6866666666667,
+        "min_w": 129.4,
+        "max_w": 133.2,
+        "p50_w": 132.9
+      },
+      "gross_rows_per_joule": 9464310.09351778,
+      "dynamic_rows_per_joule": 36308435.58043258
+    },
+    {
+      "launches": 339840,
+      "seconds": 20.002,
+      "rows_per_s": 3397987952.5,
+      "system": "npu_ascendc",
+      "power": {
+        "samples": 15,
+        "mean_w": 154.15999999999997,
+        "min_w": 148.4,
+        "max_w": 155.2,
+        "p50_w": 154.5
+      },
+      "gross_rows_per_joule": 22041956.100804362,
+      "dynamic_rows_per_joule": 60613413.35176599
+    }
+  ]
+}
